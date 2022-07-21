@@ -1,0 +1,305 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>opencv on AnbiDev</title>
+        <link>https://anbidev.com/tags/opencv/</link>
+        <description>Recent content in opencv on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Crawl Gambar Instagram Pakai Python dan Instalooter</title>
+            <link>https://anbidev.com/python-instalooter/</link>
+            <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/python-instalooter/</guid>
+            <description>Hola anbies, sekarang mari kita membahas sedikit tentang library (lebih ke program) crawling yang sering digunakan untuk meng-crawl Seluruh Gambar dan Video Pada Instagram. Apa itu? nama library nya adalah instalooter.
+Apa itu Instalooter? Instalooter adalah sebuah program yang digunakan untuk mendownload seluruh video dan gambar pada sebuah profile atau hashtag pada instagram tanpa menggunakan API atau Token apapun. Bahkan kalian juga bisa mendownload gambar atau video pada private akun!</description>
+            <content type="html"><![CDATA[<p>Hola anbies, sekarang mari kita membahas sedikit tentang library (lebih ke program) crawling yang sering digunakan untuk meng-<em>crawl</em> <strong>Seluruh Gambar dan Video Pada Instagram</strong>. Apa itu? nama library nya adalah <a href="https://instalooter.readthedocs.io/"
+    
+     target="_blank" rel="noreferrer" >instalooter</a>.</p>
+<br>
+<h2 id="apa-itu-instalooter">Apa itu Instalooter?</h2>
+<hr>
+<p><strong>Instalooter</strong> adalah sebuah <strong>program</strong> yang digunakan untuk mendownload seluruh video dan gambar pada sebuah profile atau <em>hashtag</em> pada instagram tanpa menggunakan API atau Token apapun. Bahkan kalian juga bisa mendownload gambar atau video pada <strong>private akun</strong>!</p>
+<p>Cara installnya cukup mudah, kita cuman butuh <a href="https://anbidev.com/python-pip"
+    
+     target="_blank" rel="noreferrer" >pip</a> dan command dibawah :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install instalooter
+</code></pre></div><p>Nah kalau udah, kita bisa langsung menggunakan perintah dasar instalooter pada <strong>command line</strong> kita.</p>
+<blockquote>
+<p>Untuk menghindari <strong>Error</strong>, bisa terlebih <strong>login instagram</strong> di PC atau browser kita hehe, tapi jarang sih ini :)</p>
+</blockquote>
+<br>
+<p>Disini, anbi bakal kasih contoh command buat <strong>download semua gambar dan video</strong> pada instagram <a href="https://instagram.com/anbidev"
+    
+     target="_blank" rel="noreferrer" >anbidev</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">instalooter user anbidev
+</code></pre></div><p>Kalau berhasil ada <em>log</em> kayak gini.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-instalooter-01.png" alt="&amp;ldquo;Log sudah selesai Download&amp;rdquo;" title="Log sudah selesai Download" >
+    <figcaption>Log sudah selesai Download</figcaption>
+  </figure>
+
+
+</p>
+<p>Dan jika kita lihat, pada folder di path <em>command line</em> anbi, akan berisi banyak gambar dari anbidev.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-instalooter-02.jpg" alt="&amp;ldquo;Selesai Download Gambar&amp;rdquo;" title="Selesai Crawl Gambar" >
+    <figcaption>Selesai Crawl Gambar</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="crawl-berdasarkan-hashtag">Crawl Berdasarkan Hashtag</h2>
+<hr>
+<p>Kita juga bisa mengcrawl gambar dan video dengan <em>instalooter</em> berdasarkan parameter hashtag. Nih, kita coba crawl <strong>10 gambar atau video</strong> pada postingan dengan hashtag <code>#programmer</code>.</p>
+<pre><code>instalooter hashtag programmer -n 10
+</code></pre><p>Ia akan mendownload 10 postingan gambar atau video terbaru, yang menggunakan hashtag <code>#programmer</code> yang terbaru.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-instalooter-03.png" alt="&amp;ldquo;Selesai Download Gambar&amp;rdquo;" title="Selesai Crawl Di Hashtag #programmer" >
+    <figcaption>Selesai Crawl Di Hashtag #programmer</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="crawl-single-posting">Crawl Single Posting</h2>
+<hr>
+<p>Kita sudah berhasil crawling secara batch berdasarkan <em>hashtag</em> atau <em>profile</em>. Lalu bagaimana jika kita ingin crawling single posting?</p>
+<p>Mudah aja, copy link postingannnya, lalu gunakan command berikut ini.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">instalooter post <span style="color:#e6db74">&#34;https://www.instagram.com/p/CEwhuIghkKb/&#34;</span> 
+</code></pre></div><p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-instalooter-04.jpg" alt="&amp;ldquo;Single Post Berhasil Didownload!&amp;quot;" title="Single Post Berhasil Didownload!" >
+    <figcaption>Single Post Berhasil Didownload!</figcaption>
+  </figure>
+
+
+</p>
+<p>Nah, sesimpel itu. Oh iya, anbi pengen gambar hasil crawl disimpen difolder <strong>Pictures</strong>. Kita tinggal kasih parameter <em><strong>path</strong></em> direktori tujuan. Contoh :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">instalooter post <span style="color:#e6db74">&#34;https://www.instagram.com/p/CEwhuIghkKb/&#34;</span>  ~/Pictures
+</code></pre></div><ul>
+<li><code>~/Pictures</code> adalah <em><strong>path</strong></em> direktori untuk menyimpan hasil crawl.</li>
+</ul>
+<br>
+<h2 id="crawling-akun-private">Crawling Akun Private</h2>
+<hr>
+<p>Nah, kalau mau crawling akun private, cara satu - satunya adalah kalian follow dulu akunnya. Lalu nunggu di <em>Accept</em> nah, abis itu baru deh bisa kita crawl 😂.</p>
+<p>Cara <strong>login</strong> pakai <strong>Instalooter</strong> gimana? gini caranya, misal anbi bakal crawl salah satu akun instagram Private yang kebetulan udah di accept hehe.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">instalooter user tridesir --username humanoid99 --password <span style="color:#ae81ff">12345678</span>
+</code></pre></div><ul>
+<li><code>--username</code> : kalian isi dengan username akun instagram kalian.</li>
+<li><code>--password</code> : kalian isi dengan <em>password</em> instagram kalian.</li>
+</ul>
+<blockquote>
+<p><strong>PENTING</strong> : Akun yang digunakan harus udah diaccept dulu yak 🙄</p>
+</blockquote>
+<br>
+<h2 id="implementasi-pada-script">Implementasi Pada Script</h2>
+<hr>
+<p>Nah, program ini juga bisa kita perlakukan juga menjadi sebuah library. Sehingga bisa kita <code>import</code> kedalam script atau program yang ingin kita buat.</p>
+<p>Contoh kode yang paling mudah seperti ini.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> instalooter.looters <span style="color:#f92672">import</span> ProfileLooter
+
+instagram_user <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;anbidev&#34;</span>
+looter <span style="color:#f92672">=</span> ProfileLooter(username<span style="color:#f92672">=</span>instagram_user)    
+looter<span style="color:#f92672">.</span>download(<span style="color:#e6db74">&#39;~/Pictures&#39;</span>, media_count<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+</code></pre></div><p>Dari script diatas bertujuan untuk mendownload 10 postingan terbaru pada instagram <strong>@anbidev</strong>.</p>
+<p>Nah, selanjutnya kita bisa mengembangkannya lagi, dari script tersebut sesuai dengan kebutuhan yang diinginkan.</p>
+<p>Misal anbi, disini bakal <em>crawling</em> seluruh komentar postingan di salah satu postingan instagram. Anbi bakal ambil di postingannya <strong>petanikode</strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> instalooter.looters <span style="color:#f92672">import</span> PostLooter
+
+instagram_post <span style="color:#f92672">=</span> PostLooter(<span style="color:#e6db74">&#39;https://www.instagram.com/p/CLiS5C9BVQx/&#39;</span>)
+list_media <span style="color:#f92672">=</span> instagram_post<span style="color:#f92672">.</span>medias()
+
+<span style="color:#66d9ef">for</span> media <span style="color:#f92672">in</span> list_media:
+    info <span style="color:#f92672">=</span> instagram_post<span style="color:#f92672">.</span>get_post_info(media[<span style="color:#e6db74">&#39;shortcode&#39;</span>])
+    list_comment <span style="color:#f92672">=</span> info[<span style="color:#e6db74">&#39;edge_media_to_parent_comment&#39;</span>]
+    the_comment <span style="color:#f92672">=</span> list_comment[<span style="color:#e6db74">&#39;edges&#39;</span>]
+    count <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">for</span> comment <span style="color:#f92672">in</span> the_comment:
+        the_comment <span style="color:#f92672">=</span> comment[<span style="color:#e6db74">&#39;node&#39;</span>]
+
+        parent_comment <span style="color:#f92672">=</span> the_comment[<span style="color:#e6db74">&#39;text&#39;</span>]
+        list_reply <span style="color:#f92672">=</span> the_comment[<span style="color:#e6db74">&#39;edge_threaded_comments&#39;</span>][<span style="color:#e6db74">&#39;edges&#39;</span>]
+      
+        <span style="color:#66d9ef">print</span>(count,<span style="color:#e6db74">&#39; Komentar : &#39;</span>, parent_comment)
+      
+        count_reply <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">if</span> list_reply:
+            <span style="color:#66d9ef">for</span> reply <span style="color:#f92672">in</span> list_reply:
+                the_reply <span style="color:#f92672">=</span> reply[<span style="color:#e6db74">&#39;node&#39;</span>]
+                
+                parent_reply <span style="color:#f92672">=</span> the_reply[<span style="color:#e6db74">&#39;text&#39;</span>]
+                <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&#34;</span>,count_reply, <span style="color:#e6db74">&#39;Balasan&#39;</span>, parent_reply)
+                count_reply <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        
+        count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</code></pre></div><p>Pada kode diatas, anbi crawling semua komentar pada salah satu postingan instagram petanikode menggunakan modul <code>PostLooter</code>.</p>
+<p>Jika komentarnya ga nambah kemungkinan hasilnya akan seperti ini.</p>
+<pre><code>1  Komentar :  Typo tu unary semua tiap slide min 🙄
+         1 Balasan @anandapujawandra betul. tolong direvisi 😂 @petanikode
+2  Komentar :  waduh tipo min
+3  Komentar :  Bernyanyy
+         1 Balasan @alfari16 ngoding doang ga bernyanyy
+         2 Balasan @alfari16 🤙🏻🤙🏻🤙🏻
+4  Komentar :  bernyanyi 🔫
+5  Komentar :  Cara termudah buat belajar ternary, example: Laper ? Makan(makanan: any) : udahKenyang()
+6  Komentar :  Setiap operator itu unary ya? Ato typo?
+7  Komentar :  Namanya juga manusia, klo sekali dua kali salah ya wajar
+</code></pre><p>Dan masih banyak lagi yang dapat kita implementasikan menggunakan library ini. Bisa crawling jumlah like, kapan dia posting, siapa aja followernya dan lain - lain. Semuanya tergantung kebutuhan kalian masing - masing.</p>
+<center> . . . </center>
+<p>Oke gitu dulu untuk postingan pelengkap ini hehe, semoga bermanfaat dan mungkin bakal anbi buatin program crawling instagram ini nantinya. Nantikan postingan anbidev selanjutnya ya. Terima kasih :)</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Konversi Gambar Ke Sketsa Pensil Dengan Python OpenCV</title>
+            <link>https://anbidev.com/python-konversi-gambar-sketsa-pensil/</link>
+            <pubDate>Sat, 13 Feb 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/python-konversi-gambar-sketsa-pensil/</guid>
+            <description>Hai, anbi disini bakal kasih sedikit tutorial tentang cara mengkonversi gambar yang berwarna kembali menjadi sketsa pensil atau foto berwarna kalian menjadi sebuah gambaran pensil.
+ . . . Sekarang banyak sekali aplikasi filter yang mengubah gambar atau foto kita ke suatu warna tertentu atau lebih imut atau masih banyak lagi. Tapi apakah kalian pernah berpikiran bagaimana filter gambar itu dibuat?
+Aplikasi - aplikasi tersebut melakukan manipulasi gambar dengan teknik computer vision.</description>
+            <content type="html"><![CDATA[<p>Hai, anbi disini bakal kasih sedikit tutorial tentang cara mengkonversi gambar yang berwarna kembali menjadi sketsa pensil atau foto berwarna kalian menjadi sebuah gambaran pensil.</p>
+<center> . . . </center>
+<p>Sekarang banyak sekali aplikasi filter yang mengubah gambar atau foto kita ke suatu warna tertentu atau lebih imut atau masih banyak lagi. Tapi apakah kalian pernah berpikiran bagaimana filter gambar itu dibuat?</p>
+<p>Aplikasi - aplikasi tersebut melakukan manipulasi gambar dengan teknik <strong>computer vision</strong>. Nah, disini anbi bakal salah satu library terkenal yang dapat melakukan manipulasi gambar ydengan teknik yang sama yaitu <strong><a href="https://opencv.org/"
+    
+     target="_blank" rel="noreferrer" >OpenCV</a></strong>.</p>
+<p>Menggunakan library ini kita coba mengkonversi gambar atau foto berwarna menjadi seperti sketsa pensil. Bagaimana cara melakukannya? mari kita simak langkah - langkahnya dibawah ini.</p>
+<br>
+<h2 id="1-install-dan-import-opencv">1. Install Dan Import OpenCV</h2>
+<hr>
+<p>Pertama kita install dulu library opencv dalam bahasa python menggunakan pip.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pip install opencv<span style="color:#f92672">-</span>python
+</code></pre></div><p>Setelah itu kita import modulnya yaitu <code>cv2</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cv2
+</code></pre></div><br>
+<h2 id="2-load-gambar">2. Load Gambar</h2>
+<hr>
+<p>Lalu selanjutnya kita <em>load</em> gambar yang ingin kita konversi ke dalam program kita.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">img <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>imread(<span style="color:#e6db74">&#34;gambarku.jpg&#34;</span>, <span style="color:#ae81ff">1</span>)
+</code></pre></div><ul>
+<li><code>gambarku.jpg</code> -&gt; adalah gambar yang ingin anda konversi.</li>
+</ul>
+<blockquote>
+<p>Pastikan gambar dan juga program dalam satu folder untuk mempermudah <em>load</em> image</p>
+</blockquote>
+<p>Gambar yang ingin anbi konversi adalah gambar lawang sewu ini.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-sketch-pencil-01.jpg" alt="&amp;lsquo;Gambar Lawang Sewu&amp;rsquo;" title="Gambar Lawang Sewu" >
+    <figcaption>Gambar Lawang Sewu</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="3-konversi-gambar-ke-hitam---putih">3. Konversi Gambar Ke Hitam - Putih</h2>
+<hr>
+<p>Kemudian kita konversi gambar yang kita load tadi ke warna hitam putih terlebih dahulu, menggunakan fungsi <code>cvtColor</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">img_gray <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>cvtColor(img, cv2<span style="color:#f92672">.</span>COLOR_BGR2GRAY)
+</code></pre></div><p>Kenapa harus dibuat hitam putih? mengubahnya kedalam bentuk hitam putih (grayscale) memberi kita <strong>Pixel</strong> mana saja yang bisa digunakan dalam membuat gambar menjadi sebuah sketsa pensil.</p>
+<p>Lalu, untuk melihat hasilnya kalian bisa menggunakan fungsi <code>imwrite</code> dibawah ini.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cv2<span style="color:#f92672">.</span>imwrite(<span style="color:#e6db74">&#34;img_hitam_putih.png&#34;</span>, img_gray)
+</code></pre></div><p>Fungsi ini akan membuat gambar yang dimanipulasi menjadi sebuah file <code>.png</code> atau ekstensi yang kalian inginkan.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-sketch-pencil-02.jpg" alt="&amp;lsquo;Gambar Hitam Putih&amp;rsquo;" title="Gambar Hitam Putih" >
+    <figcaption>Gambar Hitam Putih</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="4-invert-gambar">4. Invert Gambar</h2>
+<hr>
+<p>Langkah selanjutnya adalah <em>inverting</em> warna pada gambar hitam putih. Untuk inverting kita bisa menggunakan fungsi <code>bitwise_not</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">img_invert <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>bitwise_not(img_gray)
+</code></pre></div><p>Kenapa harus dikonversi ke <em>invert</em>? Hal ini digunakan untuk membuat daerah yang terang menjadi lebih terang dan sebaliknya. Sehingga kita dapat menemukan garis - garis yang tepat untuk membuat sketsa pensil.</p>
+<p>Coba kita lihat hasilnya.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cv2<span style="color:#f92672">.</span>imwrite(<span style="color:#e6db74">&#34;img_invert.png&#34;</span>, img_invert)
+</code></pre></div><p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-sketch-pencil-03.jpg" alt="&amp;lsquo;Gambar Inversi&amp;rsquo;" title="Gambar Inversi" >
+    <figcaption>Gambar Inversi</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="5-memperhalus-gambar">5. Memperhalus Gambar</h2>
+<hr>
+<p>Berikutnya adalah memperhalus gambar yang sudah ada dengan cara menambahkan filter <em>gaussian blur</em> pada gambar yang kita invert tadi.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">img_smoothing <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>GaussianBlur(img_invert, (<span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">21</span>),sigmaX<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, sigmaY<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</code></pre></div><p>Disini kita menggunakan teknik <em>gaussian blur</em> dengan tingkat blur 21 x 21 pixel, serta membiarkan kedua nilai <code>sigma</code> menjadi default <code>(0, 0)</code> pada saat memperhalus gambar kita.</p>
+<p>Dengan meningkatkan ukuran filter, kita dapat membuat garis tipis untuk sketsa yang akan kita buat, dan hal ini digunakan juga untuk mengurangi <em>noise</em> pada gambar.</p>
+<p>Coba kita lihat hasilnya.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cv2<span style="color:#f92672">.</span>imwrite(<span style="color:#e6db74">&#34;img_smoothing.png&#34;</span>, img_invert)
+</code></pre></div><p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-sketch-pencil-04.png" alt="&amp;lsquo;Gambar Smoothing&amp;rsquo;" title="Gambar Smoothing" >
+    <figcaption>Gambar Smoothing</figcaption>
+  </figure>
+
+
+</p>
+<p><em>&ldquo;Loh, kok jadi gini?&quot;</em> Sabar, mari kita ke tahap selanjutnya.</p>
+<br>
+<h2 id="6-sketsa-final">6. Sketsa Final</h2>
+<hr>
+<p>Pada <strong>tahap ke 5</strong> kita telah mendapatkan gambar <em>invert</em> yang sudah di perhalus. Nah, dilangkah terakhir ini kita akan mencampurkan gambar <strong>hitam putih</strong> dengan gambar yang sudah di <strong>perhalus</strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sketsa_final <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>divide(img_gray, <span style="color:#ae81ff">255</span> <span style="color:#f92672">-</span> img_smoothing, scale<span style="color:#f92672">=</span><span style="color:#ae81ff">256</span>)
+</code></pre></div><p>Menggunakan fungsi <code>divide()</code> untuk membagi nilai pada gambar hitam putih, berdasarkan nilai gambar yang sudah kita perhalus, sehingga menghasilkan gambar dengan garis - garis yang ditebalkan menggunakan kalkulasi tersebut.</p>
+<p>Mari kita lihat bagaimana hasil akhirnya.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cv2<span style="color:#f92672">.</span>imwrite(<span style="color:#e6db74">&#34;sketsa_final.png&#34;</span>, sketsa_final)
+</code></pre></div><p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-sketch-pencil-05.jpg" alt="&amp;lsquo;Gambar Sketsa Pensil&amp;rsquo;" title="Gambar Sketsa Pensil" >
+    <figcaption>Gambar Sketsa Pensil</figcaption>
+  </figure>
+
+
+</p>
+<center> . . . </center>
+<p>Nah, coba kita bandingkan dengan gambar aslinya. Gimana? langsung jadi seperti dibuat dari sketsa pensil kan?</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-sketch-pencil-06.jpg" alt="&amp;lsquo;Perbandingan&amp;rsquo;" title="Perbandingan" >
+    <figcaption>Perbandingan</figcaption>
+  </figure>
+
+
+</p>
+<p>Masih banyak lagi hal - hal keren yang bisa kita buat menggunakan library keren <a href="https://opencv.org/"
+    
+     target="_blank" rel="noreferrer" >ini</a>. Lain kali anbi bakal buat tutorial tentang <em>image processing</em> menggunakan OpenCV.</p>
+<p>Untuk <strong>full codenya</strong> kalian bisa kalian di github <a href="https://github.com/AnbiDev/python-opencv-sketch-pencil"
+    
+     target="_blank" rel="noreferrer" >AnbiDev</a>.</p>
+<p>🐙 <a href="https://github.com/AnbiDev/python-opencv-sketch-pencil"
+    
+     target="_blank" rel="noreferrer" >https://github.com/AnbiDev/python-opencv-sketch-pencil</a></p>
+<p>Eh, nih anbi kasih satu bonus lagi buat kalian hehe.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-sketch-pencil-07.jpg" alt="&amp;lsquo;Waifu Anbi :*&#39;" title="Waifu Anbi :*" >
+    <figcaption>Waifu Anbi :*</figcaption>
+  </figure>
+
+
+</p>
+<p>Oke sekian dari Anbi, sampai ketemuan di postingan selanjutnya.</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

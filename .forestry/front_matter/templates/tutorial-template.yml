@@ -1,0 +1,98 @@
+---
+label: Tutorial Template
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: description
+  label: description
+- type: list
+  name: type
+  label: type
+- type: text
+  name: status
+  label: status
+- type: list
+  name: tags
+  label: tags
+- type: datetime
+  name: date
+  label: date
+- type: list
+  name: tutorials
+  label: tutorials
+- type: text
+  name: series
+  label: series
+- type: text
+  name: authors
+  label: authors
+- type: text
+  name: shortcode
+  label: shortcode
+- type: text
+  name: url
+  label: url
+- type: list
+  name: sumber
+  label: sumber
+- name: cover
+  type: file
+  config:
+    maxSize: 64
+  label: cover
+- type: field_group
+  name: author
+  label: author
+  fields:
+  - type: text
+    name: name
+    label: name
+  - name: images
+    type: text
+    config:
+      required: false
+    label: images
+    description: images for author
+    default: "/img/author.jpg"
+pages:
+- content/tutorials/android/berkenalan-dengan-android-studio.md
+- content/tutorials/android/installasi-android-studio.md
+- content/tutorials/android/layouting-pada-android-studio.md
+- content/tutorials/arduino/mengenal-arduino.md
+- content/tutorials/arduino/persiapan-belajar-arduino.md
+- content/tutorials/blockchain/struktur-blockchain-dan-bagaimana-blockchain-bekerja.md
+- content/tutorials/c/bilangan-prima-pada-c.md
+- content/tutorials/c/break-dan-continue-pada-c.md
+- content/tutorials/c/ganjil-genap-pada-bahasa-c.md
+- content/tutorials/c/input-dan-output-pada-c.md
+- content/tutorials/c/membuat-menu-pada-c.md
+- content/tutorials/c/mencari-zodiak-dengan-c.md
+- content/tutorials/c/menggunakan-goto-pada-c.md
+- content/tutorials/c/operator-operand-dan-aritmatika-pada-c.md
+- content/tutorials/c/pengkondisian-if-statements.md
+- content/tutorials/c/persiapan-belajar-c.md
+- content/tutorials/c/perulangan-c-while-loop.md
+- content/tutorials/c/perulangan-foor-loop.md
+- content/tutorials/c/switch-case-pada-c.md
+- content/tutorials/c/syntax-dasar-c.md
+- content/tutorials/flutter/column-dan-row.md
+- content/tutorials/flutter/flutter-struktur-folder-dan-file.md
+- content/tutorials/flutter/flutter-test-drive.md
+- content/tutorials/flutter/instalasi-flutter.md
+- content/tutorials/flutter/layout-pada-flutter.md
+- content/tutorials/flutter/membuat-aplikasi-flutter-pertama.md
+- content/tutorials/flutter/mempersiapkan-editor.md
+- content/tutorials/flutter/mengenal-widget-pada-flutter.md
+- content/tutorials/git/cara-menggunakan-git.md
+- content/tutorials/kotlin/kotlin-101.md
+- content/tutorials/kotlin/kotlin-basic-part-1.md
+- content/tutorials/kotlin/kotlin-basic-part-2-control-flow-returns-jumps.md
+- content/tutorials/kotlin/kotlin-basic-part-3-functions.md
+- content/tutorials/kotlin/kotlin-basic-part-4-oop.md
+- content/tutorials/kotlin/lets-start-with-kotlin.md
+- content/tutorials/networking/intro-apa-itu-mikrotik.md
+- content/tutorials/networking/kode-serie-produk-mikrotik.md
+- content/tutorials/networking/monitoring-mikrotik-dengan-zabbix.md

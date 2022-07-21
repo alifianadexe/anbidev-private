@@ -1,0 +1,185 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>network on AnbiDev</title>
+        <link>https://anbidev.com/tags/network/</link>
+        <description>Recent content in network on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Sun, 13 Dec 2020 17:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/network/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>YouTube dan Google down!?</title>
+            <link>https://anbidev.com/google-youtube-down/</link>
+            <pubDate>Sun, 13 Dec 2020 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/google-youtube-down/</guid>
+            <description>Pada 14 Desember 2020, sekitar jam 18.25 WIB, sejumlah layanan dari Google dan YouTube mengalami down server. Hal ini ditunjukkan dengan pesan error 500 atau gambar Monyet saat kita mencoba mengakses YouTube. &amp;ldquo;Ada yang tidak beres …&amp;rdquo; adalah pesan yang muncul menyertainya.
+Menurut situs Downdetector, sejumlah laporan muncul untuk Youtube yakni, 47% akses ke Website, 44 % saat menonton video, dan 7% tidak bisa login. Pada situs ini juga, banyak laporan dimulai dengan 87 laporan pada 18:39 WIB sampai 71126 laporan pada 19:12 WIB.</description>
+            <content type="html"><![CDATA[<p>Pada 14 Desember 2020, sekitar jam 18.25 WIB, sejumlah layanan dari Google dan YouTube mengalami down server. Hal ini ditunjukkan dengan pesan error <code>500</code> atau gambar Monyet saat kita mencoba mengakses YouTube. &ldquo;Ada yang tidak beres …&rdquo; adalah pesan yang muncul menyertainya.</p>
+<p>Menurut situs <a href="https://downdetector.com/"
+     title="Downdetector" 
+     target="_blank" rel="noreferrer" >Downdetector</a>, sejumlah laporan muncul untuk Youtube yakni, 47% akses ke Website, 44 % saat menonton video, dan 7% tidak bisa login. Pada situs ini juga, banyak laporan dimulai dengan 87 laporan pada 18:39 WIB sampai 71126 laporan pada 19:12 WIB. Sungguh angka yang fantastis kan. YouTube juga merupakan layanan milik Google, sehingga tidak heran jika Google down, beberapa layanan lain seperti AdSense, Analytic, Gmail dan Drive juga ikut tidak bisa diakses.</p>
+<p>Pada Twitter sendiri, jam 19:33 WIB, topik <code>Google</code> mendapat 1,11M Tweet, dan <code>#YouTubeDOWN</code> mendapat 124K Tweet. Banyak yang kecewa dengannya, terutama bagi negara bagian barat yang masih siang dan sedang menjalani pembelajaran secara virtual dan <em>work-from-home</em>. Untuk negara timur memang sedang mengalami zona waktu petang, tetapi banyak juga mahasiswa dan pekerja yang beraktivitas hingga malam hari.</p>
+<p>Untuk YouTube sendiri ini merupakan kali ketiga situs ini tidak bisa diakses bulan ini. Yakni pada 9 dan 11 Desember 2020. Sedangkan untuk Google, banyak dilaporkan gangguan pada 7, 9, dan 10 Desember 2020.</p>
+<p>Setiap perusahaan pasti punya hitungan sendiri dalam menentukan kerugian. Tempat kerja Anbi yang beroperasi 24 jam pun juga ikut terkendala, terutama saat memerlukan layanan Gmail untuk menghubungi provider yang lagi mengalami kendala <em>fiber-optic</em>. Sampai saat ini, belum ada konfirmasi dari pihak Google tentang down nya layanan mereka. Kira-kira apa ya?</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Menginstall Zabbix pada Linux</title>
+            <link>https://anbidev.com/menginstall-zabbix-pada-linux/</link>
+            <pubDate>Tue, 03 Nov 2020 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/menginstall-zabbix-pada-linux/</guid>
+            <description>Zabbix dibuat oleh Alexei Vladishev, saat ini dikembangkan dan di support oleh Zabbix SIA. Zabbix adalah software yang digunakan untuk memonitoring jaringan, kesehatan server, virtual machine, aplikasi, database, website, cloud dan masih banyak lagi. Aplikasi ini gratis, ditulis dan didistribusikan dibawah General Public License version 2. Website resminya ada di sini.
+Kebutuhan Dalam praktik kali ini author menggunakan:
+ Linux 16.04 Server LTS (Xenial Xerus) RAM 4 GB HDD 50 GB  Install LAMPP Server Update terlebih dahulu Sistem Operasi</description>
+            <content type="html"><![CDATA[<p>Zabbix dibuat oleh <em><strong>Alexei Vladishev</strong></em>, saat ini dikembangkan dan di support oleh <em>Zabbix SIA</em>. Zabbix adalah software yang digunakan untuk memonitoring jaringan, kesehatan server, virtual machine, aplikasi, database, website, cloud dan masih banyak lagi. Aplikasi ini gratis, ditulis dan didistribusikan dibawah <em>General Public License version 2</em>. Website resminya ada di <a href="www.zabbix.com"
+     title="zabbix" 
+    >sini</a>.</p>
+<br>
+<h2 id="kebutuhan">Kebutuhan</h2>
+<hr>
+<p>Dalam praktik kali ini author menggunakan:</p>
+<ul>
+<li><strong>Linux 16.04 Server LTS (Xenial Xerus)</strong></li>
+<li><strong>RAM 4 GB</strong></li>
+<li><strong>HDD 50 GB</strong></li>
+</ul>
+<br>
+<h2 id="install-lampp-server">Install LAMPP Server</h2>
+<hr>
+<p>Update terlebih dahulu Sistem Operasi</p>
+<pre><code>$ sudo apt update -y
+$ sudo apt upgrade -y
+</code></pre><p>Install Apache, PHP 7 dan modul yang diperlukan lainnya</p>
+<pre><code>$ sudo apt install apache2 libapache2-mod-php7.0 php7.0 php7.0-xml php7.0-bcmath php7.0-mbstring -y
+</code></pre><p>Pastikan Apache sudah terinstall dengan baik dengan mengetikkan IP dari server di Browser, semoga sudah muncul halaman seperti ini</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/screenshot-423.png" alt="Halaman Apache" title="Halaman Apache" >
+    <figcaption>Halaman Apache</figcaption>
+  </figure>
+
+
+</p>
+<p>Pastikan PHP sudah terinstall dengan mengetikkan <code>php -v</code></p>
+<pre><code>$ php -v
+PHP 7.0.33-0ubuntu0.16.04.16 (cli) ( NTS )
+Copyright (c) 1997-2017 The PHP Group
+Zend Engine v3.0.0, Copyright (c) 1998-2017 Zend Technologies with Zend OPcache v7.0.33-0ubuntu0.16.04.16, Copyright (c) 1999-2017, by Zend Technologies
+</code></pre><p>Install database, disini author menggunakan MySQL</p>
+<pre><code>$ sudo apt install mysql-server -y
+</code></pre><p>Masukkan <strong>Password MySQL</strong> dan jangan dilupakan, nanti kita akan buat database untuk zabbix
+Jika proses instalasi sudah selesai, kita jalankan MySQL. Lalu <em>enable</em> juga agar MySQL berjalan pada awal booting</p>
+<pre><code>$ sudo systemctl start mysql
+$ sudo systemctl enable mysql
+</code></pre><br>
+<h2 id="install-zabbix">Install Zabbix</h2>
+<hr>
+<p>Secara default, repositori zabbix tidak ada di <strong>Ubuntu 16.04</strong> sehingga kita perlu menambahkan nya secara manual dengan cara:</p>
+<pre><code>$ sudo wget https://repo.zabbix.com/zabbix/4.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_4.0-3+xenial_all.deb  
+$ sudo dpkg -i zabbix-release_4.0-3+xenial_all.deb  
+$ sudo apt update
+</code></pre><p>Lalu kita install Zabbix server, <em>frontend</em> (Dijalankan di Browser), agent</p>
+<pre><code>$ sudo apt install zabbix-server-mysql zabbix-frontend-php zabbix-agent
+</code></pre><p>Lalu kita buat database untuk zabbix. Jalankan kode berikut</p>
+<pre><code>$ mysql -u root -p  
+password:
+mysql&gt; create database zabbix character set utf8 collate utf8_bin;  
+mysql&gt; create user zabbix@localhost identified by 'password';  
+mysql&gt; grant all privileges on zabbix.* to zabbix@localhost;  
+mysql&gt; quit;
+</code></pre><p>Kita harus mengimport desain database milik zabbix</p>
+<pre><code>$ sudo zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -uzabbix -p zabbix`
+</code></pre><p>Konfigurasi password database zabbix</p>
+<pre><code>$ nano /etc/zabbix/zabbix_server.conf
+</code></pre><p>Cari <strong>DBPassword</strong>, lalu ubah dan sesuaikan dengan password mysql zabbix tadi, konfigurasi file nya ada di  <code>zabbix_server.conf</code>.</p>
+<pre><code>DBPassword=password
+</code></pre><p>Konfigurasi <strong>timezone</strong> yang akan digunakan, sesuaikan dengan tempat server terpasang. Sesuaikan juga dengan versi PHP yg terpasang, file konfigurasinya terletak di  <code>/etc/zabbix/apache.conf</code>.</p>
+<pre><code>php_value date.timezone Europe/Riga
+</code></pre><p>Ubah menjadi</p>
+<pre><code>php_value date.timezone Asia/Jakarta
+</code></pre><p>Jalankan Zabbix Server dan Agent</p>
+<pre><code>$ sudo systemctl restart zabbix-server zabbix-agent apache2
+$ sudo systemctl enable zabbix-server zabbix-agent apache2
+</code></pre><br>
+<h2 id="konfigurasi-front-end-zabbix">Konfigurasi Front-End Zabbix</h2>
+<hr>
+<p>Zimbra perlu dikonfigurasi lagi dibagian front-end menggunakan browser. Buka Setup Zabbix pada browser dengan mengetikkan alamat server tempat install zabbix</p>
+<ul>
+<li>Pilih Next Setup</li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/screenshot-457.png" alt="&amp;ldquo;Anbidev Zabbix 1&amp;rdquo;" title="Anbidev Zabbix 1" >
+    <figcaption>Anbidev Zabbix 1</figcaption>
+  </figure>
+
+
+</p>
+<ul>
+<li>Pastikan semua Status telah OK</li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/screenshot-458.png" alt="&amp;ldquo;Anbidev Zabbix 2&amp;rdquo;" title="Anbidev Zabbix 2" >
+    <figcaption>Anbidev Zabbix 2</figcaption>
+  </figure>
+
+
+</p>
+<ul>
+<li>Halaman berikutnya adalah konfigurasi database. Sesuaikan dengan yang telah di install tadi</li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/screenshot-459.png" alt="&amp;ldquo;Status Frontend&amp;rdquo;" title="Konfigurasi Database" >
+    <figcaption>Konfigurasi Database</figcaption>
+  </figure>
+
+
+</p>
+<ul>
+<li>Berikan identitas Hostname dan Port, untuk nama bersifat opsional.</li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/screenshot-460.png" alt="&amp;ldquo;Isi Hostname dan Port&amp;rdquo;" title="Isi Hostname dan Port" >
+    <figcaption>Isi Hostname dan Port</figcaption>
+  </figure>
+
+
+</p>
+<ul>
+<li>Pastikan data telah benar, lalu pilih Next Step untuk memulai Installasi</li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/screenshot-461.png" alt="&amp;ldquo;Check Data Anda dan Finish&amp;rdquo;" title="Check Data Anda dan Finish" >
+    <figcaption>Check Data Anda dan Finish</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="zabbix-login">Zabbix Login</h2>
+<hr>
+<p>Setelah proses install selesai, sekarang buka zabbix.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/screenshot-464.png" alt="&amp;ldquo;Halaman Login Zabbix&amp;rdquo;" title="Halaman Login Zabbix" >
+    <figcaption>Halaman Login Zabbix</figcaption>
+  </figure>
+
+
+</p>
+<p>Authentikasi untuk masuk ke halaman dashboard zabbix adalah</p>
+<p><strong>Username: Admin</strong></p>
+<p><strong>Password: zabbix</strong></p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

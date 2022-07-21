@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<link rel="preconnect" href="https://www.google.com" crossorigin="">
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin="">
+<link rel="preconnect" href="https://code.jquery.com" crossorigin="">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="">
+<link rel="preconnect" href="https://www.anbidev.com">
+
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://www.google.com">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta itemprop="name" content="Cara Membuat Library Python">
+<meta itemprop="description" content="Membahas bagaimana cara membuat library python dari awal sampai akhir">
+<meta itemprop="datePublished" content="2020-12-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-12-23T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1149">
+<meta itemprop="image" content="https://anbidev.com/"/>
+
+
+
+<meta itemprop="keywords" content="modul,python,library," />
+
+<meta itemprop="image" content="https://www.anbidev.com/post/python-buat-library.jpg">
+<meta itemprop="author" content="AlifianAdexe">
+
+<meta property="og:locale" content="id_ID" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Cara Membuat Library Python" />
+<meta property="og:description" content="Membahas bagaimana cara membuat library python dari awal sampai akhir" />
+<meta property="og:image" itemprop="image" content="https://www.anbidev.com/post/python-buat-library.jpg">
+<meta property="og:image:secure_url" itemprop="image" content="https://www.anbidev.com/post/python-buat-library.jpg">
+<meta property="og:image:alt" content="Membahas bagaimana cara membuat library python dari awal sampai akhir">
+<meta property="og:url" content="https://anbidev.com/python-buat-library/" />
+<meta property="og:site_name" content="AnbiDev" />
+
+<meta property="article:author" content="https://www.facebook.com/anbidevofficial">
+<meta property="article:publisher" content="https://www.facebook.com/anbidevofficial" />
+<meta property="article:published_time" content="2020-12-23 00:00:00 &#43;0000 UTC">
+<meta property="article:modified_time" content="2020-12-23 00:00:00 &#43;0000 UTC" />
+
+
+
+
+<meta property="article:tag" content="modul">
+
+<meta property="article:tag" content="python">
+
+<meta property="article:tag" content="library">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.anbidev.com/post/python-buat-library.jpg" />
+<meta name="twitter:description" content="Membahas bagaimana cara membuat library python dari awal sampai akhir" />
+<meta name="twitter:creator" content="AlifianAdexe" />
+<meta name="twitter:site" content="@anbidev" />
+<meta name="telegram:channel" content="@anbidev">
+
+<meta name="language" content="Indonesian">
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="description" content="Membahas bagaimana cara membuat library python dari awal sampai akhir" />
+<meta name="google-site-verification" content="83X4eiMqN4k1rdNtstMPYQCN9PNUpKoSq5NWEW0hRQw" />
+
+<link rel="canonical" href="https://anbidev.com/python-buat-library/" />
+<link rel="manifest" href="https://anbidev.com/manifest.json">
+
+<meta name="application-name" content="AnbiDev"/>
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://anbidev.com/appicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://anbidev.com/appicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://anbidev.com/appicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://anbidev.com/appicons/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://anbidev.com/appicons/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://anbidev.com/appicons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://anbidev.com/appicons/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://anbidev.com/appicons/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="https://anbidev.com/appicons/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="https://anbidev.com/appicons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://anbidev.com/appicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://anbidev.com/appicons/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://anbidev.com/appicons/favicon-128.png" sizes="128x128" />
+
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="/appicons/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="/appicons/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="/appicons/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="/appicons/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="/appicons/mstile-310x310.png" />
+
+
+<title>
+    
+    Cara Membuat Library Python :: AnbiDev 
+    
+</title>
+
+
+
+
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://anbidev.com/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://anbidev.com/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://anbidev.com/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://anbidev.com/favicon/site.webmanifest">
+<link rel="mask-icon" href="https://anbidev.com/favicon/safari-pinned-tab.svg" color="#252627">
+<meta name="msapplication-TileColor" content="#252627">
+<meta name="theme-color" content="#252627">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="https://anbidev.com/css/custom.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="https://anbidev.com/css/bootstrap-grid.css">
+
+
+
+<link rel="preload" href="https://anbidev.com/css/font.css" as="style">
+<link rel="preload" href="https://anbidev.com/fonts/asap-v13-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" href="https://anbidev.com/fonts/asap-v13-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" href="https://anbidev.com/fonts/asap-v13-latin-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" href="https://anbidev.com/fonts/asap-v13-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" href="https://anbidev.com/fonts/asap-v13-latin-600italic.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+
+
+
+<link rel="stylesheet" href="https://anbidev.com/main.min.1e87bcd477ea6a20681b75fd80f44c25354e3a95149d4963c52845e849e1b7c3.css">
+
+
+    </head>
+
+    <body class="">
+            <div class="container">
+<header class="header nav-down">
+    <span class="header__inner">
+        <a href="https://anbidev.com/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">>_ cd</span>
+            <span class="logo__text"
+                  data-period="2000"
+                  data-rotate=[&#32;&#34;/AnbiDev/&#34;,&#32;&#34;/Python/&#34;,&#32;&#34;/Kotlin/&#34;,&#32;&#34;/Flutter/&#34;,&#32;&#34;/CodeLife/&#34;&#32;]
+            >/AnbiDev/</span>
+            
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner">
+            
+                <li>
+                    <a href="https://anbidev.com/blogs/">Blog</a>
+                </li>
+            
+        
+            
+            <li class="menu-hover">
+                    <a href="https://anbidev.com/tutorials/">Tutorial
+                        <span class="drop-icon" for="Tutorial">▾</span>
+                    </a>
+                <ul class="sub-menu">
+                    
+                    <li>
+                        <a href="https://anbidev.com/tutorials/python/"><img class="img-icon" src="https://anbidev.com/img/python.svg">Python</a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://anbidev.com/tutorials/machine-learning/"><img class="img-icon" src="https://anbidev.com/img/machine-learning.svg">Machine Learning</a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://anbidev.com/tutorials/c&#43;&#43;/"><img class="img-icon" src="https://anbidev.com/img/c&#43;&#43;.svg">C&#43;&#43;</a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://anbidev.com/tutorials/kotlin/"><img class="img-icon" src="https://anbidev.com/img/kotlin.svg">Kotlin</a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://anbidev.com/tutorials/android/"><img class="img-icon" src="https://anbidev.com/img/android.svg">Android</a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://anbidev.com/tutorials/git/"><img class="img-icon" src="https://anbidev.com/img/git.svg">Git</a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://anbidev.com/tutorials/php/"><img class="img-icon" src="https://anbidev.com/img/php.svg">PHP</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            
+        
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+            
+            <span id="theme-search" class="theme-search"><svg class="theme-searching" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        width="19.2" height="19.2" viewBox="0 0 30.239 30.239" style="enable-background:new 0 0 30.239 30.239;"
+                        xml:space="preserve">
+                       <path d="M20.194,3.46c-4.613-4.613-12.121-4.613-16.734,0c-4.612,4.614-4.612,12.121,0,16.735
+                           c4.108,4.107,10.506,4.547,15.116,1.34c0.097,0.459,0.319,0.897,0.676,1.254l6.718,6.718c0.979,0.977,2.561,0.977,3.535,0
+                           c0.978-0.978,0.978-2.56,0-3.535l-6.718-6.72c-0.355-0.354-0.794-0.577-1.253-0.674C24.743,13.967,24.303,7.57,20.194,3.46z
+                            M18.073,18.074c-3.444,3.444-9.049,3.444-12.492,0c-3.442-3.444-3.442-9.048,0-12.492c3.443-3.443,9.048-3.443,12.492,0
+                           C21.517,9.026,21.517,14.63,18.073,18.074z"/>
+</svg> </span>
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+
+        </span>
+    </span>
+</header>
+</div>
+
+            <div class="overlay hidden"></div>
+            
+<div class="container-post">
+    <div class="content">
+        <div class="row">
+            <main class="post post-tutorial col-md-8" >
+            <div class="post-info">
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>6 minutes
+
+                
+
+                </p>
+            </div>
+            <article>
+                <h1 class="post-title"><a href="https://anbidev.com/python-buat-library/">Cara Membuat Library Python</a></h1>
+
+                
+                    <img class="lazy post-cover" src="https://anbidev.com/img/no-image.png" data-src="https://anbidev.com/post/python-buat-library.jpg" alt="/post/python-buat-library.jpg" loading="lazy"  />
+                
+
+                <div class="post-content">
+                    <p>Nah kemarin sudah pernah anbi bahas perbedaan antara <a href="https://anbidev.com/python-modul-package-library"
+    
+     target="_blank" rel="noreferrer" >modul , package dan library</a>. Sekarang ini anbi mau bahas cara membuat <em>library</em> python. Apa saja langkah - langkah nya? simak nih.</p>
+<br>
+<h2 id="langkah-1--buat-direktori">Langkah 1 : Buat Direktori</h2>
+<hr>
+<p>Buat direktori yang ingin kalian jadikan wadah buat <em>library</em> yang akan kita buat. Sesuaikan juga nama direktori dengan nama <em>library</em> yang akan kalian buat.</p>
+<p>Disini anbi buat direktori dengan nama <code>anbi-library</code>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="https://anbidev.com/img/no-image.png" data-src="https://anbidev.com/post/python-buat-library-01.png" alt="&amp;ldquo;Direktrori Untuk Nampung Library&amp;rdquo;" title="Direktrori Untuk Nampung Library" >
+    <figcaption>Direktrori Untuk Nampung Library</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="langkah-2--buat-virtual-environtment">Langkah 2 : Buat Virtual Environtment</h2>
+<hr>
+<p>Setelah selesai dengan pembuatan direktori, akan lebih baik jika kita juga membuat <em>virtual environtment</em> pada direktori agar versi python dan juga <em>library</em> lain yang kita gunakan tidak berubah.</p>
+<blockquote>
+<p><a href="https://anbidev.com/python-virtual-environtment"
+    
+     target="_blank" rel="noreferrer" >Belajar Virtual Environtment</a></p>
+</blockquote>
+<p>Kenapa harus pakai <em>virtual environtment</em>? Karena <em>virtual environtment</em> dapat mencegah adanya <em>issue dependency</em> yang terjadi nantinya.</p>
+<p>Lalu, buka terminal atau cmd dan arahkan <strong>PATH</strong> ke direktori yang kita buat tadi. Untuk membuat <a href="https://anbidev.com/python-virtual-environtment"
+    
+     target="_blank" rel="noreferrer" >virtual environtment</a> kita gunakan <em>command</em> dibawah ini :</p>
+<p>untuk kalian pemakai windows :</p>
+<pre><code>py -m venv env
+</code></pre><p>untuk kalian pemakai <strong>linux</strong> dan <strong>macos</strong></p>
+<pre><code>python3 -m venv env
+</code></pre><p>
+  <figure>
+    <img class="lazy" src="https://anbidev.com/img/no-image.png" data-src="https://anbidev.com/post/python-buat-library-02.png" alt="&amp;ldquo;Contoh Command Di Windows&amp;rdquo;" title="Contoh Command Di Windows" >
+    <figcaption>Contoh Command Di Windows</figcaption>
+  </figure>
+
+
+</p>
+<p>Setelah berhasil membuat <a href="https://anbidev.com/python-virtual-environtment"
+    
+     target="_blank" rel="noreferrer" >virtual environtment</a>, sekarang kita aktifkan virtual environtment dengan command dibawah ini :</p>
+<p>ini untuk pemakai <strong>windows</strong></p>
+<pre><code>.\env\Scripts\activate
+</code></pre><p>ini untuk pemakai <strong>linux</strong> dan <strong>macos</strong></p>
+<pre><code>source env/bin/activate
+</code></pre><p>Pastikan <em>session</em> di terminal atau command promt kalian seperti gambar dibawah, yang menandakan virtual environtment sudah aktif.</p>
+<p>
+  <figure>
+    <img class="lazy" src="https://anbidev.com/img/no-image.png" data-src="https://anbidev.com/post/python-buat-library-03.png" alt="&amp;ldquo;Session Virtual Environtment Udah Aktif&amp;rdquo;" title="Session Virtual Environtment Udah AktifSession Virtual Environtment Udah Aktif" >
+    <figcaption>Session Virtual Environtment Udah AktifSession Virtual Environtment Udah Aktif</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="langkah-3--install-library-bantuan">Langkah 3 : Install Library Bantuan</h2>
+<hr>
+<p>Tidak lupa kita install beberapa library bantuan untuk <strong><em>build</em></strong> library kita nanti.</p>
+<ul>
+<li>
+<p><strong><code>setuptools</code></strong> adalah library yang didesain untuk memfasilitasi pemaketan proyek python dengan memberikan beberapa hal yang dibutuhkan untuk membuat <em>library</em> standar pada umumnya.</p>
+<pre><code>pip install setuptools
+</code></pre></li>
+<li>
+<p><strong><code>wheel</code></strong>  adalah <em>built-in-package</em>, yang digunakan agar library tidak mengkompilasi ulang perangkat lunak selama setiap penginstalan</p>
+<pre><code>pip install wheel
+</code></pre></li>
+<li>
+<p><strong><code>twine</code></strong> adalah utilitas untuk mempublish <em>package</em> pada <a href="https://pypi.org"
+    
+     target="_blank" rel="noreferrer" >PyPI</a></p>
+<pre><code>pip install twine
+</code></pre></li>
+<li>
+<p>Kalian bisa menggunakan library <code>pytest</code> dan <code>pytest-runner</code> untuk nanti kita gunakan sebagai tester apakah kode pada library kita berjalan dengan baik atau tidak.</p>
+<pre><code>pip install pytest
+</code></pre><pre><code>pip install pytest-runner
+</code></pre></li>
+</ul>
+<br>
+<h2 id="langkah-4--buat-struktur-folder">Langkah 4 : Buat Struktur Folder</h2>
+<hr>
+<p>Buka folder direktori proyek yang kalian buat tadi, untuk nantinya kita tambahkan beberapa file dan folder. Kalian bisa menggunakan editor atau membuatnya secara manual.</p>
+<p>
+  <figure>
+    <img class="lazy" src="https://anbidev.com/img/no-image.png" data-src="https://anbidev.com/post/python-buat-library-03.png" alt="&amp;ldquo;Buka Folder Pakai Visual Studio Code&amp;rdquo;" title="Buka Folder Pakai Visual Studio Code" >
+    <figcaption>Buka Folder Pakai Visual Studio Code</figcaption>
+  </figure>
+
+
+</p>
+<p>Anbi disini bakal buat pakai <strong>visual studio code</strong>. Mari kita buat file dan folder yang dibutuhkan untuk :</p>
+<ol>
+<li>
+<p>Buat file kosong dengan nama <code>setup.py</code>. Ini adalah <strong>file penting</strong> ketika membuat sebuah <em>library</em> python.</p>
+</li>
+<li>
+<p>Buat lagi file kosong dengan nama <code>README.md</code>. File ini nanti digunakan untuk mendeskripsikan tentang <em>library</em> yang kamu buat.</p>
+</li>
+<li>
+<p>Buat folder kosong dan beri nama <code>anbi_lib</code> atau terserah kalian. Intinya nama ini yang akan dipanggil saat menginstall menggunakan <a href="https://anbidev.com/python-pip"
+    
+     target="_blank" rel="noreferrer" >PIP</a>.</p>
+<blockquote>
+<p>Jika kalian ingin publish library kalian ke PIP, pastikan nama tersebut <strong>unik</strong> atau belum ada di <a href="https://pypi.org/"
+    
+     target="_blank" rel="noreferrer" >https://pypi.org/</a>.</p>
+</blockquote>
+</li>
+<li>
+<p>Didalam folder <code>anbi_lib</code> buat sebuah file <em>constructor</em> (<code>__init__.py</code>) agar ia diperlakukan <a href="https://anbidev.com/python-modul-pakcage-library.md"
+    
+     target="_blank" rel="noreferrer" >sebagai package</a>, dikosongin aja gapapa.</p>
+<blockquote>
+<p>Pada dasarnya, folder yang memiliki file <em>constructor</em> (<code>__init___.py</code>) akan ikut di <strong><em>build</em></strong> kedalam library.</p>
+</blockquote>
+</li>
+<li>
+<p>Pada folder yang sama (<code>anbi_lib</code>), kita buat file <code>fungsiku.py</code>.</p>
+</li>
+<li>
+<p>Dan terakhir, buat sebuah folder <code>test</code> pada folder <em>root</em>. Didalamnya, kita buat juga file <em>constructor</em> (<code>__init__.py</code>) dan file kosong <code>test_fungsi.py</code>.</p>
+</li>
+</ol>
+<p>Yep, harusnya struktur folder kalian akan seperti ini :</p>
+<p>
+  <figure>
+    <img class="lazy" src="https://anbidev.com/img/no-image.png" data-src="https://anbidev.com/post/python-buat-library-05.png" alt="&amp;ldquo;Struktur Folder anbi-library&amp;rdquo;" title="Struktur Folder anbi-library" >
+    <figcaption>Struktur Folder anbi-library</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="langkah-5--mulai-mengisi-librarymu">Langkah 5 : Mulai Mengisi Librarymu!</h2>
+<hr>
+<p>Sekarang coba kita masukkan beberapa fungsi kedalam <em>library</em> kita. Kalian bisa mulai menulisnya pada file <code>fungsiku.py</code>.</p>
+<p>Mari kita buat fungsi untuk menghitung berapa jarak antara 2 titik longitude dan latitude.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># fungsiku.py</span>
+<span style="color:#f92672">import</span> math
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getDistance</span>(lat1, lon1, lat2, lon2) <span style="color:#f92672">-&gt;</span> float:
+   <span style="color:#75715e"># radius bumi</span>
+   R <span style="color:#f92672">=</span> <span style="color:#ae81ff">6373.0</span>
+
+   <span style="color:#75715e"># konversi dari derajat ke radian</span>
+   lat1, lon1 <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>radians(lat1), math<span style="color:#f92672">.</span>radians(lon1)
+   lat2, lon2 <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>radians(lat2), math<span style="color:#f92672">.</span>radians(lon2)
+
+   <span style="color:#75715e"># perubahan koordinat</span>
+   dlon <span style="color:#f92672">=</span> lon2 <span style="color:#f92672">-</span> lon1
+   dlat <span style="color:#f92672">=</span> lat2 <span style="color:#f92672">-</span> lat1
+
+   <span style="color:#75715e"># formula haversine</span>
+   a <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>sin(dlat <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> math<span style="color:#f92672">.</span>cos(lat1) <span style="color:#f92672">*</span> math<span style="color:#f92672">.</span>cos(lat2) <span style="color:#f92672">*</span> math<span style="color:#f92672">.</span>sin(dlon <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>
+   c <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> math<span style="color:#f92672">.</span>atan2(math<span style="color:#f92672">.</span>sqrt(a), math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> a))
+
+   distance <span style="color:#f92672">=</span> R <span style="color:#f92672">*</span> c
+
+   <span style="color:#66d9ef">return</span> distance
+</code></pre></div><p>Setiap kali kalian selesai menulis sebuah kode program, sangat anbi sarankan untuk mengetest kodenya terlebih dahulu.</p>
+<p>Mari kita buat test kecil - kecilan untuk fungsi yang kita buat tadi. Salin kode dibawah kedalam file <code>test_fungsi.py</code> :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> anbi_lib <span style="color:#f92672">import</span> fungsiku
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">testFunction</span>():
+   <span style="color:#66d9ef">assert</span> fungsiku<span style="color:#f92672">.</span>getDistance(<span style="color:#ae81ff">52.2296756</span>, <span style="color:#ae81ff">21.0122287</span>, <span style="color:#ae81ff">52.406374</span>, <span style="color:#ae81ff">16.9251681</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">278.54558935106695</span>
+</code></pre></div><br>
+<h2 id="langkah-6--konfigurasi-setuppy">Langkah 6 : Konfigurasi Setup.py!</h2>
+<hr>
+<p>Selanjutnya kita akan mengkonfigurasi file <code>setup.py</code> sebelum membuild <em>library</em> kita. File <code>setup.py</code> biasanya diisi seperti ini :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> setuptools <span style="color:#f92672">import</span> find_packages, setup
+
+setup(
+    name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;anbi_lib&#39;</span>,
+    packages<span style="color:#f92672">=</span>find_packages(),
+    version<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0.1.0&#39;</span>,
+    description<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Test buat library python&#39;</span>,
+    author<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;alifianadexe&#39;</span>,
+    license<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;MIT&#39;</span>,
+)
+</code></pre></div><p>Untuk isi variabel <code>name</code> kalian bisa isi sesuka kalian, tapi untuk memudahkan kita, samakan saja dengan nama folder <em>package</em> kita.</p>
+<br>
+<h3 id="setting-package-yang-dibutuhkan-untuk-librarymu">Setting package yang dibutuhkan untuk librarymu</h3>
+<p>Pada variabel <code>package</code> kalian dapat mengatur package mana saja yang mau digunakan pakai fungsi <code>find_package()</code>. Kalian <code>include</code> suatu package atau <code>exclude</code> paket yang tidak kalian butuhkan.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> setuptools <span style="color:#f92672">import</span> find_packages, setup
+
+setup(
+   name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;anbi_lib&#39;</span>,
+   packages<span style="color:#f92672">=</span>find_packages(includes<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;anbi_lib&#39;</span>]),
+   version<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0.1.0&#39;</span>,
+   description<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Test buat library python&#39;</span>,
+   author<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;alifianadexe&#39;</span>,
+   license<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;MIT&#39;</span>,
+)
+</code></pre></div><p>Pada kode diatas, kita memasukkan package <strong>namapaket</strong> yang tadi kita buat pada parameter <code>include</code>. Pada dasarnya <code>find_packages()</code> bisa dikosongi tanpa harus memasukkan parameter apa - apa, tapi <em>package</em> yang tidak kita inginkan, juga akan masuk kedalam <em>library</em> kita (<em><strong>contoh</strong></em> : <em>package</em> <code>test</code>).</p>
+<br>
+<h3 id="setting-library-tambahan-untuk-librarymu">Setting library tambahan untuk librarymu</h3>
+<p>Jika kalian sering menginstall <em>library</em> dengan pip, biasanya dia tidak hanya menginstall satu <em>library</em> saja, bahkan bisa 3 sampai 4 <em>library</em>. Kenapa?</p>
+<p>Ketika kita membuat sebuah program, tidak jarang juga kita perlu menggunakan <em>library</em> bantuan. Sama saat kita membuat sebuah <em>library</em>, kadang untuk melakukan sesuatu yang mungkin membutuhkan effort lebih, kita lebih suka untuk menggunakan bantuan dari <em>library</em> lain agar lebih efisien.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> setuptools <span style="color:#f92672">import</span> find_packages, setup
+
+setup(
+   name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;anbi_lib&#39;</span>,
+   packages<span style="color:#f92672">=</span>find_packages(includes<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;anbi_lib&#39;</span>]),
+   version<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0.1.0&#39;</span>,
+   description<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Test buat library python&#39;</span>,
+   author<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;alifianadexe&#39;</span>,
+   license<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;MIT&#39;</span>,
+   install_requires<span style="color:#f92672">=</span>[]
+)
+</code></pre></div><p>Pada kode diatas, terdapat parameter dengan nama <code>install_requires</code>, disitulah kita memasukkan daftar <em>library</em> bantuan yang kita gunakan untuk membuat <em>library</em> ini. Karena kita menggunakan <em>library</em> <code>math</code> yang sudah ada pada <em>standard library python</em>, kita tidak perlu memasukkan ke dalam daftar.</p>
+<br>
+<h3 id="test-library">Test library</h3>
+<p>Apakah kalian ingat jika kita menginstall, sebuah <em>library</em> untuk testing? Tentu <em>library</em> ini bukan untuk kita masukkan ke <code>install_requires</code>.</p>
+<p>Kita akan menggunakannya untuk mengetest apakah fungsi pada <em>library</em> kita akan berjalan dengan baik atau tidak, dengan beberapa &ldquo;kasus&rdquo; yang kita sediakan pada folder <em>test</em>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> setuptools <span style="color:#f92672">import</span> find_packages, setup
+
+setup(
+   name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;anbi_lib&#39;</span>,
+   packages<span style="color:#f92672">=</span>find_packages(includes<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;anbi_lib&#39;</span>]),
+   version<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0.1.0&#39;</span>,
+   description<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Test buat library python&#39;</span>,
+   author<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;alifianadexe&#39;</span>,
+   license<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;MIT&#39;</span>,
+   install_requires<span style="color:#f92672">=</span>[],    
+   setup_requires<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;pytest-runner&#39;</span>],
+   tests_require<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;pytest&#39;</span>],
+   test_suite<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;test&#39;</span>,
+)
+</code></pre></div><p>Untuk mengetest library kita, gunakan perintah dibawah :</p>
+<pre><code>python setup.py pytest
+</code></pre><p>Kode tersebut akan mengeksekusi semua <em>&ldquo;test case&rdquo;</em> pada folder <strong>test</strong>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="https://anbidev.com/img/no-image.png" data-src="https://anbidev.com/post/python-buat-library-06.png" alt="&amp;ldquo;Fungsi Kita Berjalan Dengan Baik&amp;rdquo;" title="Fungsi Kita Berjalan Dengan Baik" >
+    <figcaption>Fungsi Kita Berjalan Dengan Baik</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="langkah-7--build-library">Langkah 7 : Build Library</h2>
+<hr>
+<p>Semua kebutuhan sudah kita penuhi, sekarang hanya tinggal sedikit lagi, <em>library</em> yang kita buat akan selesai. Sekarang kita kembali ke <em>command line</em>, dan arahkan ke <strong>root</strong> folder <em>library</em> yang kita buat, lalu command:</p>
+<pre><code>python setup.py bdist_wheel
+</code></pre><p><strong><em>Wheel</em></strong> akan membuat menggenerate sebuah folder <strong>dist</strong>, dan disitulah <em>library</em> yang kamu buat berada.</p>
+<p>
+  <figure>
+    <img class="lazy" src="https://anbidev.com/img/no-image.png" data-src="https://anbidev.com/post/python-buat-library-07.png" alt="&amp;ldquo;File whl Pada Folder Dist&amp;rdquo;" title="File whl Pada Folder Dist" >
+    <figcaption>File whl Pada Folder Dist</figcaption>
+  </figure>
+
+
+</p>
+<p>Dan kamu bisa menginstall library yang sudah kamu baut tadi dengan  perintah</p>
+<pre><code>pip install dist/nama_library_kalian.whl
+</code></pre><p>
+  <figure>
+    <img class="lazy" src="https://anbidev.com/img/no-image.png" data-src="https://anbidev.com/post/python-buat-library-08.png" alt="&amp;ldquo;Library Kamu Berhasil Diinstall&amp;rdquo;" title="Library Kamu Berhasil Diinstall" >
+    <figcaption>Library Kamu Berhasil Diinstall</figcaption>
+  </figure>
+
+
+</p>
+<p>SELAMAT LIBRARY KAMU SUDAH TERINSTALL DAN SIAP DIGUNAKAN</p>
+<blockquote>
+<p>Catatan : Kamu juga bisa <strong>mempublish</strong> library mu kedalam PyPi Repository dan menginstall nya lewat PIP.</p>
+</blockquote>
+
+                </div>
+            </article>
+                        
+            
+            
+            <div class="sidenav">
+                <h3>More Python</h3>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        
+                            
+                                <a href="https://anbidev.com/destructuring-python/">Destructuring</a>
+                            
+                        
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        
+                            
+                                <a href="https://anbidev.com/python-modul-package-library/">Modul vs Package vs Library</a>
+                            
+                        
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        
+                            
+                                <a href="https://anbidev.com/python-buat-library/" class="active">Buat Library</a>
+                            
+                        
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        
+                            
+                                <a href="https://anbidev.com/python-web-scraping/">Web Scraping</a>
+                            
+                        
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        
+                            
+                                <a href="https://anbidev.com/python-kriptografi/">Kriptografi</a>
+                            
+                        
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+
+            <div class="ads-below">
+                <hr>
+                <p>😊 Mungkin Kalian Tertarik! 😊</p>
+                <div class="adsense">
+                    
+                    <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-3449944216687441"
+                    data-ad-slot="7126043333"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                    <p class="adsense__loading"></p>
+                </div>
+            </div>
+            
+            <div class="post-share">
+                <div>
+
+
+
+<style>
+#mini-share-text{font-size: small; color:#838282 ;}
+#share-buttons {display: inline-block; vertical-align: middle; }
+#share-buttons:after {content: ""; display: block; clear: both;}
+#share-buttons > div {
+position: relative;
+text-align: left; 
+height: 36px; 
+width: 64px; 
+float: left; 
+text-align: center;
+}
+#share-buttons > div > svg {height: 20px; fill: #d5d5d5; margin-top: 10px;}
+#share-buttons > div:hover {cursor: pointer;}
+#share-buttons > div.facebook:hover > svg {fill: #3B5998;}
+#share-buttons > div.twitter:hover > svg {fill: #55ACEE;}
+#share-buttons > div.linkedin:hover > svg {fill: #0077b5;}
+#share-buttons > div.pinterest:hover > svg {fill: #CB2027;}
+#share-buttons > div.gplus:hover > svg {fill: #dd4b39;}
+#share-buttons > div.mail:hover > svg {fill: #7D7D7D;}
+#share-buttons > div.instagram:hover > svg {fill: #C73B92;}
+#share-buttons > div.telegram:hover > svg {fill: #0088cc;}
+#share-buttons > div.facebook > svg {height: 24px; margin-top: 9px;}
+#share-buttons > div.twitter > svg {height: 24px; margin-top: 8px;}
+#share-buttons > div.linkedin > svg {height: 24px; margin-top: 7px;}
+#share-buttons > div.pinterest > svg {height: 24px; margin-top: 9px;}
+#share-buttons > div.mail > svg {height: 20px; margin-top: 11px;}
+#share-buttons > div.telegram > svg {height: 24px; margin-top: 9px;}
+</style>
+
+
+<p id="mini-share-text">bantu share dong!</p>
+<div id="share-buttons">
+<div class="facebook" title="Share this on Facebook" onclick="window.open('https://facebook.com/sharer/sharer.php?u=https:\/\/anbidev.com\/python-buat-library\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/></svg></div>
+<div class="twitter" title="Share this on Twitter" onclick="window.open('https://twitter.com/intent/tweet/?text=&amp;url=https:\/\/anbidev.com\/python-buat-library\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg></div>
+<div class="linkedin" title="Share this on Linkedin" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/anbidev.com\/python-buat-library\/&title=&summary=&source=');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/></svg></div>
+
+<div class="telegram" title="Share this on Telegram" onclick="window.open('https://telegram.me/share/url?text=&amp;url=https:\/\/anbidev.com\/python-buat-library\/');"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></div>
+<div class="mail" title="Share this through Email" onclick="window.open('mailto:?subject=&body=https:\/\/anbidev.com\/python-buat-library\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg></div>
+</div></div>        
+            </div>
+
+            <hr />
+            <div class="post-info">
+                <h4>Referensi</h4>
+                <ul>
+                   <li><a href="https://medium.com/analytics-vidhya/how-to-create-a-python-library-7d5aea80cc3f">https://medium.com/analytics-vidhya/how-to-create-a-python-library-7d5aea80cc3f</a></li>
+                </ul>
+            </div>
+            <hr />
+            
+            <div class="post-author">
+                <img alt="AlifianAdexe" class="lazy" src="https://anbidev.com/img/no-image.png" data-src="https://anbidev.com/img/adexe.jpg">
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><a href="https://anbidev.com/authors/adexe">AlifianAdexe</a></p>                
+            </div>
+            
+            <div class="post-info">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://anbidev.com/tags/modul">modul</a></span><span class="tag"><a href="https://anbidev.com/tags/python">python</a></span><span class="tag"><a href="https://anbidev.com/tags/library">library</a></span>
+                    </p>
+
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>1149 Words</p>
+
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-12-23 07:00 &#43;0700</p>
+            </div>
+            
+
+            
+                <div class="pagination-post">
+                    <div class="pagination__buttons">
+                        
+                            <span class="button previous">
+                                <a href="https://anbidev.com/python-list-input-manipulation/">
+                                    <span class="button__icon">←</span>
+                                    <span class="button__text">Ragam Manipulasi Input List Dengan Python</span>
+                                </a>
+                            </span>
+                        
+
+                        
+                            <span class="button next">
+                                <a href="https://anbidev.com/berkenalan-dengan-android-studio/">
+                                    <span class="button__text">Berkenalan Dengan Android Studio</span>
+                                    <span class="button__icon">→</span>
+                                </a>
+                            </span>
+                        
+                    </div>
+                </div>
+            
+            <div class="comments thin">
+    <div class="disqus-placeholder">Loading comments...</div>
+    <div class="disqus"></div>
+</div>
+            </main>
+            <div class="side-right-bar col-md-4">
+                <div class="social-media-post">
+                    <p class="subtitle">Kepoin kita yuk!</p>
+                    <a href="https://instagram.com/anbidev" class="tooltip" target="_blank" rel="noopener" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg><span class="tooltiptext">Instagram</span></a><a href="https://facebook.com/anbidevofficial" class="tooltip" target="_blank" rel="noopener" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg><span class="tooltiptext">Facebook</span></a><a href="https://twitter.com/anbidev" class="tooltip" target="_blank" rel="noopener" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><span class="tooltiptext">Twitter</span></a><a href="mailto:anbidev@gmail.com" class="tooltip" target="_blank" rel="noopener" title="Email"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><span class="tooltiptext">Email</span></a><a href="https://github.com/AnbiDev" class="tooltip" target="_blank" rel="noopener" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span class="tooltiptext">Github</span></a><a href="https://t.me/anbidev" class="tooltip" target="_blank" rel="noopener" title="Telegram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg><span class="tooltiptext">Telegram</span></a>
+                </div>
+                <hr>
+                <div class="related-side">
+                    <h4>Masih hangat baru diupload</h4>
+
+
+
+
+
+<ul>
+	
+	<li><a href="https://anbidev.com/ganjil-genap-c/">Ganjil Genap pada Bahasa C</a></li>
+	
+	<li><a href="https://anbidev.com/python-self/">Membahas Lengkap &#34;Self&#34; Pada Python</a></li>
+	
+	<li><a href="https://anbidev.com/syntax-dasar-c/">Syntax Dasar C</a></li>
+	
+	<li><a href="https://anbidev.com/persiapan-c/">Persiapan Belajar C</a></li>
+	
+	<li><a href="https://anbidev.com/python-kriptografi/">Belajar Kriptografi Dengan Python</a></li>
+	
+</ul>
+</div>  
+                <div class="related-side">
+                    <h4>Atau mau yang serupa..</h4>
+
+<ul>
+	
+	<li><a href="https://anbidev.com/python-modul-package-library/">Perbedaan Modul, Package dan Library Pada Python</a></li>
+	
+	<li><a href="https://anbidev.com/python-virtual-environtment/">Belajar Tentang Virtual Environtment Pada Python</a></li>
+	
+	<li><a href="https://anbidev.com/python-ac-remote/">Program Simulasi  Remote AC</a></li>
+	
+	<li><a href="https://anbidev.com/python-cari-ganjil-genap/">Program Mencari Ganjil Genap</a></li>
+	
+	<li><a href="https://anbidev.com/python-konversi-bilangan/">Program Konversi Decimal ke Binner, Octa, Hexa</a></li>
+	
+</ul>
+</div>
+                <hr>
+                <div class="related-sosial">
+                    <div class="fb-page" data-lazy="true" data-href="https://www.facebook.com/anbidevofficial/" data-tabs="timeline" data-width="400" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/anbidevofficial/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/anbidevofficial/">AnbiDev</a></blockquote></div>
+                </div>
+                <hr>
+                <div class="ads-side">
+                    <div class="adsense">
+                        
+                        <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-3449944216687441"
+                        data-ad-slot="7126043333"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                        <p class="adsense__loading"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tag-list">
+                    <h3>Ayok! dipilih, dipilih..</h3>
+                    <ul class="tags">
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/android-studio/" title="All pages with tag <i>android-studio</i>" class="tag" >android-studio<sup>2</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/blog/" title="All pages with tag <i>blog</i>" class="tag" >blog<sup>25</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/blogs/" title="All pages with tag <i>blogs</i>" class="tag" >blogs<sup>2</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/c/" title="All pages with tag <i>c</i>" class="tag" >c<sup>4</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/c&#43;&#43;/" title="All pages with tag <i>c&#43;&#43;</i>" class="tag" >c&#43;&#43;<sup>4</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/code/" title="All pages with tag <i>code</i>" class="tag" >code<sup>2</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/code-life/" title="All pages with tag <i>code-life</i>" class="tag" >code-life<sup>1</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/control-flow/" title="All pages with tag <i>control-flow</i>" class="tag" >control-flow<sup>1</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/crud/" title="All pages with tag <i>crud</i>" class="tag" >crud<sup>2</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/dart/" title="All pages with tag <i>dart</i>" class="tag" >dart<sup>5</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/data-mining/" title="All pages with tag <i>data-mining</i>" class="tag" >data-mining<sup>1</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/design-pattern/" title="All pages with tag <i>design-pattern</i>" class="tag" >design-pattern<sup>3</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/developer/" title="All pages with tag <i>developer</i>" class="tag" >developer<sup>2</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/domain/" title="All pages with tag <i>domain</i>" class="tag" >domain<sup>2</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/edukasi/" title="All pages with tag <i>edukasi</i>" class="tag" >edukasi<sup>2</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/electron/" title="All pages with tag <i>electron</i>" class="tag" >electron<sup>3</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/elektronika/" title="All pages with tag <i>elektronika</i>" class="tag" >elektronika<sup>3</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/fakta/" title="All pages with tag <i>fakta</i>" class="tag" >fakta<sup>4</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/flutter/" title="All pages with tag <i>flutter</i>" class="tag" >flutter<sup>5</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/funcode/" title="All pages with tag <i>funcode</i>" class="tag" >funcode<sup>10</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/gcp/" title="All pages with tag <i>gcp</i>" class="tag" >gcp<sup>2</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/git/" title="All pages with tag <i>git</i>" class="tag" >git<sup>2</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/hacking/" title="All pages with tag <i>hacking</i>" class="tag" >hacking<sup>1</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/internet/" title="All pages with tag <i>internet</i>" class="tag" >internet<sup>8</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/java/" title="All pages with tag <i>java</i>" class="tag" >java<sup>1</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/javascript/" title="All pages with tag <i>javascript</i>" class="tag" >javascript<sup>4</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/kotlin/" title="All pages with tag <i>kotlin</i>" class="tag" >kotlin<sup>8</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/laravel/" title="All pages with tag <i>laravel</i>" class="tag" >laravel<sup>8</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/library/" title="All pages with tag <i>library</i>" class="tag" >library<sup>6</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/linux/" title="All pages with tag <i>linux</i>" class="tag" >linux<sup>1</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/machine-learning/" title="All pages with tag <i>machine-learning</i>" class="tag" >machine-learning<sup>10</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/modul/" title="All pages with tag <i>modul</i>" class="tag" >modul<sup>12</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/mysql/" title="All pages with tag <i>mysql</i>" class="tag" >mysql<sup>2</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/network/" title="All pages with tag <i>network</i>" class="tag" >network<sup>2</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/opencv/" title="All pages with tag <i>opencv</i>" class="tag" >opencv<sup>2</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/opini/" title="All pages with tag <i>opini</i>" class="tag" >opini<sup>10</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/php/" title="All pages with tag <i>php</i>" class="tag" >php<sup>10</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/python/" title="All pages with tag <i>python</i>" class="tag" >python<sup>37</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/repository/" title="All pages with tag <i>repository</i>" class="tag" >repository<sup>1</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/serapan/" title="All pages with tag <i>serapan</i>" class="tag" >serapan<sup>5</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/server/" title="All pages with tag <i>server</i>" class="tag" >server<sup>1</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/style/" title="All pages with tag <i>style</i>" class="tag" >style<sup>1</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/tips/" title="All pages with tag <i>tips</i>" class="tag" >tips<sup>2</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/voice-over/" title="All pages with tag <i>voice-over</i>" class="tag" >voice-over<sup>1</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/vpn/" title="All pages with tag <i>vpn</i>" class="tag" >vpn<sup>1</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/wawasan/" title="All pages with tag <i>wawasan</i>" class="tag" >wawasan<sup>19</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/web-scraping/" title="All pages with tag <i>web-scraping</i>" class="tag" >web-scraping<sup>1</sup></a></li>
+                            
+                         
+                            
+                            <li><a href="https://anbidev.com/tags/zabbix/" title="All pages with tag <i>zabbix</i>" class="tag" >zabbix<sup>1</sup></a></li>
+                            
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+                <footer class="footer">
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-left">
+            <div class="footer__content">
+                <span><a href="https://anbidev.com/about">About</a></span>
+                <span><a href="https://anbidev.com/faq">FAQs</a></span>
+                <span><a href="https://anbidev.com/contact">Contact</a></span>
+                <span><a href="https://anbidev.com/policy">Policy</a></span>
+                <span><a href="https://anbidev.com/disclaimer">Disclaimer</a></span>
+                <span><a href="https://anbidev.com/donate">Donate</a></span>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-right">
+            <div class="footer__content">
+                <span>&copy; 2021</span>
+                <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+                <span>we &#10084; <a href="https://github.com/alifianadexe">alifianadexe</a></span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+            
+        <a id="but-to-up"></a>
+        <div id="search" >
+            <div class="loop" style="display: none;">
+                <img class="lazy" src="https://anbidev.com/img/no-image.png" data-src="https://anbidev.com/img/for-gif-min.gif" style="width: 100px; height: 100px;" />
+            </div> 
+            <form id="search-form" class="search-form" role="search">            
+                <button type="button" class="close">×</button>
+                <input id="search-input" class="search-input" type="search" value="" placeholder="Ketik Disini..." ></input>
+                <label for="search-input">Apa yang kamu cari?</label>
+            </form>
+            <template id="search-result" hidden>
+    <div class="col-md-12 col-sm-12">
+        <article class="content post">
+            <a class="summary-title-link">        
+                <div class="row release">
+                    <div class="col-md-5 col-sm-5 result-search-img text-center">    
+                        <img class="post-cover summary-cover lazy" src="" data-src="" alt="cover" loading="lazy"/> 
+                    </div>
+                    <div class="col-md-7 col-sm-7 result-search-info">
+                        <h3 class="result-search-title"></h3>
+                        <summary class="result-search-summary summary"></summary>
+                        <br>
+                        <div class="read-more-container">
+                            <a class="read-more-link">Read More »</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <hr>
+        </article>
+    </div>
+</template>
+
+        </div>     
+        
+
+
+
+
+
+
+
+
+
+
+<script src=//code.jquery.com/jquery-3.5.1.min.js integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+<script src=//instant.page/5.1.0 type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+<script src=//cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY" crossorigin="anonymous"></script>
+<script src=//cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.0/dist/lazyload.min.js integrity="sha384-ZrJga8P3ouosoSMGmLGRIij6vLRqGVXn9Y8Lypv9itSaoHHxb5YG6NsP9nP+F0nZ" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://anbidev.com/bundle.min.9445d4fc9ca0023bfddac73e3a61becba1a0dbcc718117c5c957e87255a6cec49bd0db89b34180db83383282c6ae487292027dfabba95361b3847f4a413fb734.js" integrity="sha512-lEXU/JygAjv92sc&#43;OmG&#43;y6Gg28xxgRfFyVfoclWmzsSb0NuJs0GA24M4MoLGrkhykgJ9&#43;rupU2GzhH9KQT&#43;3NA==" crossorigin="anonymous"></script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v10.0" nonce="ghawHMPp"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('/sw.js', { scope: '/' })
+        .then(() => {
+            console.info('AnbiDev Service Worker Registered');
+        }, err => console.error("AnbiDev Service Worker registration failed: ", err));
+
+    navigator.serviceWorker
+        .ready
+        .then(() => {
+            console.info('AnbiDev Service Worker Ready');
+        });
+}
+</script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-147560016-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+	
+		<script src="https://anbidev.com/js/custom.js"></script>
+	
+
+
+    </body>
+</html>

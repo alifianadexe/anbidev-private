@@ -1,0 +1,65 @@
+1. Mengulang `key` dan `value`, Bersamaan?
+
+2. Solusi ini biasanya diperlukan ketika menghadapi masalah 
+perulangan untuk tipe data dict, object atau array.   
+	
+	bentuk umum :
+	
+	`loop( key, value in object)`
+
+3.Didalam Python, `dict` diikuti dengan fungsi items() pada saat perulangan dictionary.
+	
+	 bentuk umum:
+
+	 for key, value in dictku.items():
+	    print(key , '->', value)
+
+
+4. Contoh :
+	code:
+	list_menu = {'roti':2000, 'teh':1500, 'nasi':4000}
+	for menu, harga in list_menu.items():
+	    print('Menu ', menu, ' - Rp.', harga)
+	
+	output : 
+	Menu roti - Rp.2000	
+	Menu teh - Rp.1500
+	Menu nasi - Rp.4000
+
+5. Lalu pada JavaScript, Kita panggil method Object.entries() saat perulangan.   
+	
+	bentuk umum:
+	for (const [key, value] of Object.entries(objectku)) {
+  	    console.log(key,'->', value);
+	}
+
+6. Contoh : 
+	code :
+	const binatang = {'anjing': 4, 'ayam': 2, 'ikan' : 0};
+	for (const [hewan, kaki] of Object.entries(binatang)) {
+  	    console.log(hewan, 'berkaki' , kaki);
+	}
+
+	output :
+	anjing berkaki 4
+	ayam berkaki 2
+	ikan berkaki 0
+
+7. Sedangkan pada PHP, kita hanya perlu menggunakan arrow (=>) untuk mengekstrak `value`.
+	
+	bentuk umum :
+	foreach ($myArray as $key => $value){
+	   echo $key." -> ".$value;		
+	} 	
+
+8. Contoh : 
+	code: 	
+	$doi = array('aku' => 0, 'dia' => 50, 'fckboy' => 100);
+	foreach ($doi as $subjek => $cinta){
+	   echo "doi ke ".$subjek." ".$cinta."% sayang <br/>";		
+	} 
+
+	output:
+	doi ke aku 0% sayang
+	doi ke dia 50% sayang
+	doi ke fckboy 100% sayang	

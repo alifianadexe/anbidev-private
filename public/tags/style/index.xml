@@ -1,0 +1,150 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>style on AnbiDev</title>
+        <link>https://anbidev.com/tags/style/</link>
+        <description>Recent content in style on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Thu, 04 Feb 2021 10:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/style/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>7 Gaya Penulisan Pada Kode Program</title>
+            <link>https://anbidev.com/gaya-penulisan-program/</link>
+            <pubDate>Thu, 04 Feb 2021 10:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/gaya-penulisan-program/</guid>
+            <description>Halo pembaca Anbi, tak jarang ya kita kasih perhatian lebih ke variable, fungsi atau syntax dari program yang lagi kita kembangkan.
+Selain karena pemilihan nama yang cocok, tapi kita juga harus konsisten dalam menggunakan gaya penulisan kode programnya ya.
+Karena sebagian besar bahasa pemrogaman bersifat case-sensitive, artinya besar kecil kata akan mempengaruhi kode kita. Anbi akan jelaskan beberapa gaya penulisan pada kode program.
+Camel Case Cirinya tanpa spasi dan kata paling awal menggunakan huruf kecil dan kata selanjutnya diawali huruf besar.</description>
+            <content type="html"><![CDATA[<p>Halo pembaca Anbi, tak jarang ya kita kasih perhatian lebih ke variable, fungsi atau syntax dari program yang lagi kita kembangkan.</p>
+<p>Selain karena pemilihan nama yang cocok, tapi kita juga harus konsisten dalam menggunakan gaya penulisan kode programnya ya.</p>
+<p>Karena sebagian besar bahasa pemrogaman bersifat case-sensitive, artinya besar kecil kata akan mempengaruhi kode kita. Anbi akan jelaskan beberapa gaya penulisan pada kode program.</p>
+<br>
+<h2 id="camel-case">Camel Case</h2>
+<hr>
+<p>Cirinya tanpa spasi dan <strong>kata paling awal</strong> menggunakan <strong>huruf kecil</strong> dan kata selanjutnya diawali <strong>huruf besar</strong>. Penggunaan huruf besar ini diinspirasi dari punuk hewan unta yang menonjol, sehingga diberi nama <strong>Camel Case</strong>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/kode-style-case-01.jpg" alt="&amp;ldquo;Camel Case&amp;rdquo;" title="Camel Case" >
+    <figcaption>Camel Case</figcaption>
+  </figure>
+
+
+</p>
+<p>Biasa digunakan pada pemrograman berorientasi objek atau OOP dalam mendeklarasikan method. Contoh penggunaan Camel Case adalah sebagai berikut:</p>
+<pre><code>doCalculate  
+getConnection  
+setPrice
+</code></pre><br>
+<h2 id="pascal-case">Pascal Case</h2>
+<hr>
+<p>Hampir sama dengan Camel Case ya, bedanya hanya pada awal huruf dari Pascal Case adalah menggunakan huruf besar. Cirinya <strong>tanpa spasi</strong> dan setiap kata <strong>diawali huruf besar</strong>. Pascal Case juga sering disebut dengan <em>UpperCamelCase</em>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/kode-style-case-02.jpg" alt="&amp;ldquo;Pascal Case&amp;rdquo;" title="Pascal Case" >
+    <figcaption>Pascal Case</figcaption>
+  </figure>
+
+
+</p>
+<p>Biasa digunakan dalam penamaan class pada banyak bahasa pemrograman. Contoh penggunaan Pascal Case adalah sebagai berikut:</p>
+<pre><code>UserLoginCount  
+EmployeeStatus  
+PayrollStatus
+</code></pre><br>
+<h2 id="snake-case">Snake Case</h2>
+<hr>
+<p>Cirinya mengganti semua spasi dengan garis bawah atau <strong>underscore</strong> <code>(_)</code>. Dengan menggunakan underscore, maka mata akan melihatnya hampir mirip dengan kata biasa, sehingga pembaca dapat mengenali dua kata atau kumpulan kata dengan lebih cepat.</p>
+<p>Contoh bahasa pemrogaman yang menggunakan Snake Case adalah C, Python, Ruby dan Java dan masih banyak lagi.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/kode-style-case-03.jpg" alt="&amp;ldquo;Snake Case&amp;rdquo;" title="Snake Case" >
+    <figcaption>Snake Case</figcaption>
+  </figure>
+
+
+</p>
+<p>Biasa digunakan dalam penamaan variabel pada banyak bahasa pemrograman. Contoh penggunaan Snake Case adalah sebagai berikut:</p>
+<pre><code>my_url  
+var_lib  
+max_point_out
+</code></pre><br>
+<h2 id="kebab-case">Kebab Case</h2>
+<hr>
+<p>Hampir sama dengan snake case namun spasi di replace dengan <strong>tanda hubung</strong> <code>( - )</code>. Sama-sama memudahkan developer untuk membaca kode, karena adanya ruang yang agak kosong antar kata.</p>
+<p>Kelemahan dari Kebab Case adalah penggunaan <em>dash</em> atau tanda min ( - ). Karena sebagian besar bahasa pemrograman menganggap <em>dash</em> sebagai bentuk matematika pengurangan.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/kode-style-case-04.jpg" alt="&amp;ldquo;Kebab Case&amp;rdquo;" title="Kebab Case" >
+    <figcaption>Kebab Case</figcaption>
+  </figure>
+
+
+</p>
+<p>Biasa digunakan pada penamaan URLs, agar lebih manusiawi dalam pembacaan. Lalu, kebab case juga diimplementasikan pada penamaan variabel di bahasa Lisp.</p>
+<pre><code>cara-mendapatkan-pacar  
+how-to-get-wife
+</code></pre><br>
+<h2 id="upper-case">Upper Case</h2>
+<hr>
+<p>Sering kali dalam pembuatan password baru, perlu adanya Upper Case didalam bagian password tersebut. Upper Case ini dapat diartikan sebagai huruf besar.</p>
+<p>Nah, pada pemrogaman juga sama, Upper Case akan mengkonversi semua huruf dengan <strong>huruf kapital</strong> atau juga bisa disebut dengan “ScreamCase”.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/kode-style-case-05.jpg" alt="&amp;ldquo;Upper Case&amp;rdquo;" title="Upper Case" >
+    <figcaption>Upper Case</figcaption>
+  </figure>
+
+
+</p>
+<p>Biasa digunakan dalam mendeklarasikan sebuah constant variabel pada banyak bahasa pemrograman.</p>
+<pre><code>DB_CLIENT  
+HOSTNAME  
+URL_STRING
+</code></pre><br>
+<h2 id="dot-case">Dot Case</h2>
+<hr>
+<p>Atau bisa juga disebut dengan &ldquo;dot notation&rdquo;. Mengganti semua spasi dengan <strong>titik</strong> <code>(.)</code> dan semua huruf menjadi huruf kecil. Sering kita temui pada saat pemanggilan package atau library.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/kode-style-case-06.jpg" alt="&amp;ldquo;Dot Case&amp;rdquo;" title="Dot Case" >
+    <figcaption>Dot Case</figcaption>
+  </figure>
+
+
+</p>
+<p>Biasa digunakan dalam penulisan nama &ldquo;package&rdquo; atau &ldquo;library&rdquo;. Contoh penggunaan Dot Case adalah sebagai berikut:</p>
+<pre><code>mypackage.do.something  
+java.util
+com.android.util.package
+</code></pre><br>
+<h2 id="slash-case">Slash Case</h2>
+<hr>
+<p>Terakhir adalah Slash Case, memang dalam bahasa pemrograman jarang dijumpai gaya penulisan seperti ini. Ciri nya yaitu mengganti spasi dengan <strong>tanda slash</strong> <code>(/)</code>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/kode-style-case-07.jpg" alt="&amp;ldquo;Slash Case&amp;rdquo;" title="Slash Case" >
+    <figcaption>Slash Case</figcaption>
+  </figure>
+
+
+</p>
+<p>Biasa digunakan dalam pemanggilan “command” atau pemisah <code>path</code> pada sistem terminal. Contoh penggunaan Slash Case adalah sebagai berikut:</p>
+<pre><code>/help  
+dir/w  
+watch/anime/onepiece
+</code></pre><center>. . .</center>
+<br>
+<h2 id="kesimpulan">Kesimpulan</h2>
+<hr>
+<p>Mau pakai gaya yang manapun terserah kalian, yang penting mudah dipahami dan juga mudah dibaca. Ingat konsep yang pernah anbi sampaikan <a href="https://anbidev.com/clean-code"
+    
+     target="_blank" rel="noreferrer" >Clean Code</a>. Gaya penamaan ini hanyalah salah satu dari penerapan konsep ini kok.</p>
+<p>Yaudah gitu aja, ketemu lagi di postingan berikutnya yaa.</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

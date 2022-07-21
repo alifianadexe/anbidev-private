@@ -1,0 +1,819 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>crud on AnbiDev</title>
+        <link>https://anbidev.com/tags/crud/</link>
+        <description>Recent content in crud on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/crud/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Membuat Form Login dan Registrasi Dengan PHP MySQL : Part 2</title>
+            <link>https://anbidev.com/php-membangun-form-login-signup-2/</link>
+            <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/php-membangun-form-login-signup-2/</guid>
+            <description>Kemarin pada bagian pertama Membuat Form Login dan Registrasi Dengan PHP MySQL : Part 1 kita sudah belajar cara membuat form sederhana menggunakan HTML dan CSS. Lalu membuat request POST dan menerimanya dengan PHP.
+Sekarang mari kita lanjutkan menghubungkan form yang telah kita buat dengan sebuah database. Sehingga nanti data pendaftaran yang diinput akan tersimpan kedalam database. Dan nantinya, autentikasi login juga akan menggunakan data dari database.
+Perkenalan Database adalah sebuah sistem yang berisi kumpulan data yang dikelola sedemikian rupa dan diorganisir dengan ketentuan tertentu dalam satu penyimpanan.</description>
+            <content type="html"><![CDATA[<p>Kemarin pada bagian pertama <a href="https://anbidev.com/php-membangun-form-login-signup"
+    
+     target="_blank" rel="noreferrer" >Membuat Form Login dan Registrasi Dengan PHP MySQL : Part 1</a> kita sudah belajar cara membuat form sederhana menggunakan HTML dan CSS. Lalu membuat request POST dan menerimanya dengan PHP.</p>
+<p>Sekarang mari kita lanjutkan menghubungkan form yang telah kita buat dengan sebuah database. Sehingga nanti data pendaftaran yang diinput akan tersimpan kedalam database. Dan nantinya, autentikasi login juga akan menggunakan data dari database.</p>
+<br>
+<h2 id="perkenalan">Perkenalan</h2>
+<hr>
+<p><strong>Database</strong> adalah sebuah sistem yang berisi kumpulan data yang dikelola sedemikian rupa dan diorganisir dengan ketentuan tertentu dalam satu penyimpanan.</p>
+<p>Data pada database dapat dilakukan manipulasi seperti penambahan, pengubahan dan penghapusan serta dapat dilihat dengan menggunakan teknik tertentu untuk menghasilkan informasi yang lebih bermakna.</p>
+<p>Sekarang anbi mau mengajarkan ke kalian bagaimana cara membuat database menggunakan MySQL dengan bantuan phpMyAdmin. Apa itu MySQL dan phpMyAdmin?</p>
+<ul>
+<li>
+<p><strong>MySQL</strong> : adalah sebuah sistem manajemen database yang menggunakan perintah - perintah SQL (<em>Structured Query Language</em>) untuk mengelola data yang disimpan.</p>
+</li>
+<li>
+<p><strong>phpMyAdmin</strong> : adalah sebuah software berbasis PHP yang bertujuan untuk memudahkan kita mengelola database MySQL.</p>
+</li>
+</ul>
+<p><em>&ldquo;Kenapa kita mengelola database dengan <strong>phpMyAdmin</strong>? Kenapa tidak langsung saja menggunakan <strong>MySQL</strong>?&quot;</em></p>
+<p>Dengan <strong>phpMyAdmin</strong>, kalian tidak perlu menggunakan <strong><em>terminal</em></strong> untuk mengelola data dalam database, karena phpMyAdmin memiliki tampilan GUI (<em>Graphic User Interface</em>) sehingga mudah digunakan.</p>
+<blockquote>
+<p>Ibarat <strong>MySQL</strong> adalah <strong>cangkul</strong> untuk membajak sawah, <strong>phpMyAdmin</strong> adalah <strong>traktor</strong>.</p>
+</blockquote>
+<br>
+<h2 id="membuat-database">Membuat Database</h2>
+<hr>
+<p>Sekarang kita akan membuat database untuk menyimpan inputan data dari form yang telah kita buat.</p>
+<ol>
+<li>Pertama, pastikan server dan database local pada XAMPP sudah aktif.
+
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-01.png" alt="&amp;ldquo;Apache Server dan Database MySQL&amp;rdquo;" title="Apache Server dan Database MySQL" >
+    <figcaption>Apache Server dan Database MySQL</figcaption>
+  </figure>
+
+
+</li>
+<li>Buka <strong>browser</strong>, dan akses link <a href="http://localhost/phpmyadmin/"
+    
+     target="_blank" rel="noreferrer" >http://localhost/phpmyadmin/</a> untuk membuka tampilan dashboard phpMyAdmin.
+
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-2-01.png" alt="&amp;ldquo;Tampilan Dashboard phpMyAdmin&amp;rdquo;" title="Tampilan Dashboard phpMyAdmin" >
+    <figcaption>Tampilan Dashboard phpMyAdmin</figcaption>
+  </figure>
+
+
+</li>
+<li>Pada bagian pojok kiri navigasi, paling atas terdapat tombol <strong>New</strong> untuk membuat database, dan isikan nama database pada kolom <code>database name</code>.
+
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-2-02.png" alt="&amp;ldquo;Klik New &amp;gt; Isi Nama Database&amp;rdquo;" title="Klik New &gt; Isi Nama Database" >
+    <figcaption>Klik New &gt; Isi Nama Database</figcaption>
+  </figure>
+
+
+</li>
+<li>Kita beri nama database ini <strong><code>db_user</code></strong>. Lalu klik tombol <strong>create</strong>, dan akan muncul tampilan untuk membuat <strong>table</strong>.
+
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-2-03.png" alt="&amp;ldquo;Setelah berhasil membuat database&amp;rdquo;" title="Setelah berhasil membuat database" >
+    <figcaption>Setelah berhasil membuat database</figcaption>
+  </figure>
+
+
+</li>
+</ol>
+<br>
+<h2 id="membuat-table">Membuat Table</h2>
+<hr>
+<p><strong>Table</strong> merupakan bagian dari database yang dapat memiliki relasi satu sama lain, tabel sendiri terdiri dari <strong>baris</strong> dan <strong>kolom</strong>. Jika database adalah ibunya maka tabel adalah anak - anaknya.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-2-12.jpg" alt="&amp;ldquo;Ilustrasi Database dan Tabel&amp;rdquo;" title="Ilustrasi Database dan Tabel" >
+    <figcaption>Ilustrasi Database dan Tabel</figcaption>
+  </figure>
+
+
+</p>
+<p>Disini kita akan membuat tabel yang akan menampung data input dari form registrasi yang kita buat kemarin. Nah, untuk itu kita akan membuat <strong>table</strong> bernama <strong><code>tbl_pendaftaran</code></strong> dengan isi 4 kolom yaitu :</p>
+<ul>
+<li>id</li>
+<li>username</li>
+<li>password</li>
+<li>email</li>
+</ul>
+<p>Jika nanti sudah berisi data, Kurang lebih gambarannya seperti ini :</p>
+<p><strong>tbl_pendaftaran</strong></p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Username</th>
+<th>Password</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>anbi</td>
+<td>123asd456</td>
+<td><a href="mailto:anbi@sayang.com">anbi@sayang.com</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>adeulfi</td>
+<td>sayang123</td>
+<td><a href="mailto:adeul@gmail.com">adeul@gmail.com</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>adexes</td>
+<td>juanda123</td>
+<td><a href="mailto:adexe@email.com">adexe@email.com</a></td>
+</tr>
+</tbody>
+</table>
+<p>Setelah tadi kita selesai membuat database. Sekarang bagaimana cara membuat tabel? Berikut langkah - langkahnya.</p>
+<ol>
+<li>
+<p>Masukkan nama tabel didalam kolom input <em>create table</em>. Kita beri nama <strong><code>tbl_pendaftaran</code></strong> dengan jumlah 4 kolom seperti yang kita bahas tadi.
+
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-2-04.png" alt="&amp;ldquo;Input nama tabel &amp;gt; masukkan jumlah kolom &amp;gt; go&amp;rdquo;" title="Input nama tabel &gt; masukkan jumlah kolom &gt; go" >
+    <figcaption>Input nama tabel &gt; masukkan jumlah kolom &gt; go</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p>Lalu akan muncul tampilan beberapa <em>field input</em> yang digunakan untuk mendeskripsikan kolom yang akan kita buat. Untuk membuat kolom kita perlu mendefinisikan <em><strong>name</strong></em> , <em><strong>type</strong></em> dan <em><strong>length/values</strong></em> kolom :</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-2-05.png" alt="&amp;ldquo;Definisikan nama, tipe dan panjang kolom&amp;rdquo;" title="Definisika nama, tipe dan panjang kolom" >
+    <figcaption>Definisika nama, tipe dan panjang kolom</figcaption>
+  </figure>
+
+
+</p>
+<ul>
+<li><strong>VARCHAR</strong> adalah tipe data String, cocok digunakan untuk menyimpan kata dan kalimat.</li>
+<li><strong>INT</strong> adalah tipe data Number, cocok digunakan unutk menyimpan angka.</li>
+</ul>
+<blockquote>
+<p>Usahakan dalam penamaan kolom <strong>jangan ada spasi</strong>. Sebaiknya gunakan <code>_</code> atau <code>camelCase</code>. Contoh : &ldquo;nama_depan&rdquo; atau &ldquo;namaBelakang&rdquo;</p>
+</blockquote>
+</li>
+<li>
+<p>Khusus untuk kolom <strong>Id</strong> , perlu kita jadikan sebagai <strong><code>primary key</code></strong> dan diberikan fungsi <em><strong>auto increment</strong></em>. Tujuannya agar setiap data yang diinput memiliki nilai yang <em>uniqe</em>.</p>
+<ol>
+<li>
+<p>Pada bagian <strong>id</strong> centang kolom bernama <strong>A.I</strong></p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-2-06.png" alt="&amp;ldquo;Centang Bagian A.I&amp;rdquo;" title="Centang Bagian A.I" >
+    <figcaption>Centang Bagian A.I</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p>Lalu akan muncul dialog box seperti ini, Langsung <strong>GO</strong> aja.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-2-07.png" alt="&amp;ldquo;Dialog Box Primary&amp;rdquo;" title="Dialog Box Primary" >
+    <figcaption>Dialog Box Primary</figcaption>
+  </figure>
+
+
+</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Setelah semuanya terisi, tekan <strong>save</strong> dan jadilah tabel <strong>tbl_pendaftaran</strong>!
+
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-2-08.png" alt="&amp;ldquo;Jadilah tbl_pendaftaran&amp;rdquo;" title="Jadilah Tabel Pendaftaran" >
+    <figcaption>Jadilah Tabel Pendaftaran</figcaption>
+  </figure>
+
+
+</p>
+</li>
+</ol>
+<br>
+<h2 id="koneksi-dengan-database">Koneksi Dengan Database</h2>
+<hr>
+<p>Database sudah kita siapkan, sekarang waktunya kita koneksikan dengan form yang sudah kita buat. Didalam <code>index.php</code>, kita tambahkan kode PHP untuk mengkoneksikan dengan database.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e">/* nama server kita */</span>
+$servername <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost&#34;</span>;
+
+<span style="color:#75715e">/* nama database kita */</span>
+$database <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;db_user&#34;</span>; 
+
+<span style="color:#75715e">/* nama user yang terdaftar pada database (default: root) */</span>
+$username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span>;
+
+<span style="color:#75715e">/* password yang terdaftar pada database (default : &#34;&#34;) */</span> 
+$password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>; 
+
+<span style="color:#75715e">/* membuat koneksi */</span>
+$conn <span style="color:#f92672">=</span> <span style="color:#a6e22e">mysqli_connect</span>($servername, $username, $password, $database);
+
+<span style="color:#75715e">/* mengecek koneksi */</span>
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>$conn) {
+    <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#34;Maaf koneksi anda gagal : &#34;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">mysqli_connect_error</span>());
+}<span style="color:#66d9ef">else</span>{
+   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;h1&gt;Yes! Koneksi Berhasil..&lt;/h1&gt;&#34;</span>;
+}
+
+
+<span style="color:#75715e">/* ============================
+</span><span style="color:#75715e">      NANTI KODE NYA DISINI 
+</span><span style="color:#75715e">   ============================*/</span>
+   
+
+<span style="color:#75715e">/* menutup koneksi */</span>
+<span style="color:#a6e22e">mysqli_close</span>($conn);
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>Jika koneksi berhasil, ketika kita mencoba login atau daftar akan muncul output :</p>
+<pre><code>Yes! Koneksi Berhasil..
+</code></pre><p>Jika gagal, akan muncul output :</p>
+<pre><code>Maaf koneksi anda gagal : *penyebab koneksi gagal*
+</code></pre><p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-2-09.gif" alt="&amp;ldquo;Contoh Koneksi Berhasil&amp;rdquo;" title="Contoh Koneksi Berhasil" >
+    <figcaption>Contoh Koneksi Berhasil</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="menyimpan-hasil-pendaftaran">Menyimpan Hasil Pendaftaran</h2>
+<hr>
+<p>Sekarang mari kita belajar cara menyimpan hasil input data form pendaftaran kedalam tabel <strong><code>tbl_pendaftaran</code></strong> di database <strong><code>db_user</code></strong>.</p>
+<p>Kita kemarin belajar cara mengambil input data form dengan menggunakan <code>$_POST</code>. Sekarang kita akan menyimpan setiap data pada form dengan memanggil data menggunakan <code>$_POST</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$username <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;username&#34;</span>];
+$password <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;password&#34;</span>];
+$email <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;email&#34;</span>];
+
+$query_sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;INSERT INTO tbl_pendaftaran (username, password, email) 
+</span><span style="color:#e6db74">                                    VALUES (&#39;</span><span style="color:#e6db74">$username</span><span style="color:#e6db74">&#39;, &#39;</span><span style="color:#e6db74">$password</span><span style="color:#e6db74">&#39;, &#39;</span><span style="color:#e6db74">$email</span><span style="color:#e6db74">&#39;)&#34;</span>;
+
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">mysqli_query</span>($conn, $query_sql)) {
+      <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;h1&gt;Username </span><span style="color:#e6db74">$username</span><span style="color:#e6db74"> berhasil terdaftar&lt;/h1&gt;
+</span><span style="color:#e6db74">            &lt;a href=&#39;pages/login.php&#39;&gt;Kembali Login&lt;/h1&gt;
+</span><span style="color:#e6db74">         &#34;</span>;
+} <span style="color:#66d9ef">else</span> {
+      <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Pendaftaran Gagal : &#34;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">mysqli_error</span>($conn);
+}
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><h3 id="penjelasan-garis-besar">Penjelasan Garis Besar</h3>
+<ul>
+<li>
+<p><strong>Query SQL</strong></p>
+<p>yaitu sintaks atau perintah yang dipakai untuk mengakses, memanipulasi dan menampilkan data pada sistem database SQL.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$query_sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;INSERT INTO tbl_pendaftaran (username, password, email) 
+</span><span style="color:#e6db74">                                    VALUES (&#39;</span><span style="color:#e6db74">$username</span><span style="color:#e6db74">&#39;, &#39;</span><span style="color:#e6db74">$password</span><span style="color:#e6db74">&#39;, &#39;</span><span style="color:#e6db74">$email</span><span style="color:#e6db74">&#39;)&#34;</span>;
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>Pada query diatas, bermaksud untuk menginput <em><code>username</code></em>, <em><code>password</code></em>, dan <em><code>email</code></em> kedalam tabel <strong><code>tbl_pendaftaran</code></strong> di database.</p>
+</li>
+<li>
+<p><strong>Eksekusi Query</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">mysqli_query</span>($conn, $query_sql)
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>Dalam kode diatas, digunakan untuk mengeksekusi Query SQL pada variabel <code>$query_sql</code> dalam database yang terkoneksi pada variabel <code>$conn</code>.</p>
+</li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-2-10.gif" alt="&amp;ldquo;Contoh Eksekusi Form Pendaftaran&amp;rdquo;" title="Contoh Eksekusi Form Pendaftaran" >
+    <figcaption>Contoh Eksekusi Form Pendaftaran</figcaption>
+  </figure>
+
+
+</p>
+<p>Jika kita berhasil mendaftar maka data tersebut sudah tersimpan di database. Coba kita lihat di <strong>phpMyAdmin</strong> &gt; <strong><code>db_user</code></strong> &gt; <strong><code>tbl_pendaftaran</code></strong> akan terlihat data kita yang tersimpan.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-2-11.png" alt="&amp;ldquo;Data Tersimpan Di tbl_pendaftaran&amp;rdquo;" title="Data tersimpan di tbl_pendaftaran" >
+    <figcaption>Data tersimpan di tbl_pendaftaran</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="autentikasi-login-dengan-data-database">Autentikasi Login Dengan Data Database</h2>
+<hr>
+<p>Kita sudah dapat menyimpan data pada saat mendaftar dengan form registrasi, sekarang kita akan membuat autentikasi login menggunakan username dan password yang sudah kita daftarkan.</p>
+<p>Mudahnya, kita mengambil data yang ada pada database dengan parameter data username dan password yang diinput pada form login.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-2-13.jpg" alt="&amp;ldquo;Ilustrasi Algoritma Autentikasi Login&amp;rdquo;" title="Ilustrasi Algoritma Autentikasi Login" >
+    <figcaption>Ilustrasi Algoritma Autentikasi Login</figcaption>
+  </figure>
+
+
+</p>
+<p>Jika datanya ada maka <em><strong>&ldquo;Login Berhasil&rdquo;</strong></em>, jika tidak maka <em><strong>&ldquo;Login Gagal&rdquo;</strong></em>. Langsung saja kita buat kodenya.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$username <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;username&#34;</span>];
+$password <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;password&#34;</span>];
+
+$query_sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM tbl_pendaftaran 
+</span><span style="color:#e6db74">                        WHERE username = &#39;</span><span style="color:#e6db74">$username</span><span style="color:#e6db74">&#39; AND password = &#39;</span><span style="color:#e6db74">$password</span><span style="color:#e6db74">&#39;&#34;</span>;
+
+$result <span style="color:#f92672">=</span> <span style="color:#a6e22e">mysqli_query</span>($conn, $query_sql);
+
+<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">mysqli_num_rows</span>($result) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>){
+      <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;h1&gt;Selamat Datang, &#34;</span><span style="color:#f92672">.</span>$username<span style="color:#f92672">.</span><span style="color:#e6db74">&#34;!&lt;/h1&gt;&#34;</span>;
+}<span style="color:#66d9ef">else</span>{
+      <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;h2&gt;Username atau Password Salah!&lt;/h2&gt;&#34;</span>;
+}
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><h3 id="penjelasan-secara-garis-besar">Penjelasan Secara Garis Besar</h3>
+<ul>
+<li><strong>Query Select</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$query_sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM tbl_pendaftaran 
+</span><span style="color:#e6db74">                        WHERE username = &#39;</span><span style="color:#e6db74">$username</span><span style="color:#e6db74">&#39; AND password = &#39;</span><span style="color:#e6db74">$password</span><span style="color:#e6db74">&#39;&#34;</span>;
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>Query diatas digunakan untuk mengambil data pada tabel <strong>tbl_pendaftaran</strong> , dimana ia akan mencari <code>username</code> dan <code>password</code> yang sama dengan yang dikirimkan pada form login.</p>
+<ul>
+<li><strong>Menghitung Jumlah Data</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">mysqli_num_rows</span>($result)
+<span style="color:#f92672">&gt;</span>
+</code></pre></div><p>Kode diatas digunakan untuk menghitung jumlah data pada hasil eksekusi query.Nah, disitu terdapat kondisi yang membandingkan dengan <strong>&gt; 0</strong>, yang berarti jika ada datanya maka berhasil login, jika tidak ada maka login gagal.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-2-14.gif" alt="&amp;ldquo;Contoh Eksekusi Login&amp;rdquo;" title="Contoh Eksekusi Login" >
+    <figcaption>Contoh Eksekusi Login</figcaption>
+  </figure>
+
+
+</p>
+<center> . . . </center>
+<p>Nah itu kan masih ada output buat cek koneksi tadi, kalian bisa menghapus kode tersebut.</p>
+<p>Gimana paham gak dengan penjelasan diatas, mungkin agak ribet yak, jika kalian masih bingung bisa tanya dikolom komentar dibawah. Untuk <strong>full codenya</strong> kalian bisa akses di github <a href="https://github.com/AnbiDev/"
+    
+     target="_blank" rel="noreferrer" >AnbiDev</a>.</p>
+<p>🐙 <a href="https://github.com/AnbiDev/php-login-daftar"
+    
+     target="_blank" rel="noreferrer" >https://github.com/AnbiDev/php-login-daftar</a></p>
+<p>Oke itulah full tutorial dari <a href="https://anbidev.com/buat-form-login-signup"
+    
+     target="_blank" rel="noreferrer" >Membuat Form Login dan Registrasi Dengan PHP MySQL</a>. Semoga bermanfaat dan sampai jumpa!</p>
+<blockquote>
+<p>Happy Coding</p>
+</blockquote>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Membuat Form Login dan Registrasi Dengan PHP MySQL : Part 1</title>
+            <link>https://anbidev.com/php-membangun-form-login-signup/</link>
+            <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/php-membangun-form-login-signup/</guid>
+            <description>Sekarang kita akan membuat sebuah form login dan pendaftaraan dengan menggunakan PHP dan MySQL. Nah, kalian yang mungkin pertama kali belajar membuat web santai saja, disini anbi bakal bahas langkah per langkah.
+Persiapan Nah apa saja yang perlu kita persiapkan nih? Berikut ini yang perlu kalian persiapan :
+Visual Studio Code Buat apa Visual Studio Code? VS Code (Visual Studio Code) sebuah teks editor ringan dan handal yang dibuat oleh Microsoft untuk sistem operasi multiplatform, artinya tersedia juga untuk versi Linux, Mac, dan Windows.</description>
+            <content type="html"><![CDATA[<p>Sekarang kita akan membuat sebuah <strong>form login</strong> dan <strong>pendaftaraan</strong> dengan menggunakan PHP dan MySQL. Nah, kalian yang mungkin pertama kali belajar membuat web santai saja, disini anbi bakal bahas langkah per langkah.</p>
+<br>
+<h2 id="persiapan">Persiapan</h2>
+<hr>
+<p>Nah apa saja yang perlu kita persiapkan nih? Berikut ini yang perlu kalian persiapan :</p>
+<h3 id="visual-studio-code"><strong>Visual Studio Code</strong></h3>
+<p>Buat apa <strong>Visual Studio Code</strong>? VS Code (<em><strong>Visual Studio Code</strong></em>) sebuah teks editor ringan dan handal yang dibuat oleh Microsoft untuk sistem operasi multiplatform, artinya tersedia juga untuk versi Linux, Mac, dan Windows.</p>
+<p><a href="https://code.visualstudio.com/"
+    
+     target="_blank" rel="noreferrer" >Download Disini</a></p>
+<p>Kalau selesai download, waktu installasi itu <em>option</em> dibawah dicentang semua yaa, supaya mempermudah kita dalam mengakses <em>Visual Studio Code</em>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-03.png" alt="&amp;ldquo;Centang Semua Optionnya&amp;rdquo;" title="Centang Semua Optionnya" >
+    <figcaption>Centang Semua Optionnya</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h3 id="xampp"><strong>XAMPP</strong></h3>
+<p>Lalu apa itu <strong>XAMPP</strong>? XAMPP merupakan paket alat untuk menjalankan web server dan database di <strong>localhost</strong> komputer. Itu artinya kalau kalian sudah punya website online, XAMPP membantumu membuat versi offline dari website tersebut.</p>
+<p><a href="https://www.apachefriends.org/"
+    
+     target="_blank" rel="noreferrer" >Download Disini</a></p>
+<p>Setelah selesai menginstall jangan lupa untuk mengaktifkan server <strong>Apache</strong> dan database <strong>MySQL</strong> pada XAMPP terlebih dahulu.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-01.png" alt="&amp;ldquo;Apache Server dan Database MySQL&amp;rdquo;" title="Apache Server dan Database MySQL" >
+    <figcaption>Apache Server dan Database MySQL</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="buat-struktur-folder">Buat Struktur Folder</h2>
+<hr>
+<p>Setelah selesai menginstall kedua aplikasi tersebut, mari kita lanjut membuat struktur folder untuk web ini.</p>
+<ul>
+<li>
+<p>Sekarang arahkan ke folder <strong>htdocs</strong> dan buat folder baru bernama <strong>login-signup</strong> caranya :</p>
+<ul>
+<li>Akses pada <strong>C:\xampp\htdocs</strong></li>
+<li>Buat disana buat folder bernama <strong>login-signup</strong>.
+
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-02.png" alt="&amp;ldquo;Folder login-signup&amp;rdquo;" title="Folder login-signup" >
+    <figcaption>Folder login-signup</figcaption>
+  </figure>
+
+
+</li>
+</ul>
+</li>
+<li>
+<p>Lalu didalam folder <strong>login-signup</strong> kita buat file PHP bernama <code>index.php</code> serta buat juga file stylesheet css bernama <code>style.css</code> dan juga folder lagi bernama <strong>pages</strong>.</p>
+</li>
+<li>
+<p>Didalam folder <strong>pages</strong> buat file bernama <code>login.php</code> dan <code>daftar.php</code>.</p>
+</li>
+<li>
+<p>Coba buka folder <strong>login-signup</strong> dengan menggunakan Visual Studio Code. Caranya hanya dengan klik kanan dan pilih <em>&ldquo;Open With Code&rdquo;</em>.</p>
+</li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-04.gif" alt="&amp;ldquo;Nih kayak gini Open With Code&amp;rdquo;" title="Nih kayak gini Open With Code" >
+    <figcaption>Nih kayak gini Open With Code</figcaption>
+  </figure>
+
+
+</p>
+<p><strong>Penjelasan Struktur Kode</strong></p>
+<p>Jika kalian membuat folder beserta filenya dengan baik, hasilnya akan seperti ini :</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-06.png" alt="&amp;ldquo;Struktur Web Folder&amp;rdquo;" title="Struktur Web Folder" >
+    <figcaption>Struktur Web Folder</figcaption>
+  </figure>
+
+
+</p>
+<ul>
+<li>
+<p>Folder <strong>pages</strong> berisi file <code>login.php</code> dan <code>daftar.php</code>.</p>
+<ul>
+<li>
+<p><strong><code>login.php</code></strong> , file ini nantinya akan berisi tampilan form login, dengan input <strong>username</strong> dan <strong>password</strong>.</p>
+</li>
+<li>
+<p><strong><code>daftar.php</code></strong>, file ini nantinya akan berisi tampilan form daftar dengan input <em><strong>username</strong></em> , <em><strong>email</strong></em> dan <em><strong>password</strong></em>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>index.php</code></strong>, file ini akan kita isi dengan kode PHP dimana ia akan menampilkan hasil <code>POST</code> pada halaman <strong>login</strong> dan <strong>daftar</strong>.</p>
+</li>
+<li>
+<p><strong><code>style.css</code></strong> , file ini akan menampung kode stylesheet untuk menghias web kita dengan CSS agar lebih menarik.</p>
+</li>
+</ul>
+<br>
+<h2 id="form-login">Form Login</h2>
+<hr>
+<p>Setelah membuat struktur folder dengan baik, mari kita membuat halaman form login terlebih dahulu. Kode yang kita buat akan disimpan di <strong>login.php</strong>, dan kode lengkap nya seperti ini :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        &lt;<span style="color:#f92672">title</span>&gt;Login&lt;/<span style="color:#f92672">title</span>&gt;
+        &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;../style.css&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+          &lt;<span style="color:#f92672">h1</span>&gt;Login&lt;/<span style="color:#f92672">h1</span>&gt;
+            &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;../index.php&#34;</span>&gt;
+
+                <span style="color:#75715e">&lt;!-- tipe hidden tidak akan tampil pada website --&gt;</span> 
+                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tujuan&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;LOGIN&#34;</span> &gt;
+
+                &lt;<span style="color:#f92672">label</span>&gt;Username&lt;/<span style="color:#f92672">label</span>&gt;
+                &lt;<span style="color:#f92672">br</span>&gt;
+                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span>&gt;
+                &lt;<span style="color:#f92672">br</span>&gt;
+                &lt;<span style="color:#f92672">label</span>&gt;Password&lt;/<span style="color:#f92672">label</span>&gt;
+                &lt;<span style="color:#f92672">br</span>&gt;
+                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;
+                &lt;<span style="color:#f92672">br</span>&gt;
+
+                &lt;<span style="color:#f92672">button</span>&gt;Log In&lt;/<span style="color:#f92672">button</span>&gt;
+                
+                &lt;<span style="color:#f92672">p</span>&gt; Belum punya akun?
+                  &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;daftar.php&#34;</span>&gt;Daftar di sini&lt;/<span style="color:#f92672">a</span>&gt;
+                &lt;/<span style="color:#f92672">p</span>&gt;
+            &lt;/<span style="color:#f92672">form</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>Coba kita lihat hasilnya, dengan mengakses link berikut <a href="http://localhost/login-signup/pages/login.php."
+    
+     target="_blank" rel="noreferrer" >http://localhost/login-signup/pages/login.php</a></p>
+<p><em><strong>&ldquo;Sebentar, Kenapa linknya aksesnya seperti itu?&quot;</strong></em></p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-12.jpg" alt="&amp;ldquo;Ini penjelasannya&amp;rdquo;" title="Ini Penjelasannya" >
+    <figcaption>Ini Penjelasannya</figcaption>
+  </figure>
+
+
+</p>
+<p>Nih hasilnya 😄</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-07.png" alt="&amp;ldquo;Hasil Tampilan Login&amp;rdquo;" title="Hasil Tampilan Login" >
+    <figcaption>Hasil Tampilan Login</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h3 id="penjelasan-garis-besar-kode"><strong>Penjelasan Garis Besar Kode</strong></h3>
+<ul>
+<li><code>&lt;form&gt;</code> Action</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;../index.php&#34;</span>&gt;
+</code></pre></div><p>Kode diatas untuk memberi tahu kemana data pada form ini akan dikirim? disana anbi mengarahkan ke file <code>index.php</code> dengan menggunakan method <code>POST</code>. Apa itu method <code>POST</code>? bisa kalian lihat disini.</p>
+<ul>
+<li><em>Data yang dikirim</em></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span>&gt;
+&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;
+</code></pre></div><p>Kedua baris kode diatas adalah tempat data yang akan dikirim. Attribute <code>name</code> digunakan sebagai identitas dari data yang dikirim, sehingga server dapat mengenali data tersebut berdasarkan nama yang kita berikan.</p>
+<p>Jadi misal <code>name = &quot;username&quot;</code> nanti ketika dikirim kita bisa menggunakan kode PHP untuk memanggil data yang dia input di <em>textbox</em> dengan kode <code>$_POST[&quot;username&quot;]</code>.</p>
+<ul>
+<li><em>Hidden Input</em></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tujuan&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;LOGIN&#34;</span> &gt;
+</code></pre></div><p>Kode diatas nantinya akan sebagai penanda bahwa data yang dikirim ke <code>index.php</code> adalah dari form Login. Kita juga akan membuat hal yang sama pada form pendaftaran.</p>
+<p>Perhatikan <em>attribute</em>  <code>value</code>, <em>value</em> ini digunakan untuk mendefinisikan nilai <em>default</em>.</p>
+<ul>
+<li>Pindah Halaman</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;daftar.php&#34;</span>&gt;Daftar di sini&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div><p>Untuk kode diatas digunakan untuk pindah ke halaman daftar.</p>
+<br>
+<h2 id="form-daftar">Form Daftar</h2>
+<hr>
+<p>Lalu kita lanjut membuat tampilan form pada file <strong>daftar.php</strong>. Kode nya hampir sama dengan yang tadi, tetapi ada sedikit perubahan dan tambahan menjadi seperti ini :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        &lt;<span style="color:#f92672">title</span>&gt;Halaman Login&lt;/<span style="color:#f92672">title</span>&gt;
+        &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;../style.css&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+          &lt;<span style="color:#f92672">h1</span>&gt;Daftar&lt;/<span style="color:#f92672">h1</span>&gt;
+            &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;../index.php&#34;</span>&gt;
+
+                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tujuan&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;DAFTAR&#34;</span>&gt;
+
+                &lt;<span style="color:#f92672">label</span>&gt;Username&lt;/<span style="color:#f92672">label</span>&gt;
+                &lt;<span style="color:#f92672">br</span>&gt;
+                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span>&gt;
+                &lt;<span style="color:#f92672">br</span>&gt;
+                &lt;<span style="color:#f92672">label</span>&gt;Email&lt;/<span style="color:#f92672">label</span>&gt;
+                &lt;<span style="color:#f92672">br</span>&gt;
+                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span>&gt;
+                &lt;<span style="color:#f92672">br</span>&gt;
+                &lt;<span style="color:#f92672">label</span>&gt;Password&lt;/<span style="color:#f92672">label</span>&gt;
+                &lt;<span style="color:#f92672">br</span>&gt;
+                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;
+                &lt;<span style="color:#f92672">br</span>&gt;
+                &lt;<span style="color:#f92672">button</span>&gt;Daftar&lt;/<span style="color:#f92672">button</span>&gt;
+                &lt;<span style="color:#f92672">p</span>&gt; Sudah punya akun?
+                  &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;login.php&#34;</span>&gt;Login di sini&lt;/<span style="color:#f92672">a</span>&gt;
+                &lt;/<span style="color:#f92672">p</span>&gt;
+            &lt;/<span style="color:#f92672">form</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>Coba kita lihat hasilnya dengan mengakses link berikut ini <a href="http://localhost/login-signup/pages/daftar.php"
+    
+     target="_blank" rel="noreferrer" >http://localhost/login-signup/pages/daftar.php</a>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-08.png" alt="&amp;ldquo;Hasil Tampilan Daftar&amp;rdquo;" title="Hasil Tampilan Daftar" >
+    <figcaption>Hasil Tampilan Daftar</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h3 id="penjelasan-garis-besar-kode-1"><strong>Penjelasan Garis Besar Kode</strong></h3>
+<p>Sebagian besar kode yang digunakan hampir sama seperti  form login, tetapi disini nilai untuk <em>Hidden Input</em> diubah menjadi <span style="color:#ff9c36">&quot;DAFTAR&quot;</span> dan input data tambahan bernama <span style="color:#ff9c36">&quot;email&quot;</span>.</p>
+<br>
+<h2 id="mari-hias-dengan-css">Mari Hias Dengan CSS!</h2>
+<hr>
+<p>Nah, sentuhan terakhir agar form web kita terlihat elok nan cantik, perlu kita hias menggunakan CSS. Jika kalian lihat pada kode diatas, terdapat satu baris kode :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;../style.css&#34;</span>&gt;
+</code></pre></div><p>Yang berarti semua kode CSS pada file <code>style.css</code> akan diimport kedalam file HTML yang memiliki baris kode tersebut. Gampangnya, baris kode itu menghubungkan file PHP HTML kita dengan file CSS.</p>
+<p>Nah sekarang mari kita masukkan kode CSS kedalam file <code>style.css</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">*</span>{
+    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">outline</span>: <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Open Sans&#39;</span>, <span style="color:#66d9ef">sans-serif</span>;
+}
+<span style="color:#f92672">body</span>{
+    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vh</span>;
+    <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#242424</span>;
+    <span style="color:#66d9ef">background-size</span>: <span style="color:#66d9ef">cover</span>;
+    <span style="color:#66d9ef">background-position</span>: <span style="color:#66d9ef">center</span>;
+    <span style="color:#66d9ef">background-repeat</span>: <span style="color:#66d9ef">no-repeat</span>;
+}
+<span style="color:#f92672">p</span> {
+  <span style="color:#66d9ef">color</span>: rgb(<span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">25</span>);
+  <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Open Sans&#39;</span>, <span style="color:#66d9ef">sans-serif</span>;
+  <span style="color:#66d9ef">padding-top</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+}
+
+<span style="color:#f92672">h1</span> {
+  <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+  <span style="color:#66d9ef">padding-bottom</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+}
+
+<span style="color:#f92672">a</span> {
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#752BEA</span>;
+  <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Open Sans&#39;</span>, <span style="color:#66d9ef">sans-serif</span>;
+}
+
+.<span style="color:#a6e22e">container</span>{
+    <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+    <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
+    <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
+    <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">-50</span><span style="color:#66d9ef">%</span>,<span style="color:#ae81ff">-50</span><span style="color:#66d9ef">%</span>);
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">300</span><span style="color:#66d9ef">px</span>;
+
+    <span style="color:#66d9ef">background-color</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">.9</span>);
+    <span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">255</span>,<span style="color:#ae81ff">255</span>,<span style="color:#ae81ff">255</span>,<span style="color:#ae81ff">.3</span>);
+}
+.<span style="color:#a6e22e">container</span> <span style="color:#f92672">h1</span>{
+    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">left</span>;
+    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#1d1d1d</span>;
+    <span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span><span style="color:#ae81ff">#1d1d1d</span>;
+}
+.<span style="color:#a6e22e">container</span> <span style="color:#f92672">label</span>{
+    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">left</span>;
+    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#1d1d1d</span>;
+}
+.<span style="color:#a6e22e">container</span> <span style="color:#f92672">form</span> <span style="color:#f92672">input</span>{
+    <span style="color:#66d9ef">width</span>: calc(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>);
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">none</span>;
+    <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">transparent</span>;
+    <span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#1d1d1d</span>;
+    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#1d1d1d</span>;
+    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+}
+.<span style="color:#a6e22e">container</span> <span style="color:#f92672">form</span> <span style="color:#f92672">button</span>{
+    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">none</span>;
+    <span style="color:#66d9ef">background-color</span>:<span style="color:#ae81ff">#752BEA</span>;
+    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">18</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#fafafa</span>;
+    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><p>Setelah kita hias dengan kode diatas, anbi harap tampilan kedua form akan menjadi seperti ini.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-09.png" alt="&amp;ldquo;Hasil Tampilan Login Dengan CSS&amp;rdquo;" title="Hasil Tampilan Login Dengan CSS" >
+    <figcaption>Hasil Tampilan Login Dengan CSS</figcaption>
+  </figure>
+
+
+</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-10.png" alt="&amp;ldquo;Hasil Tampilan Daftar Dengan CSS&amp;rdquo;" title="Hasil Tampilan Daftar Dengan CSS" >
+    <figcaption>Hasil Tampilan Daftar Dengan CSS</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="halaman-index">Halaman Index!</h2>
+<hr>
+<p>Terakhir kita akan membuat halaman <strong>index</strong>. Nantinya, halaman ini akan menjadi target data form kita dikirim. Sehingga data yang kita masukkan pada form login atau daftar akan diproses disini.</p>
+<p>Kode pada halaman index berisi seperti ini :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span> 
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">isset</span>($_POST[<span style="color:#e6db74">&#34;tujuan&#34;</span>])){
+
+        $tujuan <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;tujuan&#34;</span>];
+        
+        <span style="color:#66d9ef">if</span>($tujuan <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;LOGIN&#34;</span>){
+            $username <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;username&#34;</span>];
+            $password <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;password&#34;</span>];
+            
+            <span style="color:#75715e">/* logika sederhana admin */</span>
+            <span style="color:#66d9ef">if</span>($username <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;admin&#34;</span> <span style="color:#f92672">&amp;&amp;</span> $password <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;admin&#34;</span>){
+                <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;h1&gt;Selamat Datang, &#34;</span><span style="color:#f92672">.</span>$username<span style="color:#f92672">.</span><span style="color:#e6db74">&#34;!&lt;/h1&gt;&#34;</span>;
+            }<span style="color:#66d9ef">else</span>{
+                <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;h2&gt;Username atau Password Salah!&lt;/h2&gt;&#34;</span>;
+            }
+    
+        }<span style="color:#66d9ef">else</span>{
+            $username <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;username&#34;</span>];
+            $password <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;password&#34;</span>];
+            $email <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;email&#34;</span>];
+    
+            <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;h1&gt;Anda sudah terdaftar sebagai &#34;</span><span style="color:#f92672">.</span>$username<span style="color:#f92672">.</span><span style="color:#e6db74">&#34;!&lt;/h1&gt;&#34;</span>;
+            
+        }
+    }   
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><br>
+<p><strong>Penjelasan Garis Besar Kode</strong></p>
+<ul>
+<li><strong>Cek Request POST</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">isset</span>($_POST[<span style="color:#e6db74">&#34;tujuan&#34;</span>]))
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>Kode diatas bertujuan untuk mengetahui <em>&ldquo;apakah terdapat request POST yang masuk?&quot;</em>. Maksud variabel <code>$_POST[&quot;tujuan&quot;]</code> adalah data dari <code>&lt;input name=&quot;tujuan&quot;&gt;</code> yang dikirim melalui form ke <code>index.php</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$tujuan <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;tujuan&#34;</span>];
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>Jika terdapat request POST dari <em>hidden</em> input <span style="color:#ff9c36">&quot;tujuan&quot;</span> maka nilai akan disimpan divariabel <code>$tujuan</code>.</p>
+<ul>
+<li><strong>Bagian Login</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">if</span>($tujuan <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;LOGIN&#34;</span>){
+    $username <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;username&#34;</span>];
+    $password <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;password&#34;</span>];
+}
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>Nah, jika nilai variabel <code>$tujuan</code> bernilai <span style="color:#ff9c36">&quot;LOGIN&quot;</span> maka ia akan mengambil data form input <span style="color:#ff9c36">&quot;username&quot;</span> dan <span style="color:#ff9c36">&quot;password&quot;</span> yang dikirim. Kedua data tersebut akan disimpan di variabel <code>$username</code> dan <code>$password</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e">/* logika sederhana admin */</span>
+<span style="color:#66d9ef">if</span>($username <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;admin&#34;</span> <span style="color:#f92672">&amp;&amp;</span> $password <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;admin&#34;</span>){
+    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;h1&gt;Selamat Datang, &#34;</span><span style="color:#f92672">.</span>$username<span style="color:#f92672">.</span><span style="color:#e6db74">&#34;!&lt;/h1&gt;&#34;</span>;
+}<span style="color:#66d9ef">else</span>{
+    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;h2&gt;Username atau Password Salah!&lt;/h2&gt;&#34;</span>;
+}
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>Disini anbi membuat kondisi simulasi login pada umumnya. Jika nilai Username dan Password adalah <span style="color:#ff9c36">&quot;admin&quot;</span>, maka halaman <code>index.php</code> akan mengatakan <em>&ldquo;Selamat Datang, Admin!&quot;</em>. Jika tidak makan halaman <code>index.php</code> akan mengatakan <em>Username atau Password Salah!&quot;</em></p>
+<ul>
+<li><strong>Bagian Daftar</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$username <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;username&#34;</span>];
+$password <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;password&#34;</span>];
+$email <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#34;email&#34;</span>];
+
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;h1&gt;Anda sudah terdaftar sebagai &#34;</span><span style="color:#f92672">.</span>$username<span style="color:#f92672">.</span><span style="color:#e6db74">&#34;!&lt;/h1&gt;&#34;</span>;
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>Selanjutnya adalah bagian daftar, disini kita mengambil nilai dari data form input <span style="color:#ff9c36">&quot;username&quot;</span>, <span style="color:#ff9c36">&quot;password&quot;</span>, <span style="color:#ff9c36">&quot;email&quot;</span> dan menampilkan nilai <code>$username</code>.</p>
+<br>
+<p>Ketika semua langkah - langkah diatas sudah kita implementasikan, maka web akan berjalan seperti ini.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/php-membangun-form-login-daftar-11.gif" alt="&amp;ldquo;Hasil Login dan Daftar!&amp;quot;" title="Hasil Login dan Daftar!" >
+    <figcaption>Hasil Login dan Daftar!</figcaption>
+  </figure>
+
+
+</p>
+<center> . . . </center>
+<p>Gimana paham gak dengan penjelasan diatas, mungkin agak ribet yak, jika kalian masih bingung bisa tanya dikolom komentar dibawah. Untuk <strong>full codenya</strong> kalian bisa akses di github <a href="https://github.com/AnbiDev/"
+    
+     target="_blank" rel="noreferrer" >AnbiDev</a>.</p>
+<p>🐙 <a href="https://github.com/AnbiDev/php-login-daftar"
+    
+     target="_blank" rel="noreferrer" >https://github.com/AnbiDev/php-login-daftar</a></p>
+<p>Oke sekian dari Anbi, sampai ketemu di artikel selanjutnya</p>
+<blockquote>
+<p>Happy Coding</p>
+</blockquote>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

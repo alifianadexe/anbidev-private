@@ -1,0 +1,564 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>gerbang logika on AnbiDev</title>
+        <link>https://anbidev.com/tags/gerbang-logika/</link>
+        <description>Recent content in gerbang logika on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Thu, 19 Nov 2020 17:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/gerbang-logika/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Gerbang Logika Dasar</title>
+            <link>https://anbidev.com/gerbang-logika-dasar/</link>
+            <pubDate>Thu, 19 Nov 2020 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/gerbang-logika-dasar/</guid>
+            <description>Dalam merangkai sebuah rangkaian elektronika tidak lepas dengan adanya gerbang logika. Disetiap gerbang logika memiliki satu keluaran dan satu atau lebih masukan (input). Didalam bahasa mesin sendiri hanya dikenal dalam bilangan biner saja antara 1 dan 0.
+Maka dari itu keluaran dan masukan di gerbang logika ini memiliki kondisi HIGH 1 atau LOW 0. Disetiap gerbang pun memiliki tabel kebenaran, yakni tabel yang berisikan kombinasi-kombinasi Variabel Input (Masukan) yang menghasilkan Output (Keluaran) Logis.</description>
+            <content type="html"><![CDATA[<p>Dalam merangkai sebuah rangkaian elektronika tidak lepas dengan adanya gerbang logika. Disetiap gerbang logika memiliki satu keluaran dan satu atau lebih masukan (<em>input</em>). Didalam bahasa mesin sendiri hanya dikenal dalam bilangan biner saja antara <strong>1</strong> dan <strong>0</strong>.</p>
+<p>Maka dari itu keluaran dan masukan di gerbang logika ini memiliki kondisi <strong>HIGH 1</strong> atau <strong>LOW 0</strong>. Disetiap gerbang pun memiliki tabel kebenaran, yakni tabel yang berisikan kombinasi-kombinasi Variabel Input (Masukan) yang menghasilkan Output (Keluaran) Logis.</p>
+<p>Gerbang logika digital standar secara umum tersedia dalam dua macam yakni,</p>
+<ul>
+<li>TTL (Transistor-Transistor Logic)</li>
+<li>CMOS (Complementary Metal-Oxide-Silicon).</li>
+</ul>
+<p>Nah kedua hal tersebut mengacu pada teknologi logika yang digunakan untuk memproduksi sebuah IC (Integrated Circuit) atau chip.</p>
+<p>Gerbang logika sendiri ada tujuh macam ,yakni :</p>
+<ol>
+<li><em>AND</em></li>
+<li><em>OR</em></li>
+<li><em>NOT</em></li>
+<li><em>NAND</em></li>
+<li><em>NOR</em></li>
+<li><em>X OR</em></li>
+<li><em>X NOR</em></li>
+</ol>
+<br>
+<h2 id="gerbang-and"><strong>Gerbang AND</strong></h2>
+<hr>
+<p>Gerbang <strong>AND</strong> 2 masukan dapat dianalogikan sebagai 2 saklar seri untuk menghidupkan lampu. Lampu akan menyala bila saklar SA dan saklar SB sama - sama ditutup <em>(gambar 1.1)</em>. Gerbang AND dapat disimbolkan pada <em>(gambar 1.2)</em>.</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/saklar-and.png" alt="Gambar 1.1" title="Gambar 1.1 Saklar Lampu Sederhana" loading="lazy">
+    <figcaption>Gambar 1.1 Saklar Lampu Sederhana</figcaption>
+  </figure>
+
+
+</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/simbol-and.png" alt="Gambar 1.2" title="Gambar 1.2 Simbol Gerbang AND" loading="lazy">
+    <figcaption>Gambar 1.2 Simbol Gerbang AND</figcaption>
+  </figure>
+
+
+</p>
+<p>Tabel kebenaran dari Gerbang AND untuk 2 masukan (inputan)</p>
+<table>
+<thead>
+<tr>
+<th>Masukan</th>
+<th></th>
+<th>Keluaran</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>B</td>
+<td>Y=A.B</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Jadi ibaratnya kita pake operator perkalian dalam gerbang AND ini. lalu, untuk IC atau chip yang menggunakan gerbang ini contohnya adalah seperti berikut.</p>
+<p><em>Gerbang AND 2 masukan : IC 7408 (gambar 1.3)</em></p>
+<p><em>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/ic-7408.jpg" alt="Gambar 1.3" title="Gambar 1.3 IC 7408" loading="lazy">
+    <figcaption>Gambar 1.3 IC 7408</figcaption>
+  </figure>
+
+
+</em></p>
+<p><em>Gerbang AND 3 masukan : IC 7411 (gambar 1.4)</em></p>
+<p><em>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/ic-7411.png" alt="Gambar 1.4" title="Gambar 1.4 IC 7411" loading="lazy">
+    <figcaption>Gambar 1.4 IC 7411</figcaption>
+  </figure>
+
+
+</em></p>
+<p><em>Gerbang AND 4 masukan : IC 7421 (gambar 1.5)</em></p>
+<p><em>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/ic-7421.jpg" alt="Gambar 1.5" title="Gambar 1.5 IC 7421" loading="lazy">
+    <figcaption>Gambar 1.5 IC 7421</figcaption>
+  </figure>
+
+
+</em></p>
+<br>
+<h2 id="gerbang-or"><strong>Gerbang OR</strong></h2>
+<hr>
+<p>Gerbang OR 2 masukan dapat dianalogikan sebagai 2 saklar paralel untuk menghidupkan lampu, lampu akan menyala bila salah satu saklar SA atau saklar SB ditutup <em>(gambar 2.1)</em>. Gerbang OR memiliki simbol seperti ini <em>(gambar 2.2).</em></p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/saklar-or.png" alt="Gambar 2.1" title="Gambar 2.1 Saklar sederhana OR" loading="lazy">
+    <figcaption>Gambar 2.1 Saklar sederhana OR</figcaption>
+  </figure>
+
+
+</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/simbol-or.png" alt="Gambar 2.2" title="Gambar 2.2 Simbol Gerbang OR" loading="lazy">
+    <figcaption>Gambar 2.2 Simbol Gerbang OR</figcaption>
+  </figure>
+
+
+</p>
+<p>Tabel Kebenaran untuk Gerbang OR dan 2 masukan (inputan)</p>
+<table>
+<thead>
+<tr>
+<th>Masukan</th>
+<th></th>
+<th>Keluaran</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>B</td>
+<td>Y=A+B</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Bisa diibaratin kita pake operator penjumlahan dalam hal ini. Untuk IC atau chip yang menggunakan gerbang ini contohnya adalah <em>IC 7432</em>.</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/ic-7432.png" alt="&amp;ldquo;Gambar 2.3&amp;rdquo;" title="Gambar 2.3 IC 7432" loading="lazy">
+    <figcaption>Gambar 2.3 IC 7432</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="gerbang-not-inverter"><strong>Gerbang NOT (INVERTER)</strong></h2>
+<hr>
+<p>Gerbang ini merupakan suatu rangkaian logika yang berfungsi sebagai &ldquo;pembalik&rdquo;, jika masukan berlogika 1, maka keluaran akan berlogika 0, demikian sebaliknya. Seperti halnya sebuah saklar yang dihubungkan ke relay <em>Normally Closed (NC)</em>.</p>
+<p>Jika saklar SA terbuka (logika 0), maka relay (S) dalam kondisi tertutup sehingga lampu menyala (logika 1), sedangkan bila saklar terbuka (logika 0), maka relay dalam kondisi terbuka sehingga lampu padam (logika 0) <em>(gambar 3.1)</em>. Gerbang Not disimbolkan seperti (<em>gambar 3.2).</em></p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/saklar-not.png" alt="Gambar 3.1" title="Gambar 3.1 Rangkaian Saklar NOT dengan NC" loading="lazy">
+    <figcaption>Gambar 3.1 Rangkaian Saklar NOT dengan NC</figcaption>
+  </figure>
+
+
+</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/simbol-not.png" alt="Gambar 3.2" title="Gambar 3.2 Simbol Gerbang NOT" loading="lazy">
+    <figcaption>Gambar 3.2 Simbol Gerbang NOT</figcaption>
+  </figure>
+
+
+</p>
+<p>Tabel Kebenaran Gerbang Not</p>
+<table>
+<thead>
+<tr>
+<th>Masukan</th>
+<th>Keluaran</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Z = A’</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Untuk IC atau chip yang menggunakan gerbang ini contohnya adalah <em>IC 7404.</em></p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/ic-7404.png" alt="Gambar 3.3" title="Gambar 3.3 IC 7404" loading="lazy">
+    <figcaption>Gambar 3.3 IC 7404</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="gerbang-nand"><strong>Gerbang NAND</strong></h2>
+<hr>
+<p>Gabungan antara gerbang NOT dan gerbang AND. Gerbang logika ini adalah kebalikan dari gerbang logika AND namun tidak sama dengan gerbang logika OR. Memiliki simbol :</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/simbol-nand2.png" alt="Gambar 4.1" title="Gambar 4.1 Simbol Gerbang NAND" loading="lazy">
+    <figcaption>Gambar 4.1 Simbol Gerbang NAND</figcaption>
+  </figure>
+
+
+</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/simbol-nand1.png" alt="Gambar 4.2" title="Gambar 4.2 Simbol Gerbang NAND" loading="lazy">
+    <figcaption>Gambar 4.2 Simbol Gerbang NAND</figcaption>
+  </figure>
+
+
+</p>
+<p>Tabel Kebenaran Gerbang NAND</p>
+<table>
+<thead>
+<tr>
+<th>Masukan</th>
+<th></th>
+<th>Keluaran</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>B</td>
+<td>Yand</td>
+<td>Ynand</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Nah, untuk IC atau chip yang menggunakan gerbang ini contohnya adalah seperti berikut.</p>
+<p><em>Gerbang NAND 2 masukan : IC 7400 (gambar 4.3)</em></p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/ic-7400.gif" alt="Gambar 4.3" title="Gambar 4.3 IC 7400" loading="lazy">
+    <figcaption>Gambar 4.3 IC 7400</figcaption>
+  </figure>
+
+
+</p>
+<p><em>Gerbang NAND 3 masukan : IC 7410 (gambar 4.4)</em></p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/ic-7410.gif" alt="Gambar 4.4" title="Gambar 4.4 IC 7410" loading="lazy">
+    <figcaption>Gambar 4.4 IC 7410</figcaption>
+  </figure>
+
+
+</p>
+<p><em>Gerbang NAND 4 masukan : IC 7420 (gambar 4.5)</em></p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/ic-7420.gif" alt="Gambar 4.5" title="Gambar 4.5 IC 7420" loading="lazy">
+    <figcaption>Gambar 4.5 IC 7420</figcaption>
+  </figure>
+
+
+</p>
+<p><em>Gerbang NAND 8 masukan : IC 7430 (gambar 4.6)</em></p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/ic-7430.gif" alt="Gambar 4.6" title="Gambar 4.6 IC 7420" loading="lazy">
+    <figcaption>Gambar 4.6 IC 7420</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="gerbang-nor"><strong>Gerbang NOR</strong></h2>
+<hr>
+<p>Gabungan dari gerbang NOT dan gerbang OR. Artinya gerbang logika ini adalah kebalikan dari Gerbang OR. Memiliki simbol :</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/simbol-nor1.png" alt="Gambar 5.1" title="Gambar 5.1 Simbol Gerbang NOR" loading="lazy">
+    <figcaption>Gambar 5.1 Simbol Gerbang NOR</figcaption>
+  </figure>
+
+
+</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/simbol-nor2.png" alt="Gambar 5.2" title="Gambar 5.2 Simbol Gerbang NOR" loading="lazy">
+    <figcaption>Gambar 5.2 Simbol Gerbang NOR</figcaption>
+  </figure>
+
+
+</p>
+<p>Tabel Kebenaran Gerbang NOR</p>
+<table>
+<thead>
+<tr>
+<th>Masukan</th>
+<th></th>
+<th>Keluaran</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>B</td>
+<td>Yor</td>
+<td>Ynor</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>IC atau chip yang menggunakan gerbang ini contohnya adalah seperti berikut.</p>
+<p><em>Gerbang NOR 2 masukan : IC 7402 (gambar 5.3).</em></p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/ic-7402.gif" alt="Gambar 5.3" title="Gambar 5.3 IC 7402" loading="lazy">
+    <figcaption>Gambar 5.3 IC 7402</figcaption>
+  </figure>
+
+
+</p>
+<p><em>Gerbang NOR 3 masukan : IC 7427 (gambar 5.4).</em></p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/ic-7427.gif" alt="Gambar 5.4" title="Gambar 5.4 IC 7427" loading="lazy">
+    <figcaption>Gambar 5.4 IC 7427</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="gerbang-xor"><strong>Gerbang XOR</strong></h2>
+<hr>
+<p>(Exclusive OR) memiliki dua inputan dan satu hasil output. Logika pada gerbang ini adalah output pasti 1 jika kedua nilai inputan berbeda, dan pasti 0 jika kedua inputan sama.</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/simbol-xor.png" alt="Gambar 6.1" title="Gambar 6.1 Simbol Gerbang XOR" loading="lazy">
+    <figcaption>Gambar 6.1 Simbol Gerbang XOR</figcaption>
+  </figure>
+
+
+</p>
+<p>Tabel Kebenaran Gerbang X OR</p>
+<table>
+<thead>
+<tr>
+<th>Masukan</th>
+<th></th>
+<th>Keluaran</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>B</td>
+<td>Yor</td>
+<td>Yxor</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>IC atau chip yang menggunakan gerbang ini contohnya adalah <em>IC 7486</em> dua masukan.</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/ic-7486.png" alt="Gambar 6.2" title="Gambar 6.2 IC 7486" loading="lazy">
+    <figcaption>Gambar 6.2 IC 7486</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="gerbang-xnor"><strong>Gerbang XNOR</strong></h2>
+<hr>
+<p>(Exclusive NOT OR) adalah kebalikan dari gerbang XOR. Logika gerbang ini adalah jika kedua input nilainya sama maka output yang dihasilkan pasti 1.</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/simbol-xnor1.png" alt="Gambar 7.1" title="Gambar 7.1 Simbol Gerbang XNOR" loading="lazy">
+    <figcaption>Gambar 7.1 Simbol Gerbang XNOR</figcaption>
+  </figure>
+
+
+</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/simbol-xnor2.png" alt="Gambar 7.2" title="Gambar 7.2 Simbol Gerbang XNOR" loading="lazy">
+    <figcaption>Gambar 7.2 Simbol Gerbang XNOR</figcaption>
+  </figure>
+
+
+</p>
+<p>Tabel Kebenaran Gerbang X NOR</p>
+<table>
+<thead>
+<tr>
+<th>Masukan</th>
+<th></th>
+<th>Keluaran</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>B</td>
+<td>Yxor</td>
+<td>Yxnor</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>IC atau chip yang menggunakan gerbang ini contohnya adalah IC 74266 dua masukan.</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/ic-74266-1.png" alt="gambar 7.3" title="Gambar 7.3 IC 74266" loading="lazy">
+    <figcaption>Gambar 7.3 IC 74266</figcaption>
+  </figure>
+
+
+</p>
+<p>Nah mungkin itu dia beberapa informasi yang dapat saya sampaikan untuk saat ini. Mohon maaf atas segala kesalahan dan kerandoman materi saya, jika ada sanggahan mangga untuk komen di bawah yah :)</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

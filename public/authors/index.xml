@@ -1,0 +1,88 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Authors on AnbiDev</title>
+        <link>https://anbidev.com/authors/</link>
+        <description>Recent content in Authors on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Sun, 14 Mar 2021 17:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/authors/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Hamid Machfudin Sukardi</title>
+            <link>https://anbidev.com/authors/hamid/</link>
+            <pubDate>Sun, 14 Mar 2021 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/authors/hamid/</guid>
+            <description>Amateur Programmer on Premise. Currently living in Jakarta Selatan.</description>
+            <content type="html"><![CDATA[<p>Amateur Programmer on Premise. Currently living in Jakarta Selatan.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Muhammad Alifian Aqshol (AlifianAdexe)</title>
+            <link>https://anbidev.com/authors/adexe/</link>
+            <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/authors/adexe/</guid>
+            <description>Manusia dengan segala dosanya, fakir ilmu dan hanya berharap bisa menjadi lebih baik serta berguna bagi nusa bangsa dan agama. Memiliki cita - cita menjadi wakil dari seorang pemimpin yang sangat ia percaya. Hobi menonton anime dan bermain sama teman.</description>
+            <content type="html"><![CDATA[<p>Manusia dengan segala dosanya, fakir ilmu dan hanya berharap bisa menjadi lebih baik serta berguna bagi nusa bangsa dan agama. Memiliki cita - cita menjadi wakil dari seorang pemimpin yang sangat ia percaya. Hobi menonton anime dan bermain sama teman.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>J3ndra</title>
+            <link>https://anbidev.com/authors/j3ndra/</link>
+            <pubDate>Fri, 29 Jan 2021 15:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/authors/j3ndra/</guid>
+            <description>Want to learn something new but too lazy&amp;hellip; 😴</description>
+            <content type="html"><![CDATA[<p>Want to learn something new but too lazy&hellip; 😴</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Muhammad Bagus Satria</title>
+            <link>https://anbidev.com/authors/bagus/</link>
+            <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/authors/bagus/</guid>
+            <description>I&amp;rsquo;m not the only one ~</description>
+            <content type="html"><![CDATA[<p>I&rsquo;m not the only one ~</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Muhammad Dafi Hisbullah</title>
+            <link>https://anbidev.com/authors/dave/</link>
+            <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/authors/dave/</guid>
+            <description>Desc Insert Here</description>
+            <content type="html"><![CDATA[<p>Desc Insert Here</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Dhevan Muhamad Anthareza</title>
+            <link>https://anbidev.com/authors/dhevanthareza/</link>
+            <pubDate>Thu, 08 Oct 2020 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/authors/dhevanthareza/</guid>
+            <description>Masih jadi tukang ketik sambil nyari client tetap buat bikin softwarehouse sendiri</description>
+            <content type="html"><![CDATA[<p>Masih jadi tukang ketik sambil nyari client tetap buat bikin softwarehouse sendiri</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>admin</title>
+            <link>https://anbidev.com/authors/admin/</link>
+            <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/authors/admin/</guid>
+            <description></description>
+            <content type="html"><![CDATA[]]></content>
+        </item>
+        
+    </channel>
+</rss>

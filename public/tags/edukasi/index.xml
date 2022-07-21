@@ -1,0 +1,721 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>edukasi on AnbiDev</title>
+        <link>https://anbidev.com/tags/edukasi/</link>
+        <description>Recent content in edukasi on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Thu, 19 Nov 2020 17:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/edukasi/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Gerbang Logika Dasar</title>
+            <link>https://anbidev.com/gerbang-logika-dasar/</link>
+            <pubDate>Thu, 19 Nov 2020 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/gerbang-logika-dasar/</guid>
+            <description>Dalam merangkai sebuah rangkaian elektronika tidak lepas dengan adanya gerbang logika. Disetiap gerbang logika memiliki satu keluaran dan satu atau lebih masukan (input). Didalam bahasa mesin sendiri hanya dikenal dalam bilangan biner saja antara 1 dan 0.
+Maka dari itu keluaran dan masukan di gerbang logika ini memiliki kondisi HIGH 1 atau LOW 0. Disetiap gerbang pun memiliki tabel kebenaran, yakni tabel yang berisikan kombinasi-kombinasi Variabel Input (Masukan) yang menghasilkan Output (Keluaran) Logis.</description>
+            <content type="html"><![CDATA[<p>Dalam merangkai sebuah rangkaian elektronika tidak lepas dengan adanya gerbang logika. Disetiap gerbang logika memiliki satu keluaran dan satu atau lebih masukan (<em>input</em>). Didalam bahasa mesin sendiri hanya dikenal dalam bilangan biner saja antara <strong>1</strong> dan <strong>0</strong>.</p>
+<p>Maka dari itu keluaran dan masukan di gerbang logika ini memiliki kondisi <strong>HIGH 1</strong> atau <strong>LOW 0</strong>. Disetiap gerbang pun memiliki tabel kebenaran, yakni tabel yang berisikan kombinasi-kombinasi Variabel Input (Masukan) yang menghasilkan Output (Keluaran) Logis.</p>
+<p>Gerbang logika digital standar secara umum tersedia dalam dua macam yakni,</p>
+<ul>
+<li>TTL (Transistor-Transistor Logic)</li>
+<li>CMOS (Complementary Metal-Oxide-Silicon).</li>
+</ul>
+<p>Nah kedua hal tersebut mengacu pada teknologi logika yang digunakan untuk memproduksi sebuah IC (Integrated Circuit) atau chip.</p>
+<p>Gerbang logika sendiri ada tujuh macam ,yakni :</p>
+<ol>
+<li><em>AND</em></li>
+<li><em>OR</em></li>
+<li><em>NOT</em></li>
+<li><em>NAND</em></li>
+<li><em>NOR</em></li>
+<li><em>X OR</em></li>
+<li><em>X NOR</em></li>
+</ol>
+<br>
+<h2 id="gerbang-and"><strong>Gerbang AND</strong></h2>
+<hr>
+<p>Gerbang <strong>AND</strong> 2 masukan dapat dianalogikan sebagai 2 saklar seri untuk menghidupkan lampu. Lampu akan menyala bila saklar SA dan saklar SB sama - sama ditutup <em>(gambar 1.1)</em>. Gerbang AND dapat disimbolkan pada <em>(gambar 1.2)</em>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/saklar-and.png" alt="Gambar 1.1" title="Gambar 1.1 Saklar Lampu Sederhana" >
+    <figcaption>Gambar 1.1 Saklar Lampu Sederhana</figcaption>
+  </figure>
+
+
+</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/simbol-and.png" alt="Gambar 1.2" title="Gambar 1.2 Simbol Gerbang AND" >
+    <figcaption>Gambar 1.2 Simbol Gerbang AND</figcaption>
+  </figure>
+
+
+</p>
+<p>Tabel kebenaran dari Gerbang AND untuk 2 masukan (inputan)</p>
+<table>
+<thead>
+<tr>
+<th>Masukan</th>
+<th></th>
+<th>Keluaran</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>B</td>
+<td>Y=A.B</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Jadi ibaratnya kita pake operator perkalian dalam gerbang AND ini. lalu, untuk IC atau chip yang menggunakan gerbang ini contohnya adalah seperti berikut.</p>
+<p><em>Gerbang AND 2 masukan : IC 7408 (gambar 1.3)</em></p>
+<p><em>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/ic-7408.jpg" alt="Gambar 1.3" title="Gambar 1.3 IC 7408" >
+    <figcaption>Gambar 1.3 IC 7408</figcaption>
+  </figure>
+
+
+</em></p>
+<p><em>Gerbang AND 3 masukan : IC 7411 (gambar 1.4)</em></p>
+<p><em>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/ic-7411.png" alt="Gambar 1.4" title="Gambar 1.4 IC 7411" >
+    <figcaption>Gambar 1.4 IC 7411</figcaption>
+  </figure>
+
+
+</em></p>
+<p><em>Gerbang AND 4 masukan : IC 7421 (gambar 1.5)</em></p>
+<p><em>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/ic-7421.jpg" alt="Gambar 1.5" title="Gambar 1.5 IC 7421" >
+    <figcaption>Gambar 1.5 IC 7421</figcaption>
+  </figure>
+
+
+</em></p>
+<br>
+<h2 id="gerbang-or"><strong>Gerbang OR</strong></h2>
+<hr>
+<p>Gerbang OR 2 masukan dapat dianalogikan sebagai 2 saklar paralel untuk menghidupkan lampu, lampu akan menyala bila salah satu saklar SA atau saklar SB ditutup <em>(gambar 2.1)</em>. Gerbang OR memiliki simbol seperti ini <em>(gambar 2.2).</em></p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/saklar-or.png" alt="Gambar 2.1" title="Gambar 2.1 Saklar sederhana OR" >
+    <figcaption>Gambar 2.1 Saklar sederhana OR</figcaption>
+  </figure>
+
+
+</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/simbol-or.png" alt="Gambar 2.2" title="Gambar 2.2 Simbol Gerbang OR" >
+    <figcaption>Gambar 2.2 Simbol Gerbang OR</figcaption>
+  </figure>
+
+
+</p>
+<p>Tabel Kebenaran untuk Gerbang OR dan 2 masukan (inputan)</p>
+<table>
+<thead>
+<tr>
+<th>Masukan</th>
+<th></th>
+<th>Keluaran</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>B</td>
+<td>Y=A+B</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Bisa diibaratin kita pake operator penjumlahan dalam hal ini. Untuk IC atau chip yang menggunakan gerbang ini contohnya adalah <em>IC 7432</em>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/ic-7432.png" alt="&amp;ldquo;Gambar 2.3&amp;rdquo;" title="Gambar 2.3 IC 7432" >
+    <figcaption>Gambar 2.3 IC 7432</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="gerbang-not-inverter"><strong>Gerbang NOT (INVERTER)</strong></h2>
+<hr>
+<p>Gerbang ini merupakan suatu rangkaian logika yang berfungsi sebagai &ldquo;pembalik&rdquo;, jika masukan berlogika 1, maka keluaran akan berlogika 0, demikian sebaliknya. Seperti halnya sebuah saklar yang dihubungkan ke relay <em>Normally Closed (NC)</em>.</p>
+<p>Jika saklar SA terbuka (logika 0), maka relay (S) dalam kondisi tertutup lalu lampu menyala (logika 1), sedangkan bila saklar tertutup (logika 1), maka relay dalam kondisi terbuka sehingga lampu padam (logika 0) <em>(gambar 3.1)</em>. Gerbang Not disimbolkan seperti (<em>gambar 3.2).</em></p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/saklar-not.png" alt="Gambar 3.1" title="Gambar 3.1 Rangkaian Saklar NOT dengan NC" >
+    <figcaption>Gambar 3.1 Rangkaian Saklar NOT dengan NC</figcaption>
+  </figure>
+
+
+</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/simbol-not.png" alt="Gambar 3.2" title="Gambar 3.2 Simbol Gerbang NOT" >
+    <figcaption>Gambar 3.2 Simbol Gerbang NOT</figcaption>
+  </figure>
+
+
+</p>
+<p>Tabel Kebenaran Gerbang Not</p>
+<table>
+<thead>
+<tr>
+<th>Masukan</th>
+<th>Keluaran</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Z = A’</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Untuk IC atau chip yang menggunakan gerbang ini contohnya adalah <em>IC 7404.</em></p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/ic-7404.png" alt="Gambar 3.3" title="Gambar 3.3 IC 7404" >
+    <figcaption>Gambar 3.3 IC 7404</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="gerbang-nand"><strong>Gerbang NAND</strong></h2>
+<hr>
+<p>Gabungan antara gerbang NOT dan gerbang AND. Gerbang logika ini adalah kebalikan dari gerbang logika AND namun tidak sama dengan gerbang logika OR. Memiliki simbol :</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/simbol-nand2.png" alt="Gambar 4.1" title="Gambar 4.1 Simbol Gerbang NAND" >
+    <figcaption>Gambar 4.1 Simbol Gerbang NAND</figcaption>
+  </figure>
+
+
+</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/simbol-nand1.png" alt="Gambar 4.2" title="Gambar 4.2 Simbol Gerbang NAND" >
+    <figcaption>Gambar 4.2 Simbol Gerbang NAND</figcaption>
+  </figure>
+
+
+</p>
+<p>Tabel Kebenaran Gerbang NAND</p>
+<table>
+<thead>
+<tr>
+<th>Masukan</th>
+<th></th>
+<th>Keluaran</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>B</td>
+<td>Yand</td>
+<td>Ynand</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Nah, untuk IC atau chip yang menggunakan gerbang ini contohnya adalah seperti berikut.</p>
+<p><em>Gerbang NAND 2 masukan : IC 7400 (gambar 4.3)</em></p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/ic-7400.gif" alt="Gambar 4.3" title="Gambar 4.3 IC 7400" >
+    <figcaption>Gambar 4.3 IC 7400</figcaption>
+  </figure>
+
+
+</p>
+<p><em>Gerbang NAND 3 masukan : IC 7410 (gambar 4.4)</em></p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/ic-7410.gif" alt="Gambar 4.4" title="Gambar 4.4 IC 7410" >
+    <figcaption>Gambar 4.4 IC 7410</figcaption>
+  </figure>
+
+
+</p>
+<p><em>Gerbang NAND 4 masukan : IC 7420 (gambar 4.5)</em></p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/ic-7420.gif" alt="Gambar 4.5" title="Gambar 4.5 IC 7420" >
+    <figcaption>Gambar 4.5 IC 7420</figcaption>
+  </figure>
+
+
+</p>
+<p><em>Gerbang NAND 8 masukan : IC 7430 (gambar 4.6)</em></p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/ic-7430.gif" alt="Gambar 4.6" title="Gambar 4.6 IC 7420" >
+    <figcaption>Gambar 4.6 IC 7420</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="gerbang-nor"><strong>Gerbang NOR</strong></h2>
+<hr>
+<p>Gabungan dari gerbang NOT dan gerbang OR. Artinya gerbang logika ini adalah kebalikan dari Gerbang OR. Memiliki simbol :</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/simbol-nor1.png" alt="Gambar 5.1" title="Gambar 5.1 Simbol Gerbang NOR" >
+    <figcaption>Gambar 5.1 Simbol Gerbang NOR</figcaption>
+  </figure>
+
+
+</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/simbol-nor2.png" alt="Gambar 5.2" title="Gambar 5.2 Simbol Gerbang NOR" >
+    <figcaption>Gambar 5.2 Simbol Gerbang NOR</figcaption>
+  </figure>
+
+
+</p>
+<p>Tabel Kebenaran Gerbang NOR</p>
+<table>
+<thead>
+<tr>
+<th>Masukan</th>
+<th></th>
+<th>Keluaran</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>B</td>
+<td>Yor</td>
+<td>Ynor</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>IC atau chip yang menggunakan gerbang ini contohnya adalah seperti berikut.</p>
+<p><em>Gerbang NOR 2 masukan : IC 7402 (gambar 5.3).</em></p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/ic-7402.gif" alt="Gambar 5.3" title="Gambar 5.3 IC 7402" >
+    <figcaption>Gambar 5.3 IC 7402</figcaption>
+  </figure>
+
+
+</p>
+<p><em>Gerbang NOR 3 masukan : IC 7427 (gambar 5.4).</em></p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/ic-7427.gif" alt="Gambar 5.4" title="Gambar 5.4 IC 7427" >
+    <figcaption>Gambar 5.4 IC 7427</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="gerbang-xor"><strong>Gerbang XOR</strong></h2>
+<hr>
+<p>(Exclusive OR) memiliki dua inputan dan satu hasil output. Logika pada gerbang ini adalah output pasti 1 jika kedua nilai inputan berbeda, dan pasti 0 jika kedua inputan sama.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/simbol-xor.png" alt="Gambar 6.1" title="Gambar 6.1 Simbol Gerbang XOR" >
+    <figcaption>Gambar 6.1 Simbol Gerbang XOR</figcaption>
+  </figure>
+
+
+</p>
+<p>Tabel Kebenaran Gerbang X OR</p>
+<table>
+<thead>
+<tr>
+<th>Masukan</th>
+<th></th>
+<th>Keluaran</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>B</td>
+<td>Yor</td>
+<td>Yxor</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>IC atau chip yang menggunakan gerbang ini contohnya adalah <em>IC 7486</em> dua masukan.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/ic-7486.png" alt="Gambar 6.2" title="Gambar 6.2 IC 7486" >
+    <figcaption>Gambar 6.2 IC 7486</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="gerbang-xnor"><strong>Gerbang XNOR</strong></h2>
+<hr>
+<p>(Exclusive NOT OR) adalah kebalikan dari gerbang XOR. Logika gerbang ini adalah jika kedua input nilainya sama maka output yang dihasilkan pasti 1.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/simbol-xnor1.png" alt="Gambar 7.1" title="Gambar 7.1 Simbol Gerbang XNOR" >
+    <figcaption>Gambar 7.1 Simbol Gerbang XNOR</figcaption>
+  </figure>
+
+
+</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/simbol-xnor2.png" alt="Gambar 7.2" title="Gambar 7.2 Simbol Gerbang XNOR" >
+    <figcaption>Gambar 7.2 Simbol Gerbang XNOR</figcaption>
+  </figure>
+
+
+</p>
+<p>Tabel Kebenaran Gerbang X NOR</p>
+<table>
+<thead>
+<tr>
+<th>Masukan</th>
+<th></th>
+<th>Keluaran</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>B</td>
+<td>Yxor</td>
+<td>Yxnor</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>IC atau chip yang menggunakan gerbang ini contohnya adalah IC 74266 dua masukan.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/ic-74266-1.png" alt="gambar 7.3" title="Gambar 7.3 IC 74266" >
+    <figcaption>Gambar 7.3 IC 74266</figcaption>
+  </figure>
+
+
+</p>
+<p>Nah mungkin itu dia beberapa informasi yang dapat saya sampaikan untuk saat ini. Mohon maaf atas segala kesalahan dan kerandoman materi saya, jika ada sanggahan mangga untuk komen di bawah yah. Terima kasih :)</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Pengertian Binary</title>
+            <link>https://anbidev.com/pengertian-binary/</link>
+            <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/pengertian-binary/</guid>
+            <description>Sebelum mempelajari biner lebih baik kamu harus tahu dahulu sistem bilangan. Apa itu sistem bilangan? Kenapa ada sistem bilangan?
+Sistem bilangan itu suatu cara buat mewakili besaran item. atau bisa dikatakan mewakili sebuah perintah dalam komputer supaya dapat dimengerti oleh komputer. Ada beberapa sistem bilangan;
+ Biner Desimal Oktal Hexadesimal  Mereka memiliki keunikannya masing-masing. Disini akan dibahas mengenai sistem Biner.
+Apa sih biner? Biner atau bi.ner /binèr/ dalam KBBI dapat diartikan , a terjadi dari atau ditandai oleh dua benda atau dua bagian; serba dua, a Mat berdasar dua (tentang bilangan pada sistem bilangan).</description>
+            <content type="html"><![CDATA[<p>Sebelum mempelajari biner lebih baik kamu harus tahu dahulu sistem bilangan. Apa itu sistem bilangan? Kenapa ada sistem bilangan?</p>
+<p>Sistem bilangan itu suatu cara buat mewakili besaran item. atau bisa dikatakan mewakili sebuah perintah dalam komputer supaya dapat dimengerti oleh komputer. Ada beberapa sistem bilangan;</p>
+<ul>
+<li>Biner</li>
+<li>Desimal</li>
+<li>Oktal</li>
+<li>Hexadesimal</li>
+</ul>
+<p>Mereka memiliki keunikannya masing-masing. Disini akan dibahas mengenai sistem Biner.</p>
+<br>
+<h2 id="apa-sih-biner">Apa sih biner?</h2>
+<hr>
+<p>Biner atau <em>bi.ner /binèr/</em> dalam KBBI dapat diartikan , <em>a</em> terjadi dari atau ditandai oleh dua benda atau dua bagian; serba dua, <em>a Mat</em> berdasar dua (tentang bilangan pada sistem bilangan). Sistem biner sendiri hanya memiliki dua bilangan yakni 0 dan 1. Sistem bilangan biner adalah dasar dari semua bilangan berbasis digital.</p>
+<p>Kalau dalam komputer ada istilah <em>Byte</em>. Nah <strong>1 Byte = 8 bit</strong> (<em>binary digit</em>). Sistem coding komputer secara umum menggunakan coding 1 Byte . Bilangan biner yang digunakan ada 8 digit yang berisikan hanya angka 1 dan 0.</p>
+<p>Lah kok bisa? Kenapa harus ada Byte? Apakah Byte itu penyingkat dari bit agar lebih pendek?</p>
+<p>Sejarah Bit dan byte Lanjut ke pembahasan biner. Biner dipakai dimana aja sih? di dunia serba digital ini, setiap perangkat elektronik pasti menggunakan bilangan biner. Lah kok? Mengingat tiap perangkat memiliki hardware yang mana hardware hanya memiliki dua kondisi; mendapat aliran listrik (1) atau tidak mendapat aliran listrik (0). Begitu.</p>
+<br>
+<h2 id="cara-membaca-biner">Cara Membaca Biner</h2>
+<hr>
+<p>Secara kita semua selalu menggunakan bilangan desimal di kehidupan sehari-hari maka dari itu kali ini akan membahas mengenai bagaimana cara membaca biner kedalam desimal. Atau konversi biner ke desimal.</p>
+<p>Contohnya :</p>
+<pre><code>0000 = 0  0101 = 5
+0001 = 1  0110 = 6
+0010 = 2  0111 = 7
+0011 = 3  1000 = 8
+0100 = 4  1001 = 9
+</code></pre>
+<p>Loh kok iso?  Berarti kalau nilai desimalnya semakin besar, semakin banyak pula  jumlah digit binernya ya? . <strong>Betul</strong>!</p>
+<p>Contoh :</p>
+<pre><code>    # Binner         # Decimal 
+    10111100011010 = 12058
+</code></pre>
+<p>Tulis pangkat dari angka 2, dimana pangkat terus meningkat.</p>
+<table>
+<thead>
+<tr>
+<th>Biner</th>
+<th></th>
+<th></th>
+<th>Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2<sup>13</sup></td>
+<td>1x2<sup>13</sup></td>
+<td>8192</td>
+</tr>
+<tr>
+<td>0</td>
+<td>2<sup>12</sup></td>
+<td>0x2<sup>12</sup></td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2<sup>11</sup></td>
+<td>1x2<sup>11</sup></td>
+<td>2048</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2<sup>10</sup></td>
+<td>1x2<sup>10</sup></td>
+<td>1024</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2<sup>9</sup></td>
+<td>1x2<sup>9</sup></td>
+<td>512</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2<sup>8</sup></td>
+<td>1x2<sup>8</sup></td>
+<td>256</td>
+</tr>
+<tr>
+<td>0</td>
+<td>2<sup>7</sup></td>
+<td>0x2<sup>7</sup></td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>2<sup>6</sup></td>
+<td>0x2<sup>6</sup></td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>2<sup>5</sup></td>
+<td>0x2<sup>5</sup></td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2<sup>4</sup></td>
+<td>1x2<sup>4</sup></td>
+<td>16</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2<sup>3</sup></td>
+<td>1x2<sup>3</sup></td>
+<td>8</td>
+</tr>
+<tr>
+<td>0</td>
+<td>2<sup>2</sup></td>
+<td>0x2<sup>2</sup></td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2<sup>1</sup></td>
+<td>1x2<sup>1</sup></td>
+<td>2</td>
+</tr>
+<tr>
+<td>0</td>
+<td>2<sup>0</sup></td>
+<td>0x2<sup>0</sup></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Kemudian jumlahkan hasilnya dan akan menghasilkan bilangan desimal hasil konversi :</p>
+<p>10111100011010<sub>2</sub> = (8192+2048+1024+512+256+16+8+2)<sub>10</sub></p>
+<p>10111100011010<sub>2</sub> = 12058<sub>10</sub></p>
+<p>Nah seperti itu contohnya, <em>first impression</em> emang terlihat ribet, tapi kalau kamu sudah hafal perpangkatan atau kelipatan dari 2 4 8 <em>dst</em>. Bakalan lebih mudah. Ingat! <strong>Bisa karena biasa</strong>.</p>
+<br>
+<h2 id="manfaat-bilangan-biner">Manfaat Bilangan Biner</h2>
+<hr>
+<p>Bilangan biner digunakan dalam rangkaian digital untuk menyatakan kondisi mati dan idup. Pada dasarnya sinyal digital berisi angka deretan 0 dan 1 yang menyatakan kondisi hidup dan mati.</p>
+<br/>
+<h2 id="_fyi-nih_"><em>FYI nih..</em></h2>
+<hr>
+<p>Dalam bilangan biner nilai paling kanan atau nilai yang paling kecil disebut <strong>LSB</strong> <strong><em>(Least Significant Bit)</em></strong> sedang nilai paling kiri atau nilai yang paling besar disebut <strong>MSB</strong> <em><strong>(Most Significant Bit)</strong></em>. Contohnya :</p>
+<center>**10111100011010<sub>2<sub>**</center>
+<p>Dari barisan angka tersebut, angka 0 paling kanan bernilai 0, angka 1 paling kanan bernilai 2. Dan itu adalah angka paling kecil <strong>Least Significant</strong>. Sedangkan bagian paling kiri memiliki nilai 8192 <strong>Most Significant</strong>. Least Significant sering digunakan untuk kepentingan penyisipan data kedalam suatu media digital lain.</p>
+<p>Nah mungkin itu dia beberapa informasi yang dapat saya sampaikan untuk saat ini. Mohon maaf atas segala kesalahan dan kerandoman materi saya, jika ada sanggahan mangga untuk komen di bawah yah .Terima kasih :)</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

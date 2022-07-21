@@ -1,0 +1,10 @@
++++
+title = "Laravel"
+date = "2021-02-06"
+comments = false
+description = "Disini kita akan belajar dari awal tentang bahasa pemrograman Laravel. Anbi menyediakan tutorial pemrograman dari pemula sampai menengah keatas. Tidak lupa anbi juga memberikan beberapa pengetahuan - pengetahuan unik dari pemrograman Laravel"
+[ author ]
+  name = "Anbidev"
++++
+
+Disini kita akan belajar dari awal tentang bahasa pemrograman Laravel. Anbi menyediakan tutorial pemrograman dari pemula sampai menengah keatas. Tidak lupa anbi juga memberikan beberapa pengetahuan - pengetahuan unik dari pemrograman [Laravel](https://anbidev.com/tutorials/laravel).

@@ -1,0 +1,74 @@
+Kasus : 
+
+Saya memiliki data baju dengan ukuran yang berbeda. 
+Dan disetiap ukuran baju memiliki qty-nya sendiri.
+Lalu saya memiliki 10 data formula yang akan digunakan untuk menjual baju.
+Saya ingin formula tersebut dipilih secara otomatis berdasarkan pattern yang sesuai dengan semua histori data baju sebelumnya.
+Saat ini formula dipilih berdasarkan pengalaman si penjual. 
+Saya ingin formula dipilih oleh sistem.
+
+Contoh data :
+
+Baju A1
+
+Ukuran :
+S M L XL XXL
+Qty : 
+10 20 30 50 10
+Formula :
+1
+
+Baju A2
+
+Ukuran :
+S M L XL XXL
+Qty : 
+10 20 30 50 10
+Formula :
+2
+
+Baju A3
+
+Ukuran :
+S M L XL XXL
+Qty : 
+10 20 30 50 10
+Formula :
+3
+
+Baju A1
+
+Ukuran :
+S M L XL XXL
+Qty : 
+10 20 30 50 10
+Formula :
+1
+
+Baju A1
+
+Ukuran :
+S M L XL XXL
+Qty : 
+10 20 30 50 10
+Formula :
+1
+
+Baju A1
+
+Ukuran :
+S M L XL XXL
+Qty : 
+10 20 30 50 10
+Formula :
+1
+
+Baju A1
+
+Ukuran :
+S M L XL XXL
+Qty : 
+10 20 30 50 10
+Formula :
+1
+

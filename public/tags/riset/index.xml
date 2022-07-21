@@ -1,0 +1,34 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>riset on AnbiDev</title>
+        <link>https://anbidev.com/tags/riset/</link>
+        <description>Recent content in riset on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/riset/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Bagaimana Cara Menghadapi Model Machine Learning?</title>
+            <link>https://anbidev.com/blogs/how-to-deal-with-ml/</link>
+            <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/blogs/how-to-deal-with-ml/</guid>
+            <description>Dalam mempelajari machine learning banyak cara yang dapat kamu lakukan untuk menguasainya.Salah satu langkah awal dalam mempelajari machine learning adalah dengan membayangkan bentuk atau model machine learning yang akan kamu buat.
+COBA
+Model Permasalahan Saya punya suatu kasus. Kita akan membuat sebuah model pemecahan masalah atas kasus tersebut menggunakan Machine Learning. Berikut contoh kasus :
+Saudaramu telah membuat jutaan rupiah dengan berbisnis di real eastet. Kamu ditawari untuk bergabung dalam bisnis ini karena kamu ahli data sains.</description>
+            <content type="html"><![CDATA[<p>Dalam mempelajari <em>machine learning</em> banyak cara yang dapat kamu lakukan untuk menguasainya.Salah satu langkah awal dalam mempelajari machine learning adalah dengan membayangkan bentuk atau model machine learning yang akan kamu buat.</p>
+<p>COBA</p>
+<h2 id="model-permasalahan">Model Permasalahan</h2>
+<p>Saya punya suatu kasus. Kita akan membuat sebuah model pemecahan masalah atas kasus tersebut menggunakan Machine Learning. Berikut contoh kasus :</p>
+<pre>
+Saudaramu telah membuat jutaan rupiah dengan berbisnis di real eastet. Kamu ditawari untuk bergabung dalam bisnis ini karena kamu ahli data sains. Dia akan memberikan kamu uang, dan kamu harus membuat sebuah model yang dapat memprediksi berapa banyak nilai jual dari berbagai rumah.
+
+Ketika kamu bertanya kepada saudaramu bagaimana dia memprediksi nilai dari suatu real eastet, Dia menjawab dengan hanya menggunakan intuisi. Tetapi dia mengungkapkan bahwa dia mengidentifikasi melalui pola harga rumah yang pernah ia lihat di masa lalu, dan menggunakan pola itu untuk memprediksi harga rumah.
+</pre>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

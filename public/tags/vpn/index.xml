@@ -1,0 +1,245 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>vpn on AnbiDev</title>
+        <link>https://anbidev.com/tags/vpn/</link>
+        <description>Recent content in vpn on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Sun, 13 Sep 2020 17:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Instalasi OpenVPN ke GCP part 1</title>
+            <link>https://anbidev.com/instalasi-openvpn-ke-gcp/</link>
+            <pubDate>Sun, 13 Sep 2020 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/instalasi-openvpn-ke-gcp/</guid>
+            <description>Artikel ini merupakan hasil kiriman salah satu teman admin, Nata
+ VPN (Virtual Private Network) adalah layanan koneksi yang memberikan akses ke website secara aman dan private dengan mengubah jalur koneksi. Jika kamu menggunakan layanan ini, maka interaksimu di internet akan dikenali sesuai tempat server VPN tersebut aktif.
+Jadi, jika kamu mengakses web yang diblokir oleh suatu negara, dan kamu menggunakan layanan VPN dengan server yang berbeda negara, maka bisa saja web tersebut terakses karena protokol pemblokiran tidak dijalankan di negara tempat server VPN berada.</description>
+            <content type="html"><![CDATA[<blockquote>
+<p>Artikel ini merupakan hasil kiriman salah satu teman admin, Nata</p>
+</blockquote>
+<p><strong>VPN (<em>Virtual Private Network</em>)</strong> adalah layanan koneksi yang memberikan akses ke website secara aman dan private dengan mengubah jalur koneksi. Jika kamu menggunakan layanan ini, maka interaksimu di internet akan dikenali sesuai tempat server VPN tersebut aktif.</p>
+<p>Jadi, jika kamu mengakses web yang diblokir oleh suatu negara, dan kamu menggunakan layanan VPN dengan server yang berbeda negara, maka bisa saja web tersebut terakses karena protokol pemblokiran tidak dijalankan di negara tempat server VPN berada. Pada artikel ini, kita akan memasang <a href="https://openvpn.net"
+     title="OpenVPN" 
+     target="_blank" rel="noreferrer" >OpenVPN</a> ke <a href="https://cloud.google.com"
+    
+     target="_blank" rel="noreferrer" >GCP</a>.</p>
+<br>
+<h2 id="membuat-project">Membuat Project</h2>
+<hr>
+<ol>
+<li>
+<p>Buka <strong>Google Cloud Console</strong>. Kita akan membuat Project terlebih dahulu untuk memisahkan Project VPN ini</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/gcp-openvpn-1.png" alt="&amp;ldquo;Dashboard Console Google Cloud&amp;rdquo;" title="Dashboard Console Google Cloud" >
+    <figcaption>Dashboard Console Google Cloud</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p>Klik nama project pada sebelah kiri <strong>Search Bar</strong></p>
+</li>
+<li>
+<p>Klik <strong>&quot;<em>New Project</em>&quot;</strong></p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/gcp-openvpn-2.png" alt="&amp;ldquo;New Project&amp;rdquo;" title="New Project Sebelah Kanan" >
+    <figcaption>New Project Sebelah Kanan</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p>Isi nama project sesuai keinginanmu. Disini kami menamai <strong>Test-VPN</strong> (Nama yang dipilih bersifat permanen)</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/gcp-openvpn-3.png" alt="&amp;ldquo;Isi Deskripsi Project Baru&amp;rdquo;" title="Isi Deskripsi Project Baru" >
+    <figcaption>Isi Deskripsi Project Baru</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p>Klik <strong>&quot;<em>Create</em>&quot;</strong></p>
+</li>
+<li>
+<p>Silakan tunggu, project akan secara otomatis terbuat</p>
+</li>
+<li>
+<p>Setelah selesai, ulangi langkah kedua (yaitu <em>Search Bar</em>) untuk mencari project yang sudah dibuat</p>
+</li>
+<li>
+<p>Pilih Project yang sudah dibuat</p>
+</li>
+</ol>
+<br>
+<h2 id="membuat-virtual-machine">Membuat Virtual Machine</h2>
+<hr>
+<p>Sekarang kita akan melakukan instalasi <strong>Virtual Machine</strong> sebagai <ins>server VPN</ins></p>
+<ol>
+<li>
+<p>Klik <strong>&quot;<em>Navigation Menu</em>&quot;</strong> yang terletak di pojok kiri atas</p>
+</li>
+<li>
+<p>Buka <strong>&quot;<em>Compute Engine</em>&quot;</strong> lalu klik <strong>&quot;<em>VM Instances</em>&quot;</strong></p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/gcp-openvpn-4.png" alt="&amp;ldquo;Navigation Menu&amp;rdquo;" title="Navigation Menu Pada Kiri Layar" >
+    <figcaption>Navigation Menu Pada Kiri Layar</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p>Silakan tunggu, GCP sedang menyiapkan VM yang kita minta</p>
+</li>
+<li>
+<p>Apabila sudah selesai, klik <strong>&quot;<em>Create</em>&quot;</strong></p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/gcp-openvpn-5.png" alt="&amp;ldquo;Window Create&amp;rdquo;" title="Window Choose Create" >
+    <figcaption>Window Choose Create</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p>Masukan nama untuk Machine, disini saya namai <em>server-vpn</em>. Nama bersifat permanen.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/gcp-openvpn-6.png" alt="&amp;ldquo;Nama Mesin&amp;rdquo;" title="Masukkan Nama Mesin" >
+    <figcaption>Masukkan Nama Mesin</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p><em>Label</em> bersifat <ins>opsional</ins>, jadi tidak saya tambahkan.</p>
+</li>
+<li>
+<p>Untuk region, disini anda dapat memilih sesuai dengan region server VPN yang anda inginkan. Saya akan membuat VPN region Singapura, sehingga saya memilih menggunakan region asia-southeast1.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/gcp-openvpn-7.png" alt="&amp;ldquo;Pilih Region&amp;rdquo;" title="Pilih Region" >
+    <figcaption>Pilih Region</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p>Untuk pemilihan zone nya bebas</p>
+</li>
+<li>
+<p><em>Machine Configuration</em> dapat disesuaikan dengan banyaknya client yang akan menggunakan VPN tersebut. Disini saya menggunakan Series <em>First Generation</em> dengan <em>Machine Type</em> <code>n1-standard-1</code> dikarenakan Client yang akan menggunakan VPN ini Hanya beberapa orang ( kurang dari 5 orang )</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/gcp-openvpn-8.png" alt="&amp;ldquo;Machine Configuration&amp;rdquo;" title="Konfigurasi General Machine" >
+    <figcaption>Konfigurasi General Machine</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p>Untuk spesifikasi lainnya, saya menggunakan sistem operasi <strong>Debian 9</strong> dan <ins>SSD</ins> sebesar <strong>10 GB</strong></p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/gcp-openvpn-9.png" alt="&amp;ldquo;Konfigurasi General Boot&amp;rdquo;" title="Konfigurasi Boot Disk" >
+    <figcaption>Konfigurasi Boot Disk</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p>Pada bagian Firewall, checklist <strong>HTTP</strong> dan <strong>HTTPS</strong> Traffic. Hal ini agar kita dapat terhubung ke internet menggunakan VPN</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/gcp-openvpn-10.png" alt="&amp;ldquo;Checklist All Traffic&amp;rdquo;" title="Checklist All Traffic" >
+    <figcaption>Checklist All Traffic</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p>Setelah itu kita klik <em>Management, security, disks, networking, sole tenancy</em></p>
+</li>
+<li>
+<p>Klik bagian networking</p>
+</li>
+<li>
+<p>Pada bagian Network Tags, kita tambahkan &ldquo;vpn&rdquo; agar VM kita mengikuti rule VPN yang akan kita buat nanti dibagian Firewall</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/gcp-openvpn-11.png" alt="&amp;ldquo;Tambah Tag VPN&amp;rdquo;" title="Tambah Tag VPN" >
+    <figcaption>Tambah Tag VPN</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p>Dibagian <strong>Network Interfaces</strong>, klik tanda pena untuk mengedit Network Interface</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/gcp-openvpn-12.png" alt="&amp;ldquo;Klik Tanda Pena untuk Edit Interface&amp;rdquo;" title="Klik Tanda Pena untuk Edit Interface" >
+    <figcaption>Klik Tanda Pena untuk Edit Interface</figcaption>
+  </figure>
+
+
+</p>
+<p>Disini kita akan menyewa Static External IP untuk Server VPN kita, sehingga kita tidak akan mengubah External IP untuk VPN setiap VM dijalankan</p>
+</li>
+<li>
+<p>Dibagian External IP, kita pilih &ldquo;<em>Create IP address</em>&rdquo;</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/gcp-openvpn-13.png" alt="&amp;ldquo;External IP Create IP Address&amp;rdquo;" title="External IP &gt; Create IP Address" >
+    <figcaption>External IP &gt; Create IP Address</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p>Masukan Nama External IP address (deskripsi yang bersifat opsional).</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/gcp-openvpn-14.png" alt="&amp;ldquo;Nama External IP Address&amp;rdquo;" title="Nama External IP Address (Opsional)" >
+    <figcaption>Nama External IP Address (Opsional)</figcaption>
+  </figure>
+
+
+</p>
+<p>Untuk <strong>Network Service Tier</strong> saya pilih <ins>premium</ins> agar kita dapat memaksimalkan kecepatan internet ketika menggunakan VPN.</p>
+</li>
+<li>
+<p>Jika sudah, klik <strong><em>Reserve</em></strong></p>
+</li>
+<li>
+<p>Lalu pilih <strong>&ldquo;on&rdquo;</strong> dibagian <strong>IP Fowarding</strong></p>
+</li>
+<li>
+<p>Klik <strong>Done</strong>. Anda dapt melihat berapa harga sewa VM yang kita buat dibagian atas sebelah kanan. Patikan budget anda cukup untuk menyewa VM yang akan dibuat</p>
+</li>
+<li>
+<p>Klik <strong><em>Create</em></strong> untuk membuat VM tersebut</p>
+</li>
+</ol>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

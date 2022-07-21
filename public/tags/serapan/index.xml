@@ -1,0 +1,1147 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>serapan on AnbiDev</title>
+        <link>https://anbidev.com/tags/serapan/</link>
+        <description>Recent content in serapan on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Tue, 02 Mar 2021 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/serapan/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>&#34;Hello World&#34; Modern Butuh Lebih Dari Sekedar Kode</title>
+            <link>https://anbidev.com/hello-world-modern/</link>
+            <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/hello-world-modern/</guid>
+            <description>Diadopsi dari artikel aslinya A Modern Hello World Program Needs More Than Just Code dengan beberapa perubahan.
+ Terakhir kali saya pakai bahasa C itu sudah 2 tahun yang lalu, dan cuman penasaran aja dengan bahasa itu akhirnya saya pelajari. Sekarang dimata kuliah yang saya tempuh, semuanya dibuat menjadi python.
+Setelah sekian lama mencoba banyak bahasa, saya kembali teringat kembali ke bahasa C yang pernah dulu pelajari. Dimana, membuat sebuah program &amp;lsquo;Hello World&amp;rsquo; terlihat lebih elegan menggunakan bahasa tersebut.</description>
+            <content type="html"><![CDATA[<blockquote>
+<p>Diadopsi dari artikel aslinya <a href="https://stackoverflow.blog/2020/03/05/a-modern-hello-world-program-needs-more-than-just-code/"
+    
+     target="_blank" rel="noreferrer" >A Modern Hello World Program Needs More Than Just Code</a> dengan beberapa perubahan.</p>
+</blockquote>
+<p>Terakhir kali saya pakai bahasa C itu sudah 2 tahun yang lalu, dan cuman penasaran aja dengan bahasa itu akhirnya saya pelajari. Sekarang dimata kuliah yang saya tempuh, semuanya dibuat menjadi python.</p>
+<p>Setelah sekian lama mencoba banyak bahasa, saya kembali teringat kembali ke bahasa C yang pernah dulu pelajari. Dimana, membuat sebuah program &lsquo;Hello World&rsquo; terlihat lebih elegan menggunakan bahasa tersebut.</p>
+<p>Haha, nostalgia yang tidak berguna, tapi cukup bermakna.</p>
+<br>
+<h2 id="tradisi-dengan-sebuah-tujuan">Tradisi Dengan Sebuah Tujuan</h2>
+<hr>
+<p>Asal mula notasi program &ldquo;Hello World&rdquo; ini berasal dari bapak Brian Kernigham dan Dennis M. Ritchie&rsquo;s sang penemu <em>The C Programming Language</em>, yang dulu menulis sebuah program kecil, yang bertujuan untuk mengkonfirmasi bahwa kamu sudah mengerti <em>environtemt</em> bahasa tersebut.</p>
+<p>Program kecil ini ditulis menggunakan bahasa C :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    printf(<span style="color:#e6db74">&#34;Hello, world!</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><p>Coba tulis kode itu kedalam editormu dan kompilasi menggunakan command di terminal UNIX.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cc hello.c
+$ ./a.out 
+</code></pre></div><p>Dan hal itu menghasilkan output yang dapat mudah kita prediksi</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Hello, world!
+</code></pre></div><p>Ketiga hal diatas menyatakan bahwa kamu itu telah berhasil menulis, mengcompile dan mengeksekusi program menggunakan bahasa C. Itulah tujuan awal menggunakan dari program &ldquo;Hello, World&rdquo;.</p>
+<p>Menurut Kenighan dan Ritchie, membuat program menggunakan bahasa C, berarti kamu telah menguasai langkah dasar untuk memulai suatu projek dengan C.</p>
+<blockquote>
+<p><strong>&ldquo;This is the big hurdle; to leap over it you have to be able to create the program text somewhere, compile it successfully, load it, run it, and find out where your output went. With these mechanical details mastered, everything else is comparatively easy.&quot;</strong></p>
+</blockquote>
+<p>Dari pernyataan diatas, oke, saya mengakui bahwa &ldquo;<em>everything else is comparatively easy</em>&rdquo; itu cuman guyonan, tapi ini juga adalah landasan penting dalam mempelajari bahasa pemrograman apapun.</p>
+<p>Ini sudah menjadi tradisi dalam pemrograman, dan seperti banyak tradisi lainnya, hal ini <strong>diikuti tanpa mengenal untuk apa tujuan atau nilai dari tradisi tersebut</strong>.</p>
+<p>Saat ini kita memiliki <a href="http://helloworldcollection.de/"
+    
+     target="_blank" rel="noreferrer" >Koleksi Hello World Online</a> dengan hampir 600 contoh didalamnya. Banyak IDE akan membuat contoh dasar &ldquo;Hello World&rdquo; untukmu, dan banyak bahasa <em>interpreter</em> seperti Python, yang membuat program &ldquo;Hello World&rdquo; ini menjadi sangat singkat.</p>
+<p>Tetapi sayangnya, hal itu tidak menyediakan informasi atau wawasan yang jelas. Richard Hamming berkata, <em>&ldquo;Tujuan komputasi adalah untuk wawasan, bukan cuman literasi string&rdquo;</em>.</p>
+<br>
+<h2 id="hello-world-itu-untuk-apa">&ldquo;Hello World&rdquo; Itu Untuk Apa?</h2>
+<hr>
+<p>Berdasarkan <strong>Kenighan</strong> dan <strong>Ritchie</strong>, program &ldquo;Hello, World&rdquo; bertujuan untuk langkah awal dalam memahami dasar dari bahasa pemrograman tersebut (yaitu C). Apa saja yang kita butuhkan dari menulis sampa mengeksekusi program, terwakilkan oleh program &ldquo;Hello World&rdquo;.</p>
+<p>Dalam membuat proyek yang sesungguhnya, tidak hanya menggunakan editor dan compiler. Namun sebuah pemahaman dalam membangun sebuah program, bagaimana membangun <em>environtment</em> yang terstruktur, rencana dalam memelihara program menggunakan <em>version control</em>.</p>
+<p>Jadi, yang selama ini membuat program &ldquo;Hello World&rdquo; masih membutuhkan 5 baris kode, membangun &ldquo;Hello World&rdquo; yang siap untuk dikembangkan lebih lanjut bisa saja lebih rumit.</p>
+<br>
+<h2 id="hello-world-untuk-project">&ldquo;Hello World&rdquo; Untuk Project</h2>
+<hr>
+<p>Membuat program &ldquo;Hello World&rdquo; yang sesuai itu lebih sulit, tapi hasilnya juga lebih baik. Bayangkan kamu ingin membuat sebuah project, kita ambil contoh <em>web application</em>.</p>
+<p>Ketika kamu memilih sebuah bahasa, kamu juga akan memilih framework yang ingin dipakai, begitu juga <em>frontend</em> dan <em>backend</em>. Kamu juga perlu mengidentifikasi bagaimana aplikasi ini akan di<em>host</em> dan bagaimana kodenya akan di <em><strong>manage</strong></em> dan <em><strong>deploy</strong></em>.</p>
+<p>Program &ldquo;Hello World&rdquo; yang benar - benar sesuai tidak hanya menampilkan sebuah output. Kamu juga harus menunjukan bahwa kamu itu siap menambah fitur baru, menggunakan konsep SCRUM, dan mendemonstrasikan aplikasi tersebut dengan versi terbaru.</p>
+<p>Sebuah program &ldquo;Hello World&rdquo; yang sesuai yaitu sebuah program yang minimal dan dapat dikembangkan lebih jauh, dan dapat memberikan manfaat ketika di publikasikan.</p>
+<br>
+<h2 id="bagaimana-membuat-program-hello-world-yang-sesuai">Bagaimana Membuat Program &ldquo;Hello World&rdquo; Yang Sesuai</h2>
+<hr>
+<p>Tentu saja, program &ldquo;Hello World&rdquo; yang sesuai akan berbeda - beda tergantung bahasa dan <em>environtment</em>. Disini saya akan menyarankan bagaimana cara mengawali sebuah proyek, dengan point - point berikut ini.</p>
+<ul>
+<li><strong>Direktori Terpisah Untuk Setiap Proyek</strong> - bisa dibilang sebuah folder dimana kode itu berada.</li>
+<li><strong>Inisialisasi Git Repository Untuk Setiap Folder</strong> - ingat untuk selalu pakai version control disetiap proyek. Kita tidak pernah tau apa yang berubah, apa yang terjadi selama perubahan itu dan bagaimana kode lama kita bekerja.</li>
+<li><strong>Pilih <em>development tools</em> untuk sesuai kebutuhanmu</strong> - IDE, tool build dan sebagainya.</li>
+<li><strong><em>Build Process</em> yang berulang - ulang lebih baik daripada bergantung pada sekali compile</strong></li>
+<li><strong>Dan setelah itu barulah mulai kode pertamamu</strong></li>
+</ul>
+<p>Setelah semua itu, kemungkinan besar kalian akan terhindar dari beberapa kesalahan yang tidak pernah kalian sadari, dan ketika kesalahan - kesalahan kecil itu berhasil kalian hindari, disitulah <em>&ldquo;esensi senang&rdquo;</em> sangat membuat program akan muncul.</p>
+<br>
+<h2 id="mulai-proyek-hello-world-secara-professional">Mulai Proyek &ldquo;Hello World&rdquo; Secara Professional</h2>
+<hr>
+<p>Sangat mudah kita bayangkan &ldquo;Hello World&rdquo; hanyalah untuk pemula yang terdiri dari satu file dalam folder kosong dengan beberapa baris kode.</p>
+<p>Project &ldquo;Hello World&rdquo; yang mungkin cukup realistis, membutuhkan proses yang rumit dan sulit dengan banyak bagian.</p>
+<p>Contoh, membuat basic program dalam <strong>Java</strong> didalam <strong>Maven</strong> yang terdiri dari 10 direktori dan subdirektori hanya untuk membuat &ldquo;Hello World&rdquo;. Belum lagi ketika Maven di <em>build</em>, <em>depedency manager</em> akan mendownload sekitar 1350 file yang terdiri dari 550 direktori.</p>
+<p>Itu hanya sekedar Java dan Maven, kita ambil contoh lagi pada <strong>React</strong>. Dengan command <code>create-react-app</code>, sebuah program akan membutuhkan sekitar 4304 direktori dan 28678 file.</p>
+<p>Tentu saja melakukan ini sangatlah sulit jika dilakukan manual. Bahkan, jika sudah tercipta program &ldquo;Hello World&rdquo;, kamu juga perlu menambahkan version control serta kemungkinan mengkonfigurasi <em>container</em> atau <em>Integration/Continues Deployment</em>.</p>
+<p>Meskipun ini lebih rumit daripada program 5 baris &ldquo;Hello World&rdquo; yang asli, tetapi masih memiliki tujuan yang sama :<mark> &ldquo;Membangun aplikasi yang sederhana dengan memastikan syarat untuk pengembangan kedepannya&rdquo; </mark>.</p>
+<br>
+<h2 id="awal-bagus-untuk-kalian">Awal Bagus Untuk Kalian!</h2>
+<hr>
+<p>Setiap proyek aplikasi, dari yang besar atau kecil pasti dihadapkan dengan masalah yang sama dari awal.</p>
+<blockquote>
+<p>&ldquo;Bagaimana kamu dapat menguasai secara detail mekanisme untuk memulai sebuah proyek, membuat kodenya, bahkan menerapkannya? Sehingga kamu dapat fokus untuk membangun program yang memenuhi kebutuhan user?&rdquo;</p>
+</blockquote>
+<p>Apapun kerumitan project yang kamu buat, kamu dapat memastikannya dengan cara membuat program demonstrasi yang sangat sederhana, yang melingkupi fungsionalitas seluruh proses dari <em>build</em>, <em>testing</em> dan <em>deploy</em>.</p>
+<p>Inti pesan itulah yang program &ldquo;Hello World&rdquo; sampaikan, dan ini masih yang menjad terbaik!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Sorting Doubly Linked List (HEAD and TAIL)</title>
+            <link>https://anbidev.com/sorting-head-tail-doubly-linked-list/</link>
+            <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/sorting-head-tail-doubly-linked-list/</guid>
+            <description>Sorting (Mengurutkan) pada bahasa pemrograman adalah metode yang vital. Karena dengan mengurutkan data kita bisa mendapatkan data yang kita inginkan. Tapi sering kali kita bingung bagaimana cara mengurutkan suatu data yang berada pada struktur data tertentu. Contoh yang akan kita bahas adalah Struktur data Doubly Linked List.
+Doubly Linked List Doubly linked list adalah suatu rangkaian Node atau Elemen struktur data yang dihubungkan dengan 2 pointer dalam satu element. Berbeda dengan saudaranya Linked List yang hanya memiliki satu pointer next.</description>
+            <content type="html"><![CDATA[<p>Sorting (Mengurutkan) pada bahasa pemrograman adalah metode yang vital. Karena dengan mengurutkan data kita bisa mendapatkan data yang kita inginkan. Tapi sering kali kita bingung bagaimana cara mengurutkan suatu data yang berada pada struktur data tertentu. Contoh yang akan kita bahas adalah Struktur data <strong>Doubly Linked List</strong>.</p>
+<br>
+<h2 id="doubly-linked-list">Doubly Linked List</h2>
+<hr>
+<p>Doubly linked list adalah suatu rangkaian <strong><em>Node</em></strong> atau Elemen struktur data yang dihubungkan dengan 2 pointer dalam satu element. Berbeda dengan saudaranya Linked List yang hanya memiliki satu pointer next.</p>
+<p>Banyak manfaat yang dapat kita ambil dari metode Doubly Linked List. Salah satu pemanfaatan Doubly Linked List yang paling populer ada di <strong>blockchain</strong>.</p>
+<br>
+<h2 id="full-code">Full Code</h2>
+<hr>
+<p>Oke tidak usah banyak basa - basi lagi, berikut ini <em>script</em> untuk mengurutkan <strong><em>doubly linked list</em></strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Data</span>(object):
+    <span style="color:#66d9ef">def</span> __init__(self, name):
+        self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__compare</span>(self, name):
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>name <span style="color:#f92672">&gt;</span> name <span style="color:#66d9ef">else</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>name <span style="color:#f92672">&lt;</span> name <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">compare</span>(self, data):
+        <span style="color:#66d9ef">if</span> type(data) <span style="color:#f92672">==</span> str:
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>__compare(data)
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>__compare(data<span style="color:#f92672">.</span>name)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print</span>(self):
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#f92672">.</span>format(self<span style="color:#f92672">.</span>name))
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Rantai</span>(object):
+    <span style="color:#66d9ef">def</span> __init__(self, data):
+        self<span style="color:#f92672">.</span>data <span style="color:#f92672">=</span> data
+        self<span style="color:#f92672">.</span>__next <span style="color:#f92672">=</span> None
+        self<span style="color:#f92672">.</span>__prev <span style="color:#f92672">=</span> None
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">compare</span>(self, data):
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>compare(data)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print</span>(self):
+        self<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span><span style="color:#66d9ef">print</span>()
+
+    <span style="color:#a6e22e">@property</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">next</span>(self):
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>__next
+
+    <span style="color:#a6e22e">@next.setter</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">next</span>(self, node):
+        self<span style="color:#f92672">.</span>__next <span style="color:#f92672">=</span> node
+
+    <span style="color:#a6e22e">@property</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prev</span>(self):
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>__prev
+
+    <span style="color:#a6e22e">@prev.setter</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prev</span>(self, node):
+        self<span style="color:#f92672">.</span>__prev <span style="color:#f92672">=</span> node
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RantaiTerurut</span>(object):
+
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>KEPALA <span style="color:#f92672">=</span> None
+        self<span style="color:#f92672">.</span>BUNTUT <span style="color:#f92672">=</span> None
+        self<span style="color:#f92672">.</span>POSISI <span style="color:#f92672">=</span> None
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">node_print</span>(self):
+        current <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>KEPALA
+        <span style="color:#66d9ef">while</span> current <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> None:
+            current<span style="color:#f92672">.</span><span style="color:#66d9ef">print</span>()
+            current <span style="color:#f92672">=</span> current<span style="color:#f92672">.</span>next
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">node_append</span>(self, str_data):
+        data <span style="color:#f92672">=</span> Data(str_data)
+        self<span style="color:#f92672">.</span>__do_append(data)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__do_append</span>(self, data):
+
+        new_chain <span style="color:#f92672">=</span> Rantai(data)
+        new_chain<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> None
+
+        <span style="color:#75715e"># kepala dan buntutnya ada nggak? klo ngga diisi</span>
+        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>KEPALA <span style="color:#f92672">==</span> None:
+            self<span style="color:#f92672">.</span>KEPALA <span style="color:#f92672">=</span> new_chain
+            self<span style="color:#f92672">.</span>BUNTUT <span style="color:#f92672">=</span> new_chain
+            self<span style="color:#f92672">.</span>KEPALA<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> None
+            <span style="color:#66d9ef">return</span>
+
+        <span style="color:#75715e"># jika kepala lebih kecil atau sama dengan, maka kepalanya diganti</span>
+        <span style="color:#66d9ef">if</span> new_chain<span style="color:#f92672">.</span>compare(self<span style="color:#f92672">.</span>KEPALA<span style="color:#f92672">.</span>data) <span style="color:#f92672">in</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>]:
+            new_chain<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> None
+            self<span style="color:#f92672">.</span>KEPALA<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> new_chain
+            new_chain<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>KEPALA
+            self<span style="color:#f92672">.</span>KEPALA <span style="color:#f92672">=</span> new_chain
+            <span style="color:#66d9ef">return</span>
+
+        <span style="color:#75715e"># jika ada node dengan data lebih besar maka buntutnya diganti</span>
+        <span style="color:#66d9ef">if</span> new_chain<span style="color:#f92672">.</span>compare(self<span style="color:#f92672">.</span>BUNTUT<span style="color:#f92672">.</span>data) <span style="color:#f92672">in</span> [ <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>]:
+            new_chain<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>BUNTUT
+            self<span style="color:#f92672">.</span>BUNTUT<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> new_chain
+            self<span style="color:#f92672">.</span>BUNTUT <span style="color:#f92672">=</span> new_chain
+            <span style="color:#66d9ef">return</span>
+
+        <span style="color:#75715e"># itterate dari setelah kepala, buat cari yang mana yang</span>
+        <span style="color:#75715e"># mau diappend ke list</span>
+        self<span style="color:#f92672">.</span>POSISI <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>KEPALA<span style="color:#f92672">.</span>next
+        <span style="color:#66d9ef">while</span> self<span style="color:#f92672">.</span>POSISI<span style="color:#f92672">.</span>compare(new_chain<span style="color:#f92672">.</span>data) <span style="color:#f92672">in</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>]:
+            self<span style="color:#f92672">.</span>POSISI <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>POSISI<span style="color:#f92672">.</span>next
+
+        <span style="color:#75715e"># tuker dengan apa yang udah ada</span>
+        (self<span style="color:#f92672">.</span>POSISI<span style="color:#f92672">.</span>prev)<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> new_chain
+        new_chain<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>POSISI<span style="color:#f92672">.</span>prev
+        self<span style="color:#f92672">.</span>POSISI<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> new_chain
+        new_chain<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>POSISI
+
+        <span style="color:#75715e"># raise NotImplementedError()</span>
+
+<span style="color:#75715e"># Tempat eksekusi anda dapat bermain&#34; disini</span>
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+    <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;./dummy.txt&#34;</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf8&#34;</span>) <span style="color:#66d9ef">as</span> text_file:
+        lines <span style="color:#f92672">=</span> text_file<span style="color:#f92672">.</span>read()<span style="color:#f92672">.</span>splitlines()
+
+    chain_list <span style="color:#f92672">=</span> RantaiTerurut()
+    <span style="color:#66d9ef">for</span> str_data <span style="color:#f92672">in</span> lines:
+        chain_list<span style="color:#f92672">.</span>node_append(str_data)
+    <span style="color:#75715e"># chain_list.node_print()</span>
+
+</code></pre></div><br>
+<h2 id="explanation">Explanation</h2>
+<hr>
+<p>Dari kode diatas terdapat 3 Class Utama :</p>
+<ul>
+<li>Data</li>
+<li>Rantai</li>
+<li>RantaiTerurut</li>
+</ul>
+<br>
+<p><strong>1. Class Data</strong></p>
+<hr>
+<p><strong>Class Data</strong> adalah permisalan sebuah data yang akan diinputkan kedalam sebuah node (Rantai). Objek class ini hanyalah sebuah data <em>dummy</em>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Data</span>(object):
+    <span style="color:#66d9ef">def</span> __init__(self, name):
+        self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__compare</span>(self, name):
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>name <span style="color:#f92672">&gt;</span> name <span style="color:#66d9ef">else</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>name <span style="color:#f92672">&lt;</span> name <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">compare</span>(self, data):
+        <span style="color:#66d9ef">if</span> type(data) <span style="color:#f92672">==</span> str:
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>__compare(data)
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>__compare(data<span style="color:#f92672">.</span>name)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print</span>(self):
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#f92672">.</span>format(self<span style="color:#f92672">.</span>name))
+
+</code></pre></div><p>Didalam class ini terdapat 2 fungsi utama yaitu <code>compare()</code> dan <code>print()</code>.</p>
+<ul>
+<li>Fungsi <code>compare()</code> digunakan untuk membandingkan data yang ada di objek ini dengan data di objek lain.</li>
+<li>Fungsi <code>print()</code> digunakan untuk menampilkan data pada objek tersebut.</li>
+</ul>
+<br>
+<p><strong>2. Class Rantai</strong></p>
+<hr>
+<p><strong>Class Rantai</strong> digunakan untuk membuat sebuah <em>node</em> yang nantinya akan di hubungkan dengan <em>node</em> lainnya menggunakan metode <em>LinkedList</em>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/structure-data-double-linked-list-sorting-1.png" alt="Struktur Data Double Linked List" title="Contoh Struktur Node" >
+    <figcaption>Contoh Struktur Node</figcaption>
+  </figure>
+
+
+</p>
+<p>Struktur data dari sebuah rantai atau node dapat dilihat diatas dimana ia memiliki 3 bagian utama.</p>
+<ol type="a"> 
+    <li><b>Data</b> : Dimana data ditampung</li>
+    <li><b>Next</b> : Penghubung ke node berikutnya</li>
+    <li><b>Prev</b> : Penghubung ke node selanjutnya</li>
+</ol>
+<p>Setiap bagian pada node sangatlah penting, terutama bagian <code>next</code> dan <code>prev</code>. Dikarenakan pada bagian tersebut digunakan untuk menghubungkan ke node yang lain.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Rantai</span>(object):
+    <span style="color:#66d9ef">def</span> __init__(self, data):
+        self<span style="color:#f92672">.</span>data <span style="color:#f92672">=</span> data
+        self<span style="color:#f92672">.</span>__next <span style="color:#f92672">=</span> None
+        self<span style="color:#f92672">.</span>__prev <span style="color:#f92672">=</span> None
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">compare</span>(self, data):
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>compare(data)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print</span>(self):
+        self<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span><span style="color:#66d9ef">print</span>()
+
+    <span style="color:#a6e22e">@property</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">next</span>(self):
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>__next
+
+    <span style="color:#a6e22e">@next.setter</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">next</span>(self, node):
+        self<span style="color:#f92672">.</span>__next <span style="color:#f92672">=</span> node
+
+    <span style="color:#a6e22e">@property</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prev</span>(self):
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>__prev
+
+    <span style="color:#a6e22e">@prev.setter</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prev</span>(self, node):
+        self<span style="color:#f92672">.</span>__prev <span style="color:#f92672">=</span> node
+</code></pre></div><p>Sebagian fungsi pada class rantai hanya meneruskan dari fungsi di class data, hal ini bisa kita sebut node di <strong>Bagian Data</strong>. Fungsi - fungsi pada <strong>bagian data</strong> bisa kita sesuaikan sesuai kebutuhan kita.</p>
+<p>Lalu ada fungsi tambahan <code>prev</code> dan <code>next</code> dengan masing - masing <strong><em>getter</em></strong> dan <strong><em>setter</em></strong> nya. Fungsi ini yang nanti nya jadi penghubung ke node yang lain.</p>
+<br>
+<p><strong>3. Class RantaiTerurut</strong></p>
+<hr>
+<p>Lalu yang terakhir adalah class RantaiTerurut disinilah serangkaian node yang memiliki data acak akan diurutkan berdasarkan <em>alphabetical order ascending</em>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RantaiTerurut</span>(object):
+
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>KEPALA <span style="color:#f92672">=</span> None
+        self<span style="color:#f92672">.</span>BUNTUT <span style="color:#f92672">=</span> None
+        self<span style="color:#f92672">.</span>POSISI <span style="color:#f92672">=</span> None
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">node_print</span>(self):
+        current <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>KEPALA
+        <span style="color:#66d9ef">while</span> current <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> None:
+            current<span style="color:#f92672">.</span><span style="color:#66d9ef">print</span>()
+            current <span style="color:#f92672">=</span> current<span style="color:#f92672">.</span>next
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">node_append</span>(self, str_data):
+        data <span style="color:#f92672">=</span> Data(str_data)
+        self<span style="color:#f92672">.</span>__do_append(data)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__do_append</span>(self, data):
+
+        new_chain <span style="color:#f92672">=</span> Rantai(data)
+        new_chain<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> None
+
+        <span style="color:#75715e"># kepala dan buntutnya ada nggak? klo ngga diisi</span>
+        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>KEPALA <span style="color:#f92672">==</span> None:
+            self<span style="color:#f92672">.</span>KEPALA <span style="color:#f92672">=</span> new_chain
+            self<span style="color:#f92672">.</span>BUNTUT <span style="color:#f92672">=</span> new_chain
+            self<span style="color:#f92672">.</span>KEPALA<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> None
+            <span style="color:#66d9ef">return</span>
+
+        <span style="color:#75715e"># jika kepala lebih kecil atau sama dengan, maka kepalanya diganti</span>
+        <span style="color:#66d9ef">if</span> new_chain<span style="color:#f92672">.</span>compare(self<span style="color:#f92672">.</span>KEPALA<span style="color:#f92672">.</span>data) <span style="color:#f92672">in</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>]:
+            new_chain<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> None
+            self<span style="color:#f92672">.</span>KEPALA<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> new_chain
+            new_chain<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>KEPALA
+            self<span style="color:#f92672">.</span>KEPALA <span style="color:#f92672">=</span> new_chain
+            <span style="color:#66d9ef">return</span>
+
+        <span style="color:#75715e"># jika ada node dengan data lebih besar maka buntutnya diganti</span>
+        <span style="color:#66d9ef">if</span> new_chain<span style="color:#f92672">.</span>compare(self<span style="color:#f92672">.</span>BUNTUT<span style="color:#f92672">.</span>data) <span style="color:#f92672">in</span> [ <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>]:
+            new_chain<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>BUNTUT
+            self<span style="color:#f92672">.</span>BUNTUT<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> new_chain
+            self<span style="color:#f92672">.</span>BUNTUT <span style="color:#f92672">=</span> new_chain
+            <span style="color:#66d9ef">return</span>
+
+        <span style="color:#75715e"># itterate dari setelah kepala, buat cari yang mana yang</span>
+        <span style="color:#75715e"># mau diappend ke list</span>
+        self<span style="color:#f92672">.</span>POSISI <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>KEPALA<span style="color:#f92672">.</span>next
+        <span style="color:#66d9ef">while</span> self<span style="color:#f92672">.</span>POSISI<span style="color:#f92672">.</span>compare(new_chain<span style="color:#f92672">.</span>data) <span style="color:#f92672">in</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>]:
+            self<span style="color:#f92672">.</span>POSISI <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>POSISI<span style="color:#f92672">.</span>next
+
+        <span style="color:#75715e"># tuker dengan apa yang udah ada</span>
+        (self<span style="color:#f92672">.</span>POSISI<span style="color:#f92672">.</span>prev)<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> new_chain
+        new_chain<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>POSISI<span style="color:#f92672">.</span>prev
+        self<span style="color:#f92672">.</span>POSISI<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> new_chain
+        new_chain<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>POSISI
+
+</code></pre></div><p>Pengurutan ini dinamakan <strong><em>&ldquo;HEAD and TAIL Sorting&rdquo;</em></strong> dikarenakan pada metode pengurutannya menggunakan konsep Kepala dan Buntut.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/structure-data-double-linked-list-sorting-2.png" alt="Struktur Data Double Linked List" title="Contoh Struktur List Node Dengan Metode HEAD dan TAIL" >
+    <figcaption>Contoh Struktur List Node Dengan Metode HEAD dan TAIL</figcaption>
+  </figure>
+
+
+</p>
+<p>Maksud dari <strong>Kepala</strong> <strong>(<em>HEAD</em>)</strong> adalah data pertama dari sebuah node list. Dalam metode pengurutan ini HEAD akan menyimpan node dengan data terkecil.</p>
+<p>Sedangkan <strong>Buntut</strong> <strong>(<em>TAIL</em>)</strong> adalah data terakhir dari sebuah node list. Sehingga didalam TAIL menyimpan node dengan data terbesar.</p>
+<br>
+<h1 id="note">Note</h1>
+<hr>
+<p>Kode ini memang acak, tetapi saya berusaha semaksimal mungkin untuk membuat anda mengerti. Jika masih bingung anda bisa berkomentar dibawah, penulis akan siap sedia membantu kesulitan anda.</p>
+<p>untuk <em>fullcode github</em> nya bisa akses langsung ke :</p>
+<p>🐙 <a href="https://github.com/alifianadexe/python-sort-double-linked-list"
+    
+     target="_blank" rel="noreferrer" >alifianadexe/python-sort-double-linked-list</a></p>
+<p>Terima kasih atas perhatiannya dan sampai jumpa.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Ragam Design Pattern : Factory</title>
+            <link>https://anbidev.com/design-pattern-factory/</link>
+            <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/design-pattern-factory/</guid>
+            <description>Factory Pattern salah satu dari 23 Design Pattern yang ada di buku Gang of four. Didalam factory pattern client (atau client code) meminta sebuah objek tanpa tahu asal dari objek tersebut (yang berarti, ada class yang digunakan untuk membuat objek tersebut).
+Ide dibalik Factory Pattern ini adalah untuk menyederhanakan proses object creation. Factory pattern mengurangi kompleksitas dalam memaintance suatu aplikasi dengan cara memisahkan kode untuk membuat objek dari kode yang menggunakannya.</description>
+            <content type="html"><![CDATA[<p>Factory Pattern salah satu dari 23 Design Pattern yang ada di buku Gang of four. Didalam factory pattern <strong>client</strong> (atau client code) meminta sebuah objek tanpa tahu asal dari objek tersebut (yang berarti, ada class yang digunakan untuk membuat objek tersebut).</p>
+<p>Ide dibalik Factory Pattern ini adalah untuk menyederhanakan proses object creation. Factory pattern mengurangi kompleksitas dalam memaintance suatu aplikasi dengan cara memisahkan kode untuk membuat objek dari kode yang menggunakannya.</p>
+<p>Kita akan mendiskusikan dua hal :</p>
+<ul>
+<li>Factory Method</li>
+<li>Abstract Factory</li>
+</ul>
+<h2 id="factory-method">Factory Method</h2>
+<p>Factory Method didasarkan dari sebuah single function yang ditulis untuk menangani tugas object creation. Kita mengeksekusi nya, memberikan sebuah parameter tentang apa yang kita inginkan, dan hasilnya adalah objek yang kita inginkan.</p>
+<p>Uniknya, ketika menggunakan factory method, kita tidak diharuskan tahu tentang detail bagaimana objek itu dimplementasikan dan dari mana objek itu berasal.</p>
+<h2 id="contoh-dunia-nyata">Contoh Dunia Nyata</h2>
+<p>Contoh penggunaan factory method di dunia nyata sama seperti pabrik mainan plastik. Bahan material yang digunakan untuk membuat mainan selalu sama, tapi untuk mainan yang berbeda(beda figur dan bentuk)bisa dibuat dengan cetakan yang berbeda.</p>
+<p>Seperti halnya factory method yang dimana inputnya adalah nama dari mainan yang kita minta (mainan bebek atau mobil) dan outputnya (setelah di cetak) adalah mainan plastik yang kita inginkan.</p>
+<p>Dalam dunia software, Django web framework menggunakan factory pattern untuk membuat field pada form. Modul <code>forms</code> pada Django, dapat membuat berbagai macam field seperti <code>CharField</code>, <code>EmailField</code> dan sebagainya. Dan bagian dari perilaku field tersebut bisa kita atur menggunakan attribut seperti <code>max_length</code> atau <code>required</code>.</p>
+<p>Contoh penggunaan dari Factory Method di modul <code>forms</code> Django :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> django <span style="color:#f92672">import</span> forms
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InputForm</span>(forms<span style="color:#f92672">.</span>Form):
+    name <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>)
+    birth_date <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>DateField(required<span style="color:#f92672">=</span>False)
+</code></pre></div><p>Contoh lain dari penerapan factory method yaitu berkaitan dengan meningkatkan performa dan penggunaan memory dari sebuah aplikasi. Factory method dapat meningkatkan performa serta penggunaan memory dengan membuat sebuah objek hanya ketika objek itu dibutuhkan.</p>
+<p>Ketika kita membuat sebuah objek dengan cara menginisialiasi class, extra memory akan teralokasi ke dalam objek baru setiap kali dibuat (Kecuali class menggunakan chaching internal).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># save as id.py</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span>:
+    <span style="color:#66d9ef">pass</span>
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    a <span style="color:#f92672">=</span> A()
+    b <span style="color:#f92672">=</span> A()
+
+    <span style="color:#66d9ef">print</span>(id(a) <span style="color:#f92672">==</span> id(b)) <span style="color:#75715e"># False</span>
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;a -&gt;&#39;</span>,a)
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;b -&gt;&#39;</span>,b)
+</code></pre></div><p>Pada kode diatas, ia membuat dua <em>instance</em> dari class yang sama (<code>A</code>), dan menggunakan function <code>id()</code> untuk membandingkan <strong>memory adresses</strong> merekam dan hasilnya adalah <code>False</code>. Memory Adresses mereka juga kita <code>print</code> dan hasilnya adalah :</p>
+<pre><code>a -&gt; &lt;__main__.A object at 0x015405D0&gt;
+b -&gt; &lt;__main__.A object at 0x01540610&gt;
+</code></pre><p>Dapat dilihat diatas <strong>memory adresses</strong> mereka berbeda dan dapat disimpulkan mereka adalah objek yang berbeda.</p>
+<h2 id="implementasi-factory-method">Implementasi Factory Method</h2>
+<p>Data datang dari mana saja. Ada dua kategori utama bentuk file dalam menyimpan/mengambil sebuah data :</p>
+<ul>
+<li>human-readable files</li>
+<li>binary files</li>
+</ul>
+<p>Contoh human-readable files adalah XML, RSS/Atom, YAML, JSON. Lalu, contoh binary files adalah <code>.sq3</code> format yang digunakan pada SQLite dan .mp3 format file audio.</p>
+<p>Kali ini kita akan fokus pada dua human-readable files yang paling populer yaitu XML dan JSON.</p>
+<p>Pada kasus ini , terdapat data yang disimpan pada XML dan juga JSON, kita ingin memusatkan koneksi client ke service eksternal mereka. Kita akan menggunakan factory method untuk menyelesaikan masalah ini.</p>
+<p>Pertama coba kita lihat data pada JSON. Kita simpan sebagai <code>movie.json</code> :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
+  {
+    <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;After Dark in Central Park&#34;</span>,
+    <span style="color:#f92672">&#34;year&#34;</span>: <span style="color:#ae81ff">1900</span>,
+    <span style="color:#f92672">&#34;director&#34;</span>: <span style="color:#66d9ef">null</span>,
+    <span style="color:#f92672">&#34;cast&#34;</span>: <span style="color:#66d9ef">null</span>,
+    <span style="color:#f92672">&#34;genre&#34;</span>: <span style="color:#66d9ef">null</span>
+  },
+  {
+    <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Boarding School Girls&#39; Pajama Parade&#34;</span>,
+    <span style="color:#f92672">&#34;year&#34;</span>: <span style="color:#ae81ff">1900</span>,
+    <span style="color:#f92672">&#34;director&#34;</span>: <span style="color:#66d9ef">null</span>,
+    <span style="color:#f92672">&#34;cast&#34;</span>: <span style="color:#66d9ef">null</span>,
+    <span style="color:#f92672">&#34;genre&#34;</span>: <span style="color:#66d9ef">null</span>
+  },
+  {
+    <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Buffalo Bill&#39;s Wild West Parad&#34;</span>,
+    <span style="color:#f92672">&#34;year&#34;</span>: <span style="color:#ae81ff">1900</span>,
+    <span style="color:#f92672">&#34;director&#34;</span>: <span style="color:#66d9ef">null</span>,
+    <span style="color:#f92672">&#34;cast&#34;</span>: <span style="color:#66d9ef">null</span>,
+    <span style="color:#f92672">&#34;genre&#34;</span>: <span style="color:#66d9ef">null</span>
+  },
+  {
+    <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Caught&#34;</span>,
+    <span style="color:#f92672">&#34;year&#34;</span>: <span style="color:#ae81ff">1900</span>,
+    <span style="color:#f92672">&#34;director&#34;</span>: <span style="color:#66d9ef">null</span>,
+    <span style="color:#f92672">&#34;cast&#34;</span>: <span style="color:#66d9ef">null</span>,
+    <span style="color:#f92672">&#34;genre&#34;</span>: <span style="color:#66d9ef">null</span>
+  },
+  {
+    <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Clowns Spinning Hats&#34;</span>,
+    <span style="color:#f92672">&#34;year&#34;</span>: <span style="color:#ae81ff">1900</span>,
+    <span style="color:#f92672">&#34;director&#34;</span>: <span style="color:#66d9ef">null</span>,
+    <span style="color:#f92672">&#34;cast&#34;</span>: <span style="color:#66d9ef">null</span>,
+    <span style="color:#f92672">&#34;genre&#34;</span>: <span style="color:#66d9ef">null</span>
+  },
+  {
+    <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Capture of Boer Battery by British&#34;</span>,
+    <span style="color:#f92672">&#34;year&#34;</span>: <span style="color:#ae81ff">1900</span>,
+    <span style="color:#f92672">&#34;director&#34;</span>: <span style="color:#e6db74">&#34;James H. White&#34;</span>,
+    <span style="color:#f92672">&#34;cast&#34;</span>: <span style="color:#66d9ef">null</span>,
+    <span style="color:#f92672">&#34;genre&#34;</span>: <span style="color:#e6db74">&#34;Short documentary&#34;</span>
+  },
+  {
+    <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;The Enchanted Drawing&#34;</span>,
+    <span style="color:#f92672">&#34;year&#34;</span>: <span style="color:#ae81ff">1900</span>,
+    <span style="color:#f92672">&#34;director&#34;</span>: <span style="color:#e6db74">&#34;J. Stuart Blackton&#34;</span>,
+    <span style="color:#f92672">&#34;cast&#34;</span>: <span style="color:#66d9ef">null</span>,
+    <span style="color:#f92672">&#34;genre&#34;</span>: <span style="color:#66d9ef">null</span>
+  },
+  {
+    <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Family Troubles&#34;</span>,
+    <span style="color:#f92672">&#34;year&#34;</span>: <span style="color:#ae81ff">1900</span>,
+    <span style="color:#f92672">&#34;director&#34;</span>: <span style="color:#66d9ef">null</span>,
+    <span style="color:#f92672">&#34;cast&#34;</span>: <span style="color:#66d9ef">null</span>,
+    <span style="color:#f92672">&#34;genre&#34;</span>: <span style="color:#66d9ef">null</span>
+  },
+  {
+    <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Feeding Sea Lions&#34;</span>,
+    <span style="color:#f92672">&#34;year&#34;</span>: <span style="color:#ae81ff">1900</span>,
+    <span style="color:#f92672">&#34;director&#34;</span>: <span style="color:#66d9ef">null</span>,
+    <span style="color:#f92672">&#34;cast&#34;</span>: <span style="color:#e6db74">&#34;Paul Boyton&#34;</span>,
+    <span style="color:#f92672">&#34;genre&#34;</span>: <span style="color:#66d9ef">null</span>
+  }
+]
+</code></pre></div><p>Lalu kita lihat data dari file XML, yang mempresentasikan sebagai <code>Person</code> dengan informasi seperti <code>firstName</code> , <code>lastName</code> , <code>gender</code> dan sebagainya. Lalu kita simpan sebagai <code>person.xml</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;persons&gt;</span>
+  <span style="color:#f92672">&lt;person&gt;</span>
+    <span style="color:#f92672">&lt;firstName&gt;</span>John<span style="color:#f92672">&lt;/firstName&gt;</span>
+    <span style="color:#f92672">&lt;lastName&gt;</span>Smith<span style="color:#f92672">&lt;/lastName&gt;</span>
+    <span style="color:#f92672">&lt;age&gt;</span>25<span style="color:#f92672">&lt;/age&gt;</span>
+    <span style="color:#f92672">&lt;address&gt;</span>
+      <span style="color:#f92672">&lt;streetAddress&gt;</span>21 2nd Street<span style="color:#f92672">&lt;/streetAddress&gt;</span>
+      <span style="color:#f92672">&lt;city&gt;</span>New York<span style="color:#f92672">&lt;/city&gt;</span>
+      <span style="color:#f92672">&lt;state&gt;</span>NY<span style="color:#f92672">&lt;/state&gt;</span>
+      <span style="color:#f92672">&lt;postalCode&gt;</span>10021<span style="color:#f92672">&lt;/postalCode&gt;</span>
+    <span style="color:#f92672">&lt;/address&gt;</span>
+    <span style="color:#f92672">&lt;phoneNumbers&gt;</span>
+      <span style="color:#f92672">&lt;phoneNumber</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;home&#34;</span><span style="color:#f92672">&gt;</span>212 555-1234<span style="color:#f92672">&lt;/phoneNumber&gt;</span>
+      <span style="color:#f92672">&lt;phoneNumber</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;fax&#34;</span><span style="color:#f92672">&gt;</span>646 555-4567<span style="color:#f92672">&lt;/phoneNumber&gt;</span>
+    <span style="color:#f92672">&lt;/phoneNumbers&gt;</span>
+    <span style="color:#f92672">&lt;gender&gt;</span>
+      <span style="color:#f92672">&lt;type&gt;</span>male<span style="color:#f92672">&lt;/type&gt;</span>
+    <span style="color:#f92672">&lt;/gender&gt;</span>
+  <span style="color:#f92672">&lt;/person&gt;</span>
+  <span style="color:#f92672">&lt;person&gt;</span>
+    <span style="color:#f92672">&lt;firstName&gt;</span>Jimy<span style="color:#f92672">&lt;/firstName&gt;</span>
+    <span style="color:#f92672">&lt;lastName&gt;</span>Liar<span style="color:#f92672">&lt;/lastName&gt;</span>
+    <span style="color:#f92672">&lt;age&gt;</span>19<span style="color:#f92672">&lt;/age&gt;</span>
+    <span style="color:#f92672">&lt;address&gt;</span>
+      <span style="color:#f92672">&lt;streetAddress&gt;</span>18 2nd Street<span style="color:#f92672">&lt;/streetAddress&gt;</span>
+      <span style="color:#f92672">&lt;city&gt;</span>New York<span style="color:#f92672">&lt;/city&gt;</span>
+      <span style="color:#f92672">&lt;state&gt;</span>NY<span style="color:#f92672">&lt;/state&gt;</span>
+      <span style="color:#f92672">&lt;postalCode&gt;</span>10021<span style="color:#f92672">&lt;/postalCode&gt;</span>
+    <span style="color:#f92672">&lt;/address&gt;</span>
+    <span style="color:#f92672">&lt;phoneNumbers&gt;</span>
+      <span style="color:#f92672">&lt;phoneNumber</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;home&#34;</span><span style="color:#f92672">&gt;</span>212 555-1234<span style="color:#f92672">&lt;/phoneNumber&gt;</span>
+    <span style="color:#f92672">&lt;/phoneNumbers&gt;</span>
+    <span style="color:#f92672">&lt;gender&gt;</span>
+      <span style="color:#f92672">&lt;type&gt;</span>male<span style="color:#f92672">&lt;/type&gt;</span>
+    <span style="color:#f92672">&lt;/gender&gt;</span>
+  <span style="color:#f92672">&lt;/person&gt;</span>
+  <span style="color:#f92672">&lt;person&gt;</span>
+    <span style="color:#f92672">&lt;firstName&gt;</span>Patty<span style="color:#f92672">&lt;/firstName&gt;</span>
+    <span style="color:#f92672">&lt;lastName&gt;</span>Liar<span style="color:#f92672">&lt;/lastName&gt;</span>
+    <span style="color:#f92672">&lt;age&gt;</span>20<span style="color:#f92672">&lt;/age&gt;</span>
+    <span style="color:#f92672">&lt;address&gt;</span>
+      <span style="color:#f92672">&lt;streetAddress&gt;</span>18 2nd Street<span style="color:#f92672">&lt;/streetAddress&gt;</span>
+      <span style="color:#f92672">&lt;city&gt;</span>New York<span style="color:#f92672">&lt;/city&gt;</span>
+      <span style="color:#f92672">&lt;state&gt;</span>NY<span style="color:#f92672">&lt;/state&gt;</span>
+      <span style="color:#f92672">&lt;postalCode&gt;</span>10021<span style="color:#f92672">&lt;/postalCode&gt;</span>
+    <span style="color:#f92672">&lt;/address&gt;</span>
+    <span style="color:#f92672">&lt;phoneNumbers&gt;</span>
+      <span style="color:#f92672">&lt;phoneNumber</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;home&#34;</span><span style="color:#f92672">&gt;</span>212 555-1234<span style="color:#f92672">&lt;/phoneNumber&gt;</span>
+      <span style="color:#f92672">&lt;phoneNumber</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;mobile&#34;</span><span style="color:#f92672">&gt;</span>001 452-8819<span style="color:#f92672">&lt;/phoneNumber&gt;</span>
+    <span style="color:#f92672">&lt;/phoneNumbers&gt;</span>
+    <span style="color:#f92672">&lt;gender&gt;</span>
+      <span style="color:#f92672">&lt;type&gt;</span>female<span style="color:#f92672">&lt;/type&gt;</span>
+    <span style="color:#f92672">&lt;/gender&gt;</span>
+  <span style="color:#f92672">&lt;/person&gt;</span>
+<span style="color:#f92672">&lt;/persons&gt;</span>
+</code></pre></div>]]></content>
+        </item>
+        
+        <item>
+            <title>Ragam Design Pattern : Singleton</title>
+            <link>https://anbidev.com/design-pattern-singleton/</link>
+            <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/design-pattern-singleton/</guid>
+            <description>Singleton adalah salah satu dari klasifikasi Creational Design Pattern. Pattern ini memastikan bahwa kamu hanya perlu satu instance , sambil menyediakan akses secara global ke instance.
+Hal ini berguna ketika kamu perlu sebuah objek yang dapat mengkoordinasikan tindakan diseluruh sistem. Istilah ini berasal dari konsep matematika bernama &amp;lt;strong&amp;gt;Singleton&amp;lt;/strong&amp;gt;.
+ Dalam pemrograman, sebuah objek bisa dikatakan Singleton, apabila hanya memiliki sebuah instance yang digunakan diseluruh kode logikamu.
+ Apa Itu Instansi (Instance) Instansi (Instance) adalah sebuah variabel objek dari class, atau bisa dibilang pembentukan dari class menjadi sebuah objek.</description>
+            <content type="html"><![CDATA[<p><strong>Singleton</strong> adalah salah satu dari klasifikasi <em>Creational Design Pattern</em>. Pattern ini memastikan bahwa kamu hanya perlu satu <em>instance</em> , sambil menyediakan akses secara global ke <em>instance</em>.</p>
+<p>Hal ini berguna ketika kamu perlu sebuah objek yang dapat mengkoordinasikan tindakan diseluruh sistem. Istilah ini berasal dari konsep matematika bernama <a href="https://en.wikipedia.org/wiki/Singleton_%28mathematics%29?source=post_page-----b0b1f535da11----------------------"
+    
+     target="_blank" rel="noreferrer" >&lt;strong&gt;Singleton&lt;/strong&gt;</a>.</p>
+<blockquote>
+<p>Dalam pemrograman, sebuah objek bisa dikatakan <strong>Singleton</strong>, apabila hanya memiliki <strong>sebuah instance</strong> yang digunakan diseluruh kode logikamu.</p>
+</blockquote>
+<br>
+<h2 id="apa-itu-instansi-_instance_">Apa Itu Instansi <em>(Instance)</em></h2>
+<hr>
+<p>Instansi (<em>Instance</em>) adalah sebuah variabel objek dari class, atau bisa dibilang pembentukan dari <strong>class</strong> menjadi sebuah <strong>objek</strong>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/design-pattern-singleton-fishstar.jpg" alt="Ragam Design Pattern Singleton" title="Photo by Amy Humphries on Unsplash" >
+    <figcaption>Photo by Amy Humphries on Unsplash</figcaption>
+  </figure>
+
+
+</p>
+<p>Untuk lebih sederhananya coba lihat kode dibawah ini :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Hewan</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lari</span>(self):
+        <span style="color:#66d9ef">pass</span>
+
+kucing <span style="color:#f92672">=</span> Hewan()
+</code></pre></div><p>Maksud dari kode diatas adalah kita membuat sebuah <em>instance</em> dari class yaitu <code>Hewan()</code> dan menyimpannya ke dalam variabel <code>kucing</code>.</p>
+<p>Sehingga dapat dijelaskan bahwa variabel <code>kucing</code> adalah <strong><em>instance</em></strong> dari class <code>Hewan</code>.</p>
+<p>Oke, kalian sekarang sudah tahu apa itu <strong><em>Instance</em></strong>, sekarang kita lanjutkan pembahasan kita tentang <strong>Singleton</strong>.</p>
+<br>
+<h2 id="kenapa-singleton">Kenapa Singleton?</h2>
+<hr>
+<p>Dalam kenyataannya <strong><em>Singleton Pattern</em></strong> dapat menyelesaikan dua masalah sekaligus :</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/design-pattern-singleton-question.jpg" alt="Ragam Design Pattern Singleton" title="Photo by Emily Morter on Unsplash" >
+    <figcaption>Photo by Emily Morter on Unsplash</figcaption>
+  </figure>
+
+
+</p>
+<h4 id="1-untuk-memastikan-bahwa-sebuah-class-hanya-memiliki-satu-instance">1. Untuk Memastikan Bahwa Sebuah Class Hanya Memiliki Satu Instance</h4>
+<p>Untuk apa orang ingin mengatur banyak <em>instance</em> dalam class yang ia buat? Alasan paling umum untuk ini adalah ia ingin mengendalikan akses sebuah <strong><em>shared resource</em></strong>, contohnya sebuah Database atau File.</p>
+<p><strong>Contoh Kesalahan:</strong> Bayangkan kamu membuat sebuah objek, tapi beberapa saat kemudian kamu memutuskan untuk membuat yang baru. Bukannya menerima objek baru, malah menerima objek yang telah kamu buat.</p>
+<p><strong><em>Catatan</em></strong> : Perilaku ini tidak mungkin diterapkan dengan <em>constructor</em> biasa, dikarenakan <em>constructor</em> harus selalu mengembalikan nilai (<strong>return</strong>) sebuah objek baru sesuai desainnya.</p>
+<h4 id="2-untuk-menyediakan-sebuah-akses-global-ke-instance-tersebut">2. Untuk Menyediakan Sebuah Akses Global Ke Instance Tersebut</h4>
+<p>Ingat apa itu <a href="https://anbidev.com/tutorials/python/python-variable/"
+    
+     target="_blank" rel="noreferrer" >Global Variabel</a> yang digunakan untuk menyimpan dan mengakses sebuah objek dimanapun itu? Meskipun ini sangat praktis, hal ini juga sangat beresiko. Karena variabel ini sangat <strong>rentan di overwrite</strong> oleh kode lainnya dan membuat app <em>crash</em>.</p>
+<p>Sama seperti variabel global, <strong>Singleton Pattern</strong> memungkinkan kamu mengakses beberapa objek dari manapun di dalam program. Namun, Singleton melindungi <em>instance</em> agar tidak di <em>overwrite</em> oleh kode lain.</p>
+<p>Perbedaan antara <strong>Singleton Pattern</strong> dan <strong>Global Variabel</strong> yaitu Singleton hanya dibuat saat dibutuhkan, sedangkan Global Variabel dibuat saat awal program dijalankan.</p>
+<p><strong>Masalah Dari Sisi Yang Lain :</strong></p>
+<p>Kamu tidak ingin kode yang memecahkan masalah A tersebar di seluruh program yang kamu buat. Sehingga dapat menimbulkan adanya kode yang duplikat yang dapat menyebabkan redudansi dan <strong><em>bad pattern</em></strong>.</p>
+<p>Jauh lebih baik kode ini dibuat didalam suatu class, dan class itu dapat digunakan untuk berbagai kebutuhanmu. Terutama jika kode yang lain sudah bergantung pada kode tersebut.</p>
+<center><p>.            .          .</p></center>
+<p>Saat ini , <strong>Singleton Pattern</strong> telah menjadi sangat populer sehingga orang dapat mengenali bagaimana cara memecahkan masalah dengan Singleton.</p>
+<br>
+<h2 id="contoh-penggunaan">Contoh Penggunaan</h2>
+<hr>
+<p>Contoh implementasi konsep <strong>Singleton</strong> cukup banyak. Kali ini saya hanya menampilkan yang sering digunakan saja:</p>
+<ol>
+<li>
+<p><strong><em>Database Connection</em></strong> <br> Dalam kebanyakan program yang memiliki koneksi database, mereka hanya membuat <strong>satu buah objek</strong> yang digunakan untuk berhubungan dari program ke database.</p>
+</li>
+<li>
+<p><strong><em>Application Settings</em></strong> <br> Ketika kita membuat sebuah pengaturan untuk sistem kita maka hanya satu objek yang dibuat, dan ketika pengaturan di <em>apply</em> maka seluruh sistem akan terpengaruh.</p>
+</li>
+<li>
+<p><strong><em>Search Dialog</em></strong> <br> Kita punya banyak content didalam program kita, lalu dibuatlah fitur <em>Search Dialog</em>. Ketika kita memanggil fitur ini, tidak mungkin membuat objek <em>Search Dialog</em> secara terus menerus. Hanya satu objek <em>Search Dialog</em> untuk seluruh program.</p>
+</li>
+</ol>
+<br>
+<h2 id="analogi-singleton">Analogi Singleton</h2>
+<hr>
+<p>Dalam dunia nyata, <strong>Pemerintah</strong> adalah contoh analogi yang tepat untuk Singleton. <strong>Satu negara hanya memiliki satu pemerintahan yang resmi</strong>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/design-pattern-singleton-gov.jpg" alt="Ragam Design Pattern Singleton" title="Photo by Marco Oriolesi on Unsplash" >
+    <figcaption>Photo by Marco Oriolesi on Unsplash</figcaption>
+  </figure>
+
+
+</p>
+<p>Kita ambil contoh yaitu <strong>Indonesia</strong>, Negara Indonesia memiliki <strong>Presiden</strong> dan sebuah pemerintahan resmi dengan nama <strong><em>&ldquo;Pemerintah Indonesia&rdquo;</em></strong>. Seluruh kebijakan dan kepentingan yang dilontarkan <strong>berasal</strong> dari pemerintah atas persetujuan presiden dan warga Indonesia menyampaikan aspirasinya kepada presiden <strong>lewat</strong> pemerintah.</p>
+<p>Dalam analogi tersebut, Rakyat dianggap sebagai <strong>Modul</strong> , Presiden sebagai <strong>Resource</strong> dan Pemerintah sebagai <strong>Singleton</strong>.</p>
+<br>
+<h2 id="bagaimana-cara-mengaplikasikan-singleton">Bagaimana Cara Mengaplikasikan Singleton?</h2>
+<hr>
+<p>Secara abstrak , kamu hanya perlu dua langkah sederhana untuk membuat sebuah <strong>Singleton</strong> objek.</p>
+<ol>
+<li>
+<p><strong>Buat default <em>constructor</em> secara</strong> <strong><em>private</em></strong>. Hal ini untuk mencegah objek lain membuat class Singleton baru. Kenapa? karena kita perlu memastikan bahwa objek ini hanya memiliki satu instance saja.</p>
+</li>
+<li>
+<p><strong>Buat <em>method</em> statis yang bertindak sebagai constructor</strong>. Methode ini akan memanggil <em>private constructor</em> untuk membuat sebuah objek dan menyimpannya kedalam field statis.</p>
+</li>
+</ol>
+<p>Kalian masih bingung? Baik, Saya akan menjelaskan menggunakan kode nanti.</p>
+<br>
+<h2 id="struktur-singleton">Struktur Singleton</h2>
+<hr>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/design-pattern-singleton-tree.jpg" alt="Ragam Design Pattern Singleton" title="Photo by Tim Foster on Unsplash" >
+    <figcaption>Photo by Tim Foster on Unsplash</figcaption>
+  </figure>
+
+
+</p>
+<p>Inti dari struktur tersebut adalah <strong>Client</strong> hanya dapat mengambil <em>Instance</em> dari Singleton yang kamu buat dengan memanggil <strong>getInstance()</strong>.</p>
+<p>Pada fungsi tersebut ia akan memeriksa <em>Instance</em> yang saat ini ada. Jika ia <code>null</code>, maka ia akan membuat <em>instance</em> baru dan return, dan jika ia <strong>tidak <code>null</code></strong> maka return <em>instance</em> yang ada.</p>
+<br>
+<h2 id="waktunya-koding">Waktunya Koding</h2>
+<hr>
+<p>Coba kita buat implementasi <strong>Singleton</strong> dengan bahasa pemrograman Python.</p>
+<p>Kita buat studi kasus. Seperti analogi yang kita bahas sebelumnya, yaitu Negara Indonesia dengan Pemerintah Resminya. Sekarang kita konversi ke kode.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#75715e"># save as : pemerintah.py</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Pemerintah</span>():
+    <span style="color:#75715e"># Informasi</span>
+    kebijakan <span style="color:#f92672">=</span> None
+    pajak <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#75715e"># Instance</span>
+    __instance <span style="color:#f92672">=</span> None
+
+    <span style="color:#75715e"># Private Constructor</span>
+    <span style="color:#66d9ef">def</span> __init__(self):
+        <span style="color:#66d9ef">if</span> Pemerintah<span style="color:#f92672">.</span>__instance <span style="color:#f92672">!=</span> None:
+            <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">Exception</span>(<span style="color:#e6db74">&#34;Pemerintah sudah terbentuk!&#34;</span>)
+        <span style="color:#66d9ef">else</span>:
+            Pemerintah<span style="color:#f92672">.</span>__instance <span style="color:#f92672">=</span> self
+
+    <span style="color:#75715e"># Static Access Method</span>
+    <span style="color:#a6e22e">@staticmethod</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getInstance</span>():
+        <span style="color:#66d9ef">if</span> Pemerintah<span style="color:#f92672">.</span>__instance <span style="color:#f92672">==</span> None:
+            Pemerintah()
+        <span style="color:#66d9ef">return</span> Pemerintah<span style="color:#f92672">.</span>__instance
+
+</code></pre></div><p>Baik, saya akan menjelaskan maksud dari kode diatas.</p>
+<p>Kita buat class <strong>Pemerintah()</strong> dengan <strong><em>private constructor</em></strong> dan juga method statis <code>getInstance()</code>.</p>
+<p>Saya membuat sebuah private variabel yaitu <code>__instance</code> dan beberapa informasi sebagai global variabel seperti <code>kebijakan</code> dan <code>pajak</code>.</p>
+<blockquote>
+<p>Berikut penjelasan __(<em>double underscore</em>) pada Variabel di Python.</p>
+</blockquote>
+<p>Pada fungsi <code>getInstance()</code> terdapat kondisi, jika <code>__instance</code> berisi <code>None</code> maka ia akan memanggil <strong><em>private constructor</em></strong>.</p>
+<p>Lalu didalam <strong><em>private constructor</em></strong> terdapat juga kondisi yang menyatakan jika <code>__instance</code> sudah dibuat maka <code>raise Exception()</code> atau keluar ERROR. Ini diperlukan supaya tidak ada duplikasi <em>instance</em> class.</p>
+<p>Sedangkan pada blok kode <code>else</code>, variabel <code>__instance</code> didefinisikan sebagai <code>self</code> atau bisa dibilang membuat <em>instance</em> dari class <strong>Pemerintah()</strong>.</p>
+<br>
+<p>Sekarang kita coba implementasikan class <strong>Pemerintah()</strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> pemerintah <span style="color:#f92672">import</span> Pemerintah
+
+pemindo <span style="color:#f92672">=</span> pemerintah<span style="color:#f92672">.</span>getInstance()
+
+pemindo<span style="color:#f92672">.</span>kebijakan <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Kebebasan Berpendapat&#34;</span>
+pemindo<span style="color:#f92672">.</span>pajak <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>
+
+<span style="color:#66d9ef">print</span>(pemindo<span style="color:#f92672">.</span>kebijakan) <span style="color:#75715e"># Output : &#39;Kebebasan Berpendapat&#39;</span>
+<span style="color:#66d9ef">print</span>(pemindo<span style="color:#f92672">.</span>pajak) <span style="color:#75715e"># Output : 1000</span>
+</code></pre></div><p>Oke, kode diatas untuk memastikan bahwa tidak ada error dalam inisiasi ataupun alur kode.</p>
+<p>Lalu kita coba, bagaimanakah implementasi dari sebuah <strong>Singleton</strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> pemerintah <span style="color:#f92672">import</span> Pemerintah
+
+<span style="color:#75715e"># buat 2 objek instance</span>
+pemindo <span style="color:#f92672">=</span> pemerintah<span style="color:#f92672">.</span>getInstance()
+pemkot <span style="color:#f92672">=</span> pemerintah<span style="color:#f92672">.</span>getInstance()
+
+pemindo<span style="color:#f92672">.</span>kebijakan <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Indonesia Sebagai Negara Agraris&#34;</span>
+pemindo<span style="color:#f92672">.</span>pajak <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>
+
+pemkot<span style="color:#f92672">.</span>kebijakan <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Didalam Kota Dilarang Pacaran&#34;</span>
+pemkot<span style="color:#f92672">.</span>pajak <span style="color:#f92672">=</span> <span style="color:#ae81ff">9999</span>
+
+<span style="color:#66d9ef">print</span>(pemindo<span style="color:#f92672">.</span>kebijakan) <span style="color:#75715e"># Output : &#39;Didalam Kota Dilarang Pacaran&#39;</span>
+<span style="color:#66d9ef">print</span>(pemindo<span style="color:#f92672">.</span>pajak) <span style="color:#75715e"># Output : 9999</span>
+
+</code></pre></div><p><em>&ldquo;Kenapa valuenya sama? Padahal ia adalah objek yang berbeda?&quot;</em></p>
+<p>Siapa bilang mereka adalah objek yang berbeda. Kita coba lagi.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> pemerintah <span style="color:#f92672">import</span> Pemerintah
+
+<span style="color:#75715e"># buat 2 objek instance</span>
+pemindo <span style="color:#f92672">=</span> pemerintah<span style="color:#f92672">.</span>getInstance()
+pemkot <span style="color:#f92672">=</span> pemerintah<span style="color:#f92672">.</span>getInstance()
+
+<span style="color:#66d9ef">if</span> (pemindo <span style="color:#f92672">==</span> pemkot) :
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Mereka Objek yang sama&#34;</span>)
+<span style="color:#66d9ef">else</span>:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Mereka Objek yang berbeda&#34;</span>)
+</code></pre></div><p>Nah, dari kode diatas dapat disimpulkan mereka adalah objek yang <strong>sama</strong>. Karena mereka menggunakan <strong><em>instance</em></strong> <strong>yang sama</strong>.</p>
+<p>Lalu, bagaimana jika kita definisikan lagi <em>instance</em> dari class <strong>Pemerintah()</strong>?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> pemerintah <span style="color:#f92672">import</span> Pemerintah
+
+pemindo <span style="color:#f92672">=</span> pemerintah<span style="color:#f92672">.</span>getInstance()
+pemkot <span style="color:#f92672">=</span> Pemerintah()
+</code></pre></div><p>Yups, akan terjadi <strong>ERROR</strong> yaitu <code>Exception(&quot;Pemerintah Sudah Terbentuk!&quot;)</code>. Seperti konsep yang kita bahas sebelumnya bahwa tidak boleh adanya duplikasi <em>instance</em> class.</p>
+<br>
+<h2 id="tipe---tipe-singleton">Tipe - Tipe Singleton</h2>
+<hr>
+<p>Sekarang kita bahas 3 tipe dari Singleton.</p>
+<ol>
+<li><strong>Early Loading Singleton</strong><br>
+Singleton yang <em>instance</em>-nya dinisialisasi secara langsung selama <em>instance</em> dideklarasi.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    pemindo <span style="color:#f92672">=</span> Pemerintah()  <span style="color:#75715e"># Instance Dideklarasikan Langsung</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getInstance</span>():
+        <span style="color:#66d9ef">return</span> pemindo
+</code></pre></div><ol start="2">
+<li>
+<p><strong>Single-Thread — Lazy Loading Singleton</strong><br>
+Singleton yang <em>instance</em>-nya dinisialisasi hanya saat class Singleton tersebut digunakan untuk pertama kali dan hanya ditujukan untuk <strong>Single Thread</strong>. <em>Ini adalah Singleton yang kita buat tadi</em>.</p>
+</li>
+<li>
+<p><strong>Multi-Thread — Lazy Loading Singleton</strong><br>
+Singleton yang <em>instance</em>-nya dinisialisasi hanya saat class Singleton tersebut digunakan untuk pertama kali dan ditujukan untuk <strong>multhi-threaded environtment</strong>.</p>
+</li>
+</ol>
+<p>Didalam environtment <em>multi-threaded</em>, akan sangat mungkin terjadi ketika dua <em>thread</em> memanggil <em>method</em> <code>getInstance()</code> pada waktu yang sama, dan akan membuat dua <em>instance</em> class Singleton yang tidak diinginkan, dan mungkin membuat program sulit diprediksi.</p>
+<p>Untuk membuat <em>thread instance</em> Singleton yang aman, method <code>getInstance()</code> harus di <strong>Synchronized</strong> agar method akan tereksekusi oleh satu <em>thread</em> pada satu waktu (One-Thread-One-Run).</p>
+<blockquote>
+<p>Kita akan bahas lebih mendalam tentang <strong>Multi-Thread</strong> pada artikel yang lain.</p>
+</blockquote>
+<br>
+<h4 id="--singleton-tipe-apa-yang-sebaiknya-saya-pakai">-&gt; Singleton Tipe Apa Yang Sebaiknya Saya Pakai?</h4>
+<p>Jawaban atas pertanyaan ini berdasarkan masalah yang kamu hadapi.</p>
+<p>Jika kamu hanya butuh Singleton sederhana dan mengesampingkan performa dari program yang kamu buat, gunakan <strong>Early Loading Singleton</strong>.</p>
+<p>Jika kamu peduli tentang performa aplikasimu, tapi hanya menggunakan <em>single threading</em>, gunakan <strong>Single Thread - Lazy Loading Singleton</strong>. Pastikan kamu memanggil <code>getInstance()</code> didalam <em>single thread</em>, jika tidak Singleton yang kamu buat akan dinisialisasi dua kali dan menghasilkan <strong><em>multi-instance</em></strong> (maka kita tidak bisa menyebutnya sebuah Singleton)</p>
+<p>Dan yang terakhir, jika kamu peduli tentang performa aplikasimu dan menggunakan environment <em>multi-thread</em>, gunakan <strong>Multi Thread - Lazy Loading Singleton</strong>.</p>
+<br>
+<h2 id="sesi-review">Sesi Review</h2>
+<hr>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/design-pattern-singleton-review.jpg" alt="Ragam Design Pattern Singleton" title="Photo by Isaac Smith on Unsplash" >
+    <figcaption>Photo by Isaac Smith on Unsplash</figcaption>
+  </figure>
+
+
+</p>
+<p>Setelah semua teori dan contoh kode diatas, kita bisa menyimpulkan bahwa mengimplementasikan sebuah Singleton sangatlah mudah, seperti :</p>
+<ol>
+<li>
+<p>Menambahkan <strong><em>private static field</em></strong> didalam class untuk menyimpan <em>instance</em> Singleton.</p>
+</li>
+<li>
+<p>Mendeklarasikan sebuah method <strong><em>public static creation</em></strong> untuk mendapatkan <em>instance</em> Singleton.</p>
+</li>
+<li>
+<p>Implementasikan salah satu <strong>tipe Singleton &ldquo;Lazy Initilization&rdquo;</strong> didalam method statis.</p>
+</li>
+<li>
+<p>Buat <strong>private constructor</strong> dari class.</p>
+</li>
+<li>
+<p>Lalu <strong>implementasikan</strong> ke kode program yang kamu buat.</p>
+</li>
+</ol>
+<br>
+<h4 id="--kapan-kita-menggunakan-singleton">-&gt; Kapan Kita Menggunakan Singleton?</h4>
+<ul>
+<li>
+<p>Gunakan Singleton ketika class pada programmu seharusnya memiliki satu <em>instance</em> untuk semua modul. Contoh, seperti <em>shared database</em> atau file.</p>
+</li>
+<li>
+<p>Gunakan Singleton ketika kamu ingin mengontrol atas global variabel pada program yang kamu buat.</p>
+</li>
+</ul>
+<h4 id="--kelebihan-singleton">-&gt; Kelebihan Singleton</h4>
+<ul>
+<li>
+<p>Kamu bisa memastikan bahwa hanya ada satu <em>instance</em> yang dibuat.</p>
+</li>
+<li>
+<p>Kamu dapat mengontrol <em>instance</em> yang memiliki akses secara global.</p>
+</li>
+<li>
+<p>Objek Singleton hanya diinisialisasi ketika ia di<em>request</em> untuk pertama kalinya.</p>
+</li>
+</ul>
+<h4 id="--kekurangan-singleton">-&gt; Kekurangan Singleton</h4>
+<ul>
+<li>
+<p>Singleton dapat menutupi desain program yang buruk oleh penciptanya, misalnya, ketika setiap komponen program tahu terlalu banyak informasi tentang satu sama lain.</p>
+</li>
+<li>
+<p>Singleton membutuhkan perlakuan khusus saat berada di environment <em>multi-threaded</em>, agar tidak membuat objek Singleton berkali - kali.</p>
+</li>
+</ul>
+<center><p>.            .          .</p></center>
+<p>Artikel ini adalah hasil translasi dari artikel aslinya yang bisa kalian lihat <a href="https://medium.com/@ezralazuardy/creational-design-pattern-singleton-b0b1f535da11"
+    
+     target="_blank" rel="noreferrer" >disini</a>. Artikel yang asli ditulis oleh kerabat saya bernama <a href="https://medium.com/@ezralazuardy"
+    
+     target="_blank" rel="noreferrer" >Ezra Lazuardy</a> dengan versi bahasa inggris. Sedangkan saya membuatnya menjadi versi bahasa indonesia dengan perubahan beberapa kalimat agar mudah dipahami.</p>
+<br>
+<center>***stay fool so you have learn***</center>]]></content>
+        </item>
+        
+        <item>
+            <title>Perbedaan Design Pattern dengan Architecture Pattern</title>
+            <link>https://anbidev.com/design-pattern-atau-architecture-pattern/</link>
+            <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/design-pattern-atau-architecture-pattern/</guid>
+            <description>Design Pattern dan Architecture Pattern. Apa perbedaan diantara mereka? Apakah seperti kita yang beda perasaan (Ciee) ?
+Kali ini saya akan membahas sebuah pengetahuan yang sering di salah artikan oleh kebanyakan programmer advance. Kita mulai dari pengertian dari Design Pattern dan Architecture Pattern.
+Versus Photo by Jace &amp;amp; Afsoon on UnsplashPengertian  Design Pattern adalah istilah yang merujuk pada solusi umum yang digunakan untuk memecahkan masalah yang sering terjadi dalam konteks tertentu.</description>
+            <content type="html"><![CDATA[<p><strong>Design Pattern</strong> dan <strong>Architecture Pattern</strong>. Apa perbedaan diantara mereka? Apakah seperti kita yang beda perasaan (Ciee) ?</p>
+<p>Kali ini saya akan membahas sebuah pengetahuan yang sering di salah artikan oleh kebanyakan programmer advance. Kita mulai dari pengertian dari Design Pattern dan Architecture Pattern.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/design-vs-architecture-versus.jpg" alt="Perbedaan Design dan Architecture" title="Versus Photo by Jace &amp; Afsoon on Unsplash" >
+    <figcaption>Versus Photo by Jace &amp; Afsoon on Unsplash</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="pengertian">Pengertian</h2>
+<hr>
+<blockquote>
+<p><strong>Design Pattern</strong> adalah istilah yang merujuk pada solusi umum yang digunakan untuk <strong>memecahkan masalah yang sering terjadi</strong> dalam konteks tertentu.</p>
+</blockquote>
+<p>Mengacu pada komponen (bagian kecil) dari suatu subsistem dengan hubungan dan kolaborasi satu sama lain. Sebagai contoh , kamu memiliki sebuah masalah dalam algoritma pemrogramanmu, lalu kamu membutuhkan suatu pola (Pattern) atau alur (Flow) untuk memecahkan masalah tersebut. Aplikasikan saja design pattern yang sesuai dengan masalah yang kamu hadapi.</p>
+<blockquote>
+<p><strong>Architecture Pattern</strong> pada software development adalah istilah untuk <strong>solusi</strong> yang dapat <strong>digunakan kembali</strong> dalam software architecture.</p>
+</blockquote>
+<p>Mengacu pada suatu subsistem dengan hubungan dan kolaborasi satu sama lain. Sebagai contoh, ketika kamu ingin membuat sebuah aplikasi, Architecture Pattern akan membantu dalam menentukan struktur yang cocok untuk aplikasi yang kamu buat, atau membuat alur kerja (Workflow) yang optimal dalam proyek aplikasimu.</p>
+<br>
+<h2 id="kekeliruan">Kekeliruan</h2>
+<hr>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/design-vs-architecture-mistake.jpg" alt="Perbedaan Design dan Architecture" title="Mistake Photo by Jamie Street on Unsplash" >
+    <figcaption>Mistake Photo by Jamie Street on Unsplash</figcaption>
+  </figure>
+
+
+</p>
+<p>Kebanyakan programmer masih bingung tentang perbedaan antara design pattern dengan architecture pattern, bahkan ada yang tidak tahu sama sekali. Padahal kebanyakan dari kita (programmer) sering sekali mengaplikasikan hal ini disaat membuat aplikasi.</p>
+<p>Ada suatu ketika, teman saya berdebat dengan saya tentang <strong>MVC (Model View Controller)</strong>. Menurut teman saya <strong>MVC</strong> adalah salah satu design pattern. Saya mencoba menjelaskan serta memberikan referensi yang menjelaskan bahwa MVC lebih ke arah architecture pattern.</p>
+<p>Lalu dia membalas dengan mengirim link dari GeeksforGeeks yang menyatakan bahwa MVC adalah design pattern.</p>
+<p>Dalam paragraf pertamanya, GeeksforGeeks mengatakan</p>
+<blockquote>
+<p>The <strong>Model View Controller (MVC) design pattern</strong> specifies that an application consist of a data model, presentation information, and control information. The pattern requires that each of these be separated into different objects.</p>
+</blockquote>
+<p>Tetapi dalam paragraf kedua</p>
+<blockquote>
+<p><strong>MVC is more of an architectural pattern</strong>, but not for complete application. MVC mostly relates to the UI or interaction layer of an application. You’re still going to need business logic layer, maybe some service layer and data access layer.</p>
+</blockquote>
+<p>Setelah itu, saya bertanya kepada teman saya.</p>
+<p><em>&ldquo;Hey, apakah kamu mengetahui perbedaan antara design pattern dengan architectural pattern?&quot;</em></p>
+<p><em>&ldquo;Tidak, coba jelaskan kepadaku&rdquo;</em></p>
+<p>Inilah salah satu <strong>kekeliruan</strong> diantara jutaan lainnya.</p>
+<br>
+<h2 id="design-pattern">Design Pattern</h2>
+<hr>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/design-vs-architecture-abstract.jpg" alt="Perbedaan Design dan Architecture" title="Design Photo by Andrew Ridley on Unsplash" >
+    <figcaption>Design Photo by Andrew Ridley on Unsplash</figcaption>
+  </figure>
+
+
+</p>
+<p>Saya mulai dengan definisi. Design Pattern adalah tipikal solusi untuk masalah yang sering terjadi di dalam software design. Dengan kata lain, design pattern membantu memecahkan masalahmu yang kadang terjadi ketika kamu membuat program. Mereka seperti <strong>blueprint</strong> yang dapat kamu ubah untuk memecahkan masalah pada kode mu.</p>
+<p>Ini seperti memasak menggunakan resep yang memberitahu bagaimana cara memasak sebuah makanan. Tetapi dalam kenyataannya, selera orang berbeda - beda, sehingga untuk menggunakan resep ini kamu harus menyesuaikan dengan kebutuhan bahan serta situasi yang ada.</p>
+<p>Patterns yang telah dibangun, dirumuskan sedemikian rupa agar mendapatkan cara terbaik untuk menyelesaikan masalah. Tetapi, tetap saja programmer harus <strong>menyesuaikan</strong> Patterns dengan <strong>konteks masalah</strong> yang sedang dihadapi.</p>
+<p>Berikut adalah 3 klasifikasi dalam design pattern.</p>
+<p><strong>1. Creational Patterns</strong></p>
+<p>Bertujuan untuk menyajikan mekanisme <em>object creation</em> yang dapat meningkatkan fleksibilitas dan penggunaan kembali kode yang ada.</p>
+<ul>
+<li>Abstract Factory</li>
+<li>Builder</li>
+<li>Factory Method</li>
+<li>Object Pool</li>
+<li>Prototype</li>
+<li>Singleton</li>
+</ul>
+<p><strong>2. Structural Patterns</strong></p>
+<p>Bertujuan untuk menjelaskan cara merakit object dan class ke dalam struktur yang lebih besar, sambil menjaga struktur itu tetap fleksibel dan efisien.</p>
+<ul>
+<li>Adapter</li>
+<li>Bridge</li>
+<li>Composite</li>
+<li>Decorator</li>
+<li>Facade</li>
+<li>Flyweight</li>
+<li>Private Class Data</li>
+<li>Proxy</li>
+</ul>
+<p><strong>3. Behavioral Patterns</strong></p>
+<p>Bertujuan untuk menjaga komunikasi yang efektif serta penugasan antar objek.</p>
+<ul>
+<li>Chain of Responsibility</li>
+<li>Command, Interpreter</li>
+<li>Iterator</li>
+<li>Mediator</li>
+<li>Memento</li>
+<li>Null Object</li>
+<li>Observer</li>
+<li>State</li>
+<li>Strategy</li>
+<li>Template Method</li>
+<li>Visitor</li>
+</ul>
+<p>Jumlah total design pattern yang ada adalah <strong>26</strong>. Sangat banyak bukan, tapi tenang saja kita <strong>tidak perlu tahu semua jenis yang ada</strong>. Hanya beberapa jenis saja yang bisa kamu aplikasikan kedalam permasalahanmu.</p>
+<p><em>&ldquo;Baik, aku mengerti teorinya. Tapi kenapa hal - hal kompleks ini ada?. Apa intinya dari semua ini? dan haruskah aku belajar semuanya?&quot;</em></p>
+<p>Kenyataanya adalah kamu telah bekerja sebagai programmer selama beberapa tahun, tapi kamu tidak mengetahui tentang satupun design pattern. Padahal mungkin saja kamu sedang menggunakan salah satunya tanpa kamu sadari. Jadi kenapa tidak menghabiskan sedikit waktu untuk mempelajarinya?</p>
+<ul>
+<li>
+<p>Design Pattern adalah <strong>kumpulan solusi yang dicoba dan diuji</strong> untuk masalah umum yang terjadi dalam software design. Bahkan jika kamu tidak pernah menghadapi masalah ini, mengetahui design pattern masih berguna karena akan mengajarkanmu dalam menyelesaikan semua masalah menggunakan prinsip OOP (Object-Oriented-Programming).</p>
+</li>
+<li>
+<p>Design Pattern <strong>menentukan bahasa umum</strong> yang dapat kamu gunakan untuk berkomunikasi lebih efisien bersama rekan tim ataupun programmer lain. Contoh, ketika rekanmu mendapatkan masalah dan meminta saranmu, kamu hanya mengatakan <em>&ldquo;Oh, gunakan saja Singleton untuk itu!&quot;</em> dan semua orang memahami ide dibalik saranmu. Tidak perlu kamu jelaskan Singleton jika kamu tahu itu bukan.</p>
+</li>
+</ul>
+<blockquote>
+<p><em>&ldquo;Design patterns say how to write code effectively, easy maintainable, high re-usability, and of course readable because of abstraction&rdquo;</em> — <a href="https://stackoverflow.com/users/449351/vrluckyin"
+    
+     target="_blank" rel="noreferrer" >vrluckyin</a></p>
+</blockquote>
+<p><em>&ldquo;Oh, aku mengerti.. tapi bisakah kamu memberikan contoh dari semua ini?&quot;</em></p>
+<p>Saya akan memberikan contoh dasar dari salah satu pattern favorite saya.</p>
+<br>
+<h3 id="the-observer-pattern">The Observer Pattern</h3>
+<p>Observer Pattern adalah salah satu Design Pattern yang berada pada klasifikasi behavioral patterns. Sederhananya, pattern ini memiliki 2 komponen utama, <strong>Observer</strong> dan <strong>Observeable</strong>.</p>
+<p>Sebuah observer adalah sebuah object yang mengamati sebuah <strong>Observable</strong>, sedangkan observable bertanggung jawab untuk mengirimkan informasi(notifikasi) kepada observer.</p>
+<p>Aksi Observer ketika melakukan koneksi ke Observable disebut dengan <strong><em>Subscription</em></strong>. Dan Observable hanya dapat mengirim informasi ke Observer yang sudah disubscribe pada observable tersebut.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/design-vs-architecture-observer.jpg" alt="Perbedaan Design dan Architecture" title="Observer Photo by Maarten van den Heuvel on Unsplash" >
+    <figcaption>Observer Photo by Maarten van den Heuvel on Unsplash</figcaption>
+  </figure>
+
+
+</p>
+<p>Konsep ini bertipe <strong>one-to-many relationship</strong>. Kenapa? karena satu observable dapat memiliki banyak observer dan dapat mengirim informasi(notifikasi) kepada mereka.</p>
+<p>Observer Pattern adalah solusi yang sempurna jika kamu membutuhkan algoritma atau service yang dapat mengambil data secara <em>real-time</em> atau mendengarkan perubahan yang terjadi dari server. Ambil contoh aplikasi <strong>Weather App</strong> yang membutuhkan untuk memonitoring cuaca di Jakarta, Indonesia.</p>
+<p>Kamu akan membutuhkan <strong>WeatherObservable</strong> untuk mengambil data dari server secara berkala dengan waktu yang ditentukan, dan mengirim informasi ke <strong>WeatherObserver</strong> yang sudah di subscribe.</p>
+<br>
+<h3 id="show-me-the-code">Show Me The Code</h3>
+<p>Coba lihat contoh berikut ini, saya menulis kode ini dalam bahasa Python.</p>
+<p>Pertama, deklarasi class untuk Observer dan Observable.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BaseObservable</span>:
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">subscribe</span>(baseObserver):
+        <span style="color:#66d9ef">pass</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update</span>():
+        <span style="color:#66d9ef">pass</span>
+</code></pre></div><p><strong>BaseObservable</strong> adalah implementasi dari dua function,</p>
+<ul>
+<li>function <strong>subscribe</strong>, untuk mensubscribe sebuah observer.</li>
+<li>function <strong>update</strong>, untuk menyebarkan (broadcast) perubahan data ke observer.</li>
+</ul>
+<p>Selanjutnya,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BaseObserver</span>:
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">notify</span>(degree):
+        <span style="color:#66d9ef">pass</span>
+</code></pre></div><p><strong>BaseObserver</strong> hanya mempunyai satu fungsi, yaitu <strong>notify</strong> untuk mendapatkan data dari observable.</p>
+<p>Lalu buat objek observable yang mengimplementasikan class <strong>BaseObservable</strong>. Kita juga deklarasikan sebuah list untuk menyimpan object observer yang sudah di subscribe.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> BaseObservable
+<span style="color:#f92672">import</span> BaseObserver
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WeatherObservable</span>(BaseObservable):
+
+    observerList <span style="color:#f92672">=</span> []
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">subscribe</span>(baseObserver):
+        observerList<span style="color:#f92672">.</span>append(baseObserver)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update</span>(degree):
+        WeatherObservable<span style="color:#f92672">.</span>subscribe(self)
+        <span style="color:#66d9ef">for</span> observer <span style="color:#f92672">in</span> observerList:
+            observer<span style="color:#f92672">.</span>notify(degre)
+
+    <span style="color:#75715e"># Simulasi pengambilan data dari server secara berkala</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">refresh</span>():
+        newDegree <span style="color:#f92672">=</span> fetchDataFromServer()
+        update(newDegree)
+
+</code></pre></div><p>Terakhir, kita deklarasikan observer.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WeatherObserver</span>(BaseObserver):
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_init_</span>(self):
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">notify</span>(degree):
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Weather in jakarta is changed to &#34;</span>, degree,<span style="color:#e6db74">&#34; farenheit&#34;</span>)
+</code></pre></div><p>Kode kita sudah matang, dan siap disantap.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">WeatherObservable<span style="color:#f92672">.</span>refresh()
+</code></pre></div><p>Fungsi ini akan menyebarkan pergantian data dari server ke semua observer yang sudah disubscribe-nya. Simple bukan?</p>
+<p>Cukup dengan design sekarang pindah ke architecture.</p>
+<br>
+<h2 id="architecture-pattern">Architecture Pattern</h2>
+<hr>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/design-vs-architecture-design.jpg" alt="Perbedaan Design dan Architecture" title="Abstrack Photo by Stock Photography on Unsplash" >
+    <figcaption>Abstrack Photo by Stock Photography on Unsplash</figcaption>
+  </figure>
+
+
+</p>
+<p>Architecture Pattern merupakan sebuah penjelasan abstrak tentang bagaimana struktur aplikasimu. Menurut wikipedia bahasa inggris,</p>
+<blockquote>
+<p>An architectural pattern is a general, <strong>reusable solution</strong> to a commonly occurring <strong>problem in software architecture</strong> within a given context. Architectural patterns are similar to software design patterns but have a <strong>broader scope</strong>.</p>
+</blockquote>
+<p>Mereka adalah patterns untuk tata letak (Layout) keseluruhan aplikasi yang kamu buat.Dan semuanya memiliki kelebihan dan kekurangan.</p>
+<p>Banyak architectural patterns yang ada diluar sana, kamu bisa melihatnya di <a href="https://en.wikipedia.org/wiki/Architectural_pattern"
+    
+     target="_blank" rel="noreferrer" >Wikipedia</a>. Tapi, saya akan menyebutkan 10 architecture yang umum digunakan.</p>
+<ol>
+<li><strong>Layered pattern</strong></li>
+<li><strong>Client-server pattern</strong></li>
+<li><strong>Master-slave pattern</strong></li>
+<li><strong>Pipe-filter pattern</strong></li>
+<li><strong>Broker pattern</strong></li>
+<li><strong>Peer-to-peer pattern</strong></li>
+<li><strong>Event-bus pattern</strong></li>
+<li><strong>Model-view-controller pattern</strong></li>
+<li><strong>Blackboard pattern</strong></li>
+<li><strong>Interpreter pattern</strong></li>
+</ol>
+<p>Kesepuluh pattern ini saya akan jelaskan di artikel yang lain.</p>
+<br>
+<h2 id="design-vs-architecture">Design vs Architecture</h2>
+<hr>
+<p>Pada umumnya, architecture dan design keduanya menjelaskan &ldquo;ide&rdquo;, tetapi Architecture pattern lebih kearah pandangan abstrak dari suatu ide. Sedangkan Design pattern lebih kearah implementasi dari ide tersebut. Design pattern lebih detail dari pada architecture.</p>
+<blockquote>
+<h4 id="architecture-menggambarkan-pandangan-abstrak-dari-seluruh-sistem-sedangkan-design-menggambarkan-implementasi-dari-beberapa-komponen-yang-spesifik-dan-saling-berkaitan">&ldquo;Architecture menggambarkan pandangan abstrak dari seluruh sistem sedangkan Design menggambarkan implementasi dari beberapa komponen yang spesifik dan saling berkaitan.&rdquo;</h4>
+</blockquote>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/design-vs-architecture-architecture.jpg" alt="Perbedaan Design dan Architecture" title="Architecture Photo by Marc-Olivier Jodoin on Unsplash" >
+    <figcaption>Architecture Photo by Marc-Olivier Jodoin on Unsplash</figcaption>
+  </figure>
+
+
+</p>
+<p>Anggap pemerintah ingin membuat sebuah kota. Pertama, mereka akan membuat sebuah rancangan abstrak sebuah diagram yang menjelaskan dimana letak area perumahan, dimana area pabrik akan dibangun, dimana lokasi taman, rumah sakit, pasar dan lain - lain. Inilah <strong>Architecture</strong>.</p>
+<p>Setelah itu, mereka akan membuat sebuah diagram yang menjelaskan bagaimana rumah akan dibangun, berapa maksimal jumlah rumah di area itu. Cara membuat rumah itu berdampingan dan rapi. Bagaimana desain sekolah yang akan dibuat. Berapa banyak kasur di rumah sakit dan sebagainya. Inilah <strong>Design</strong>.</p>
+<p>Sebuah Architecture menjelaskan komponen serta relasi diantara mereka sedangkan Design menjelaskan setiap komponen itu dibuat dan akan dibuat. Jadi inilah Architecture Pattern dan inilah Design Pattern <strong>mereka jelas berbeda</strong>.</p>
+<center><p>.            .          .</p></center>
+<p>Artikel ini adalah hasil translasi dari artikel aslinya yang bisa kalian lihat <a href="https://medium.com/@ezralazuardy/design-or-architecture-pattern-5314ee71ed6c"
+    
+     target="_blank" rel="noreferrer" >disini</a>. Artikel yang asli ditulis oleh kerabat saya bernama <a href="https://medium.com/@ezralazuardy"
+    
+     target="_blank" rel="noreferrer" >Ezra Lazuardy</a> dengan versi bahasa inggris. Sedangkan saya membuatnya menjadi versi bahasa indonesia dengan perubahan beberapa kalimat agar mudah dipahami.</p>
+<br>
+<center>***stay fool so you have learn***</center>]]></content>
+        </item>
+        
+    </channel>
+</rss>

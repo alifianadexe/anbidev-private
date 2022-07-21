@@ -1,0 +1,669 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>functions on AnbiDev</title>
+        <link>https://anbidev.com/tags/functions/</link>
+        <description>Recent content in functions on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Tue, 22 Sep 2020 07:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/functions/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Kotlin Basic : Part 3 - Functions</title>
+            <link>https://anbidev.com/kotlin-basic-part-3/</link>
+            <pubDate>Tue, 22 Sep 2020 07:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/kotlin-basic-part-3/</guid>
+            <description>Every Programming Language Need Functions Pada part 3 ini, Kita akan membahas tentang Functions yang terdapat pada Kotlin. Mari Kita jelajahi satu-persatu.
+Mari mengeksplor main() function fun printHello() { println (&amp;#34;Hello World&amp;#34;) } fun main() { printHello() } =&amp;gt; Hello World Anda mendifinisikan sebuah kunci menggunakan fun, diikuti nama dari fungsi. Seperti bahasa pemprogramman yang lain, tanda () adalah argumen sebuah fungsi, jika dibutuhkan.
+Tanda {} tempat dimana kita akan menuliskan kode.</description>
+            <content type="html"><![CDATA[<h1 id="every-programming-language-need-functions">Every Programming Language Need Functions</h1>
+<hr>
+<p>Pada part 3 ini, Kita akan membahas tentang Functions yang terdapat pada Kotlin. Mari Kita jelajahi satu-persatu.</p>
+<br>
+<h2 id="mari-mengeksplor-nbsp-_main_-nbsp-function">Mari mengeksplor   <em>main()</em>   function</h2>
+<hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">printHello</span>() {
+    println (<span style="color:#e6db74">&#34;Hello World&#34;</span>)
+}
+
+<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>() {
+	printHello()
+}
+
+=&gt; Hello World
+</code></pre></div><p>Anda mendifinisikan sebuah kunci menggunakan <code>fun</code>, diikuti nama dari fungsi. Seperti bahasa pemprogramman yang lain, tanda <code>()</code> adalah argumen sebuah fungsi, <em>jika dibutuhkan</em>.</p>
+<p>Tanda <code>{}</code> tempat dimana kita akan menuliskan kode. Dan tidak ada return type untuk fungsi ini karena tidak mereturn apapun.</p>
+<br>
+<h3 id="buat-file-kotlin">Buat file Kotlin</h3>
+<ol>
+<li>Buka IntelliJ IDEA.</li>
+<li>Jika kalian masih berada di panel utama, klik saja <br> <strong>New Project -&gt; Kotlin -&gt; JVM | IDEA</strong>. <br> Pada panel <br> <strong>File -&gt; New -&gt; Project -&gt; New Project -&gt; Kotlin -&gt; JVM | IDEA</strong>. <br> Namai Project Name sesuai keinginan Anda.</li>
+<li>Pada Folder <code>src</code>, buat file baru dengan cara klik kanan pada folder <code>src</code>,<br> <strong>New -&gt; New Kotlin File/Class -&gt; New File</strong> (Namai sesuka Anda).</li>
+</ol>
+<br>
+<h3 id="tambahkan-kode-dan-jalankan-program">Tambahkan kode dan jalankan program</h3>
+<ol>
+<li>
+<p>Seperti pada bahasa pemprogramman lain, Kotlin menggunakan <code>main()</code> functions untuk <em>entry point</em> sebuah eksekusi. Semua argument pada command line di pass dalam bentuk <em>array string</em>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>(args: Array&lt;String&gt;) {
+    println(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>)
+}
+</code></pre></div><blockquote>
+<p>Tip: Pada Kotlin 1.3, jika <code>main()</code> fucntions tidak menggunakan parameters. Anda tidak perlu mendifinisikan sebuah <code>args</code>.</p>
+</blockquote>
+<p>Sama seperti <code>printHello()</code> function, function tersebut tidak me<code>return</code> sebuah <em>statement</em>. Tetapi, setiap function pada Kotlin me-<code>return</code> sesuatu, bahkan jika tidak dibuat secara spesifik.</p>
+<p>Setiap function seperti <code>main()</code> me-<code>return</code> sebuah tipe, yaitu <code>kotlin.Unit</code>, dimana penyebutan pada Kotlin untuk mengatakan bahwa tidak ada nilai.</p>
+<blockquote>
+<p>Note: Ketika sebuah function return <code>kotlin.Unit</code>, Anda tidak perlu mendefinisikannya. Hal ini berbeda seperti bahasa pemrogramman yang lain dimana anda harus mendefinisikan untuk return nothing.</p>
+</blockquote>
+</li>
+<li>
+<p>Untuk menjalankan program, klik pada segitiga hijau disebelah <code>fun main()</code>. Pilih <strong>Run &lsquo;HelloKt&rsquo;</strong> pada pilihan.</p>
+</li>
+<li>
+<p><strong>IntelliJ IDEA</strong> akan meng<em>compile</em> dan menjalankan kode yang dibuat. Hasil dari kode Anda nanti akan nampak pada LOG dibawah seperti digambar.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/kotlin-basic-part-3-01.jpg" alt="&amp;ldquo;Jalankan Run (Segitiga Hijau) Pada fun main()&amp;quot;" title="Jalankan Run (Segitiga Hijau) Pada fun main()" >
+    <figcaption>Jalankan Run (Segitiga Hijau) Pada fun main()</figcaption>
+  </figure>
+
+
+</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/kotlin-basic-part-3-02.jpg" alt="&amp;ldquo;Output dari fungsi main()&amp;quot;" title="Output dari fungsi main()" >
+    <figcaption>Output dari fungsi main()</figcaption>
+  </figure>
+
+
+</p>
+<blockquote>
+<p>Java programmers: Jika Anda menggunakan instalasi IntelliJ IDEA sebelumnya daripada menginstal versi yang baru, Anda mungkin akan kesulitan dalam compile Kotlin.</p>
+</blockquote>
+<blockquote>
+<p>Pastikan project anda menggunakan versi JDK yang cocok. Lihat <a href="https://stackoverflow.com/a/44907745"
+    
+     target="_blank" rel="noreferrer" >disuksi di Stack Overflow</a> and the <a href="https://www.jetbrains.com/help/idea/sdk.html#change-project-sdk"
+    
+     target="_blank" rel="noreferrer" >Mengganti project SDK documentation</a> untuk IntelliJ IDEA.</p>
+</blockquote>
+</li>
+</ol>
+<br>
+<h3 id="mempassing-argument-ke-main">Mempassing argument ke main()</h3>
+<p>Karena Anda menjalankan dari IntelliJ IDEA dan bukan dari command line, Anda perlu menspesifik argument pada program dengan cara yang beda.</p>
+<ol>
+<li>
+<p>Pilih <strong>Run -&gt; Edit Configurations</strong>. <strong>Run/Debug Configurations</strong> windows.</p>
+</li>
+<li>
+<p>Ketik <code>Kotlin</code> pada <strong>Program arguments</strong>.</p>
+</li>
+<li>
+<p>Klik <strong>OK</strong>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/kotlin-basic-part-3-03.jpg" alt="&amp;ldquo;Window Pada Run/Debug Configuration&amp;rdquo;" title="Window Pada Run/Debug Configuration" >
+    <figcaption>Window Pada Run/Debug Configuration</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p>Ubah kode menggunakan string template</p>
+<blockquote>
+<p><a href="https://kotlinlang.org/docs/reference/basic-types.html#string-templates"
+    
+     target="_blank" rel="noreferrer" >String template</a> memasukkan sebuah variable atau expression ke sebuah string, dan <code>$</code> menspesifik bagian dari string yang berupa variable atau expression. <code>{}</code> digunakan untuk memasukkan sebuah arguments jika ada</p>
+</blockquote>
+</li>
+<li>
+<p>Pada <strong>Hello.kt</strong>, ubah message untuk menggunakan argument pertama yang digunakan untuk mempass pada program, <code>args[0]</code> daripada <code>&quot;world&quot;</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>(args: Array&lt;String&gt;) {
+    println(<span style="color:#e6db74">&#34;Hello, ${args[0]}&#34;</span>)
+}
+</code></pre></div></li>
+<li>
+<p>Jalankan program dan lihat output yang keluar</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">=&gt; Hello, Kotlin
+</code></pre></div></li>
+</ol>
+<br>
+<h2 id="kenapa-hampir-semuanya-memiliki-value">Kenapa Hampir Semuanya Memiliki Value</h2>
+<hr>
+<p>Pada bahasa pemprogramman memiliki sebuah <em>statement</em>, dimana baris pada kode tidak memiliki <em>value</em>. Pada Kotlin, hampir semuanya adalah <em>expression</em> dan memiliki value bahkan jika itu <code>kotlin.Unit</code>.</p>
+<ol>
+<li>
+<p>Pada <strong>Hello.kt</strong>, tulis kode pada <code>main()</code> untuk memasukkan <code>println()</code> pada pemanggilan variable <code>isUnit</code> dan menuliskan message.</p>
+<blockquote>
+<p><code>println()</code> tidak mengembalikan sebuah value, sehingga mereturn <code>kotlin.Unit</code>.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>(args: Array&lt;String&gt;) {
+    <span style="color:#75715e">// Will assign kotlin.Unit
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">val</span> isUnit = println(<span style="color:#e6db74">&#34;This is an expression&#34;</span>)
+    println(isUnit)
+}
+</code></pre></div></li>
+<li>
+<p>Jalankan program anda. pada <code>println()</code> pertama memprint sebuah string <code>&quot;Ini adalah sebuah expression&quot;</code>. Pada <code>println()</code> kedua akan mereturn value <code>println()</code> pertama, itu dia, <code>kotlin.Unit</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">=&gt; This <span style="color:#66d9ef">is</span> an expression
+kotlin.Unit
+</code></pre></div><p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/kotlin-basic-part-3-04.jpg" alt="&amp;ldquo;Output Fungsi main()&amp;quot;" title="Output Fungsi main()" >
+    <figcaption>Output Fungsi main()</figcaption>
+  </figure>
+
+
+</p>
+</li>
+<li>
+<p>Mari kita coba yang lain. Coba deklarasikan <code>val</code> dengan nama <code>temperature</code> dan initialisasi dengan nilai 10.</p>
+</li>
+<li>
+<p>Deklarasikan <code>val</code> lain dengan nama <code>isHot</code> dan tulis return value degan <code>if</code>/<code>else</code> statement untuk <code>isHot</code>, seperti contoh dibawah. Karena <code>isHot</code> sebuah <em>expression</em>, Anda bisa menggunakan value dari <code>if</code> sebagai <em>expression</em> juga.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">val</span> temperature = <span style="color:#ae81ff">10</span>
+<span style="color:#66d9ef">val</span> isHot = <span style="color:#66d9ef">if</span> (temperature &gt; <span style="color:#ae81ff">50</span>) <span style="color:#66d9ef">true</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">false</span>
+println(isHot)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">=&gt; <span style="color:#66d9ef">false</span>
+</code></pre></div></li>
+<li>
+<p>Gunakan value dari <em>expression</em> pada string tempalte. Tambahkan beberapa kode untuk mengecek temperature untuk mendifinisikan sebuah suhu itu dingin atau hangat.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>(args: Array&lt;String&gt;) {
+    <span style="color:#66d9ef">val</span> temperature = <span style="color:#ae81ff">10</span>
+    <span style="color:#66d9ef">val</span> message = <span style="color:#e6db74">&#34;Temperature air adalah ${ if (temperature &gt; 50) &#34;</span>terlalu hangat<span style="color:#e6db74">&#34; else &#34;</span>OK<span style="color:#e6db74">&#34; }.&#34;</span>
+    println(message)
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">=&gt; Temperature air adalah OK.
+</code></pre></div><blockquote>
+<p><strong>Note:</strong> Loops merupakan pengecualian dari &ldquo;Semuanya memiliki value&rdquo;. Tidak ada value untuk <code>for</code> dari loops atau <code>while</code> loops, sehingga mereka tidak memiliki value. Jika anda mencoba menuliskan loop value pada sesuatu, compiler akan memberikan error.</p>
+</blockquote>
+</li>
+</ol>
+<br>
+<h2 id="lets-get-into-it">Lets Get Into It</h2>
+<hr>
+<ol>
+<li>
+<p>Tulis function dengan nama <code>feedTheFish</code> dan panggil <code>randomDay()</code> untuk mendapatkan hari secara randon. Gunakan <em>string template</em> untuk menuliskan <code>food</code> untuk menentukan makanan ikan pada hari itu. Untuk sekarang, ikan-ikan ini memakan makanan yang sama setiap hari.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">feedTheFish</span>() {
+    <span style="color:#66d9ef">val</span> day = randomDay()
+    <span style="color:#66d9ef">val</span> food = <span style="color:#e6db74">&#34;pellets&#34;</span>
+    println (<span style="color:#e6db74">&#34;Hari ini hari $day dan ikan memakan $food&#34;</span>)
+}
+
+<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>(args: Array&lt;String&gt;) {
+    feedTheFish()
+}
+</code></pre></div></li>
+<li>
+<p>Tulis function <code>randomDay()</code> untuk menentukan hari secara random dari array dan berikan return</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">randomDay</span>() : String {
+    <span style="color:#66d9ef">val</span> week = arrayOf (<span style="color:#e6db74">&#34;Senin&#34;</span>, <span style="color:#e6db74">&#34;Selasa&#34;</span>, <span style="color:#e6db74">&#34;Rabu&#34;</span>, <span style="color:#e6db74">&#34;Kamis&#34;</span>,
+            <span style="color:#e6db74">&#34;Jumat&#34;</span>, <span style="color:#e6db74">&#34;Sabtu&#34;</span>, <span style="color:#e6db74">&#34;Minggu&#34;</span>)
+    <span style="color:#66d9ef">return</span> week[Random().nextInt(week.size)]
+}
+</code></pre></div></li>
+<li>
+<p>Untuk <code>Random()</code> dan <code>nextInt()</code> function didefinisikan melalui <code>java.util.*</code>. Pada baris paling atas, Anda perlu menambahkan</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">import</span> java.util.*
+</code></pre></div><blockquote>
+<p><strong>Tip:</strong> Sebelum Anda mengimport, <code>Random()</code> memberikan error berupa <em>unresolver reference</em> pada IntelliJ IDEA. Untuk menambahkannya secara otomatis, klik pada <code>Random()</code>, lalu tekan <code>Alt+Enter</code> (<code>Option+Enter</code> pada Mac). Pilih <strong>Import -&gt; java.util.Random</strong>.</p>
+</blockquote>
+</li>
+<li>
+<p>Jalankan program yang anda buat, dan liat output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">=&gt; Hari ini hari Jumat dan ikan memakan pellets
+</code></pre></div></li>
+</ol>
+<br>
+<h3 id="menggunakan-when-expression">Menggunakan when expression</h3>
+<p>Untuk mengenal lebih jauh, mari kita coba untuk mengubah kode saat memilih makanan yang berbeda dengan hari yang berbeda menggunakan expression <code>when</code>.</p>
+<p>Hampir mirip dengan <code>switch</code> pada bahasa pemprogramman yang lain, tetapi <code>when</code> secara otomatis melakukan <code>break</code> setiap akhir dari kode yang dimasukkan kedalam <code>when</code>. Hal ini juga dapat memastikan bahwa mencakup cabang dari <code>when</code> saat anda memeriksa enum.</p>
+<ol>
+<li>
+<p>Coba tambahkan function <code>fishFood()</code> dimana hari berupa <code>String</code> dan mengembalikan makanan ikan pada hari tertentu berupa <code>String</code>. Gunakan <code>when()</code> sehingga setiap hari, ikan akan mendapatkan makanan secara spesifik. Jalankan program yang dibuat dan jalankan beberapa kali untuk mendapatkan hasil yang berbeda.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">fishFood</span> (day : String) : String {
+    <span style="color:#66d9ef">var</span> food = <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#66d9ef">when</span> (day) {
+        <span style="color:#e6db74">&#34;Senin&#34;</span> -&gt; food = <span style="color:#e6db74">&#34;flakes&#34;</span>
+        <span style="color:#e6db74">&#34;Selasa&#34;</span> -&gt; food = <span style="color:#e6db74">&#34;pellets&#34;</span>
+        <span style="color:#e6db74">&#34;Rabu&#34;</span> -&gt; food = <span style="color:#e6db74">&#34;redworms&#34;</span>
+        <span style="color:#e6db74">&#34;Kamis&#34;</span> -&gt; food = <span style="color:#e6db74">&#34;granules&#34;</span>
+        <span style="color:#e6db74">&#34;Jumat&#34;</span> -&gt; food = <span style="color:#e6db74">&#34;mosquitoes&#34;</span>
+        <span style="color:#e6db74">&#34;Sabtu&#34;</span> -&gt; food = <span style="color:#e6db74">&#34;lettuce&#34;</span>
+        <span style="color:#e6db74">&#34;Minggu&#34;</span> -&gt; food = <span style="color:#e6db74">&#34;plankton&#34;</span>
+    }
+    <span style="color:#66d9ef">return</span> food
+}
+
+<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">feedTheFish</span>() {
+    <span style="color:#66d9ef">val</span> day = randomDay()
+    <span style="color:#66d9ef">val</span> food = fishFood(day)
+
+    println (<span style="color:#e6db74">&#34;Hari ini hari $day dan ikan memakan $food&#34;</span>)
+}
+
+<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>(args: Array&lt;String&gt;) {
+    feedTheFish()
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">=&gt; Hari ini hari Kamis dan ikan memakan granules
+</code></pre></div></li>
+<li>
+<p>Tambahkan branch pada <code>when</code> expression menggunakan <code>else</code>. Untuk mengetes, coba hapus <code>Selasa</code> dan <code>Sabtu</code>.</p>
+<p>Default branch digunakan untuk memastikan kita telah mendapatkan value sebelum di return, sehingga kita tidak perlu initialisasi lagi. Karena kode yang akan kita buat menetapkan <code>String</code> pada makanan hanya sekali, Kita bisa mendeklarasikannya menggunakan <code>val</code> daripada <code>var</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">fishFood</span> (day : String) : String {
+    <span style="color:#66d9ef">val</span> food : String
+    <span style="color:#66d9ef">when</span> (day) {
+        <span style="color:#e6db74">&#34;Senin&#34;</span> -&gt; food = <span style="color:#e6db74">&#34;flakes&#34;</span>
+        <span style="color:#e6db74">&#34;Rabu&#34;</span> -&gt; food = <span style="color:#e6db74">&#34;redworms&#34;</span>
+        <span style="color:#e6db74">&#34;Kamis&#34;</span> -&gt; food = <span style="color:#e6db74">&#34;granules&#34;</span>
+        <span style="color:#e6db74">&#34;Jumat&#34;</span> -&gt; food = <span style="color:#e6db74">&#34;mosquitoes&#34;</span>
+        <span style="color:#e6db74">&#34;Minggu&#34;</span> -&gt; food = <span style="color:#e6db74">&#34;plankton&#34;</span>
+        <span style="color:#66d9ef">else</span> -&gt; food = <span style="color:#e6db74">&#34;tidak ada&#34;</span>
+    }
+    <span style="color:#66d9ef">return</span> food
+}
+</code></pre></div></li>
+<li>
+<p>Karena setiap expression memiliki value, Anda dapat membuat kode sedikit lebih ringkas. Kita dapat mengembalikan expression value <code>when</code> secara langsung, dengan cara menghilangkan <code>food</code> variable. Nilai <code>when</code> expression adalah nilai terakhir dari expression.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">fishFood</span> (day : String) : String {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">when</span> (day) {
+        <span style="color:#e6db74">&#34;Senin&#34;</span> -&gt; <span style="color:#e6db74">&#34;flakes&#34;</span>
+        <span style="color:#e6db74">&#34;Rabu&#34;</span> -&gt; <span style="color:#e6db74">&#34;redworms&#34;</span>
+        <span style="color:#e6db74">&#34;Kamis&#34;</span> -&gt; <span style="color:#e6db74">&#34;granules&#34;</span>
+        <span style="color:#e6db74">&#34;Jumat&#34;</span> -&gt; <span style="color:#e6db74">&#34;mosquitoes&#34;</span>
+        <span style="color:#e6db74">&#34;Minggu&#34;</span> -&gt; <span style="color:#e6db74">&#34;plankton&#34;</span>
+        <span style="color:#66d9ef">else</span> -&gt; <span style="color:#e6db74">&#34;tidak ada&#34;</span>
+    }
+}
+</code></pre></div><p>Versi final :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">import</span> java.util.*    <span style="color:#75715e">// required import
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">randomDay</span>() : String {
+    <span style="color:#66d9ef">val</span> week = arrayOf (<span style="color:#e6db74">&#34;Senin&#34;</span>, <span style="color:#e6db74">&#34;Selasa&#34;</span>, <span style="color:#e6db74">&#34;Rabu&#34;</span>, <span style="color:#e6db74">&#34;Kamis&#34;</span>,
+            <span style="color:#e6db74">&#34;Jumat&#34;</span>, <span style="color:#e6db74">&#34;Sabtu&#34;</span>, <span style="color:#e6db74">&#34;Minggu&#34;</span>)
+    <span style="color:#66d9ef">return</span> week[Random().nextInt(week.size)]
+}
+
+<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">fishFood</span> (day : String) : String {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">when</span> (day) {
+        <span style="color:#e6db74">&#34;Senin&#34;</span> -&gt; <span style="color:#e6db74">&#34;flakes&#34;</span>
+        <span style="color:#e6db74">&#34;Rabu&#34;</span> -&gt; <span style="color:#e6db74">&#34;redworms&#34;</span>
+        <span style="color:#e6db74">&#34;Kamis&#34;</span> -&gt; <span style="color:#e6db74">&#34;granules&#34;</span>
+        <span style="color:#e6db74">&#34;Jumat&#34;</span> -&gt; <span style="color:#e6db74">&#34;mosquitoes&#34;</span>
+        <span style="color:#e6db74">&#34;Minggu&#34;</span> -&gt; <span style="color:#e6db74">&#34;plankton&#34;</span>
+        <span style="color:#66d9ef">else</span> -&gt; <span style="color:#e6db74">&#34;tidak ada&#34;</span>
+    }
+}
+
+<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">feedTheFish</span>() {
+    <span style="color:#66d9ef">val</span> day = randomDay()
+    <span style="color:#66d9ef">val</span> food = fishFood(day)
+
+    println (<span style="color:#e6db74">&#34;Hari ini hari $day dan ikan memakan $food&#34;</span>)
+}
+
+<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>(args: Array&lt;String&gt;) {
+    feedTheFish()
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">=&gt; Hari ini hari Selasa dan ikan memakan tidak ada
+</code></pre></div></li>
+</ol>
+<br>
+<h2 id="mengenal-default-values--compact-functions">Mengenal Default Values &amp; Compact Functions</h2>
+<hr>
+<p>Pada Kotlin, Anda dapat <em>passing</em> sebuah <em>arguments</em> dengan hanya menyebut nama parameter. Anda juga dapat menspesifikasi <em>default values</em> dari parameter. Jika argument tidak disediakan oleh pemanggil, <em>default values</em> akan otomatis terpakai.</p>
+<p>Selanjutnya, ketika Anda menulis methods (member functions), ini berarti akan membantu Anda untuk menghindari menulis kode yang sama pada method yang sama.</p>
+<ol>
+<li>
+<p>Pada <strong>Hello.kt</strong>, tulis <code>swim()</code> function dengan <code>String</code> untuk parameter <code>speed</code> yang akan digunakan untuk print kecepatan ikan. <code>speed</code> parameter memiliki value default berupa <code>&quot;fast&quot;</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">swim</span>(speed: String = <span style="color:#e6db74">&#34;fast&#34;</span>) {
+   println(<span style="color:#e6db74">&#34;swimming $speed&#34;</span>)
+}
+</code></pre></div></li>
+<li>
+<p>Pada <code>main()</code> function, panggil <code>swim()</code> function dengan tiga (3) cara :</p>
+<ul>
+<li>Pertama memanggil function dengan <em>default value</em>.</li>
+<li>Kedua dengan memanggil function dan pass <code>speed</code> parameter tanpa menggunakan nama parameter.</li>
+<li>Terakhir dengan menyebut nama parameter.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">swim()   <span style="color:#75715e">// uses default speed
+</span><span style="color:#75715e"></span>swim(<span style="color:#e6db74">&#34;slow&#34;</span>)   <span style="color:#75715e">// positional argument
+</span><span style="color:#75715e"></span>swim(speed=<span style="color:#e6db74">&#34;turtle-like&#34;</span>)   <span style="color:#75715e">// named parameter
+</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">=&gt; swimming fast
+swimming slow
+swimming turtle-like
+</code></pre></div><blockquote>
+<p><strong>Note:</strong> Argument tidak harus menggunakan nama parameter; Anda dapat langsung mempass arguments sesuai dengan urutan parameter. Tetapi dengan default values, ini dapat sedikit membingungkan, jadi praktek terbaiknya adalah meletakkan sebuah parameter tanpa default parameter terlebih dahulu dan menyebut parameter default setelahnya.</p>
+</blockquote>
+</li>
+</ol>
+<br>
+<h3 id="menambahkan-required-parameters">Menambahkan Required Parameters</h3>
+<p>Jika tidak spesifik default untuk parameter, <em>corresponding</em> pada argument akan secara otomatis terpass.</p>
+<ol>
+<li>
+<p>Pada <strong>Hello.kt</strong>, tulis <code>shouldChangeWater</code> functions yang memiliki tiga (3) parameter: <code>day</code>, <code>temperature</code>, dan <code>dirty</code> level. Function memberikan return <code>true</code> jika air harus diganti, dimana jika hari itu adalah hari Minggu, jika suhu terlalu tinggi, atau jika air terlalu kotor. Hari pada mingguan diperlukan, tetapi default temperature adalah 22 dan <em>default dirty</em> level adalah 20.</p>
+<p>Gunakan <code>when</code> expression tanpa argument, dimana Kotlin bertindak sebagai <code>if/else if</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">shouldChangeWater</span> (day: String, temperature: Int = <span style="color:#ae81ff">22</span>, dirty: Int = <span style="color:#ae81ff">20</span>): Boolean {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">when</span> {
+        temperature &gt; <span style="color:#ae81ff">30</span> -&gt; <span style="color:#66d9ef">true</span>
+        dirty &gt; <span style="color:#ae81ff">30</span> -&gt; <span style="color:#66d9ef">true</span>
+        day == <span style="color:#e6db74">&#34;Sunday&#34;</span> -&gt;  <span style="color:#66d9ef">true</span>
+        <span style="color:#66d9ef">else</span> -&gt; <span style="color:#66d9ef">false</span>
+    }
+}
+</code></pre></div></li>
+<li>
+<p>Panggil <code>shouldChangeWater()</code> dari <code>feedTheFish()</code> dan sediakan hari juga. <code>day</code> parameter tidak memiliki nilai default, jadi Kita harus menspesifikasi sebuah argument. Parameter dua (2) yang lain dari <code>shouldChangeWater()</code> memiliki default values, jadi Kita tidak menulis argument lagi.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">feedTheFish</span>() {
+    <span style="color:#66d9ef">val</span> day = randomDay()
+    <span style="color:#66d9ef">val</span> food = fishFood(day)
+
+    println (<span style="color:#e6db74">&#34;Hari ini hari $day dan ikan memakan $food&#34;</span>)
+    println(<span style="color:#e6db74">&#34;Ganti air: ${shouldChangeWater(day)}&#34;</span>)
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">=&gt; Hari ini hari Sabtu dan ikan memakan tidak ada
+Ganti air: <span style="color:#66d9ef">false</span>
+</code></pre></div></li>
+</ol>
+<br>
+<h3 id="buat-compact-functions">Buat Compact Functions</h3>
+<p><code>when</code> expression yang Anda tulis pada sebelumnya memiliki banyak logic yang dimasukkan kedalam kode yang ringkas. Jika Anda ingin membuatnya lebih banyak, atau kondisi jika dibuat sedikit lebih rumit, Anda bisa menggunakan <code>well-named</code> local variables. Tapi pada Kotlin, Kita menggunakannya dengan compact functions.</p>
+<p>Compact functions atau <a href="https://kotlinlang.org/docs/reference/idioms.html#single-expression-functions"
+    
+     target="_blank" rel="noreferrer" >single-expression functions</a> adalah pattern yang biasa pada Kotlin. Ketika sebuah functions mereturn hasil dari single expression, Anda bisa menspesifikasi body dari functions setelah <code>=</code>, atau menghilangkan <code>{}</code> dan hilangkan <code>return</code>.</p>
+<ol>
+<li>
+<p>pada <strong>Hello.kt</strong>, tambahkan compact functions dan coba test</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">isTooHot</span>(temperature: Int) = temperature &gt; <span style="color:#ae81ff">30</span>
+
+<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">isDirty</span>(dirty: Int) = dirty &gt; <span style="color:#ae81ff">30</span>
+
+<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">isSunday</span>(day: String) = day == <span style="color:#e6db74">&#34;Minggu&#34;</span>
+</code></pre></div></li>
+<li>
+<p>Ubah <code>shouldChangeWater()</code> untuk memanggil function yang baru saja kita buat.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">shouldChangeWater</span> (day: String, temperature: Int = <span style="color:#ae81ff">22</span>, dirty: Int = <span style="color:#ae81ff">20</span>): Boolean {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">when</span> {
+        isTooHot(temperature) -&gt; <span style="color:#66d9ef">true</span>
+        isDirty(dirty) -&gt; <span style="color:#66d9ef">true</span>
+        isSunday(day) -&gt; <span style="color:#66d9ef">true</span>
+        <span style="color:#66d9ef">else</span>  -&gt; <span style="color:#66d9ef">false</span>
+    }
+}
+</code></pre></div></li>
+<li>
+<p>Coba jalankan program yang Anda buat. Output pada <code>println()</code> dengan <code>shouldChangeWater</code> harus seperti dengan sebelum Kita menulis menggunakan <em>Compact Functions</em>.</p>
+</li>
+</ol>
+<br>
+<h3 id="default-values">Default Values</h3>
+<p>Default value sebuah parameter tidak harus berupa sebuah value. Default value dapat berupa function yang lain, seperti contoh dibawah ini</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">shouldChangeWater</span> (day: String, temperature: Int = <span style="color:#ae81ff">22</span>, dirty: Int = getDirtySensorReading()): Boolean {
+	<span style="color:#75715e">/*...*/</span>
+}
+</code></pre></div><blockquote>
+<p><strong>Note:</strong> Sebuah functions yang digunakan sebagai default value dievaluasi juga saat runtime, jadi anda tidak perlu memberikan operation seperti file read atau large memory allocation pada function. Operasi selalu dieksekusi setiap function yang Anda buat dipanggil, dimana akan memungkinkan perlambatan pada program yang Anda buat.</p>
+</blockquote>
+<br>
+<h2 id="filtering-data">Filtering Data</h2>
+<hr>
+<ol>
+<li>
+<p>pada <strong>Hello.kt</strong>, definisikan list dekorasi aquarium menggunakan <code>listOf()</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">val</span> decorations = listOf (<span style="color:#e6db74">&#34;rock&#34;</span>, <span style="color:#e6db74">&#34;pagoda&#34;</span>, <span style="color:#e6db74">&#34;plastic plant&#34;</span>, <span style="color:#e6db74">&#34;alligator&#34;</span>, <span style="color:#e6db74">&#34;flowerpot&#34;</span>)
+</code></pre></div></li>
+<li>
+<p>Buat <code>main()</code> baru atau mungkin kalian bisa saja membuat file yang baru. Function yang dibuat akan hanya menunjukkan kata yang dimulai dengan huruf &lsquo;p&rsquo;. <br><br>Kode yang digunakan untuk memfilter dimasukkan didalam <code>{}</code> dan <code>it</code> menunjukkan tiap item sebagai filter loop. Jika expression returns <code>true</code>, ada item yang dimulai dengan &lsquo;p&rsquo;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>() {
+    println( decorations.filter {it[<span style="color:#ae81ff">0</span>] == <span style="color:#e6db74">&#39;p&#39;</span>})
+}
+</code></pre></div></li>
+<li>
+<p>Coba Jalankan program yang Anda buat dan coba liat output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">=&gt; [pagoda, plastic plant]
+</code></pre></div></li>
+</ol>
+<br>
+<h3 id="compare-eager-dan-lazy-filters">Compare Eager dan Lazy Filters</h3>
+<p>Jika Anda familiar dengan filter pada beberapa bahasa pemprograman, Anda membayangkan apakah filter pada Kotlin itu berupa <em>eager</em> atau <em>lazy</em>. Apakah result ditunjukkan secara langsung, atau kapan list dapat diakses? Pada Kotlin, semua cara dapat digunakan sesuai dengan yang Anda butuhkan.</p>
+<p>Secara default, <code>filter</code> adalah <em>eager</em> tetapi terkadang setiap Anda menggunakan filter, list sudah terbuat secara otomatis.</p>
+<p>Untuk membuat <em>lazy filter</em>, anda dapat menggunakan <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/index.html"
+    
+     target="_blank" rel="noreferrer" >Sequence</a>. Dimana koleksi hanya dapat melihat satu (1) item dalam satu (1) waktu, mulai dari awal hingga akhir. Ini merupakan API yang dibutuhkan untuk <em>lazy filter</em>.</p>
+<ol>
+<li>
+<p>Pada <strong>Hello.kt</strong>, ubah kode untuk memasukkan <em>filtered list</em> pada variable <code>eager</code>, lalu print.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">val</span> decorations = listOf (<span style="color:#e6db74">&#34;rock&#34;</span>, <span style="color:#e6db74">&#34;pagoda&#34;</span>, <span style="color:#e6db74">&#34;plastic plant&#34;</span>, <span style="color:#e6db74">&#34;alligator&#34;</span>, <span style="color:#e6db74">&#34;flowerpot&#34;</span>)
+
+    <span style="color:#75715e">// eager, creates a new list
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">val</span> eager = decorations.filter { it [<span style="color:#ae81ff">0</span>] == <span style="color:#e6db74">&#39;p&#39;</span> }
+    println(<span style="color:#e6db74">&#34;eager: $eager&#34;</span>)
+ }
+</code></pre></div></li>
+<li>
+<p>Kode dibawah ini menyeleksi filter menggunakan <code>Sequence</code> dengan <code>asSequence()</code>. Tulis sequence pada variable <code>filtered</code> dan print.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#75715e">// lazy, will wait until asked to evaluate
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">val</span> filtered = decorations.asSequence().filter { it[<span style="color:#ae81ff">0</span>] == <span style="color:#e6db74">&#39;p&#39;</span> }
+println(<span style="color:#e6db74">&#34;filtered: $filtered&#34;</span>)
+</code></pre></div><p>Ketika Anda return hasil filter sebagai <code>Sequence</code>, <code>filtered</code> variable tidak akan menangkap list yang baru &ndash; variable tersebut akan menyimpan <code>Sequence</code> element dan filter diterapkan pada elemen tersebut. Setiap kali Anda mengakses <code>Sequence</code>, filter secara otomatis akan diterapkan dan result akan dikembalikan.</p>
+</li>
+<li>
+<p>Paksa evaluation pada sequence dengan mengkonvert menjadi <code>List</code> dengan <code>toList()</code>. Print result</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#75715e">// force evaluation of the lazy list
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">val</span> newList = filtered.toList()
+println(<span style="color:#e6db74">&#34;new list: $newList&#34;</span>)
+</code></pre></div></li>
+<li>
+<p>Coba jalankan program yang Anda buat.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">val</span> decorations = listOf (<span style="color:#e6db74">&#34;rock&#34;</span>, <span style="color:#e6db74">&#34;pagoda&#34;</span>, <span style="color:#e6db74">&#34;plastic plant&#34;</span>, <span style="color:#e6db74">&#34;alligator&#34;</span>, <span style="color:#e6db74">&#34;flowerpot&#34;</span>)
+
+<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>() {
+    println( decorations.filter {it[<span style="color:#ae81ff">0</span>] == <span style="color:#e6db74">&#39;p&#39;</span>})
+
+    <span style="color:#75715e">// eager, creates a new list
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">val</span> eager = decorations.filter { it [<span style="color:#ae81ff">0</span>] == <span style="color:#e6db74">&#39;p&#39;</span> }
+    println(<span style="color:#e6db74">&#34;eager: $eager&#34;</span>)
+
+    <span style="color:#75715e">// lazy, will wait until asked to evaluate
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">val</span> filtered = decorations.asSequence().filter { it[<span style="color:#ae81ff">0</span>] == <span style="color:#e6db74">&#39;p&#39;</span> }
+    println(<span style="color:#e6db74">&#34;filtered: $filtered&#34;</span>)
+
+    <span style="color:#75715e">// force evaluation of the lazy list
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">val</span> newList = filtered.toList()
+    println(<span style="color:#e6db74">&#34;new list: $newList&#34;</span>)
+}
+
+=&gt;[pagoda, plastic plant]
+eager: [pagoda, plastic plant]
+filtered: kotlin.sequences.FilteringSequence<span style="color:#960050;background-color:#1e0010">@</span><span style="color:#ae81ff">41</span>cf53f9
+new list: [pagoda, plastic plant]
+</code></pre></div><p>Untuk melihat apa yang terjadi pada <code>Sequence</code> dan <em>lazy evaluation</em>, gunakan <code>map()</code> function. Function tersebut digunakan untuk menjalankan <em>simple transformation</em> pada setiap elemen di sequence.</p>
+</li>
+<li>
+<p>Dengan list <code>decorations</code> yang sama, buat <em>transformations</em> dengan <code>map()</code> dan return element yang terpass. Tambahkan <code>println()</code> untuk menampilkan tiap element yang diakses dan tambahkan sequence pada variable <code>lazyMap.</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"> <span style="color:#66d9ef">val</span> lazyMap = decorations.asSequence().map {
+        println(<span style="color:#e6db74">&#34;access: $it&#34;</span>)
+        it
+    }
+</code></pre></div></li>
+<li>
+<p>Print <code>lazyMap</code>, print element pertama dari <code>lazyMap</code> menggunakan <code>first()</code> dan print <code>lazymap</code> yang terconvert menjadi <code>List</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"> println(<span style="color:#e6db74">&#34;lazy: $lazyMap&#34;</span>)
+    println(<span style="color:#e6db74">&#34;-----&#34;</span>)
+    println(<span style="color:#e6db74">&#34;first: ${lazyMap.first()}&#34;</span>)
+    println(<span style="color:#e6db74">&#34;-----&#34;</span>)
+    println(<span style="color:#e6db74">&#34;all: ${lazyMap.toList()}&#34;</span>)
+</code></pre></div></li>
+<li>
+<p>Jalankan program yang Anda buat dan liat output. Print <code>lazyMap</code> hanyak print referensi pada <code>Sequence</code> &ndash; <code>println()</code> didalamnya tidak terpanggil. Print element pertama hanya dapat digunakan untuk mengakses element pertama. Convert <code>Sequence</code> menjadi <code>List</code> membuatnya dapat mengakses semua <code>List</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">=&gt; lazy: kotlin.sequences.TransformingSequence<span style="color:#960050;background-color:#1e0010">@</span><span style="color:#ae81ff">5</span>a10411
+-----
+access: rock
+first: rock
+-----
+access: rock
+access: pagoda
+access: plastic plant
+access: alligator
+access: flowerpot
+all: [rock, pagoda, plastic plant, alligator, flowerpot]
+</code></pre></div></li>
+<li>
+<p>Coba buat <code>Sequence</code> yang baru menggunakan original filter sebelum menggunakan <code>map</code>. Print hasil.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">    <span style="color:#66d9ef">val</span> lazyMap2 = decorations.asSequence().filter {it[<span style="color:#ae81ff">0</span>] == <span style="color:#e6db74">&#39;p&#39;</span>}.map {
+        println(<span style="color:#e6db74">&#34;access: $it&#34;</span>)
+        it
+    }
+    println(<span style="color:#e6db74">&#34;-----&#34;</span>)
+    println(<span style="color:#e6db74">&#34;filtered: ${lazyMap2.toList()}&#34;</span>)
+</code></pre></div></li>
+<li>
+<p>Jalankan program yang dibuat dan amati hasil output. Dengan mendapatkan elemen pertama, <code>println</code> didalam hanya terpanggil ketika ada elemen yang dapat diakses</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">-----
+access: pagoda
+access: plastic plant
+filtered: [pagoda, plastic plant]
+</code></pre></div></li>
+</ol>
+<br>
+<h3 id="final-result">Final Result</h3>
+<ol>
+<li>
+<p><strong>FilterOne.kt</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">val</span> decorations = listOf (<span style="color:#e6db74">&#34;rock&#34;</span>, <span style="color:#e6db74">&#34;pagoda&#34;</span>, <span style="color:#e6db74">&#34;plastic plant&#34;</span>, <span style="color:#e6db74">&#34;alligator&#34;</span>, <span style="color:#e6db74">&#34;flowerpot&#34;</span>)
+
+<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>() {
+   println( decorations.filter {it[<span style="color:#ae81ff">0</span>] == <span style="color:#e6db74">&#39;p&#39;</span>})
+
+   <span style="color:#75715e">// eager, creates a new list
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">val</span> eager = decorations.filter { it [<span style="color:#ae81ff">0</span>] == <span style="color:#e6db74">&#39;p&#39;</span> }
+   println(<span style="color:#e6db74">&#34;eager: $eager&#34;</span>)
+
+   <span style="color:#75715e">// lazy, will wait until asked to evaluate
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">val</span> filtered = decorations.asSequence().filter { it[<span style="color:#ae81ff">0</span>] == <span style="color:#e6db74">&#39;p&#39;</span> }
+   println(<span style="color:#e6db74">&#34;filtered: $filtered&#34;</span>)
+
+   <span style="color:#75715e">// force evaluation of the lazy list
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">val</span> newList = filtered.toList()
+   println(<span style="color:#e6db74">&#34;new list: $newList&#34;</span>)
+}
+</code></pre></div></li>
+<li>
+<p><strong>FilterTwo.kt</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">val</span> lazyMap = decorations.asSequence().map {
+      println(<span style="color:#e6db74">&#34;access: $it&#34;</span>)
+      it
+   }
+
+   <span style="color:#66d9ef">val</span> lazyMap2 = decorations.asSequence().filter {it[<span style="color:#ae81ff">0</span>] == <span style="color:#e6db74">&#39;p&#39;</span>}.map {
+      println(<span style="color:#e6db74">&#34;access: $it&#34;</span>)
+      it
+   }
+   println(<span style="color:#e6db74">&#34;-----&#34;</span>)
+   println(<span style="color:#e6db74">&#34;filtered: ${lazyMap2.toList()}&#34;</span>)
+
+   println(<span style="color:#e6db74">&#34;lazy: $lazyMap&#34;</span>)
+   println(<span style="color:#e6db74">&#34;-----&#34;</span>)
+   println(<span style="color:#e6db74">&#34;first: ${lazyMap.first()}&#34;</span>)
+   println(<span style="color:#e6db74">&#34;-----&#34;</span>)
+   println(<span style="color:#e6db74">&#34;all: ${lazyMap.toList()}&#34;</span>)
+}
+</code></pre></div></li>
+</ol>
+<br>
+<h2 id="lambdas--higher-order-functions">Lambdas &amp; Higher-Order Functions</h2>
+<hr>
+<h3 id="lambdas">Lambdas</h3>
+<p>Kotlin juga mendukung lambda dimana lambda merupakan expression yang digunakan untuk membuat suatu fungsi. Daripada anda membuat functions menggunakan nama, Anda dapat mendeklarasikan fungsi tanpa menggunakan nama.</p>
+<p>Bagian ini yang membuat expression lambda sangat berguna, dan juga sekarang lambda dapat meneruskan suatu data. Dalam bahasa lain, lambda bisa disebut funsgi anonim, literal funtions atau nama yang mirip lainnya.</p>
+<br>
+<h3 id="higher-order-functions">Higher-Order Functions</h3>
+<p>Anda dapat membuat <em>High-Order Functions</em> dengan meneruskan lambda ke function yang lain. Pada kode yang sebelumnya, Anda telah membuat <em>Higher-Order Functions</em> menggunakan <code>filter</code>. Anda meneruskan lambda expression untuk difilter sebagai kondisi yang harus dicek: <code>{it[0] == 'p'}</code></p>
+<p>Hampir sama dengan <code>map</code>, <code>map</code> juga termasuk <em>Higher-Order Function</em>, dan lambda yang diberikan berupa transformasi yang akan diterapkan.</p>
+<br>
+<h3 id="belajar-tentang-lambda">Belajar tentang lambda</h3>
+<ol>
+<li>
+<p>Seperti named Functions, lambda juga dapat memiliki parameter. Untuk lambda, parameter (dan tipe jika perlu) berada di sebelah kiri dari apa yang disebut function arrow <code>-&gt;</code>. Kode yang akan dieksekusi berada di sebelah kanan function arrow. Setelah lambda diterapkan pada variable, Anda dapat memanggilnya seperti function</p>
+<p>Gunakan REPL (<strong>Tools -&gt; Kotlin -&gt; Kotlin REPL)</strong>, coba kode dibawah ini</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">var</span> dirtyLevel = <span style="color:#ae81ff">20</span>
+<span style="color:#66d9ef">val</span> waterFilter = { dirty : Int -&gt; dirty / <span style="color:#ae81ff">2</span>}
+println(waterFilter(dirtyLevel))
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">=&gt; <span style="color:#ae81ff">10</span>
+</code></pre></div><p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/kotlin-basic-part-3-06.jpg" alt="&amp;ldquo;Kotlin ERPL Output&amp;rdquo;" title="Kotlin ERPL Output" >
+    <figcaption>Kotlin ERPL Output</figcaption>
+  </figure>
+
+
+</p>
+<p>Dalam contoh ini, lambda menggunakan <code>Int</code> untuk <code>dirty</code> dan return <code>dirty / 2</code>.</p>
+</li>
+<li>
+<p>Sintaks Kotlin untuk tipe functions terkait erat dengan sintaks untuk lambda. Gunakan sintaks ini untuk mendeklarasikan variable yang memiliki functions.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">val</span> waterFilter: (Int) -&gt; Int = { dirty -&gt; dirty / <span style="color:#ae81ff">2</span> }
+</code></pre></div><p>Bedah kode:</p>
+<ul>
+<li>Buat variable <code>waterFilter.</code></li>
+<li><code>waterFilter</code> dapat berupa functions yang berisi <code>Int</code> dan mereturn <code>Int</code>.</li>
+<li>Memasukkan lambda kedalam <code>waterFilter</code>.</li>
+<li>Lambda mereturn value dari arguments <code>dirty</code> yang dibagi dua (2)</li>
+</ul>
+<p>Perhatikan bahwa Anda tidak perlu menspesifik tipe dari tipe argument lambda. Tipe tersebut secara otomatis terisi oleh tipe interface.</p>
+</li>
+</ol>
+<br>
+<h3 id="membuat-higher-order-function">Membuat Higher-Order Function</h3>
+<p>Sejauh ini, contoh dari lambda hampir terlihat sama dengan function. Kekuatan sesungguhnya akan Kita mulai sekarang.</p>
+<ol>
+<li>
+<p>Tulis <em>Higher-Order function</em>. Ini adalah contoh basic, sebuah function yang menyimpan dua (2) arguments. Argument pertama adalah Integer. Sedangkan argument kedua berupa functions yang terdapat Integer dan me<em>return</em> Integer. Coba kode ini didalam REPL.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">updateDirty</span>(dirty: Int, operation: (Int) -&gt; Int): Int {
+   <span style="color:#66d9ef">return</span> operation(dirty)
+}
+</code></pre></div><p>Body dari kode memanggil function yang diteruskan sebagai argument kedua, dan meneruskan argument pertama ke dalamnya.</p>
+</li>
+<li>
+<p>Untuk memanggil function tersebut, teruskan Integer dan juga Function nya.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">val</span> waterFilter: (Int) -&gt; Int = { dirty -&gt; dirty / <span style="color:#ae81ff">2</span> }
+println(updateDirty(<span style="color:#ae81ff">30</span>, waterFilter))
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">=&gt; <span style="color:#ae81ff">15</span>
+</code></pre></div><p>Function yang Anda pass tidak harus berupa lambda; function tersebut dapat berupa named function sebagai gantinya. Untuk menerapkan argument sebagai regular functions, gunakan <code>::</code> operator. Dengan cara ini, Kotlin tahu bahwa Anda meneruskan function <em>reference</em> sebagai argument, bukan untuk memanggil sebuah function.</p>
+</li>
+<li>
+<p>Coba pass regular named function ke <code>updateDirty()</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">increaseDirty</span>( start: Int ) = start + <span style="color:#ae81ff">1</span>
+
+println(updateDirty(<span style="color:#ae81ff">15</span>, <span style="color:#f92672">::</span>increaseDirty))
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">=&gt; <span style="color:#ae81ff">16</span>
+</code></pre></div><blockquote>
+<p><strong>Note:</strong> Kotlin lebih memilih bahwa parameter apapun yang mengambil function adalah parameter terakhir. Ketika menggunakan Higher-Order Function, Kotlin memiliki sintaks khusus, yang disebut <a href="https://kotlinlang.org/docs/reference/lambdas.html#passing-a-lambda-to-the-last-parameter"
+    
+     target="_blank" rel="noreferrer" >last parameter call syntax</a>, yang memungkinkan Anda membuat kode lebih ringkas. Dalam kasus ini, Anda bisa meneruskan lambda untuk function parameter, tetapi Anda tidak perlu memasukkan lambda di dalam <code>{}</code>.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">var</span> dirtyLevel = <span style="color:#ae81ff">19</span>
+dirtyLevel = updateDirty(dirtyLevel) { dirtyLevel -&gt; dirtyLevel + <span style="color:#ae81ff">23</span>}
+println(dirtyLevel)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">=&gt; <span style="color:#ae81ff">42</span>
+</code></pre></div><h2 id="end">End</h2>
+<p>Untuk selanjutnya, kita akan membahas lebih dalam tentang kotlin Classes dan Object. Silahkan tunggu ya kawan-kawan. 😉</p>
+<blockquote>
+<p>Happy Code y&rsquo;all!</p>
+</blockquote>
+</li>
+</ol>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

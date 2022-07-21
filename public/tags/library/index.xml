@@ -1,0 +1,1180 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>library on AnbiDev</title>
+        <link>https://anbidev.com/tags/library/</link>
+        <description>Recent content in library on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Fri, 05 Mar 2021 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/library/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Belajar Kriptografi Dengan Python</title>
+            <link>https://anbidev.com/python-kriptografi/</link>
+            <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/python-kriptografi/</guid>
+            <description>Baiklah anbies mari kita belajar kriptografi. Bagi sebagian orang keamanan data sangat diprioritaskan saat membuat aplikasi.
+Ancaman dari hacker atau cracker akan selalu menjadi momok yang menakutkan untuk sebagian orang, maka dari, salah satu cara menghindari dari bobolnya sistem keamanan adalah dengan menyamarkannya.
+Disini kita akan membahas tentang cara menerapkan kriptografi dengan Python. Dari kalian yang tertarik tentang keamanan data mungkin bisa nih, disimak terlebih dahulu.
+Fundamental Kriptografi adalah proses menyembunyikan informasi dengan cara mengkonversi data yang dapat dibaca, kedalam data yang tidak bisa dibaca menggunakan sejumlah kunci (key) atau algoritma enkripsi.</description>
+            <content type="html"><![CDATA[<p>Baiklah anbies mari kita belajar kriptografi. Bagi sebagian orang keamanan data sangat diprioritaskan saat membuat aplikasi.</p>
+<p>Ancaman dari hacker atau cracker akan selalu menjadi momok yang menakutkan untuk sebagian orang, maka dari, salah satu cara menghindari dari bobolnya sistem keamanan adalah dengan menyamarkannya.</p>
+<p>Disini kita akan membahas tentang cara menerapkan <strong>kriptografi</strong> dengan <strong>Python</strong>. Dari kalian yang tertarik tentang keamanan data mungkin bisa nih, disimak terlebih dahulu.</p>
+<br>
+<h2 id="fundamental">Fundamental</h2>
+<hr>
+<p><strong>Kriptografi</strong> adalah proses menyembunyikan informasi dengan cara mengkonversi data yang dapat dibaca, kedalam data yang tidak bisa dibaca menggunakan sejumlah kunci (<em>key</em>) atau algoritma enkripsi.</p>
+<p>Apa saja yang bisa kita enkripsi? Informasi yang dapat kita enkripsi menggunakan kriptografi meliputi email, gambar, video, file dan data sensitif lainnya.</p>
+<p>Tujuan dari kriptografi adalah untuk memastikan informasi yang terenkripsi selalu tetap rahasia, integritas, otentikasi dan asli tidak terbantahkan (non-repudiation).</p>
+<p>Kriptografi dibagi menjadi 2 tipe :</p>
+<ul>
+<li>
+<p><em><strong>Symmetric encryption</strong></em> - menggunakan satu kunci (<em>key</em>) untuk mengenkripsi dan mendekripsi sebuah informasi yang dikirim atau diterima.</p>
+</li>
+<li>
+<p><em><strong>Asymmetric enryption</strong></em> - menggunakan kunci (<em>key</em>) yang berbeda - beda untuk mengenkripsi dan mendekripsi sebuah informasi yang dikirim atau diterima.</p>
+</li>
+</ul>
+<br>
+<h2 id="cipher">Cipher</h2>
+ <hr>
+<p><em><strong>Chiper</strong></em> (sandi) merujuk pada sebuah algoritma apa yang digunakan saat mengenkripsi dan mendekripsi sebuah informasi.</p>
+<p><em>Chiper</em> dibagi menjadi 2 golongan, <em>classical ciphers</em> dan <em>modern ciphers</em>.</p>
+<ul>
+<li>
+<p><em><strong>Classical Cipher</strong></em> adalah cipher yang memanipulasi karakter secara tradisional, seperti mengganti huruf menjadi angka. Dikategorikan menjadi 2 :</p>
+<ul>
+<li><em>Substitution cipher</em>  dimana data akan diganti dengan sandi atau karakter lain.</li>
+<li><em>Transposition cipher</em> dimana data akan diatur ulang membentuk sebuah sandi.</li>
+</ul>
+</li>
+<li>
+<p><em><strong>Modern Cipher</strong></em> adalah cipher yang memanfaatkan algoritma matematika dan beroperasi menggunakan urutan byte binari. Inipun dibagi menjadi 2</p>
+<ul>
+<li>Cipher Berbasis Kunci (<em>Key</em>) seperti <em>Symmetric</em> dan <em>Asymmetric</em> encryption.</li>
+<li>Cipher Berbasis Input, yang terbagi juga menjadi <em>block cipher</em> dan <em>stream cipher</em>.</li>
+</ul>
+</li>
+</ul>
+<br>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-cryptography-01.jpg" alt="&amp;ldquo;Kriptografi Dalam Kerang&amp;rdquo;" title="Kriptografi Dalam Kerang" >
+    <figcaption>Kriptografi Dalam Kerang</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="library-kriptografi-python">Library Kriptografi Python</h2>
+<hr>
+<p>Dalam tutorial ini anbi bakal menggunakan library kriptografi bernama  <a href="https://pycryptodome.readthedocs.io/en/latest/src/introduction.html"
+    
+     target="_blank" rel="noreferrer" >pycryptodome</a>. Ini adalah library kriptografi tingkat-rendah yang memiliki banyak fungsi algoritma enkripsi.</p>
+<p>Untuk cara installnya bisa menggunakan <a href="https://anbidev.com/Python-pip"
+    
+     target="_blank" rel="noreferrer" >pip</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip  install pycryptodome
+</code></pre></div><p>Selain itu Python juga memiliki <em>built-in library</em> yang sudah ada pada standard package Python bernama <code>cryptography</code>. Untuk ini akan kita bahas diakhir, kita akan fokus menggunakan <code>pycryptodome</code>.</p>
+<br>
+<h2 id="encoding-dan-decoding-string-dengan-python">Encoding Dan Decoding String Dengan Python</h2>
+<hr>
+<p>Sebelum kita masuk ke dalam penerapan masing - masing algoritma enkripsi, anbi mau kasih tau terlebih dahulu tentang <em><code>encoding()</code></em> dan <em><code>decoding()</code></em> string dengan Python.</p>
+<p><em><strong>Encoding</strong></em> adalah proses mengkonversi <a href="https://anbidev.com/Python-string"
+    
+     target="_blank" rel="noreferrer" >string</a> menjadi kumpulan <em>bytes array</em>. <em><strong>Decoding</strong></em> sebaliknya.</p>
+<p>Contoh :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">data <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Kata pythön akan di encode!&#34;</span>
+
+<span style="color:#75715e"># encode</span>
+data <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>encode()
+<span style="color:#66d9ef">print</span>(data)
+</code></pre></div><p>Output Encode :</p>
+<pre><code>b'Kata pyth\xc3\xb6n akan di encode!'
+</code></pre><p>Ada tambahan <code>b' '</code> pada string yang di encode, juga karakter &ldquo;ö&rdquo; akan tergantikan oleh kode karakter di <code>UTF-8</code>.</p>
+<p>Untuk <em>decode</em> bagaimana? caranya juga hampir sama :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">data <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;Kata pyth</span><span style="color:#ae81ff">\xc3\xb6</span><span style="color:#e6db74">n akan di decode!&#39;</span>
+
+data <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>decode()
+<span style="color:#66d9ef">print</span>(data)
+</code></pre></div><p>Output Decode :</p>
+<pre><code>Kata pythön akan di decode!
+</code></pre><p>Untuk penjelasan lebih lanjut kalian bisa lihat dijawaban <em>stack overflow</em> <a href="https://stackoverflow.com/questions/7585435/best-way-to-convert-string-to-bytes-in-Python-3/7585619#7585619"
+    
+     target="_blank" rel="noreferrer" >disini</a>.</p>
+<br>
+<h2 id="algoritma-enkripsi-bersama-python">Algoritma Enkripsi Bersama Python</h2>
+<hr>
+<p>Ketika kita sudah mengerti fundamental dalam mengawali kriptografi, sekarang kita akan mencoba menerapkan beberapa algoritma enkripsi menggunakan Python.</p>
+<br>
+<h3 id="des">DES</h3>
+<hr>
+<p><strong>DES</strong> (<em>Data Encryption Standard</em>) adalah standar enkripsi data menggunakan algoritma <em>symmetric encryption</em>.</p>
+<p>Pada algoritma ini, kunci (<em>key</em>) hanya memiliki ukuran blok data tetap sebesar <strong>8 byte</strong>. Tetapi, <em>Secret Key</em> yang digunakan untuk enkripsi dan dekripsi ada 64 byte. 56 byte digenerate secara random, dan 8 byte digunakan untuk <em>error checking</em>.</p>
+<p>Mari kita masuk kedalam kode. Untuk cara enkripsi DES menggunakan Python cukup seperti ini :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># encryption</span>
+<span style="color:#f92672">from</span> Crypto.Cipher <span style="color:#f92672">import</span> DES
+<span style="color:#f92672">from</span> Crypto.Util.Padding <span style="color:#f92672">import</span> pad
+
+data <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Data ini akan dienkripsi&#34;</span>
+
+<span style="color:#75715e"># 8 byte block </span>
+key <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;1n1kunC1&#39;</span> 
+
+<span style="color:#75715e"># Menetapkan panjang data yang akan dienkripsi</span>
+BLOCK_SIZE <span style="color:#f92672">=</span> <span style="color:#ae81ff">32</span> 
+
+des <span style="color:#f92672">=</span> DES<span style="color:#f92672">.</span>new(key, DES<span style="color:#f92672">.</span>MODE_ECB)
+padded_text <span style="color:#f92672">=</span> pad(data<span style="color:#f92672">.</span>encode(), BLOCK_SIZE)
+encrypted_text <span style="color:#f92672">=</span> des<span style="color:#f92672">.</span>encrypt(padded_text)
+
+<span style="color:#66d9ef">print</span>(encrypted_text)
+</code></pre></div><p>Nilai pada data akan terenkripsi menjadi seperti ini :</p>
+<pre><code>b'p8\xf1\\f\xd9\xd1\n*\x8d\taa\xb0\xa4\xec\x1a\x19\xb4sB\x84E\xcd\xad\xc8\xb4\xfd\x89\xc3k!'
+</code></pre><p>Lalu bagaimana cara kita mendekripsi nya? kita juga perlu kunci (<em>key</em>) untuk mendekripsi data yang terenkripsi.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># decryption</span>
+key <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;1n1kunC1&#39;</span> <span style="color:#75715e"># 8 byte block</span>
+des <span style="color:#f92672">=</span> DES<span style="color:#f92672">.</span>new(key, DES<span style="color:#f92672">.</span>MODE_ECB)
+decrypted_text <span style="color:#f92672">=</span> des<span style="color:#f92672">.</span>decrypt(encrypted_text)
+
+<span style="color:#66d9ef">print</span>(decrypted_text<span style="color:#f92672">.</span>decode())
+</code></pre></div><p>Dan ini hasil dekripsi nya.</p>
+<pre><code>Data ini akan dienkripsi
+</code></pre><blockquote>
+<p>Dalam melakukan dekripsi, bisa diibaratkan seperti membuka pintu yang terkunci, kita membutuhkan <strong>kunci</strong> (<em>key</em>) untuk membukanya.</p>
+</blockquote>
+<br>
+<h3 id="aes">AES</h3>
+<hr>
+<p>Berbeda dengan DES, untuk <strong>AES</strong> (<em>Advanced Encryption Standard</em>) adalah algoritma <em>symmetric-key</em> yang melakukan operasi yang sama setiap kali.</p>
+<p>Memiliki block tetap sejumlah <strong>128 byte</strong>, yang nantinya akan menjadi tiga kunci yang masing - masing memiliki panjang 128, 192 dan 256 byte.</p>
+<p>AES dikenal cukup cepat dan aman, serta secara <em>defacto</em> diakui sebagai standar algoritma enkripsi simetris.</p>
+<p>Mari kita langsung ke penerapan enkripsi AES menggunakan Python :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> Crypto.Cipher <span style="color:#f92672">import</span> AES
+<span style="color:#f92672">from</span> Crypto.Random <span style="color:#f92672">import</span> get_random_bytes
+
+data <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Data ini akan di enkripsi!&#39;</span>
+key <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;1n1kuNc1k174h3h3&#39;</span> <span style="color:#75715e"># 16 block size</span>
+
+<span style="color:#75715e"># encryption</span>
+cipher <span style="color:#f92672">=</span> AES<span style="color:#f92672">.</span>new(key, AES<span style="color:#f92672">.</span>MODE_EAX)
+nonce <span style="color:#f92672">=</span> cipher<span style="color:#f92672">.</span>nonce
+ciphertext, tag <span style="color:#f92672">=</span> cipher<span style="color:#f92672">.</span>encrypt_and_digest(data<span style="color:#f92672">.</span>encode())
+
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34; nonce : &#34;</span>, nonce)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34; tag : &#34;</span>, tag)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34; enkripsi : &#34;</span>, ciphertext)
+</code></pre></div><p>Dan berikut hasil dari enkripsi (<code>ciphertext</code>) beserta dua kunci enkripsi lainnya (<code>nonce</code> dan <code>tag</code>).</p>
+<pre><code>nonce :  b'\xa9\xbeq]H\xfcF\xe7\xe9iR\xc0\x80gcj'
+tag :  b'\xb7`\x8aZ\x15I&quot; \xeb\xd9b\x00\xfe \x0eK'
+enkripsi :  b'3\xdbGx\xd2\x8b\xe6}&amp;\xd0\x1f\x84g\x01\xb1\x0b\x7f\xd7d\xdf/\x98\x12\xaf6\x0e'
+</code></pre><p>Lalu untuk dekripsi data, kita juga perlu memiliki ketiga enkripsi data tersebut (<code>chipertext</code>, <code>nonce</code>dan <code>tag</code>) agar kita dapat mengetahui data aslinya.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># decryption</span>
+key <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;1n1kuNc1k174h3h3&#39;</span> <span style="color:#75715e"># 16 block size</span>
+
+cipher <span style="color:#f92672">=</span> AES<span style="color:#f92672">.</span>new(key, AES<span style="color:#f92672">.</span>MODE_EAX, nonce)
+data <span style="color:#f92672">=</span> cipher<span style="color:#f92672">.</span>decrypt(ciphertext)
+<span style="color:#66d9ef">try</span>:
+    cipher<span style="color:#f92672">.</span>verify(tag)
+    <span style="color:#66d9ef">print</span>(data<span style="color:#f92672">.</span>decode())
+<span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ValueError</span>:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Kunci salah atau data korup!&#34;</span>)
+</code></pre></div><p>Jika ketiga data tersebut benar, maka output yang dihasilkan juga akan benar.</p>
+<pre><code>Data ini akan di enkripsi!
+</code></pre><p>Akan tetapi jika salah satu dari ketiga data atau kunci untuk membuka enkripsi data itu <strong>salah</strong>. Maka dekripsi tidak bisa dilakukan dan akan muncul error seperti ini.</p>
+<pre><code>Kunci salah atau data korup!
+</code></pre><p>Inilah yang membuat AES menjadi standarisasi enkripsi dikarenakan menggunakan lebih dari satu kunci serta menguji keaslian data.</p>
+<br>
+<h3 id="blowfish">Blowfish</h3>
+<hr>
+<p><strong>Blowfish</strong> adalah algoritma blok simetris yang didesain oleh <em>Bruce Schneier</em>. Memiliki blok data tetap sebesar <strong>8 byte</strong> dan memiliki panjang kunci (<em>key</em>) yang bervariasi, mulai dari <strong>32</strong> sampai <strong>448 byte</strong>.</p>
+<p>Blowfish dipercaya sangat cepat dan aman. Namun, kunci yang dimiliki oleh algoritma ini cukup besar untuk menahan serangan <em>brute force</em>.</p>
+<p>Berikut contoh penerapannya di Python.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> Crypto.Cipher <span style="color:#f92672">import</span> Blowfish
+<span style="color:#f92672">from</span> struct <span style="color:#f92672">import</span> pack
+
+key <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;KeyIniSangatlahPanjang&#39;</span>
+data <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;Mari kita enkripsi!&#39;</span>
+
+bs <span style="color:#f92672">=</span> Blowfish<span style="color:#f92672">.</span>block_size
+
+cipher <span style="color:#f92672">=</span> Blowfish<span style="color:#f92672">.</span>new(key, Blowfish<span style="color:#f92672">.</span>MODE_CBC)
+
+plen <span style="color:#f92672">=</span> bs <span style="color:#f92672">-</span> len(data) <span style="color:#f92672">%</span> bs
+
+padding <span style="color:#f92672">=</span> [plen]<span style="color:#f92672">*</span>plen
+padding <span style="color:#f92672">=</span> pack(<span style="color:#e6db74">&#39;b&#39;</span><span style="color:#f92672">*</span>plen, <span style="color:#f92672">*</span>padding)
+msg <span style="color:#f92672">=</span> cipher<span style="color:#f92672">.</span>iv <span style="color:#f92672">+</span> cipher<span style="color:#f92672">.</span>encrypt(data <span style="color:#f92672">+</span> padding)
+
+<span style="color:#66d9ef">print</span>(msg)
+</code></pre></div><p>Dan ini hasil enkripsinya</p>
+<pre><code>b'\xfc\xd90\xb8\x8b*\x9f@ZX\xf3?\x86\xd5jcV\xe9I\x9fA\x95]#\xa4b\xa3\x00-[M\x8f'
+</code></pre><br>
+<h3 id="rsa">RSA</h3>
+<hr>
+<p><strong>RSA</strong> (<em>Rivest–Shamir–Adleman</em>) adalah algoritma untuk generate <em>public key</em> paling populer didunia. Algoritma ini telah bertahan dari serangan selama lebih dari 30 tahun, dan oleh karena itu dianggap cukup aman untuk standar sistem keamanan data.</p>
+<p>Algoritma ini biasa digunakan dalam mengamankan data konfidensial (enkripsi) dan autentikasi (<em>digital signature</em>). RSA juga menggunakan kedua <em>private</em> dan <em>public key</em> saat proses enkripsi dan dekripsi.</p>
+<p>Contoh penerapan RSA menggunakan Python :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> Crypto.PublicKey <span style="color:#f92672">import</span> RSA
+
+secret_code <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;AnibDevIsKey&#34;</span>
+key <span style="color:#f92672">=</span> RSA<span style="color:#f92672">.</span>generate(<span style="color:#ae81ff">1024</span>)
+private_key <span style="color:#f92672">=</span> key<span style="color:#f92672">.</span>export_key(passphrase<span style="color:#f92672">=</span>secret_code, pkcs<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>,
+                             protection<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;scryptAndAES128-CBC&#34;</span>)
+public_key <span style="color:#f92672">=</span> key<span style="color:#f92672">.</span>publickey()<span style="color:#f92672">.</span>export_key()
+</code></pre></div><p>Pada kode diatas, akan terdapat 2 data yang di<em>generate</em> pertama <em><strong>private key</strong></em> serta <em><strong>public key</strong></em>.</p>
+<ul>
+<li><em><strong>private key</strong></em> adalah data yang nantinya akan dikirim.</li>
+<li><em><strong>public key</strong></em> adalah data yang digunakan untuk verifikasi.</li>
+</ul>
+<p>Untuk yang penasaran hasil generate <em>private key</em> dan <em>public key</em> dari kode diatas bisa dilihat <a href="https://jpst.it/2rwl0"
+    
+     target="_blank" rel="noreferrer" >disini</a>.</p>
+<p>Dan untuk mendekripsi <em>private key</em>, sama seperti algoritma lainnya kita juga perlu kunci untuk membukanya. Bedanya, kalau yang tadi <code>export_key</code> kalau ini <code>import_key</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">secret_code <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;AnibDevIsKey&#34;</span>
+key <span style="color:#f92672">=</span> RSA<span style="color:#f92672">.</span>import_key(encrypted_key, passphrase<span style="color:#f92672">=</span>secret_code)
+public_key <span style="color:#f92672">=</span> key<span style="color:#f92672">.</span>publickey()<span style="color:#f92672">.</span>export_key()
+</code></pre></div><p>RSA bisa diibaratkan seperti koper yang akan dikirim, <em>private key</em> adalah kopernya dan <em>public key</em> adalah isi dari koper tersebut. Ketika koper sudah sampai, kunci yang digunakan untuk membuka dan menutup tetap sama.</p>
+<center> . . . </center>
+<p>Baiklah kawan, mungkin sampai disini dulu anbi bahasnya, kemungkinan artikel ini akan anbi update lagi atau anbi buat part 2 nya, karena memang masih banyak yang belum anbi sampaikan tentang macam - macam kriptografi di artikel ini.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Crawl Gambar Instagram Pakai Python dan Instalooter</title>
+            <link>https://anbidev.com/python-instalooter/</link>
+            <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/python-instalooter/</guid>
+            <description>Hola anbies, sekarang mari kita membahas sedikit tentang library (lebih ke program) crawling yang sering digunakan untuk meng-crawl Seluruh Gambar dan Video Pada Instagram. Apa itu? nama library nya adalah instalooter.
+Apa itu Instalooter? Instalooter adalah sebuah program yang digunakan untuk mendownload seluruh video dan gambar pada sebuah profile atau hashtag pada instagram tanpa menggunakan API atau Token apapun. Bahkan kalian juga bisa mendownload gambar atau video pada private akun!</description>
+            <content type="html"><![CDATA[<p>Hola anbies, sekarang mari kita membahas sedikit tentang library (lebih ke program) crawling yang sering digunakan untuk meng-<em>crawl</em> <strong>Seluruh Gambar dan Video Pada Instagram</strong>. Apa itu? nama library nya adalah <a href="https://instalooter.readthedocs.io/"
+    
+     target="_blank" rel="noreferrer" >instalooter</a>.</p>
+<br>
+<h2 id="apa-itu-instalooter">Apa itu Instalooter?</h2>
+<hr>
+<p><strong>Instalooter</strong> adalah sebuah <strong>program</strong> yang digunakan untuk mendownload seluruh video dan gambar pada sebuah profile atau <em>hashtag</em> pada instagram tanpa menggunakan API atau Token apapun. Bahkan kalian juga bisa mendownload gambar atau video pada <strong>private akun</strong>!</p>
+<p>Cara installnya cukup mudah, kita cuman butuh <a href="https://anbidev.com/python-pip"
+    
+     target="_blank" rel="noreferrer" >pip</a> dan command dibawah :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install instalooter
+</code></pre></div><p>Nah kalau udah, kita bisa langsung menggunakan perintah dasar instalooter pada <strong>command line</strong> kita.</p>
+<blockquote>
+<p>Untuk menghindari <strong>Error</strong>, bisa terlebih <strong>login instagram</strong> di PC atau browser kita hehe, tapi jarang sih ini :)</p>
+</blockquote>
+<br>
+<p>Disini, anbi bakal kasih contoh command buat <strong>download semua gambar dan video</strong> pada instagram <a href="https://instagram.com/anbidev"
+    
+     target="_blank" rel="noreferrer" >anbidev</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">instalooter user anbidev
+</code></pre></div><p>Kalau berhasil ada <em>log</em> kayak gini.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-instalooter-01.png" alt="&amp;ldquo;Log sudah selesai Download&amp;rdquo;" title="Log sudah selesai Download" >
+    <figcaption>Log sudah selesai Download</figcaption>
+  </figure>
+
+
+</p>
+<p>Dan jika kita lihat, pada folder di path <em>command line</em> anbi, akan berisi banyak gambar dari anbidev.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-instalooter-02.jpg" alt="&amp;ldquo;Selesai Download Gambar&amp;rdquo;" title="Selesai Crawl Gambar" >
+    <figcaption>Selesai Crawl Gambar</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="crawl-berdasarkan-hashtag">Crawl Berdasarkan Hashtag</h2>
+<hr>
+<p>Kita juga bisa mengcrawl gambar dan video dengan <em>instalooter</em> berdasarkan parameter hashtag. Nih, kita coba crawl <strong>10 gambar atau video</strong> pada postingan dengan hashtag <code>#programmer</code>.</p>
+<pre><code>instalooter hashtag programmer -n 10
+</code></pre><p>Ia akan mendownload 10 postingan gambar atau video terbaru, yang menggunakan hashtag <code>#programmer</code> yang terbaru.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-instalooter-03.png" alt="&amp;ldquo;Selesai Download Gambar&amp;rdquo;" title="Selesai Crawl Di Hashtag #programmer" >
+    <figcaption>Selesai Crawl Di Hashtag #programmer</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="crawl-single-posting">Crawl Single Posting</h2>
+<hr>
+<p>Kita sudah berhasil crawling secara batch berdasarkan <em>hashtag</em> atau <em>profile</em>. Lalu bagaimana jika kita ingin crawling single posting?</p>
+<p>Mudah aja, copy link postingannnya, lalu gunakan command berikut ini.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">instalooter post <span style="color:#e6db74">&#34;https://www.instagram.com/p/CEwhuIghkKb/&#34;</span> 
+</code></pre></div><p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-instalooter-04.jpg" alt="&amp;ldquo;Single Post Berhasil Didownload!&amp;quot;" title="Single Post Berhasil Didownload!" >
+    <figcaption>Single Post Berhasil Didownload!</figcaption>
+  </figure>
+
+
+</p>
+<p>Nah, sesimpel itu. Oh iya, anbi pengen gambar hasil crawl disimpen difolder <strong>Pictures</strong>. Kita tinggal kasih parameter <em><strong>path</strong></em> direktori tujuan. Contoh :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">instalooter post <span style="color:#e6db74">&#34;https://www.instagram.com/p/CEwhuIghkKb/&#34;</span>  ~/Pictures
+</code></pre></div><ul>
+<li><code>~/Pictures</code> adalah <em><strong>path</strong></em> direktori untuk menyimpan hasil crawl.</li>
+</ul>
+<br>
+<h2 id="crawling-akun-private">Crawling Akun Private</h2>
+<hr>
+<p>Nah, kalau mau crawling akun private, cara satu - satunya adalah kalian follow dulu akunnya. Lalu nunggu di <em>Accept</em> nah, abis itu baru deh bisa kita crawl 😂.</p>
+<p>Cara <strong>login</strong> pakai <strong>Instalooter</strong> gimana? gini caranya, misal anbi bakal crawl salah satu akun instagram Private yang kebetulan udah di accept hehe.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">instalooter user tridesir --username humanoid99 --password <span style="color:#ae81ff">12345678</span>
+</code></pre></div><ul>
+<li><code>--username</code> : kalian isi dengan username akun instagram kalian.</li>
+<li><code>--password</code> : kalian isi dengan <em>password</em> instagram kalian.</li>
+</ul>
+<blockquote>
+<p><strong>PENTING</strong> : Akun yang digunakan harus udah diaccept dulu yak 🙄</p>
+</blockquote>
+<br>
+<h2 id="implementasi-pada-script">Implementasi Pada Script</h2>
+<hr>
+<p>Nah, program ini juga bisa kita perlakukan juga menjadi sebuah library. Sehingga bisa kita <code>import</code> kedalam script atau program yang ingin kita buat.</p>
+<p>Contoh kode yang paling mudah seperti ini.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> instalooter.looters <span style="color:#f92672">import</span> ProfileLooter
+
+instagram_user <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;anbidev&#34;</span>
+looter <span style="color:#f92672">=</span> ProfileLooter(username<span style="color:#f92672">=</span>instagram_user)    
+looter<span style="color:#f92672">.</span>download(<span style="color:#e6db74">&#39;~/Pictures&#39;</span>, media_count<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+</code></pre></div><p>Dari script diatas bertujuan untuk mendownload 10 postingan terbaru pada instagram <strong>@anbidev</strong>.</p>
+<p>Nah, selanjutnya kita bisa mengembangkannya lagi, dari script tersebut sesuai dengan kebutuhan yang diinginkan.</p>
+<p>Misal anbi, disini bakal <em>crawling</em> seluruh komentar postingan di salah satu postingan instagram. Anbi bakal ambil di postingannya <strong>petanikode</strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> instalooter.looters <span style="color:#f92672">import</span> PostLooter
+
+instagram_post <span style="color:#f92672">=</span> PostLooter(<span style="color:#e6db74">&#39;https://www.instagram.com/p/CLiS5C9BVQx/&#39;</span>)
+list_media <span style="color:#f92672">=</span> instagram_post<span style="color:#f92672">.</span>medias()
+
+<span style="color:#66d9ef">for</span> media <span style="color:#f92672">in</span> list_media:
+    info <span style="color:#f92672">=</span> instagram_post<span style="color:#f92672">.</span>get_post_info(media[<span style="color:#e6db74">&#39;shortcode&#39;</span>])
+    list_comment <span style="color:#f92672">=</span> info[<span style="color:#e6db74">&#39;edge_media_to_parent_comment&#39;</span>]
+    the_comment <span style="color:#f92672">=</span> list_comment[<span style="color:#e6db74">&#39;edges&#39;</span>]
+    count <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">for</span> comment <span style="color:#f92672">in</span> the_comment:
+        the_comment <span style="color:#f92672">=</span> comment[<span style="color:#e6db74">&#39;node&#39;</span>]
+
+        parent_comment <span style="color:#f92672">=</span> the_comment[<span style="color:#e6db74">&#39;text&#39;</span>]
+        list_reply <span style="color:#f92672">=</span> the_comment[<span style="color:#e6db74">&#39;edge_threaded_comments&#39;</span>][<span style="color:#e6db74">&#39;edges&#39;</span>]
+      
+        <span style="color:#66d9ef">print</span>(count,<span style="color:#e6db74">&#39; Komentar : &#39;</span>, parent_comment)
+      
+        count_reply <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">if</span> list_reply:
+            <span style="color:#66d9ef">for</span> reply <span style="color:#f92672">in</span> list_reply:
+                the_reply <span style="color:#f92672">=</span> reply[<span style="color:#e6db74">&#39;node&#39;</span>]
+                
+                parent_reply <span style="color:#f92672">=</span> the_reply[<span style="color:#e6db74">&#39;text&#39;</span>]
+                <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&#34;</span>,count_reply, <span style="color:#e6db74">&#39;Balasan&#39;</span>, parent_reply)
+                count_reply <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        
+        count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</code></pre></div><p>Pada kode diatas, anbi crawling semua komentar pada salah satu postingan instagram petanikode menggunakan modul <code>PostLooter</code>.</p>
+<p>Jika komentarnya ga nambah kemungkinan hasilnya akan seperti ini.</p>
+<pre><code>1  Komentar :  Typo tu unary semua tiap slide min 🙄
+         1 Balasan @anandapujawandra betul. tolong direvisi 😂 @petanikode
+2  Komentar :  waduh tipo min
+3  Komentar :  Bernyanyy
+         1 Balasan @alfari16 ngoding doang ga bernyanyy
+         2 Balasan @alfari16 🤙🏻🤙🏻🤙🏻
+4  Komentar :  bernyanyi 🔫
+5  Komentar :  Cara termudah buat belajar ternary, example: Laper ? Makan(makanan: any) : udahKenyang()
+6  Komentar :  Setiap operator itu unary ya? Ato typo?
+7  Komentar :  Namanya juga manusia, klo sekali dua kali salah ya wajar
+</code></pre><p>Dan masih banyak lagi yang dapat kita implementasikan menggunakan library ini. Bisa crawling jumlah like, kapan dia posting, siapa aja followernya dan lain - lain. Semuanya tergantung kebutuhan kalian masing - masing.</p>
+<center> . . . </center>
+<p>Oke gitu dulu untuk postingan pelengkap ini hehe, semoga bermanfaat dan mungkin bakal anbi buatin program crawling instagram ini nantinya. Nantikan postingan anbidev selanjutnya ya. Terima kasih :)</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Konversi Gambar Ke Sketsa Pensil Dengan Python OpenCV</title>
+            <link>https://anbidev.com/python-konversi-gambar-sketsa-pensil/</link>
+            <pubDate>Sat, 13 Feb 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/python-konversi-gambar-sketsa-pensil/</guid>
+            <description>Hai, anbi disini bakal kasih sedikit tutorial tentang cara mengkonversi gambar yang berwarna kembali menjadi sketsa pensil atau foto berwarna kalian menjadi sebuah gambaran pensil.
+ . . . Sekarang banyak sekali aplikasi filter yang mengubah gambar atau foto kita ke suatu warna tertentu atau lebih imut atau masih banyak lagi. Tapi apakah kalian pernah berpikiran bagaimana filter gambar itu dibuat?
+Aplikasi - aplikasi tersebut melakukan manipulasi gambar dengan teknik computer vision.</description>
+            <content type="html"><![CDATA[<p>Hai, anbi disini bakal kasih sedikit tutorial tentang cara mengkonversi gambar yang berwarna kembali menjadi sketsa pensil atau foto berwarna kalian menjadi sebuah gambaran pensil.</p>
+<center> . . . </center>
+<p>Sekarang banyak sekali aplikasi filter yang mengubah gambar atau foto kita ke suatu warna tertentu atau lebih imut atau masih banyak lagi. Tapi apakah kalian pernah berpikiran bagaimana filter gambar itu dibuat?</p>
+<p>Aplikasi - aplikasi tersebut melakukan manipulasi gambar dengan teknik <strong>computer vision</strong>. Nah, disini anbi bakal salah satu library terkenal yang dapat melakukan manipulasi gambar ydengan teknik yang sama yaitu <strong><a href="https://opencv.org/"
+    
+     target="_blank" rel="noreferrer" >OpenCV</a></strong>.</p>
+<p>Menggunakan library ini kita coba mengkonversi gambar atau foto berwarna menjadi seperti sketsa pensil. Bagaimana cara melakukannya? mari kita simak langkah - langkahnya dibawah ini.</p>
+<br>
+<h2 id="1-install-dan-import-opencv">1. Install Dan Import OpenCV</h2>
+<hr>
+<p>Pertama kita install dulu library opencv dalam bahasa python menggunakan pip.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pip install opencv<span style="color:#f92672">-</span>python
+</code></pre></div><p>Setelah itu kita import modulnya yaitu <code>cv2</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cv2
+</code></pre></div><br>
+<h2 id="2-load-gambar">2. Load Gambar</h2>
+<hr>
+<p>Lalu selanjutnya kita <em>load</em> gambar yang ingin kita konversi ke dalam program kita.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">img <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>imread(<span style="color:#e6db74">&#34;gambarku.jpg&#34;</span>, <span style="color:#ae81ff">1</span>)
+</code></pre></div><ul>
+<li><code>gambarku.jpg</code> -&gt; adalah gambar yang ingin anda konversi.</li>
+</ul>
+<blockquote>
+<p>Pastikan gambar dan juga program dalam satu folder untuk mempermudah <em>load</em> image</p>
+</blockquote>
+<p>Gambar yang ingin anbi konversi adalah gambar lawang sewu ini.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-sketch-pencil-01.jpg" alt="&amp;lsquo;Gambar Lawang Sewu&amp;rsquo;" title="Gambar Lawang Sewu" >
+    <figcaption>Gambar Lawang Sewu</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="3-konversi-gambar-ke-hitam---putih">3. Konversi Gambar Ke Hitam - Putih</h2>
+<hr>
+<p>Kemudian kita konversi gambar yang kita load tadi ke warna hitam putih terlebih dahulu, menggunakan fungsi <code>cvtColor</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">img_gray <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>cvtColor(img, cv2<span style="color:#f92672">.</span>COLOR_BGR2GRAY)
+</code></pre></div><p>Kenapa harus dibuat hitam putih? mengubahnya kedalam bentuk hitam putih (grayscale) memberi kita <strong>Pixel</strong> mana saja yang bisa digunakan dalam membuat gambar menjadi sebuah sketsa pensil.</p>
+<p>Lalu, untuk melihat hasilnya kalian bisa menggunakan fungsi <code>imwrite</code> dibawah ini.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cv2<span style="color:#f92672">.</span>imwrite(<span style="color:#e6db74">&#34;img_hitam_putih.png&#34;</span>, img_gray)
+</code></pre></div><p>Fungsi ini akan membuat gambar yang dimanipulasi menjadi sebuah file <code>.png</code> atau ekstensi yang kalian inginkan.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-sketch-pencil-02.jpg" alt="&amp;lsquo;Gambar Hitam Putih&amp;rsquo;" title="Gambar Hitam Putih" >
+    <figcaption>Gambar Hitam Putih</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="4-invert-gambar">4. Invert Gambar</h2>
+<hr>
+<p>Langkah selanjutnya adalah <em>inverting</em> warna pada gambar hitam putih. Untuk inverting kita bisa menggunakan fungsi <code>bitwise_not</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">img_invert <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>bitwise_not(img_gray)
+</code></pre></div><p>Kenapa harus dikonversi ke <em>invert</em>? Hal ini digunakan untuk membuat daerah yang terang menjadi lebih terang dan sebaliknya. Sehingga kita dapat menemukan garis - garis yang tepat untuk membuat sketsa pensil.</p>
+<p>Coba kita lihat hasilnya.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cv2<span style="color:#f92672">.</span>imwrite(<span style="color:#e6db74">&#34;img_invert.png&#34;</span>, img_invert)
+</code></pre></div><p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-sketch-pencil-03.jpg" alt="&amp;lsquo;Gambar Inversi&amp;rsquo;" title="Gambar Inversi" >
+    <figcaption>Gambar Inversi</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="5-memperhalus-gambar">5. Memperhalus Gambar</h2>
+<hr>
+<p>Berikutnya adalah memperhalus gambar yang sudah ada dengan cara menambahkan filter <em>gaussian blur</em> pada gambar yang kita invert tadi.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">img_smoothing <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>GaussianBlur(img_invert, (<span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">21</span>),sigmaX<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, sigmaY<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</code></pre></div><p>Disini kita menggunakan teknik <em>gaussian blur</em> dengan tingkat blur 21 x 21 pixel, serta membiarkan kedua nilai <code>sigma</code> menjadi default <code>(0, 0)</code> pada saat memperhalus gambar kita.</p>
+<p>Dengan meningkatkan ukuran filter, kita dapat membuat garis tipis untuk sketsa yang akan kita buat, dan hal ini digunakan juga untuk mengurangi <em>noise</em> pada gambar.</p>
+<p>Coba kita lihat hasilnya.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cv2<span style="color:#f92672">.</span>imwrite(<span style="color:#e6db74">&#34;img_smoothing.png&#34;</span>, img_invert)
+</code></pre></div><p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-sketch-pencil-04.png" alt="&amp;lsquo;Gambar Smoothing&amp;rsquo;" title="Gambar Smoothing" >
+    <figcaption>Gambar Smoothing</figcaption>
+  </figure>
+
+
+</p>
+<p><em>&ldquo;Loh, kok jadi gini?&quot;</em> Sabar, mari kita ke tahap selanjutnya.</p>
+<br>
+<h2 id="6-sketsa-final">6. Sketsa Final</h2>
+<hr>
+<p>Pada <strong>tahap ke 5</strong> kita telah mendapatkan gambar <em>invert</em> yang sudah di perhalus. Nah, dilangkah terakhir ini kita akan mencampurkan gambar <strong>hitam putih</strong> dengan gambar yang sudah di <strong>perhalus</strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sketsa_final <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>divide(img_gray, <span style="color:#ae81ff">255</span> <span style="color:#f92672">-</span> img_smoothing, scale<span style="color:#f92672">=</span><span style="color:#ae81ff">256</span>)
+</code></pre></div><p>Menggunakan fungsi <code>divide()</code> untuk membagi nilai pada gambar hitam putih, berdasarkan nilai gambar yang sudah kita perhalus, sehingga menghasilkan gambar dengan garis - garis yang ditebalkan menggunakan kalkulasi tersebut.</p>
+<p>Mari kita lihat bagaimana hasil akhirnya.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cv2<span style="color:#f92672">.</span>imwrite(<span style="color:#e6db74">&#34;sketsa_final.png&#34;</span>, sketsa_final)
+</code></pre></div><p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-sketch-pencil-05.jpg" alt="&amp;lsquo;Gambar Sketsa Pensil&amp;rsquo;" title="Gambar Sketsa Pensil" >
+    <figcaption>Gambar Sketsa Pensil</figcaption>
+  </figure>
+
+
+</p>
+<center> . . . </center>
+<p>Nah, coba kita bandingkan dengan gambar aslinya. Gimana? langsung jadi seperti dibuat dari sketsa pensil kan?</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-sketch-pencil-06.jpg" alt="&amp;lsquo;Perbandingan&amp;rsquo;" title="Perbandingan" >
+    <figcaption>Perbandingan</figcaption>
+  </figure>
+
+
+</p>
+<p>Masih banyak lagi hal - hal keren yang bisa kita buat menggunakan library keren <a href="https://opencv.org/"
+    
+     target="_blank" rel="noreferrer" >ini</a>. Lain kali anbi bakal buat tutorial tentang <em>image processing</em> menggunakan OpenCV.</p>
+<p>Untuk <strong>full codenya</strong> kalian bisa kalian di github <a href="https://github.com/AnbiDev/python-opencv-sketch-pencil"
+    
+     target="_blank" rel="noreferrer" >AnbiDev</a>.</p>
+<p>🐙 <a href="https://github.com/AnbiDev/python-opencv-sketch-pencil"
+    
+     target="_blank" rel="noreferrer" >https://github.com/AnbiDev/python-opencv-sketch-pencil</a></p>
+<p>Eh, nih anbi kasih satu bonus lagi buat kalian hehe.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-sketch-pencil-07.jpg" alt="&amp;lsquo;Waifu Anbi :*&#39;" title="Waifu Anbi :*" >
+    <figcaption>Waifu Anbi :*</figcaption>
+  </figure>
+
+
+</p>
+<p>Oke sekian dari Anbi, sampai ketemuan di postingan selanjutnya.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Cara Membuat Library Python</title>
+            <link>https://anbidev.com/python-buat-library/</link>
+            <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/python-buat-library/</guid>
+            <description>Nah kemarin sudah pernah anbi bahas perbedaan antara modul , package dan library. Sekarang ini anbi mau bahas cara membuat library python. Apa saja langkah - langkah nya? simak nih.
+Langkah 1 : Buat Direktori Buat direktori yang ingin kalian jadikan wadah buat library yang akan kita buat. Sesuaikan juga nama direktori dengan nama library yang akan kalian buat.
+Disini anbi buat direktori dengan nama anbi-library.
+Direktrori Untuk Nampung LibraryLangkah 2 : Buat Virtual Environtment Setelah selesai dengan pembuatan direktori, akan lebih baik jika kita juga membuat virtual environtment pada direktori agar versi python dan juga library lain yang kita gunakan tidak berubah.</description>
+            <content type="html"><![CDATA[<p>Nah kemarin sudah pernah anbi bahas perbedaan antara <a href="https://anbidev.com/python-modul-package-library"
+    
+     target="_blank" rel="noreferrer" >modul , package dan library</a>. Sekarang ini anbi mau bahas cara membuat <em>library</em> python. Apa saja langkah - langkah nya? simak nih.</p>
+<br>
+<h2 id="langkah-1--buat-direktori">Langkah 1 : Buat Direktori</h2>
+<hr>
+<p>Buat direktori yang ingin kalian jadikan wadah buat <em>library</em> yang akan kita buat. Sesuaikan juga nama direktori dengan nama <em>library</em> yang akan kalian buat.</p>
+<p>Disini anbi buat direktori dengan nama <code>anbi-library</code>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-buat-library-01.png" alt="&amp;ldquo;Direktrori Untuk Nampung Library&amp;rdquo;" title="Direktrori Untuk Nampung Library" >
+    <figcaption>Direktrori Untuk Nampung Library</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="langkah-2--buat-virtual-environtment">Langkah 2 : Buat Virtual Environtment</h2>
+<hr>
+<p>Setelah selesai dengan pembuatan direktori, akan lebih baik jika kita juga membuat <em>virtual environtment</em> pada direktori agar versi python dan juga <em>library</em> lain yang kita gunakan tidak berubah.</p>
+<blockquote>
+<p><a href="https://anbidev.com/python-virtual-environtment"
+    
+     target="_blank" rel="noreferrer" >Belajar Virtual Environtment</a></p>
+</blockquote>
+<p>Kenapa harus pakai <em>virtual environtment</em>? Karena <em>virtual environtment</em> dapat mencegah adanya <em>issue dependency</em> yang terjadi nantinya.</p>
+<p>Lalu, buka terminal atau cmd dan arahkan <strong>PATH</strong> ke direktori yang kita buat tadi. Untuk membuat <a href="https://anbidev.com/python-virtual-environtment"
+    
+     target="_blank" rel="noreferrer" >virtual environtment</a> kita gunakan <em>command</em> dibawah ini :</p>
+<p>untuk kalian pemakai windows :</p>
+<pre><code>py -m venv env
+</code></pre><p>untuk kalian pemakai <strong>linux</strong> dan <strong>macos</strong></p>
+<pre><code>python3 -m venv env
+</code></pre><p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-buat-library-02.png" alt="&amp;ldquo;Contoh Command Di Windows&amp;rdquo;" title="Contoh Command Di Windows" >
+    <figcaption>Contoh Command Di Windows</figcaption>
+  </figure>
+
+
+</p>
+<p>Setelah berhasil membuat <a href="https://anbidev.com/python-virtual-environtment"
+    
+     target="_blank" rel="noreferrer" >virtual environtment</a>, sekarang kita aktifkan virtual environtment dengan command dibawah ini :</p>
+<p>ini untuk pemakai <strong>windows</strong></p>
+<pre><code>.\env\Scripts\activate
+</code></pre><p>ini untuk pemakai <strong>linux</strong> dan <strong>macos</strong></p>
+<pre><code>source env/bin/activate
+</code></pre><p>Pastikan <em>session</em> di terminal atau command promt kalian seperti gambar dibawah, yang menandakan virtual environtment sudah aktif.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-buat-library-03.png" alt="&amp;ldquo;Session Virtual Environtment Udah Aktif&amp;rdquo;" title="Session Virtual Environtment Udah AktifSession Virtual Environtment Udah Aktif" >
+    <figcaption>Session Virtual Environtment Udah AktifSession Virtual Environtment Udah Aktif</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="langkah-3--install-library-bantuan">Langkah 3 : Install Library Bantuan</h2>
+<hr>
+<p>Tidak lupa kita install beberapa library bantuan untuk <strong><em>build</em></strong> library kita nanti.</p>
+<ul>
+<li>
+<p><strong><code>setuptools</code></strong> adalah library yang didesain untuk memfasilitasi pemaketan proyek python dengan memberikan beberapa hal yang dibutuhkan untuk membuat <em>library</em> standar pada umumnya.</p>
+<pre><code>pip install setuptools
+</code></pre></li>
+<li>
+<p><strong><code>wheel</code></strong>  adalah <em>built-in-package</em>, yang digunakan agar library tidak mengkompilasi ulang perangkat lunak selama setiap penginstalan</p>
+<pre><code>pip install wheel
+</code></pre></li>
+<li>
+<p><strong><code>twine</code></strong> adalah utilitas untuk mempublish <em>package</em> pada <a href="https://pypi.org"
+    
+     target="_blank" rel="noreferrer" >PyPI</a></p>
+<pre><code>pip install twine
+</code></pre></li>
+<li>
+<p>Kalian bisa menggunakan library <code>pytest</code> dan <code>pytest-runner</code> untuk nanti kita gunakan sebagai tester apakah kode pada library kita berjalan dengan baik atau tidak.</p>
+<pre><code>pip install pytest
+</code></pre><pre><code>pip install pytest-runner
+</code></pre></li>
+</ul>
+<br>
+<h2 id="langkah-4--buat-struktur-folder">Langkah 4 : Buat Struktur Folder</h2>
+<hr>
+<p>Buka folder direktori proyek yang kalian buat tadi, untuk nantinya kita tambahkan beberapa file dan folder. Kalian bisa menggunakan editor atau membuatnya secara manual.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-buat-library-03.png" alt="&amp;ldquo;Buka Folder Pakai Visual Studio Code&amp;rdquo;" title="Buka Folder Pakai Visual Studio Code" >
+    <figcaption>Buka Folder Pakai Visual Studio Code</figcaption>
+  </figure>
+
+
+</p>
+<p>Anbi disini bakal buat pakai <strong>visual studio code</strong>. Mari kita buat file dan folder yang dibutuhkan untuk :</p>
+<ol>
+<li>
+<p>Buat file kosong dengan nama <code>setup.py</code>. Ini adalah <strong>file penting</strong> ketika membuat sebuah <em>library</em> python.</p>
+</li>
+<li>
+<p>Buat lagi file kosong dengan nama <code>README.md</code>. File ini nanti digunakan untuk mendeskripsikan tentang <em>library</em> yang kamu buat.</p>
+</li>
+<li>
+<p>Buat folder kosong dan beri nama <code>anbi_lib</code> atau terserah kalian. Intinya nama ini yang akan dipanggil saat menginstall menggunakan <a href="https://anbidev.com/python-pip"
+    
+     target="_blank" rel="noreferrer" >PIP</a>.</p>
+<blockquote>
+<p>Jika kalian ingin publish library kalian ke PIP, pastikan nama tersebut <strong>unik</strong> atau belum ada di <a href="https://pypi.org/"
+    
+     target="_blank" rel="noreferrer" >https://pypi.org/</a>.</p>
+</blockquote>
+</li>
+<li>
+<p>Didalam folder <code>anbi_lib</code> buat sebuah file <em>constructor</em> (<code>__init__.py</code>) agar ia diperlakukan <a href="https://anbidev.com/python-modul-pakcage-library.md"
+    
+     target="_blank" rel="noreferrer" >sebagai package</a>, dikosongin aja gapapa.</p>
+<blockquote>
+<p>Pada dasarnya, folder yang memiliki file <em>constructor</em> (<code>__init___.py</code>) akan ikut di <strong><em>build</em></strong> kedalam library.</p>
+</blockquote>
+</li>
+<li>
+<p>Pada folder yang sama (<code>anbi_lib</code>), kita buat file <code>fungsiku.py</code>.</p>
+</li>
+<li>
+<p>Dan terakhir, buat sebuah folder <code>test</code> pada folder <em>root</em>. Didalamnya, kita buat juga file <em>constructor</em> (<code>__init__.py</code>) dan file kosong <code>test_fungsi.py</code>.</p>
+</li>
+</ol>
+<p>Yep, harusnya struktur folder kalian akan seperti ini :</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-buat-library-05.png" alt="&amp;ldquo;Struktur Folder anbi-library&amp;rdquo;" title="Struktur Folder anbi-library" >
+    <figcaption>Struktur Folder anbi-library</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="langkah-5--mulai-mengisi-librarymu">Langkah 5 : Mulai Mengisi Librarymu!</h2>
+<hr>
+<p>Sekarang coba kita masukkan beberapa fungsi kedalam <em>library</em> kita. Kalian bisa mulai menulisnya pada file <code>fungsiku.py</code>.</p>
+<p>Mari kita buat fungsi untuk menghitung berapa jarak antara 2 titik longitude dan latitude.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># fungsiku.py</span>
+<span style="color:#f92672">import</span> math
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getDistance</span>(lat1, lon1, lat2, lon2) <span style="color:#f92672">-&gt;</span> float:
+   <span style="color:#75715e"># radius bumi</span>
+   R <span style="color:#f92672">=</span> <span style="color:#ae81ff">6373.0</span>
+
+   <span style="color:#75715e"># konversi dari derajat ke radian</span>
+   lat1, lon1 <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>radians(lat1), math<span style="color:#f92672">.</span>radians(lon1)
+   lat2, lon2 <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>radians(lat2), math<span style="color:#f92672">.</span>radians(lon2)
+
+   <span style="color:#75715e"># perubahan koordinat</span>
+   dlon <span style="color:#f92672">=</span> lon2 <span style="color:#f92672">-</span> lon1
+   dlat <span style="color:#f92672">=</span> lat2 <span style="color:#f92672">-</span> lat1
+
+   <span style="color:#75715e"># formula haversine</span>
+   a <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>sin(dlat <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> math<span style="color:#f92672">.</span>cos(lat1) <span style="color:#f92672">*</span> math<span style="color:#f92672">.</span>cos(lat2) <span style="color:#f92672">*</span> math<span style="color:#f92672">.</span>sin(dlon <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>
+   c <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> math<span style="color:#f92672">.</span>atan2(math<span style="color:#f92672">.</span>sqrt(a), math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> a))
+
+   distance <span style="color:#f92672">=</span> R <span style="color:#f92672">*</span> c
+
+   <span style="color:#66d9ef">return</span> distance
+</code></pre></div><p>Setiap kali kalian selesai menulis sebuah kode program, sangat anbi sarankan untuk mengetest kodenya terlebih dahulu.</p>
+<p>Mari kita buat test kecil - kecilan untuk fungsi yang kita buat tadi. Salin kode dibawah kedalam file <code>test_fungsi.py</code> :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> anbi_lib <span style="color:#f92672">import</span> fungsiku
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">testFunction</span>():
+   <span style="color:#66d9ef">assert</span> fungsiku<span style="color:#f92672">.</span>getDistance(<span style="color:#ae81ff">52.2296756</span>, <span style="color:#ae81ff">21.0122287</span>, <span style="color:#ae81ff">52.406374</span>, <span style="color:#ae81ff">16.9251681</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">278.54558935106695</span>
+</code></pre></div><br>
+<h2 id="langkah-6--konfigurasi-setuppy">Langkah 6 : Konfigurasi Setup.py!</h2>
+<hr>
+<p>Selanjutnya kita akan mengkonfigurasi file <code>setup.py</code> sebelum membuild <em>library</em> kita. File <code>setup.py</code> biasanya diisi seperti ini :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> setuptools <span style="color:#f92672">import</span> find_packages, setup
+
+setup(
+    name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;anbi_lib&#39;</span>,
+    packages<span style="color:#f92672">=</span>find_packages(),
+    version<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0.1.0&#39;</span>,
+    description<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Test buat library python&#39;</span>,
+    author<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;alifianadexe&#39;</span>,
+    license<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;MIT&#39;</span>,
+)
+</code></pre></div><p>Untuk isi variabel <code>name</code> kalian bisa isi sesuka kalian, tapi untuk memudahkan kita, samakan saja dengan nama folder <em>package</em> kita.</p>
+<br>
+<h3 id="setting-package-yang-dibutuhkan-untuk-librarymu">Setting package yang dibutuhkan untuk librarymu</h3>
+<p>Pada variabel <code>package</code> kalian dapat mengatur package mana saja yang mau digunakan pakai fungsi <code>find_package()</code>. Kalian <code>include</code> suatu package atau <code>exclude</code> paket yang tidak kalian butuhkan.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> setuptools <span style="color:#f92672">import</span> find_packages, setup
+
+setup(
+   name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;anbi_lib&#39;</span>,
+   packages<span style="color:#f92672">=</span>find_packages(includes<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;anbi_lib&#39;</span>]),
+   version<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0.1.0&#39;</span>,
+   description<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Test buat library python&#39;</span>,
+   author<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;alifianadexe&#39;</span>,
+   license<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;MIT&#39;</span>,
+)
+</code></pre></div><p>Pada kode diatas, kita memasukkan package <strong>namapaket</strong> yang tadi kita buat pada parameter <code>include</code>. Pada dasarnya <code>find_packages()</code> bisa dikosongi tanpa harus memasukkan parameter apa - apa, tapi <em>package</em> yang tidak kita inginkan, juga akan masuk kedalam <em>library</em> kita (<em><strong>contoh</strong></em> : <em>package</em> <code>test</code>).</p>
+<br>
+<h3 id="setting-library-tambahan-untuk-librarymu">Setting library tambahan untuk librarymu</h3>
+<p>Jika kalian sering menginstall <em>library</em> dengan pip, biasanya dia tidak hanya menginstall satu <em>library</em> saja, bahkan bisa 3 sampai 4 <em>library</em>. Kenapa?</p>
+<p>Ketika kita membuat sebuah program, tidak jarang juga kita perlu menggunakan <em>library</em> bantuan. Sama saat kita membuat sebuah <em>library</em>, kadang untuk melakukan sesuatu yang mungkin membutuhkan effort lebih, kita lebih suka untuk menggunakan bantuan dari <em>library</em> lain agar lebih efisien.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> setuptools <span style="color:#f92672">import</span> find_packages, setup
+
+setup(
+   name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;anbi_lib&#39;</span>,
+   packages<span style="color:#f92672">=</span>find_packages(includes<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;anbi_lib&#39;</span>]),
+   version<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0.1.0&#39;</span>,
+   description<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Test buat library python&#39;</span>,
+   author<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;alifianadexe&#39;</span>,
+   license<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;MIT&#39;</span>,
+   install_requires<span style="color:#f92672">=</span>[]
+)
+</code></pre></div><p>Pada kode diatas, terdapat parameter dengan nama <code>install_requires</code>, disitulah kita memasukkan daftar <em>library</em> bantuan yang kita gunakan untuk membuat <em>library</em> ini. Karena kita menggunakan <em>library</em> <code>math</code> yang sudah ada pada <em>standard library python</em>, kita tidak perlu memasukkan ke dalam daftar.</p>
+<br>
+<h3 id="test-library">Test library</h3>
+<p>Apakah kalian ingat jika kita menginstall, sebuah <em>library</em> untuk testing? Tentu <em>library</em> ini bukan untuk kita masukkan ke <code>install_requires</code>.</p>
+<p>Kita akan menggunakannya untuk mengetest apakah fungsi pada <em>library</em> kita akan berjalan dengan baik atau tidak, dengan beberapa &ldquo;kasus&rdquo; yang kita sediakan pada folder <em>test</em>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> setuptools <span style="color:#f92672">import</span> find_packages, setup
+
+setup(
+   name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;anbi_lib&#39;</span>,
+   packages<span style="color:#f92672">=</span>find_packages(includes<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;anbi_lib&#39;</span>]),
+   version<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0.1.0&#39;</span>,
+   description<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Test buat library python&#39;</span>,
+   author<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;alifianadexe&#39;</span>,
+   license<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;MIT&#39;</span>,
+   install_requires<span style="color:#f92672">=</span>[],    
+   setup_requires<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;pytest-runner&#39;</span>],
+   tests_require<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;pytest&#39;</span>],
+   test_suite<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;test&#39;</span>,
+)
+</code></pre></div><p>Untuk mengetest library kita, gunakan perintah dibawah :</p>
+<pre><code>python setup.py pytest
+</code></pre><p>Kode tersebut akan mengeksekusi semua <em>&ldquo;test case&rdquo;</em> pada folder <strong>test</strong>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-buat-library-06.png" alt="&amp;ldquo;Fungsi Kita Berjalan Dengan Baik&amp;rdquo;" title="Fungsi Kita Berjalan Dengan Baik" >
+    <figcaption>Fungsi Kita Berjalan Dengan Baik</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="langkah-7--build-library">Langkah 7 : Build Library</h2>
+<hr>
+<p>Semua kebutuhan sudah kita penuhi, sekarang hanya tinggal sedikit lagi, <em>library</em> yang kita buat akan selesai. Sekarang kita kembali ke <em>command line</em>, dan arahkan ke <strong>root</strong> folder <em>library</em> yang kita buat, lalu command:</p>
+<pre><code>python setup.py bdist_wheel
+</code></pre><p><strong><em>Wheel</em></strong> akan membuat menggenerate sebuah folder <strong>dist</strong>, dan disitulah <em>library</em> yang kamu buat berada.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-buat-library-07.png" alt="&amp;ldquo;File whl Pada Folder Dist&amp;rdquo;" title="File whl Pada Folder Dist" >
+    <figcaption>File whl Pada Folder Dist</figcaption>
+  </figure>
+
+
+</p>
+<p>Dan kamu bisa menginstall library yang sudah kamu baut tadi dengan  perintah</p>
+<pre><code>pip install dist/nama_library_kalian.whl
+</code></pre><p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-buat-library-08.png" alt="&amp;ldquo;Library Kamu Berhasil Diinstall&amp;rdquo;" title="Library Kamu Berhasil Diinstall" >
+    <figcaption>Library Kamu Berhasil Diinstall</figcaption>
+  </figure>
+
+
+</p>
+<p>SELAMAT LIBRARY KAMU SUDAH TERINSTALL DAN SIAP DIGUNAKAN</p>
+<blockquote>
+<p>Catatan : Kamu juga bisa <strong>mempublish</strong> library mu kedalam PyPi Repository dan menginstall nya lewat PIP.</p>
+</blockquote>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Belajar Tentang Virtual Environtment Pada Python</title>
+            <link>https://anbidev.com/python-virtual-environtment/</link>
+            <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/python-virtual-environtment/</guid>
+            <description>Apa itu virtual environtment pada python? Virtual Environtment adalah tools untuk mengenkapsulasi serta manajemen package atau library pada proyek kalian.
+Bingung? iya sih sama, gampangnya gini, kita membuat ruang privasi kecil untuk proyek kita, agar nantinya library yang kita install hanya dapat digunakan untuk proyek tersebut.
+Kenapa Pakai Virtual Environtment? &amp;ldquo;Kan, python serta library bisa kita instal secara global kak? Supaya bisa digunakan untuk proyek mana saja&amp;rdquo;
+Jika pakai virtual environtment, kita dapat mencegah adanya issue dependency yang terjadi saat ada update atau perbedaan versi.</description>
+            <content type="html"><![CDATA[<p>Apa itu <em>virtual environtment</em> pada python? <strong>Virtual Environtment</strong> adalah <em>tools</em> untuk mengenkapsulasi serta manajemen <em>package</em> atau <em>library</em> pada proyek kalian.</p>
+<p>Bingung? iya sih sama, gampangnya gini, kita membuat ruang privasi kecil untuk proyek kita, agar nantinya <em>library</em> yang kita install hanya dapat digunakan untuk proyek tersebut.</p>
+<br>
+<h2 id="kenapa-pakai-virtual-environtment">Kenapa Pakai Virtual Environtment?</h2>
+<hr>
+<p><em>&ldquo;Kan, python serta library bisa kita instal secara global kak? Supaya bisa digunakan untuk proyek mana saja&rdquo;</em></p>
+<p>Jika pakai <em>virtual environtment</em>, kita dapat mencegah adanya <em>issue dependency</em> yang terjadi saat ada update atau perbedaan versi.</p>
+<p>Contoh, kita buat proyek <strong>aplikasi bakso</strong> pakai <code>python</code> versi <strong>3.8</strong> dan juga library <code>numpy</code> versi <strong>3.4</strong>.</p>
+<p>Ternyata kita diberi proyek lain (<strong>aplikasi mie ayam</strong>) dengan kebutuhan versi python yang lebih tinggi. Otomatis harus update <code>python</code> ke <strong>3.9</strong> dan <em>library</em> <code>numpy</code> juga butuh update kan.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-virtual-environtment-01.png" alt="&amp;ldquo;Tanpa Virtual Environtment&amp;rdquo;" title="Tanpa Virtual Environtment" >
+    <figcaption>Tanpa Virtual Environtment</figcaption>
+  </figure>
+
+
+</p>
+<p>Nah, setelah diupdate ternyata di <strong>aplikasi bakso</strong> terdapat beberapa fungsi yang <strong>error</strong> karena <em>dependencies</em> nya banyak yang berubah karena kita update tadi.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-virtual-environtment-02.png" alt="&amp;ldquo;Tanpa Virtual Environtment&amp;rdquo;" title="Dengan Virtual Environtment" >
+    <figcaption>Dengan Virtual Environtment</figcaption>
+  </figure>
+
+
+</p>
+<p>Maka dari itu kita butuh <em>virtual environtment</em> agar <strong>aplikasi bakso</strong> dapat berjalan dengan versi yang ia butuhkan.</p>
+<p>Dengan <em>virtual environtment</em>, kita juga bisa menginstall kumpulan <em>library</em> yang kita butuhkan untuk proyek aplikasi, tanpa harus mengganggu proyek aplikasi yang lain. Seperti contoh dibawah ini.</p>
+<ul>
+<li>
+<p>library pada virtual environtment untuk proyek <strong>aplikasi makan bakso</strong>.</p>
+<ul>
+<li>python 3.8</li>
+<li>numpy versi 3.4</li>
+<li>opencv versi 3.3</li>
+<li>num2word versi 1.1.</li>
+</ul>
+</li>
+<li>
+<p>library pada virtual environtment untuk proyek <strong>aplikasi makan mie ayam</strong>.</p>
+<ul>
+<li>python 3.9</li>
+<li>numpy versi 3.5</li>
+<li>keras versi 4.1</li>
+<li>tensorflow versi 4</li>
+</ul>
+</li>
+</ul>
+<p>Nah, gimana udah ada bayangan? itulah kenapa anbi sarankan buat <em>virtual environtment</em> dalam memulai sebuah proyek aplikasi.</p>
+<br>
+<h2 id="installasi-virtual-environtment">Installasi Virtual Environtment</h2>
+<hr>
+<blockquote>
+<p><strong>Penting</strong> : Jika kalian menggunakan <strong>python 3.3</strong> atau <strong>yang lebih baru</strong>, modul virtual environtment (<code>venv</code>) sudah otomatis terinstall pada python standard library, sehingga kalian tidak perlu menginstall lagi.</p>
+</blockquote>
+<p>Untuk yang belum punya <em>library</em>-nya, mari sekarang kita mulai installasi virtual environtment. Gampang kok installasinya, cuman buka <em>command prompt</em> atau <em>terminal</em> kalian lalu <a href="https://anbidev.com/python-pip"
+    
+     target="_blank" rel="noreferrer" >install pakai PIP</a>.</p>
+<p>Untuk kalian yang pakai <strong>Windows</strong> :</p>
+<pre><code>py -m pip install --user virtualenv
+</code></pre><p>Untuk kalian yang pakai <strong>MacOS</strong> dan <strong>Linux</strong> :</p>
+<pre><code>python3 -m pip install --user virtualenv
+</code></pre><br>
+<h2 id="membuat-virtual-environtment">Membuat Virtual Environtment</h2>
+<hr>
+<p>Cara membuat <em>virtual environment</em> sangatlah mudah, pertama pilih folder aplikasi yang ingin kita buat <em>virtual environtment</em>. Lalu, buka <strong>terminal</strong> atau cmd dan arahkan ke folder yang tersebut,</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-virtual-environtment-03.png" alt="&amp;ldquo;Contoh Proyek&amp;rdquo;" title="Contoh Lokasi Proyekku" >
+    <figcaption>Contoh Lokasi Proyekku</figcaption>
+  </figure>
+
+
+</p>
+<p>Lalu untuk commandnya</p>
+<p>Untuk kalian yang pakai <strong>Windows</strong> :</p>
+<pre><code>py -m venv ini-env
+</code></pre><p>Untuk kalian yang pakai <strong>MacOS</strong> dan <strong>Linux</strong> :</p>
+<pre><code>python3 -m venv ini-env
+</code></pre><ul>
+<li><code>venv</code> adalah <em>command</em> untuk membuat <em>virtual environtment</em></li>
+<li><code>ini-env</code> adalah nama <em>virtual environtment</em></li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-virtual-environtment-04.png" alt="&amp;ldquo;Folder Virtual Environtment!&amp;quot;" title="Folder Virtual Environtment!" >
+    <figcaption>Folder Virtual Environtment!</figcaption>
+  </figure>
+
+
+</p>
+<p>Nah, jika kita lihat folder dengan nama <code>ini-env</code> akan dibuat secara otomatis. Folder <code>ini-env</code> inilah yang nantinya akan menampung <em>library - library</em> yang kita install.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-virtual-environtment-05.png" alt="&amp;ldquo;Isi Folder ini-env&amp;rdquo;" title="Isi Folder ini-env" >
+    <figcaption>Isi Folder ini-env</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="menggunakan-virtual-environtment">Menggunakan Virtual Environtment</h2>
+<hr>
+<p>Jika sudah sukses membuat <em>virtual environtment</em> sekarang saatnya untuk menggunakannya. Caranya mengaktifkan <em>virtual environtment</em> seperti ini :</p>
+<ul>
+<li>
+<p>Buka <strong>terminal</strong> atau <strong>cmd</strong>, lalu arahkan ke folder aplikasi kita.</p>
+</li>
+<li>
+<p>Ketik perintah dibawah :</p>
+<ul>
+<li>Jika pakai <strong>Windows</strong>
+<pre><code>.\ini-env\Scripts\activate
+</code></pre></li>
+<li>Jika pakai <strong>Linux</strong> atau <strong>MacOS</strong>
+<pre><code>source ini-env/bin/activate
+</code></pre></li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-virtual-environtment-06.gif" alt="&amp;ldquo;Here you go!&amp;quot;" title="Here you go!" >
+    <figcaption>Here you go!</figcaption>
+  </figure>
+
+
+</p>
+<blockquote>
+<p><code>ini-env</code> adalah nama environtment yang kita buat tadi</p>
+</blockquote>
+</li>
+</ul>
+<p>Jika <em>session</em> kalian udah ada kayak gini :</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-virtual-environtment-07.png" alt="&amp;ldquo;Selamat anda berhasil masuk di Virtual Environtment&amp;rdquo;" title="Selamat anda berhasil masuk di Virtual Environtment" >
+    <figcaption>Selamat anda berhasil masuk di Virtual Environtment</figcaption>
+  </figure>
+
+
+</p>
+<p>Berarti tandanya kalian sudah berhasil mengaktifkan ruang virtual kalian. Untuk mengkonfirmasi kalian bisa melihat letak python yang digunakan saat ini :</p>
+<ul>
+<li>
+<p>coba cek pakai <strong>windows</strong> :</p>
+<pre><code>where python
+</code></pre></li>
+<li>
+<p>coba cek pakai <strong>linux</strong> dan <strong>macOS</strong> :</p>
+<pre><code>which python
+</code></pre><br>
+</li>
+</ul>
+<pre><code>D:\ExperimentCode\python\virtual-project\ini-env\Scripts\python.exe
+</code></pre><p>Nah, python yang kita gunakan pada cmd saat ini adalah python yang berada pada direktori <em>virtual environtment</em>.</p>
+<p>Sehingga kalian dapat menginstall <em>library</em> dan package apa saja tanpa mengganggu daftar <em>library</em> pada python global.</p>
+<center> . . . </center>
+<p>Jika ingin keluar dari virtual environtment sangatlah mudah. Kalian bisa tutup terminal atau cmd kalian, atau menulis <em>command script</em> dibawah :</p>
+<pre><code>deactivate
+</code></pre><br>
+<h2 id="virtual-vs-global-environtment">Virtual vs Global Environtment</h2>
+<hr>
+<p>Mau kita bandingkan? ayo! Sekarang kita bandingkan aplikasi kita yang berada pada virtual env dan global env.</p>
+<p>Disini anbi bakal buat sebuah proyek aplikasi baru yang menggunakan framework <strong>Django</strong>.</p>
+<p>Nah, karena Anbi gamau proyek anbi nanti <strong>error</strong> gara - gara perbedaan versi <em>library</em> atau <em>dependencies</em> oleh proyek lain. Maka anbi putuskan buat <em>virtual environtment</em> saat menginstall Django.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-virtual-environtment-08.png" alt="&amp;ldquo;Buat venv dan install django&amp;rdquo;" title="Buat venv dan install django" >
+    <figcaption>Buat venv dan install django</figcaption>
+  </figure>
+
+
+</p>
+<p>Nah, sekarang kita coba lihat <em>list package library</em> yang terinstall pada <em>virtual environtment</em> ini menggunakan <a href="https://anbidev.com/python-pip"
+    
+     target="_blank" rel="noreferrer" >pip list</a>:</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-virtual-environtment-09.png" alt="&amp;ldquo;List Library Pada Virtual Environtment&amp;rdquo;" title="List Library Pada Virtual Environtment" >
+    <figcaption>List Library Pada Virtual Environtment</figcaption>
+  </figure>
+
+
+</p>
+<p>Django berhasil terinstall di <em>virtual environtment</em> yang kita buat tadi. Dan kita juga bisa menggunakan beberapa command line dari Django seperti <code>django-admin help</code>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-virtual-environtment-11.png" alt="&amp;ldquo;Hasil Command Line Django&amp;rdquo;" title="Hasil Command Line Django" >
+    <figcaption>Hasil Command Line Django</figcaption>
+  </figure>
+
+
+</p>
+<p>Sekarang mari kita keluar dari <em>virtual environtment</em> dan pindah ke <em><strong>global environtment</strong></em>. Dan coba kita ketik perintah yang sama <code>django-admin help</code>.</p>
+<pre><code>D:\ExperimentCode\python\djangoku&gt;django-admin help
+'django-admin' is not recognized as an internal or external command,
+operable program or batch file.
+</code></pre><p>Lah, kenapa tidak dikenali didalam <em><strong>global environtment</strong></em>? Mari kita lihat <em>list package library</em> yang terinstall pada <em>global environtment</em>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-virtual-environtment-12.png" alt="&amp;ldquo;List Library Pada Global Environtment&amp;rdquo;" title="List Library Pada Global Environtment" >
+    <figcaption>List Library Pada Global Environtment</figcaption>
+  </figure>
+
+
+</p>
+<p>Ternyata tidak ada satu pun <em>package library</em> yang bernama <strong>django</strong>, yang berarti kita <strong>tidak bisa</strong> menggunakan command line dari django.</p>
+<p>Dari contoh diatas dapat disimpulkan, menggunakan <em>virtual environtment</em> memungkinkan kita untuk mengisolasi suatu paket library hanya untuk aplikasi yang sedang kita buat.</p>
+<p>Sehingga aplikasi kita tidak akan campur tangan ke aplikasi lain dan sebaliknya.</p>
+<blockquote>
+<p>Ibarat virtual environtment adalah <strong>rumah</strong> dan aplikasi adalah <strong>pemilik rumah</strong> tersebut.</p>
+</blockquote>
+<p>Kita tidak mau kan tetangga kita tiba - tiba mengubah furnitur rumah kita sesuai selera mereka.</p>
+<center> . . . </center>
+<p>Yaudah gitu aja, nanti lanjut lagi.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Perbedaan Modul, Package dan Library Pada Python</title>
+            <link>https://anbidev.com/python-modul-package-library/</link>
+            <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/python-modul-package-library/</guid>
+            <description>&amp;ldquo;Kak, apa sih perbedaan antara modul, package dan library pada python?&amp;quot; Itu adalah pertanyaan yang sering saya terima dari beberapa teman kuliah saya. Mereka masih bingung untuk membedakan antara modul, variabel dan fungsi.
+Untuk kali ini anbi ingin membahas secara menyeluruh tentang perbedaan yang signifikan antara ketiga hal ini.
+ TL;DR
+ Modul adalah sebuah file yang berisikan sekumpulan kode fungsi dan global variabel yang disimpan dalam ekstensi .py.</description>
+            <content type="html"><![CDATA[<p><em>&ldquo;Kak, apa sih perbedaan antara modul, package dan library pada python?&quot;</em> Itu adalah pertanyaan yang sering saya terima dari beberapa teman kuliah saya. Mereka masih bingung untuk membedakan antara <a href="https://anbidev.com/python-modul"
+    
+     target="_blank" rel="noreferrer" >modul</a>, <a href="https://anbidev.com/python-variabel"
+    
+     target="_blank" rel="noreferrer" >variabel</a> dan <a href="https://anbidev.com/python-function"
+    
+     target="_blank" rel="noreferrer" >fungsi</a>.</p>
+<p>Untuk kali ini anbi ingin membahas secara menyeluruh tentang perbedaan yang signifikan antara ketiga hal ini.</p>
+<br>
+<blockquote>
+<p><span style="font-size:25px;font-weight:1000" ><i>TL;DR</i></span></p>
+</blockquote>
+<hr>
+<p><strong>Modul</strong> adalah sebuah file yang berisikan sekumpulan kode fungsi dan global variabel yang disimpan dalam ekstensi <code>.py</code>.</p>
+<p>Sedangkan <strong>Package</strong> adalah sekumpulan <strong>modul</strong> yang memiliki <em>constructur</em> <code>_init_</code> dalam satu folder.</p>
+<p>Lalu <strong>Library</strong> adalah gabungan dari <strong>Package</strong> dan <strong>Modul</strong> yang memiliki fungsionalitas yang saling berkaitan dengan tujuan mempermudah kita dalam membuat suatu program.</p>
+<p>Jika diibaratkan bagian tubuh :</p>
+<ul>
+<li><em>Modul</em> itu <strong>Jari</strong></li>
+<li><em>Package</em> itu <strong>Tangan</strong></li>
+<li><em>Library</em> itu <strong>Kedua Lengan Tangan</strong></li>
+</ul>
+<hr>
+<br>
+<h2 id="modul">Modul</h2>
+<hr>
+<p>Apa itu <a href="https://anbidev.com/python-modul"
+    
+     target="_blank" rel="noreferrer" >modul</a>? <strong>Modul</strong> adalah sebuah file yang berisikan sekumpulan kode fungsi, class dan variabel yang disimpan dalam satu file berekstensi <code>.py</code> dan dapat dieksekusi oleh <em>interpreter</em> python.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-modul-package-library-01.jpg" alt="&amp;ldquo;Modul Knight!&amp;quot;" title="Modul Knight!" >
+    <figcaption>Modul Knight!</figcaption>
+  </figure>
+
+
+</p>
+<p>Coba kita buat modul sederhana bernama <strong><code>kesatria.py</code></strong>. Lalu, Kita isi modul dengan fungsi <code>serangMonster()</code> :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">serangMonster</span>():
+  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;kesatria Menyerang Monster&#34;</span>)
+</code></pre></div><p>Sebuah <a href="https://anbidev.com/python-modul"
+    
+     target="_blank" rel="noreferrer" >modul</a> biasanya digunakan sebagai referensi untuk modul lain menggunakan <em>keyword</em> <code>import</code>. Sehingga modul bersifat <strong><em>reuseable</em></strong> atau istilah lainnya dapat digunakan modul lain dimana saja berulang kali.</p>
+<p>Modul <code>kesatria.py</code> yang kita buat tadi memiliki fungsi <code>serangMonster()</code>. Sekarang, kita coba <strong>import</strong> modul <code>kesatria.py</code> kedalam modul baru bernama <code>raja.py</code> agar modul raja dapat menggunakan fungsi <code>serangMonster()</code>.</p>
+<p>Didalam modul <code>raja.py</code> kita panggil modul kesatria menggunakan keyword <code>import</code> :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> kesatria
+
+kesatria<span style="color:#f92672">.</span>serangMonster()
+</code></pre></div><p>Dapat dilihat pada blok kode diatas, fungsi <code>serangMonster()</code> dapat digunakan oleh raja walaupun tidak didefinisikan didalam modul <code>raja.py</code>.</p>
+<br>
+<h2 id="package">Package</h2>
+<hr>
+<p>Apa itu Package? <strong>Package</strong> adalah sekumpulan modul python yang berada dalam sebuah folder serta memiliki satu modul <em>constructor</em> (<code>__init__.py</code>).</p>
+<p>Buat apa modul <em>constructor</em> (<code>__init__.py</code>) pada sebuah package? File <em>constructor</em> berfungsi untuk memberi tahu <em>python interpreter</em> bahwa folder tersebut adalah sebuah package.</p>
+<p>Jadi, setiap direktori atau folder yang berisi modul constructor <code>__init__.py</code> akan diperilakukan sebagai pakcage.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-modul-package-library-02.jpg" alt="&amp;ldquo;Perkenalkan Kita Package Army!&amp;quot;" title="Perkenalkan Kita Package Army!" >
+    <figcaption>Perkenalkan Kita Package Army!</figcaption>
+  </figure>
+
+
+</p>
+<p>Didalam file <code>__init__.py</code> isinya seperti apa? biasanya cuma <strong>file kosong</strong> tanpa kode.</p>
+<p>Nah,contoh sebuah <em>package</em> kayak gimana? nih bisa liat gambar dibawah.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-modul-package-library-03.png" alt="&amp;ldquo;Package !&amp;quot;" title="Perkenalkan Kita Package Army!" >
+    <figcaption>Perkenalkan Kita Package Army!</figcaption>
+  </figure>
+
+
+</p>
+<p>Gambar diatas adalah package <strong>royalguard</strong>, nama package sesuai dengan nama folder atau direktori. Jadi, didalam package <strong>royalguard</strong> memiliki 4 file.</p>
+<p>File <em>constructor</em> (<code>__init__.py</code>) untuk untuk memberitahu <em>python interpreter</em> bahwa folder ini adalah package dan 3 modul sisanya adalah isi dari package tersebut.</p>
+<br>
+<h2 id="library">Library</h2>
+<hr>
+<p>Apa itu <strong><em>Library</em></strong>? <em>Library</em> adalah gabungan dari sekumpulan <strong>package</strong> dan <strong>modul</strong> dengan fungsionalitas yang sama dengan tujuan untuk memudahkan kalian dalam membuat suatu aplikasi, tanpa harus menulis banyak kode.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/python-modul-package-library-04.jpg" alt="&amp;ldquo;Kita Semua Adalah Library!&amp;quot;" title="Kita Semua Adalah Library!" >
+    <figcaption>Kita Semua Adalah Library!</figcaption>
+  </figure>
+
+
+</p>
+<p>Library juga bersifat <em>reuseable</em> yang berarti bisa digunakan berkali - kali, dimana saja dan kapan saja. Contohnya <em>library</em> pada python seperti apa? Nih misal, <strong>10 <em>top library</em></strong> pada python :</p>
+<ul>
+<li>TensorFlow</li>
+<li>Scikit-Learn</li>
+<li>Numpy</li>
+<li>Keras</li>
+<li>PyTorch</li>
+<li>LightGBM</li>
+<li>Eli5</li>
+<li>SciPy</li>
+<li>Theano</li>
+<li>Pandas</li>
+</ul>
+<p>Bagaimana cara menggunakan library python? Misal kita ingin pakai <code>pandas</code>, library untuk mengolah data. Kita perlu <a href="https://anbidev.com/python-pip"
+    
+     target="_blank" rel="noreferrer" >menginstall library ini dengan PIP</a> terlebih dahulu.</p>
+<pre><code class="language-pip" data-lang="pip">pip install pandas
+</code></pre><p>Setelah installasi di PIP selesai baru kita <code>import</code> library tersebut ke kode aplikasi kita.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+
+dataku <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;namafile.csv&#34;</span>)
+</code></pre></div><br>
+<h2 id="kesimpulan">Kesimpulan</h2>
+<hr>
+<p>Oke, langsung keintinya, berdasarakan fungsi - fungsi seperti yang salah jelaskan diatas, maka ibarat aplikasi itu adalah sebuah tubuh.</p>
+<p>Maka <strong>modul</strong> diibaratkan sebagai jari tangan, sedangkan <strong>package</strong> adalah pergelangan tangan dan <strong>library</strong> adalah kedua lengan tangan dan kedua pasang kaki.</p>
+<blockquote>
+<p><strong>Important</strong> : library itu sudah pasti modul dan package, tapi package dan modul belum tentu library.</p>
+</blockquote>
+<center> . . . </center>
+<p>Nah gitu aja pembahasan dari ketiga istilah diatas. Gimana menarik? jika menarik nanti anbi buatin lagi versi - versi diskusi yang lebih berat haha :)</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

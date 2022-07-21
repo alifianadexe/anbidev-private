@@ -1,0 +1,81 @@
+---
+label: Blog Template
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: description
+  label: description
+- type: list
+  name: type
+  label: type
+- type: text
+  name: status
+  label: status
+- type: list
+  name: tags
+  label: tags
+- type: datetime
+  name: date
+  label: date
+- type: datetime
+  name: dateUpdate
+  label: dateUpdate
+- type: list
+  name: categories
+  label: categories
+- type: text
+  name: series
+  label: series
+- type: text
+  name: url
+  label: url
+- type: text
+  name: authors
+  label: authors
+- name: cover
+  type: file
+  config:
+    maxSize: 64
+  label: cover
+  description: To Upload Cover Image
+- type: field_group
+  name: author
+  label: author
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: file
+    name: images
+    label: images
+pages:
+- content/blogs/serapan/design-pattern-atau-architecture-pattern.md
+- content/blogs/serapan/design-pattern-factory.md
+- content/blogs/serapan/design-pattern-singleton.md
+- content/blogs/serapan/pointer.md
+- content/blogs/serapan/structure-data-double-linked-list-sorting.md
+- content/blogs/wawasan/bilangan-floating-point.md
+- content/blogs/wawasan/dasar-dasar-logika.md
+- content/blogs/wawasan/domain-yang-beredar.md
+- content/blogs/wawasan/gerbang-logika-dasar.md
+- content/blogs/wawasan/http-response-status-codes.md
+- content/blogs/wawasan/internet-lemot.md
+- content/blogs/wawasan/java-vs-kotlin.md
+- content/blogs/wawasan/kenalan-dengan-4g-lte.md
+- content/blogs/wawasan/konkurensi.md
+- content/blogs/wawasan/konsep-bahasa.md
+- content/blogs/wawasan/local-disk-a-b-c.md
+- content/blogs/wawasan/mbps-mbps.md
+- content/blogs/wawasan/mengenal-ddos-attack.md
+- content/blogs/wawasan/pengertian-domain.md
+- content/blogs/wawasan/penjadwalan-proses.md
+- content/blogs/wawasan/perbedaan-http-dan-https.md
+- content/blogs/wawasan/rumahku-ada-ac-nya.md
+- content/blogs/wawasan/seperti-apakah-itu-devops.md
+- content/blogs/wawasan/teknologi-masa-depan-metaverse.md
+- content/blogs/wawasan/teori-otomata-dan-bahasa.md
+- content/tutorials/c/tipe-data-c.md
+- content/tutorials/c/tipe-data-pada-c.md

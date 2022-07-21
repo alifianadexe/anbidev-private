@@ -1,0 +1,86 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>komputer on AnbiDev</title>
+        <link>https://anbidev.com/tags/komputer/</link>
+        <description>Recent content in komputer on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Wed, 05 Feb 2020 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/komputer/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Pengertian dan Perbedaan CPU dan PC</title>
+            <link>https://anbidev.com/pengertian-cpu/</link>
+            <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/pengertian-cpu/</guid>
+            <description>CPU tuh apa sih kak? CPU itu kan komputer yakan? Jelasin dong kak CPU tuh apa? im still blind about that :(
+Apa itu CPU dan bedanya sama PC ? CPU itu adalah otak (brain) dari PC, jadi ibarat manusia ketika bekerja/ berpikir yang mengendalikan itu otak. kebanyakan orang salah arti menganggap CPU itu sama dengan PC. padahal jelas beda dilihat dari kepanjangannya CPU (Central Processing Unit) dan PC (Personal Computer) atau Komputer.</description>
+            <content type="html"><![CDATA[<p>CPU tuh apa sih kak? CPU itu kan komputer yakan? Jelasin dong kak CPU tuh apa? im still blind about that :(</p>
+<br>
+<h2 id="apa-itu-cpu-dan-bedanya-sama-pc-">Apa itu CPU dan bedanya sama PC ?</h2>
+<hr>
+<p>CPU itu adalah <strong>otak</strong> <em>(brain)</em> dari PC, jadi ibarat manusia ketika bekerja/ berpikir yang mengendalikan itu otak. kebanyakan orang salah arti menganggap CPU itu sama dengan PC. padahal jelas beda dilihat dari kepanjangannya CPU (<em>Central Processing Unit</em>) dan PC (<em>Personal Computer</em>) atau Komputer.</p>
+<p>Yuk baca pengertiannya dulu : )</p>
+<br>
+<h2 id="pc-personal-computer">PC (Personal Computer)</h2>
+<hr>
+<p>Sebelumnya kamu harus ngerti dulu apa itu Komputer. Istilah komputer ini diambil dari bahasa inggris ; <em>to compute</em> yang memiliki arti <strong>menghitung</strong>, sementara dalam bahasa latin; <em>computare</em> berarti menghitung atau mesin yang dapat diprogram. Komputer tidak bisa ngelakuin sesuatu kalau tidak ada sebuah program.</p>
+<p><strong><em>Charles Babbage</em></strong> seorang yang pertama kali mengemukakan gagasan mengenai Komputer yang dapat diprogram. Namun beberapa mesin yang dikembangkannya tidak selesai. Mesin tersebut dapat dilihat di Museum Sains, London. Tahun 1991, sebuah mesin dikembangkan dan berfungsi secara sempurna, sebagai bukti bahwa gagasan Charles Babbage dapat diimplementasikan.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/pengertian-cpu-001.jpg" alt="Struktur Personal Computer" title="Struktur Personal Computer" >
+    <figcaption>Struktur Personal Computer</figcaption>
+  </figure>
+
+
+</p>
+<p>Nah sedangkan definisi PC (Personal Computer) adalah seperangkat komputer yang digunakan oleh satu orang saja. Fungsi dari PC ini untuk mengolah data masukan dan menghasilkan keluaran berupa data atau informasi sesuai dengan keinginan user.</p>
+<p>Komputer tidak akan jalan jika tidak mempunyai komponen sebagai berikut :</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/pengertian-cpu-002.jpg" alt="Komponen Komputer" title="Komponen Komputer" >
+    <figcaption>Komponen Komputer</figcaption>
+  </figure>
+
+
+</p>
+<h3 id="hardware">Hardware</h3>
+<p>Hardware, adalah piranti/komponen dari sebuah komputer yang bisa dilihat dengan kasat mata dan diraba secara langsung. Jenis hardware :</p>
+<ul>
+<li><strong>Input Device</strong>, perangkat keras untuk memasukkan data berupa gambar, teks, video, dan audio. <br> <em>Contoh</em> : Keyboard, Mouse, Microphone, Scanner dan lainnya.<br><br></li>
+<li><strong>Process Device</strong>, perangkat keras untuk mengolah, memproses data dan informasi. <br> <em>Contoh</em>: CPU, VGA, RAM, dan lain-lain.<br><br></li>
+<li><strong>Output Device</strong>, berfungsi untuk menampung dan menghasilkan data di dalam komputer yang kemudian dikeluarkan oleh perangkat lain yang terhubung.<br> <em>Contoh</em>: Printer, Monitor, Proyektor dan lainnya.<br><br></li>
+<li><strong>Storage Unit</strong>, hardware yang dapat menyimpan data dan informasi. <br> <em>Contoh</em>: Harddisk, Flashdisk dan lainnya<br><br></li>
+<li><strong>Peripheral Device</strong>, perangkat tambahan berfungsi untuk membantu komputer dalam menjalankan perintah dari user. <br>_Contoh_: WebCam, Modem, dan lainnya.<br><br></li>
+</ul>
+<h3 id="software">Software</h3>
+<p>Software, sekumpulan data yang diformat,disimpan secara digital yang berisi instruksi yang menghubungkan antara hardware dan brainware yang mana dapat menghasilkan informasi yang diinginkan si user. Jenis Software :</p>
+<ul>
+<li><strong>Software Operating System (OS)</strong>, software di komputer berfungsi untuk mengkoordinir semua perangkat yang terhubung di sebuah komputer. <br>_Contoh_ : Linux, Windows, MacOS, FreeBSD.<br><br></li>
+<li><strong>BIOS</strong> , program dasar di komputer untuk mengidentifikasi perangkat hardware pada saat booting. <br>_Contoh_ : AwardBIOS, Phoenix BIOS, AMI BIOS.<br><br></li>
+<li><strong>Software Aplication System</strong>, software di komputer dibuat untuk menyelesaikan suatu pekerjaan tertentu. Software hanya dapat berjalan diatas sistem operasi.<br> <em>Contoh</em> : Ms. Excel, Ms. Word, Photoshop, Navicat, dan masih banyak yang lain)<br><br></li>
+<li><strong>Utility Program</strong>, software berfungsi sebagai pembantu sistem operasi dalam mengkoordinir sebuah sistem komputer.<br> <em>Contoh</em> : Driver, Antivirus.<br><br></li>
+<li><strong>Compiler</strong>, software untuk menerjemahkan bahasa pemrograman (High Level Language) kedalam bahasa mesin. <br>_Contoh_ : Visual C, Visual Basic, Delphi, Go, Python.<br><br></li>
+</ul>
+<h3 id="brainware">Brainware</h3>
+<p>Brainware, orang yang menggunakan/user.</p>
+<br>
+<h2 id="cpu">CPU</h2>
+<hr>
+<p><strong>CPU</strong> (<em>Central Processing Unit</em>), suatu komponen vital(<em>core</em>) yang membuat sebuah Komputer menjadi sebuah Komputer, tapi CPU bukan sebuah Komputer. Jadi si CPU ini adalah salah satu <strong><em>&lsquo;Unit&rsquo;</em></strong> atau <strong><em>&lsquo;Komponen&rsquo;</em></strong> di dalam sebuah PC (Komputer). dia punya fungsi untuk menerima suatu instruksi/perintah serta mengolah data-data.</p>
+<p>CPU sendiri dibuat dari banyak-miliaran transistor <em>microscopics</em> yang dimasukkan kedalam satu chip kecil di dalam komputer. Transistor ini memungkinkan untuk membuat operasi yang diperlukan untuk menjalankan suatu program.</p>
+<p>Proses CPU bekerja; dia mengambil sebuah instruksi dari program atau aplikasi lalu dilakukan operasi(<em>calculation</em>) . Proses ini ada tiga tahap : <em>Fetch</em>, <em>decode</em>, <em>execute</em> dan <em>store</em>.</p>
+<ul>
+<li><strong><em>Fetching</em></strong>, proses pengambilan sebuah data, yang kemudian disimpan didalam CPU.<br></li>
+<li><strong><em>Decode</em></strong>, penerjemahan atau translasi suatu program kedalam bahasa mesin.<br></li>
+<li><strong><em>Execute</em></strong>, eksekusi setiap program. CPU selalu melakukan operasi aritmatika / kalkulasi.<br></li>
+<li><strong><em>Store</em></strong>, penyimpanan sementara sebuah instruksi.<br></li>
+</ul>
+<p>Dulu, Prosessor hanya memiliki satu core. Makin hari semakin berkembangnya zaman, sebuah prosessor memiliki banyak core (<em>multiple cores</em>) sehingga bisa menjalankan beberapa instruksi secara bersamaan.</p>
+<p>Nah mungkin itu dia beberapa informasi yang dapat saya sampaikan untuk saat ini. Mohon maaf atas segala kesalahan dan kerandoman materi saya, jika ada sanggahan mangga untuk komen di bawah yah .Terima kasih :)</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

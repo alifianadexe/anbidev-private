@@ -1,0 +1,99 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>repo-of-the-week on AnbiDev</title>
+        <link>https://anbidev.com/categories/repo-of-the-week/</link>
+        <description>Recent content in repo-of-the-week on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Thu, 03 Sep 2020 17:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/categories/repo-of-the-week/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Menjadi Bot Sticker di Whatsapp</title>
+            <link>https://anbidev.com/menjadi-bot-sticker-di-whatsapp/</link>
+            <pubDate>Thu, 03 Sep 2020 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/menjadi-bot-sticker-di-whatsapp/</guid>
+            <description>Dalam repository of the week kali ini, kami akan membawakan sebuah repository milik Yoga Sakti, yakni imageToSticker.
+Repo satu ini akhir-akhir ini sering saya kunjungi karena beberapa teman minta dibuatkan stiker secara instan. Sebelum mencoba repo satu ini, pastikan kamu sudah memiliki:
+ Node.js, sebagai server untuk menjalankan bot Git, untuk clone ke repository  Instalasi Buka Terminal atau CMD, lalu Clone repository
+git clone https://github.com/YogaSakti/imageToSticker.git cd imageToSticker</description>
+            <content type="html"><![CDATA[<p>Dalam <em>repository of the week</em> kali ini, kami akan membawakan sebuah repository milik <a href="https://github.com/YogaSakti"
+     title="YogaSakti" 
+     target="_blank" rel="noreferrer" >Yoga Sakti</a>, yakni <a href="https://github.com/YogaSakti/imageToSticker"
+     title="imageToSticker" 
+     target="_blank" rel="noreferrer" >imageToSticker</a>.</p>
+<p>Repo satu ini akhir-akhir ini sering saya kunjungi karena beberapa teman minta dibuatkan stiker secara instan. Sebelum mencoba repo satu ini, pastikan kamu sudah memiliki:</p>
+<ol>
+<li><strong><a href="https://nodejs.org/en/"
+     title="Node JS" 
+     target="_blank" rel="noreferrer" >Node.js</a></strong>, sebagai server untuk menjalankan bot</li>
+<li><strong><a href="https://git-scm.com/"
+     title="Git" 
+     target="_blank" rel="noreferrer" >Git</a></strong>, untuk clone ke repository</li>
+</ol>
+<br>
+<h2 id="instalasi">Instalasi</h2>
+<hr>
+<p>Buka Terminal atau CMD, lalu Clone repository</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">git clone https://github.com/YogaSakti/imageToSticker.git
+<span style="color:#66d9ef">cd</span> imageToSticker
+</code></pre></div><br>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/wa-bot-1.png" alt="Cloning Repository" title="Cloning Repository" >
+    <figcaption>Cloning Repository</figcaption>
+  </figure>
+
+
+</p>
+<p>Install dependencies, kecepatan untuk menjalankan perintah ini bergantung pada internet</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">npm install
+</code></pre></div><br>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/wa-bot-2.png" alt="Install Dependencies" title="Install Dependencies" >
+    <figcaption>Install Dependencies</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="penggunaan">Penggunaan</h2>
+<hr>
+<p>Jalankan Bot dengan mengetikkan</p>
+<pre><code>npm start
+</code></pre><p>Kamu perlu menggunakan Whatsapp Web untuk mengautentikasi nomor WA yang ingin dijadikan Bot. Autentikasinya sendiri menggunakan QR Code.</p>
+<br>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/wa-bot-3.png" alt="QR Code yang muncul" title="QR Code yang muncul" >
+    <figcaption>QR Code yang muncul</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/wa-bot-4.png" alt="Server Berjalan" title="Server Berjalan" >
+    <figcaption>Server Berjalan</figcaption>
+  </figure>
+
+
+</p>
+<p>Setelah server berjalan, mintalah pada temanmu untuk mencoba. Bisa chat personal maupun chat didalam grub WA.</p>
+<br>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/wa-bot-5.jpg" alt="Percobaan Bot Sticker" title="Percobaan Bot Sticker" >
+    <figcaption>Percobaan Bot Sticker</figcaption>
+  </figure>
+
+
+</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

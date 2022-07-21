@@ -1,0 +1,226 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>admin on AnbiDev</title>
+        <link>https://anbidev.com/authors/admin/</link>
+        <description>Recent content in admin on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Tue, 01 Oct 2019 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Contoh Artikel</title>
+            <link>https://anbidev.com/contribute/contoh-artikel/</link>
+            <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/contribute/contoh-artikel/</guid>
+            <description>Sudut pandang menjadi programmer Content Dimulai Dari Sini
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</description>
+            <content type="html"><![CDATA[<h2 id="sudut-pandang-menjadi-programmer">Sudut pandang menjadi programmer</h2>
+<p>Content Dimulai Dari Sini</p>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<p>Ini contoh</p>
+<h1 id="header-1">Header 1</h1>
+<h2 id="header-2">Header 2</h2>
+<h3 id="header-3">Header 3</h3>
+<hr>
+<p>Ini contoh <em>Huruf italic</em></p>
+<p>Ini contoh ~Huruf Strike~</p>
+<p>Ini contoh <strong>Huruf Bold</strong></p>
+<p>Ini contoh <em><strong>Huruf Bold Miring</strong></em></p>
+<hr>
+<p>Ini contoh <code>Tag Code</code></p>
+<p>Ini contoh <a href="https://anbidev.com"
+    
+     target="_blank" rel="noreferrer" >Link</a></p>
+<p>Ini contoh <a href="https://anbidev.com"
+    
+     target="_blank" rel="noreferrer" >&lt;code&gt;Tag Link&lt;/code&gt;</a></p>
+<hr>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/logo.png" alt="Ini Title Gambar" title="Ini Deskripsi Gambar" >
+    <figcaption>Ini Deskripsi Gambar</figcaption>
+  </figure>
+
+
+</p>
+<blockquote>
+<p>&ldquo;Ini contoh quote&rdquo;</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span>&gt;
+    &lt;<span style="color:#f92672">h1</span>&gt;Ini Contoh Source Code&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div>]]></content>
+        </item>
+        
+        <item>
+            <title>Kontribusi Artikel yang Dibutuhkan AnbiDev</title>
+            <link>https://anbidev.com/contribute/contribution-needed/</link>
+            <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/contribute/contribution-needed/</guid>
+            <description>Apa sih yang AnbiDev butuhkan?
+Fundamental Programming  Kami membutuhkan banyak kontribusi didalam bahasa pemrogaman apapun secara fundamental dan seri pembuatan aplikasi sederhana.
+ Project yang Sekiranya Bermanfaat  Industri 4.0, sudah tidak asing dengan istilah mesin membantu pekerjaan manusia. Kecerdasaan buatan, aplikasi pembantuan dan monitoring sangat dibutuhkan oleh masyarakat secara umum. Bagi kamu yang memiliki project seperti itu, bisa kamu tuliskan cara pembuatannya secara sederhana.
+ Open-Source Operating System  Yang utama, Linux.</description>
+            <content type="html"><![CDATA[<p>Apa sih yang AnbiDev butuhkan?</p>
+<h3 id="fundamental-programming">Fundamental Programming</h3>
+<blockquote>
+<p>Kami membutuhkan banyak kontribusi didalam bahasa pemrogaman <code>apapun</code> secara fundamental dan seri pembuatan aplikasi sederhana.</p>
+</blockquote>
+<h3 id="project-yang-sekiranya-bermanfaat">Project yang Sekiranya Bermanfaat</h3>
+<blockquote>
+<p>Industri 4.0, sudah tidak asing dengan istilah <code>mesin membantu pekerjaan manusia</code>. Kecerdasaan buatan, aplikasi pembantuan dan monitoring sangat dibutuhkan oleh masyarakat secara umum. Bagi kamu yang memiliki project seperti itu, bisa kamu tuliskan cara pembuatannya secara sederhana.</p>
+</blockquote>
+<h3 id="open-source-operating-system">Open-Source Operating System</h3>
+<blockquote>
+<p>Yang utama, Linux. Linux erat hubungannya dengan istilah <code>free</code>, mengingat tingkat penggunaan software gratisan sangat tinggi di Negeri Kita Tercinta yang mendambakan kemerdekaan secara menyeluruh ini. Kontribusi artikel bertema Sistem Operasi berlogo hewan imut pinguin ini sangat diperlukan.</p>
+</blockquote>
+<h3 id="cloud-computing">Cloud-Computing</h3>
+<blockquote>
+<p>Tidak ada diantara kami yang menguasai materi ini secara penuh. Semua bantuan tentang Cloud-Computing sangat diperlukan.</p>
+</blockquote>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Cara Berkontribusi Artikel ke AnbiDev</title>
+            <link>https://anbidev.com/contribute/documentation/</link>
+            <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/contribute/documentation/</guid>
+            <description>Anda ingin berkontribusi ke AnbiDev? Begini caranya!
+![Kontribusi Ke AnbiDev](/post/contoh-artikel.jpg &amp;ldquo;Photo by &amp;ldquo;My Life Through A Lens&amp;rdquo; on Unsplash&amp;rdquo;)
+Perlu Diketahui Hal yang perlu anda ketahui , untuk membuat posting di dalam anbidev.
+  AnbiDev menggunakan framework Hugo. Sehingga bentuk mentah artikel pada anbidev bertipe Markdown(.md).
+  Mengetahui tata cara penulisan pada file Markdown , jika belum familiar dengan tata cara penulisan file Markdown dapat dilihat di tutorial berikut ini.</description>
+            <content type="html"><![CDATA[<p>Anda ingin berkontribusi ke AnbiDev? Begini caranya!</p>
+<p>![Kontribusi Ke AnbiDev](/post/contoh-artikel.jpg &ldquo;Photo by &ldquo;My Life Through A Lens&rdquo; on Unsplash&rdquo;)</p>
+<h1 id="perlu-diketahui">Perlu Diketahui</h1>
+<p>Hal yang perlu anda ketahui , untuk membuat posting di dalam anbidev.</p>
+<ol>
+<li>
+<p><strong>AnbiDev</strong> menggunakan framework Hugo. Sehingga bentuk mentah artikel pada anbidev bertipe <strong>Markdown(.md)</strong>.</p>
+</li>
+<li>
+<p>Mengetahui tata cara penulisan pada file <strong>Markdown</strong> , jika belum familiar dengan tata cara penulisan file <strong>Markdown</strong> dapat dilihat di tutorial berikut <a href="https://help.github.com/en/articles/basic-writing-and-formatting-syntax"
+    
+     target="_blank" rel="noreferrer" >ini</a>.</p>
+</li>
+<li>
+<p>Lalu kenapa sih kita butuh kontribusi? Anda dapat melihat artikel kami <a href="https://anbidev.com/contribute/contribution-needed"
+    
+     target="_blank" rel="noreferrer" >disini</a></p>
+</li>
+</ol>
+<hr>
+<h1 id="clone-step">Clone Step</h1>
+<p>(pastikan sudah install git)</p>
+<ul>
+<li>
+<p>Pertama <strong>Fork</strong> repository AnbiDev di <a href="https://github.com/AnbiDev/anbidev-contribute">https://github.com/AnbiDev/anbidev-contribute</a> .</p>
+</li>
+<li>
+<p>Buka git bash (CLI), navigasikan folder yang ingin diisi clone folder <code>anbidev-contribute</code>. <strong>Misal :</strong> D:/AlifianAdexe/</p>
+</li>
+<li>
+<p>Lakukan perintah</p>
+</li>
+</ul>
+<pre><code>    git clone https://github.com/username-anda/anbidev-contribute.git
+</code></pre><ul>
+<li>
+<p>Secara otomatis folder <code>anbidev-contribute</code> akan ter-clone ke dalam <code>D:/AlifianAdexe/</code>.</p>
+</li>
+<li>
+<p>Masuk ke dalam folder <code>anbidev-contribute</code>. Masuk lagi kedalam folder <code>themes</code>.</p>
+</li>
+<li>
+<p>Ada 2 folder , yaitu folder <code>content</code> dan folder <code>image</code>.</p>
+<ul>
+<li>
+<p>Folder <code>content</code> digunakan untuk menampung content yang akan anda kontribusikan.</p>
+</li>
+<li>
+<p>Folder <code>image</code> digunakan untuk menampung gambar yang dipakai didalam artikel anda.</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="folder-content">Folder Content</h1>
+<p>Didalam folder <code>content</code> terdapat sub-folder yang berisi kategori tutorial, seperti <strong>CSS</strong>, <strong>C++</strong>, <strong>Python</strong>, <strong>JavaScript</strong> dan lain -lain.</p>
+<p>Anda bisa memulai membuat artikel diantara beberapa kategori yang disediakan. Jika kategori yang inginkan tidak ada, anda cukup membuat folder baru dengan nama kategori baru.</p>
+<hr>
+<h1 id="folder-image">Folder Image</h1>
+<p>Didalam folder <code>image</code> terdapat 2 sub-folder yaitu <code>author</code> dan <code>post</code>.</p>
+<p>Folder <strong>Author</strong> berisi foto anda yang akan ditampilkan didalam post.</p>
+<p>Folder <strong>Post</strong> berisi gambar - gambar yang akan ditampilkan didalam artikel anda.</p>
+<hr>
+<h1 id="penulisan-file-dan-shortcode">Penulisan File dan Shortcode</h1>
+<p>Penulisan file yang distandarisasi adalah <strong><em>nama-kategori-shortcode.md</em></strong></p>
+<p>Apa itu Shortcode? <strong><em>Shortcode</em></strong> adalah penamaan singkat dalam yang suatu judul. Shortcode tidak perlu panjang , cukup hanya 1 atau 2 kata saja.</p>
+<p>Misal saya membuat artikel dengan judul <strong>&ldquo;Mengenal Tipe Data Pada Python</strong>, lalu shortcode yang tepat adalah <strong>Tipe Data</strong> dan nama filenya :</p>
+<pre><code>python-tipe-data.md
+</code></pre><hr>
+<h1 id="mengenal-archetypes">Mengenal Archetypes</h1>
+<blockquote>
+<p>Archetypes adalah: struktur, tema, atau karakter utama yang merepresentasikan diri seseorang, yang mempengaruhi cara individu mempersepsikan pengalamannya, yang menggambarkan kebutuhan dasar individu yang berusaha dipenuhi. - <a href="https://neurolism.web.id/archetype-defenisi-jenis-dan-artinya/#targetText=Berdasarkan%20definisi%2Ddefinisi%20di%20atas,dasar%20individu%20yang%20berusaha%20dipenuhi."
+    
+     target="_blank" rel="noreferrer" >neurolism.web.id</a></p>
+</blockquote>
+<p>Dalam konteks ini, lebih tepatnya mempresentasikan struktur dari artikel yang anda buat.
+Posisi archetypes ada di awal. Jadi sebelum membuat content, anda harus membuat archetypes terlebih dahulu.</p>
+<p>Struktur archetypes kurang lebih seperti ini :</p>
+<pre><code>+++
+title = &quot;Judul artikel anda&quot;
+description = &quot;Deskripsi artikel anda&quot;
+date = &quot;2019-09-27&quot;
+shortcode = &quot;Shortcode Judul&quot;
+sumber = [
+    &quot;https://wikipedia.com/&quot;,
+    &quot;https://anbidev.com/&quot;
+]
+[ author ]
+  name = &quot;Nama lengkap anda&quot;
+  images = &quot;/author/fotoanda.jpg&quot;
++++
+</code></pre><p>Contoh penulisan archetypes :</p>
+<pre><code>+++
+title = &quot;Pengenalan Python&quot;
+description = &quot;Pengantar Untuk Belajar Python&quot;
+date = &quot;2019-09-27&quot;
+shortcode = &quot;Pendahuluan&quot;
+sumber = [
+    &quot;https://www.petanikode.com/python-linux/&quot;,
+    &quot;https://belajarpython.com/tutorial/apa-itu-python&quot;
+]
+[ author ]
+  name = &quot;Muhammad alifian Aqshol&quot;
+  images = &quot;/author/adexe.jpg&quot;
++++
+</code></pre><hr>
+<h1 id="contoh-artikel">Contoh Artikel</h1>
+<p>Contoh penulisan artikel bisa anda lihat <strong><a href="https://raw.githubusercontent.com/AnbiDev/anbidev-contribute/master/content/example/contoh-artikel.md"
+    
+     target="_blank" rel="noreferrer" >disini</a></strong>.</p>
+<p>Dan ini adalah <a href="https://anbidev.com/contribute/contoh-artikel/"
+    
+     target="_blank" rel="noreferrer" >hasilnya</a>.</p>
+<hr>
+<h1 id="proses-moderasi">Proses Moderasi</h1>
+<p><strong>Setiap hari para admin akan mengecek apakah ada kontribusi untuk AnbiDev</strong></p>
+<ol>
+<li>Admin akan mengkonfirmasi artikel anda pada comment di Pull Request anda.</li>
+<li>Jika ada penulisan yang tidak sesuai (typo) akan dibenarkan admin.</li>
+<li>Jika ada penulisan yang dilarang (sarkas, kasar, sexualitas) maka akan admin tolak.</li>
+<li>Selama proses moderasi, anda juga dapat megedit artikel anda.</li>
+<li>Proses moderasi paling lama 2 hari.</li>
+<li>Setelah moderasi selesai, artikel akan diupload dan dapat dilihat di <a href="https://anbidev.com/tutorials/">https://anbidev.com/tutorials/</a></li>
+</ol>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

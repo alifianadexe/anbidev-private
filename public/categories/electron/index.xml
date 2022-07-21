@@ -1,0 +1,247 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>electron on AnbiDev</title>
+        <link>https://anbidev.com/categories/electron/</link>
+        <description>Recent content in electron on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Thu, 26 Sep 2019 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/categories/electron/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Membuat Aplikasi Electron</title>
+            <link>https://anbidev.com/electron-first-app/</link>
+            <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/electron-first-app/</guid>
+            <description>Pendahuluan Pada dasarnya electron dikembangkan menggunakan nodejs. Terdapat file package.json yang identik dengan modul Node.js, file ini adalah file utama yang mengatur dependency yang digunakan. Kebanyakan aplikasi Electron mengikuti struktur folder seperti berikut:
+nama-aplikasimu/├── package.json├── package-lock.json├── main.js└── index.htmlPersiapan Buat folder baru sebagai direktori aplikasi Electron. Buka dengan Command Line dan jalankan npm init dari direktori tersebut:
+npm init npm akan membuatkanmu file package.json. File utama yang dijalankan berada di field main, dimana proses akan dijalankan.</description>
+            <content type="html"><![CDATA[<h3 id="pendahuluan">Pendahuluan</h3>
+<p>Pada dasarnya electron dikembangkan menggunakan nodejs. Terdapat file <code>package.json</code> yang identik dengan modul Node.js, file ini adalah file utama yang mengatur dependency yang digunakan. Kebanyakan aplikasi Electron mengikuti struktur folder seperti berikut:</p>
+<pre><code>nama-aplikasimu/
+├── package.json
+├── package-lock.json
+├── main.js
+└── index.html
+</code></pre><h3 id="persiapan">Persiapan</h3>
+<p>Buat folder baru sebagai direktori aplikasi Electron. Buka dengan <code>Command Line</code> dan jalankan <code>npm init</code> dari direktori tersebut:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">init</span>
+</code></pre></div><p>npm akan membuatkanmu file <code>package.json</code>. File utama yang dijalankan berada di field <code>main</code>, dimana proses akan dijalankan. File <code>package.json</code> akan terlihat seperti berikut:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;nama-aplikasimu&#34;</span>,
+  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
+  <span style="color:#f92672">&#34;main&#34;</span>: <span style="color:#e6db74">&#34;main.js&#34;</span> <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">file</span> <span style="color:#960050;background-color:#1e0010">utama</span>
+}
+</code></pre></div><p>Jika field <code>main</code> tidak ada di <code>package.json</code>, Electron akan secara otomatis menggunakan <code>index.js</code> sebagai file utama (Seperti yang Node.js lakukan).</p>
+<p>Jika kamu memang membangun aplikasi ini seperti membangun Node.js maka kamu harus menambah <code>start</code> pada field <code>script</code> sebagai command untuk menjalankan aplikasi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;nama-aplikasimu&#34;</span>,
+  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
+  <span style="color:#f92672">&#34;main&#34;</span>: <span style="color:#e6db74">&#34;main.js&#34;</span>,
+  <span style="color:#f92672">&#34;scripts&#34;</span>: {
+    <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;node .&#34;</span>
+  }
+}
+</code></pre></div><p>Atau jika kamu menginginkan <em>custom command</em>, aku sarankan untuk menggunakan <code>electron</code> untuk menggantikan <code>node</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;nama-aplikasimu&#34;</span>,
+  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
+  <span style="color:#f92672">&#34;main&#34;</span>: <span style="color:#e6db74">&#34;main.js&#34;</span>,
+  <span style="color:#f92672">&#34;scripts&#34;</span>: {
+    <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;electron .&#34;</span>
+  }
+}
+</code></pre></div><h3 id="instalasi">Instalasi</h3>
+<p>Pada tahap ini, kamu perlu menginstall dependency <code>electron</code> kedalam file <code>package.json</code>. Cara yang direkomendasikan adalah menggunakan <em>development dependency</em> ke aplikasimu, yang dimana nantinya bisa digunakan lagi dengan versi electron yang berbeda. Untuk melakukannya, cukup jalankan perintah berikut:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">save</span><span style="color:#f92672">-</span><span style="color:#a6e22e">dev</span> <span style="color:#a6e22e">electron</span>
+</code></pre></div><p>Itu merupakan cara yang sederhana. Untuk kebutuhan lain, seperti penggunaan proxy, mirror dan cache silakan ikuti <a href="https://electronjs.org/docs/tutorial/installation"
+    
+     target="_blank" rel="noreferrer" >panduan ini</a>.</p>
+<h3 id="pengembangan">Pengembangan</h3>
+<p>Aplikasi Electron dikembangkan dengan prinsip dan metode yang sama dengan pengembangan Node.js. Semua APIs dan fitur yang ada pada Electron berada pada modul <code>electron</code>, yang dimana dapat di <code>require</code> seperti modul Node.js pada umumnya:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">electron</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;electron&#39;</span>)
+</code></pre></div><p>Modul <code>electron</code> mengekspos fitur pada namespace. Sebagai contoh, siklus dari aplikasi dikendalikan dengan <code>electron.app</code>, dan windows dapat dibuat dengan class <code>electron.BroserWindow</code>. File <code>main.js</code> akan mengkonfirmasi jika aplikasi untuk siap dijalankan, sebelum membuka windows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Pada file main.js
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">app</span>, <span style="color:#a6e22e">BrowserWindow</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;electron&#39;</span>)
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createWindow</span> () {
+  <span style="color:#75715e">// Buat browser window
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">win</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">BrowserWindow</span>({
+    <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">800</span>, <span style="color:#75715e">// Panjang windows
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">600</span>, <span style="color:#75715e">// Tinggi windows
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">webPreferences</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">nodeIntegration</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+    }
+  })
+
+  <span style="color:#75715e">// load file index.html
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">win</span>.<span style="color:#a6e22e">loadFile</span>(<span style="color:#e6db74">&#39;index.html&#39;</span>)
+}
+
+<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;ready&#39;</span>, <span style="color:#a6e22e">createWindow</span>)
+</code></pre></div><p>File <code>main.js</code> akan membuat windows baru dan menangani semua request pada aplikasi. Versi lebih lengkap dari contoh diatas mungkin membuka tools, menangani window saat ditutup, atau membuat windows baru pada macOS jika user menekan icon aplikasi pada <em>dock</em>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">app</span>, <span style="color:#a6e22e">BrowserWindow</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;electron&#39;</span>)
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">win</span>
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createWindow</span> () {
+  <span style="color:#a6e22e">win</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">BrowserWindow</span>({
+    <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">800</span>,
+    <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">600</span>,
+    <span style="color:#a6e22e">webPreferences</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">nodeIntegration</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+    }
+  })
+
+  <span style="color:#a6e22e">win</span>.<span style="color:#a6e22e">loadFile</span>(<span style="color:#e6db74">&#39;index.html&#39;</span>)
+
+  <span style="color:#75715e">// Buka the DevTools. Jika di browser sama seperti Inspect Element
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">win</span>.<span style="color:#a6e22e">webContents</span>.<span style="color:#a6e22e">openDevTools</span>()
+
+  <span style="color:#75715e">// Tutup Windows
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">win</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;closed&#39;</span>, () =&gt; {
+    <span style="color:#a6e22e">win</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>
+  })
+}
+
+<span style="color:#75715e">// Method ini dipanggil jika Electron telah selesai
+</span><span style="color:#75715e">// menginisialisasi dan siap membuka windows.
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;ready&#39;</span>, <span style="color:#a6e22e">createWindow</span>)
+
+<span style="color:#75715e">// Quit, saat semua windows ditutup
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;window-all-closed&#39;</span>, () =&gt; {
+  <span style="color:#75715e">// Pada macOS, menu bar tetap aktif hingga user perlu menekan Cmd + Q.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">platform</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#39;darwin&#39;</span>) {
+    <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">quit</span>()
+  }
+})
+
+<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;activate&#39;</span>, () =&gt; {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">win</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">null</span>) {
+    <span style="color:#a6e22e">createWindow</span>()
+  }
+})
+</code></pre></div><p>Langkah terakhir, buat file <code>index.html</code> sebagai tampilan pada aplikasi.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;AnbiDev&lt;/<span style="color:#f92672">title</span>&gt;
+    <span style="color:#75715e">&lt;!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag --&gt;</span>
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Content-Security-Policy&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;script-src &#39;self&#39;;&#34;</span>/&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">h1</span>&gt;AnbiDev&lt;/<span style="color:#f92672">h1</span>&gt;
+    We are using node &lt;<span style="color:#f92672">script</span>&gt;document.<span style="color:#a6e22e">write</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">versions</span>.<span style="color:#a6e22e">node</span>)&lt;/<span style="color:#f92672">script</span>&gt;,
+    Chrome &lt;<span style="color:#f92672">script</span>&gt;document.<span style="color:#a6e22e">write</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">versions</span>.<span style="color:#a6e22e">chrome</span>)&lt;/<span style="color:#f92672">script</span>&gt;,
+    and Electron &lt;<span style="color:#f92672">script</span>&gt;document.<span style="color:#a6e22e">write</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">versions</span>.<span style="color:#a6e22e">electron</span>)&lt;/<span style="color:#f92672">script</span>&gt;.
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="jalankan">Jalankan</h3>
+<p>Setelah kamu membuat file <code>main.js</code>, <code>index.html</code> dan <code>package.json</code>, kamu bisa menjalankan aplikasimu dengan perintah:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">start</span>
+</code></pre></div><p>Bagus, kamu berhasil membuat aplikasi Electron pertamamu.</p>
+<blockquote>
+<p>Ini merupakan contoh aplikasi sederhana: <a href="https://electronjs.org/docs/tutorial/first-app#trying-this-example"
+    
+     target="_blank" rel="noreferrer" >electron-quick-start</a></p>
+</blockquote>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Development Environment pada Electron</title>
+            <link>https://anbidev.com/electron-development-environment/</link>
+            <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/electron-development-environment/</guid>
+            <description>Developer Environment Pada dasarnya electron dikembangkan menggunakan nodejs. Maka kamu memerlukan nodejs, npm dan pemahaman dasar tentang command line pada sistem operasi client (Command Prompt pada Windows, Terminal pada Linux dan macOS).
+Install versi terbaru Node.js, aku rekomendasikan kamu untuk menginstall versi LTS. Kunjungi Node.js download page dan pilih sesuai sistem operasi yang kamu gunakan.
+Windows  Electron mendukung Windows 7 dan versi diatasnya
+ Pastikan kamu menginstall dengan benar, cukup ikuti arahan yang ada.</description>
+            <content type="html"><![CDATA[<h3 id="developer-environment">Developer Environment</h3>
+<p>Pada dasarnya electron dikembangkan menggunakan nodejs. Maka kamu memerlukan nodejs, npm dan pemahaman dasar tentang <code>command line</code> pada sistem operasi client (Command Prompt pada Windows, Terminal pada Linux dan macOS).</p>
+<p>Install versi terbaru Node.js, aku rekomendasikan kamu untuk menginstall versi <code>LTS</code>. Kunjungi <a href="https://nodejs.org/en/download/"
+    
+     target="_blank" rel="noreferrer" >Node.js download page</a> dan pilih sesuai sistem operasi yang kamu gunakan.</p>
+<h4 id="windows">Windows</h4>
+<blockquote>
+<p>Electron mendukung Windows 7 dan versi diatasnya</p>
+</blockquote>
+<p>Pastikan kamu menginstall dengan benar, cukup ikuti arahan yang ada. Pastikan juga <code>Node.js runtime</code> dan <code>npm package manager</code> ditambahkan ke <code>PATH</code> dengan mengkonfirmasi <code>Add to PATH</code>.</p>
+<p>Setelah terinstal, pastikan semua berjalan dengan baik. Buka <code>Windows PowerShell</code> atau <code>Command Prompt</code> pada Start Menu (atau bisa dengan <em>search</em> <code>cmd</code>).</p>
+<pre><code># Command ini akan menampilkan versi node.js
+node -v
+
+# Command ini akan menampilkan versi npm
+npm -v
+</code></pre><p>Jika pada kedua <em>command</em> menampilkan nomor versi, maka kamu benar.</p>
+<h4 id="linux">Linux</h4>
+<blockquote>
+<p>Secara umum dapat dikatakan, Electron mendukung Ubuntu 12.04, Fedora 21, Debian 8 dan versi diatasnya</p>
+</blockquote>
+<p>Instalasi pada Linux sedikit berbeda. Aku sarankan untuk mengikuti petunjuk pada halaman <a href="https://nodejs.org/en/download/package-manager/"
+    
+     target="_blank" rel="noreferrer" >ini</a> dan sesuaikkan dengan <em>package manager</em> yang kamu gunakan.</p>
+<p>Buka <code>Terminal</code> (Aku tak perlu mengarahkanmu dimana kamu bisa menemukan <code>Terminal</code> pada Linux)</p>
+<pre><code># Command ini akan menampilkan versi node.js
+node -v
+
+# Command ini akan menampilkan versi npm
+npm -v
+</code></pre><p>Jika pada kedua <em>command</em> menampilkan nomor versi, maka kamu benar.</p>
+<h4 id="macos">macOS</h4>
+<blockquote>
+<p>Electron mendukung macOS 10.10(Yosemite) dan versi diatasnya.</p>
+</blockquote>
+<p>Setelah diunduh, jalankan installer dan biarkan <em>installation wizard</em> membimbingmu dalam proses instalasi.</p>
+<p>Setelah terinstal, pastikan semua berjalan dengan baik. Cari <code>Terminal macOS</code> pada direktori <code>/Applications/Utilities</code> (atau bisa dengan <em>search</em> <code>Terminal</code> pada Spotlight).</p>
+<pre><code># Command ini akan menampilkan versi node.js
+node -v
+
+# Command ini akan menampilkan versi npm
+npm -v
+</code></pre><p>Jika pada kedua <em>command</em> menampilkan nomor versi, maka kamu benar.</p>
+<p>Tidak sulit, ini baru pemanasan. Tetap semangat!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Dasar Library Electron</title>
+            <link>https://anbidev.com/javascript-electron/</link>
+            <pubDate>Fri, 20 Sep 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/javascript-electron/</guid>
+            <description>Build cross platform desktop apps with JavaScript, HTML, and CSS
+ Kata-kata itu yang akan kita lihat pertama kali pada website resmi Electron. Yup, Framework Javascript satu ini ditujukan untuk pengembangan Aplikasi berbasis Desktop menggunakan JavaScript, HTML, dan CSS. Seperti yang kita ketahui, ketiganya digunakan untuk membangun front-end pada website atau aplikasi berbasis web. Tapi dengan menggunakan Electron, kita mampu mengembangkan aplikasi desktop dengan berbekal JavaScript, HTML, dan CSS.</description>
+            <content type="html"><![CDATA[<blockquote>
+<p>Build cross platform desktop apps with JavaScript, HTML, and CSS</p>
+</blockquote>
+<p>Kata-kata itu yang akan kita lihat pertama kali pada website resmi <a href="https://electronjs.org/"
+    
+     target="_blank" rel="noreferrer" >Electron</a>. Yup, Framework Javascript satu ini ditujukan untuk pengembangan Aplikasi berbasis Desktop menggunakan JavaScript, HTML, dan CSS. Seperti yang kita ketahui,  ketiganya digunakan untuk membangun <em>front-end</em> pada website atau aplikasi berbasis web. Tapi dengan menggunakan <code>Electron</code>, kita mampu mengembangkan aplikasi desktop dengan berbekal JavaScript, HTML, dan CSS.</p>
+<h4 id="cara-kerja-electron">Cara Kerja Electron</h4>
+<p>Electron bekerja dengan menggabungkan Chromium dan Node.js ke dalam satu <em>runtime application</em> yang dapat dikemas untuk Sistem Operasi Linux, Mac dan Windows.</p>
+<h4 id="produk-electron">Produk Electron</h4>
+<p>Jika kamu pernah mencoba Text Editor <code>Atom</code>, maka kamu sudah menggunakan produk dari Electron ini. Electron dimulai pada tahun 2013 dimana Text Editor milik GitHub ini juga mulai dikembangkan dan di rilis pada musim semi tahun berikutnya.</p>
+<h4 id="pengembang">Pengembang</h4>
+<p>Electron dikembangkan oleh tim di GitHub, yang juga merupakan sebuah komunitas besar. Beberapa kontributor adalah perseorangan, beberapa lainnya bekerja diperusahaan yang lebih besar.</p>
+<h4 id="release">Release</h4>
+<p>Electron di rilis secara seksama, mengikuti perkembangan API yang digunakan dan juga dua pembangunnya, Chromium dan Node.js</p>
+<h4 id="update-dependencies">Update Dependencies</h4>
+<p>Biasanya Electron di update seminggu atau dua minggu setelah Chromium di update, semua bergantung apakah sudah ada versi stabil dan <em>effort</em> para kontributor. Jika ada update pada Node.js, Electron akan menunggu sekitar sebulan, menunggu versi stabil dari Node.js</p>
+<h4 id="versi">Versi</h4>
+<p>Aku menyarankanmu untuk menggunakan <code>npm</code>, untuk mendapatakan versi terbaru dari Electron.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">$</span> <span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">electron</span>
+</code></pre></div><p>Atau kunjungi <a href="https://electronjs.org/docs/tutorial/electron-versioning"
+    
+     target="_blank" rel="noreferrer" >Ver. Doc</a></p>
+<h4 id="lts">LTS</h4>
+<p>Kamu pasti mengutamakan versi LTS(Long Time Support), atau versi yang didukung pengembangannya dalam jangka waktu yang lama. Sayang, Electron tidak menyediakan versi LTS. Tapi jika kamu menggunakan Electron, dan kamu nyaman entah itu ada update atau tidak, <em>you can stay on it for as long as you&rsquo;d like</em>.</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

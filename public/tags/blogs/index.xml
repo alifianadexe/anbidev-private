@@ -1,0 +1,221 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>blogs on AnbiDev</title>
+        <link>https://anbidev.com/tags/blogs/</link>
+        <description>Recent content in blogs on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Mon, 18 Jan 2021 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/blogs/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Bilangan Floating Point</title>
+            <link>https://anbidev.com/floating-point-754/</link>
+            <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/floating-point-754/</guid>
+            <description>Bilangan yang memiliki nilai pecahan dapat direpresentasikan dengan dua format bilangan yakni fixed-point dan floating point. Bilangan pecahan fixed-point mempunyai jangkauan yang dibatasi oleh jumlah digit signifikan yang digunakan untuk merepresentasikan bilangan itu.
+Maka dengan hal tersebut akan memungkinkan terdapat bilangan yang sangat besar dan sangat kecil, dengan begitu harus direpresentasikan dengan tepat, yakni menggunakan floating point.
+Apa itu FLoating Point? Floating point (bilangan pecahan) adalah sebuah format bilangan yang dapat digunakan untuk merepresentasikan sebuah nilai yang besar dan kecil.</description>
+            <content type="html"><![CDATA[<p>Bilangan yang memiliki nilai pecahan dapat direpresentasikan dengan dua format bilangan yakni <strong><em>fixed-point</em></strong> dan <strong><em>floating point</em></strong>. Bilangan pecahan <em>fixed-point</em> mempunyai jangkauan yang dibatasi oleh jumlah digit signifikan yang digunakan untuk merepresentasikan bilangan itu.</p>
+<p>Maka dengan hal tersebut akan memungkinkan terdapat bilangan yang sangat besar dan sangat kecil, dengan begitu harus direpresentasikan dengan tepat, yakni menggunakan <strong><em>floating point</em></strong>.</p>
+<br>
+<h2 id="apa-itu-floating-point">Apa itu FLoating Point?</h2>
+<hr>
+<p><strong><em>Floating point</em></strong> (bilangan pecahan) adalah sebuah format bilangan yang dapat digunakan untuk merepresentasikan sebuah nilai yang besar dan kecil.</p>
+<p>Dalam penulisan bilangan ini dilakukan dengan menuliskan dalam bentuk eksponensial, sehingga bilangan tersebut memiliki bilangan dasar, bilangan pemangkat dan basis bilangan tersebut.</p>
+<p>Berikut penulisan notasi ilmiah pada floating point.
+contoh pada bilangan desimal</p>
+<ul>
+<li>
+<p><strong>261.000.000.000</strong> ditulis <strong>2,61</strong> x <b>10<sup>11</sup></b></p>
+</li>
+<li>
+<p><strong>0,000000000261</strong> ditulis <strong>2,61</strong> x <b>10<sup>-10</sup></b></p>
+</li>
+</ul>
+<p>Representasi <em>floating point</em> sendiri memiliki dua bagian, yakni bagian <strong>mantisa</strong> dan bagian <strong>eksponen</strong>. Bagian mantisa menentukan digit, sementara eksponen menentukan nilai berapa besar pangkat pada mantisa, seperti berikut :</p>
+<p><span style="font-size:30px;font-weight:800"> ±S * B<sup>±E</sup></span></p>
+<p><strong>S</strong> = Signifikan disebut juga mantisa</p>
+<p><strong>E</strong> = Eksponen</p>
+<p><strong>B</strong> = Base</p>
+<br>
+<p>Penulisan <em>floating point</em> dengan cara eksponensial dapat menyebabkan adanya kemungkinan sebuah bilangan ditulis dengan cara yang bermacam-macam. Contohnya :</p>
+<br>
+<p><strong>900 = 0,9<em>10<sup>3</sup> = 9</em>10<sup>2</sup> = 90*10<sup>1</sup> = …dst.</strong></p>
+<br>
+<p>Maka dari itu dibutuhkannya normalisasi, yakni seperti berikut :</p>
+<br>
+<p><strong>± 1,bbb..b * 2<sup>±E</sup></strong></p>
+<br>
+<p>Bit pertama Signifikan selalu <strong>1</strong> sehingga tidak perlu disimpan didalam signifikan dan <strong>b</strong> adalah bilangan <a href="https://anbidev.com/pengertian-binary"
+    
+     target="_blank" rel="noreferrer" >biner</a> (1 atau 0).</p>
+<p>Eksponen didapat dari pemetaan true eksponen yang didapatkan dari rumus :</p>
+<p><span style="font-size:30px;font-weight:800"> e = 2<sup>b-1</sup> - 1</span></p>
+<p><strong>e</strong> = Eksponen bias, adalah <strong><em>true exponent</em></strong></p>
+<p><strong>b</strong> = Panjang bit eksponen</p>
+<pre><code>32 bit, bias = 127, e = 1 – 254, E = -126 – 127
+
+64 bit, bias = 1023, e = 1 – 2046, E = -1022 – 1023
+</code></pre><br>
+<p>Untuk keperluan yang luas, maka dibentuklah standar bagi representasi bilangan <em>floating point</em> ini, yakni standar <strong>IEEE 754-2008</strong> (ISO/IEC/IEEE 60559:2011), yakni meliputi format <strong>16 bit</strong>, <strong>32 bit</strong>, <strong>64 bit</strong>, <strong>80 bit</strong> dan <strong>128 bit</strong>.</p>
+<br>
+<h2 id="floating-point-32bit-single-precision">Floating Point 32Bit (Single Precision)</h2>
+<hr>
+<ul>
+<li>
+<p><strong>1 bit</strong> (Signifikan)</p>
+</li>
+<li>
+<p><strong>8 bit</strong> (Eksponen)</p>
+</li>
+<li>
+<p><strong>23 bit</strong> (Mantisa)</p>
+</li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/floatingpoint32bit.png" alt="Floating point 32 bit IEEE 754" title="Floating point 32 bit IEEE 754" >
+    <figcaption>Floating point 32 bit IEEE 754</figcaption>
+  </figure>
+
+
+</p>
+<p>Bit Signifikan menyatakan bilangan positif jika <strong>S = 0</strong> dan negatif jika <strong>S = 1</strong>. Contoh representasi <em>floating point</em> dalam IEEE standart 32 bit, bilangan <strong>261.25</strong> :</p>
+<br>
+<p>Ambil Signifikannya :</p>
+<p><strong>261<sub>10</sub></strong> = <strong>100000101<sub>2</sub></strong></p>
+<p>Untuk sisa <strong>0.25</strong> didapat :</p>
+<p><strong>0.25</strong> x 2 = <strong>0.5</strong> &ndash;&gt; <strong>0</strong></p>
+<p><strong>0.5</strong> x 2 = <strong>1.0</strong> &ndash;&gt; <strong>1</strong></p>
+<br>
+<p>Jadi <strong>261.25<sup>10</sup></strong> = <strong>100000101.01<sup>2</sup></strong></p>
+<p>Dinormalisasi menjadi : <strong>100000101.01 x 2<sup>0</sup></strong> = <strong>1.0000010101 x 2<sup>8</sup></strong></p>
+<p>Mantissa untuk <em>single precission</em> ini terdiri atas 23 bit maka akan menjadi <strong>10000010101000000000000</strong></p>
+<p>Bilangan pemangkat adalah 8 maka bias diubah dengan cara : 8+127 = 135  1000011110 Karena negative maka Sign = 1</p>
+<p>
+  <img src="/post/floatingpoint32bit-2.png" alt="">
+
+
+</p>
+<h3 id="floating-point-64-bit-double-precision">Floating Point 64 bit (Double Precision)</h3>
+<hr>
+<p>1 bit (Signifikan)
+11 bit (Eksponen)
+52 bit (Mantisa)</p>
+<p>
+  <img src="/post/floatingpoint64bit.png" alt="">
+
+
+</p>
+<p>bit paling kiri digunakan untuk representasi tanda 0 jika positif dan 1 jika negatif, sedangkan 8 bit berikutnya adalah pangkat (exponen) yang direpresentasikan dalam bentuk bias. Contoh representasi Floating point dalam IEEE standart 64 bit. Bilangan = 178.45 178<sub>10</sub> = 10110010<sub>2</sub></p>
+<p>0.45 :</p>
+<p>0.45 x 2 = 0.9 &ndash;&gt; 0</p>
+<p>0.9 x 2 = 1.8 &ndash;&gt; 1</p>
+<p>0.8 x 2 = 1.6 &ndash;&gt; 1</p>
+<p>0.6 x 2 = 1.2 &ndash;&gt; 1</p>
+<p>0.2 x 2 = 0.4 &ndash;&gt; 0</p>
+<p>0.4 x 2 = 0.8 &ndash;&gt; 0</p>
+<p>0.8 x 2 = 1.6 &ndash;&gt; 1</p>
+<p>0.6 x 2 = 1.2 &ndash;&gt; 1</p>
+<p>0.2 x 2 = 0.4 &ndash;&gt; 0</p>
+<p>0.4 x 2 = 0.8 &ndash;&gt; 0</p>
+<p>0.8 x 2 = 1.6 &ndash;&gt; 1</p>
+<p>0.6 x 2 = 1.2 &ndash;&gt; 1</p>
+<p>0.2 x 2 = 0.4 &ndash;&gt; 0</p>
+<p>0.4 x 2 = 0.8 &ndash;&gt; 0</p>
+<p>0.8 x 2 = 1.6 &ndash;&gt; 1</p>
+<p>0.6 x 2 = 1.2 &ndash;&gt; 1</p>
+<p>0.2 x 2 = 0.4 &ndash;&gt; 0</p>
+<p>0.4 x 2 = 0.8 &ndash;&gt; 0</p>
+<p>Dari perhitungan itu terdapat perulangan didalamnya, dengan begitu bisa didapatkan nilai biner dibelakang koma akan berhenti perhitungannya disaat perulangan terjadi.</p>
+<p>Jadi 178.45<sub>10</sub> = 10110010.011100110<sub>2</sub> Dinormalisasi jadi : 10110010.01110011 x 2<sup>0</sup> = 1.0110010011100110 x 2<sup>7</sup> Mantissa pada 64bit terdiri atas 52bit maka : 0110010011100110011001100110011001100110011001100110 Bilangan pemangkat 7 diubah ke bias ; 7 +1023 = 1030 = 10000000110<sub>2</sub></p>
+<p>
+  <img src="/post/floatingpoint64bit-2.png" alt="">
+
+
+</p>
+<p>Nah mungkin itu dia beberapa informasi yang dapat saya sampaikan untuk saat ini. Mohon maaf atas segala kesalahan dan kerandoman materi saya, jika ada sanggahan mangga untuk komen di bawah yah. Terima kasih :)</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Rumahku ber-AC (Alternate Current)</title>
+            <link>https://anbidev.com/rumah-ber-ac/</link>
+            <pubDate>Sun, 15 Nov 2020 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/rumah-ber-ac/</guid>
+            <description>Bismillah,
+Halo readers anbi, melanjut pembahasan mengenai listrik yang lalu. temen-temen udah tahu belum sih listrik dirumah kita itu pake AC? oh waw sekali bukan. Lalu apa istimewanya sih? Di dunia yang fana ini masih diketahui ada dua jenis aliran listrik yakni AC dan DC? nah dulu sejarah mencatat mereka berdua ini bersaing, yakni antara Tesla dan Edison, pengen tahu? baca di situs lain ya, hehe.
+Lanjut mengenai si AC ini kenapa ya kok PLN nyalurin listrik ke rumah kita pake AC?</description>
+            <content type="html"><![CDATA[<p><strong>Bismillah,</strong></p>
+<p>Halo readers anbi, melanjut pembahasan mengenai listrik yang lalu. temen-temen udah tahu belum sih listrik dirumah kita itu pake AC? oh waw sekali bukan. Lalu apa istimewanya sih? Di dunia yang fana ini masih diketahui ada dua jenis aliran listrik yakni <strong>AC</strong> dan <strong>DC</strong>? nah dulu sejarah mencatat mereka berdua ini bersaing, yakni antara <strong>Tesla</strong> dan <strong>Edison</strong>, pengen tahu? baca di situs lain ya, hehe.</p>
+<p>Lanjut mengenai si AC ini kenapa ya kok PLN nyalurin listrik ke rumah kita pake AC? kok gak langsung DC aja? secara alat elektronik kita dirumah pakenya kan DC, misal Komputer, Charger, TV LED, Lampu LED, dan masih banyak lagi. Dan infonya arus AC sangat berbahaya di banding arus DC. Nah, tenang semuanya sudah diatur sama <strong>PLN yang sedang merugi</strong>, kasihan ya. Langsung aja kita bahas.</p>
+<br>
+<h2 id="apa-itu-ac-"><strong>Apa itu AC ?</strong></h2>
+<hr>
+<p><strong><em>Alternate Current</em></strong>, <em>(arus alternatif)</em>, yaitu arus listrik bolak-balik. Maksudnya adalah arus listrik tersebut mengalir pada sebuah penghantar yang tegangannya selalu berubah potensial atau tegangannya, yang bakal ngebentuk sebuah gelombang sinus, eh ga selalu sinus sih, contohnya kek gini.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/gelombang-arus-ac.png" alt="Gelombang arus AC" title="Gelombang arus AC" >
+    <figcaption>Gelombang arus AC</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="kenapa-pake-ac-"><strong>Kenapa pake AC ?</strong></h2>
+<hr>
+<p>Seperti pembahasan yang lalu, di Indonesia sendiri kebanyakan listrik yang digunain di perumahan itu pake <strong>220Volt 50Hz</strong>. Coba deh cek meteran kalian.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/meteran-prabayar.png" alt="https://www.idwebpulsa.com/kelebihan-kwh-meter-prabayar/" title="Meteran Prabayar" >
+    <figcaption>Meteran Prabayar</figcaption>
+  </figure>
+
+
+</p>
+<p>Bagian <strong>230V/220V</strong> artinya listrik dirumah kita mendapat tegangan sebesar 220 volt. 50Hz itu nunjukin kalau pake frekuensi <em>50Hertz</em> (50 gelombang per detik). kalau diibaratin lampu bohlam yang warna kuning, dia bakalan kedip-kedip sampai 50 kali dalam 1 detik. wadaw sekali ya.</p>
+<p>Lalu kenapa kok harus pakai arus AC dalam penyaluran listrik ini? Sejarah mencatat bahwa dulu abad ke-19 terdapat perseteruan yang <em>epic</em> antara <strong><em>Nikola Tesla</em></strong> vs <strong><em>Thomas Alva Edison</em></strong>. Yang mana dimenangkan oleh arus AC, karena arus AC dapat ditransmisikan dengan jarak yang cukup jauh menggunakan alat <strong>Trafo</strong> (<em>Transformer</em>) untuk menaik turunkan tegangan. Tegangan ini sangat penting guna transmisi listrik ini, kenapa? karena secara rumus daya :</p>
+<blockquote>
+<p>Daya = Tegangan x Arus</p>
+<p>P = V . I</p>
+</blockquote>
+<p>Jadi kalau semisal transimi listriknya jauh banget nanti bakalan ada arus yang hilang dijalanan (dimakan habis oleh kabel transimi) dan tidak sampai ke rumah-rumah. <ins>Jadi ada dua solusi yakni <strong>menaikkan Arus</strong> dan <strong>menaikkan Voltage</strong></ins>.</p>
+<p>Jika <strong>menaikkan Arus</strong> dibutuhkan Kabel tembaga yang cukup besar dan itu sangat gak efisien dan mahal, maka dari itu dinaikkan lah Voltage-nya yang tidak perlu membutuhkan tembaga(kabel) penyaluran yang besar. Untuk <strong>menaikkan Voltage</strong> (tegangan) dengan menggunakan Trafo (<em>Transformator</em>) <em>Step-up</em> saja.</p>
+<p>Maka dari itu lebih efisien pakai Trafo untuk menaikkan tegangan. Oke paham yah. Tidak jarang juga temen-temen dengar atau pernah merhatiin ada tulisan <em>&ldquo;Awas, Listrik bertegangan tinggi&rdquo;</em>, iya emang betul tegangannya yang ditinggikan bukan Arusnya dan itu sangat berbahaya. Dari pembahasan itu Trafo sendiri hanya dapat bekerja di arus AC aja,kenapa tuh? ya gak tau sih hehe. Info yang saya dapat seperti itu.</p>
+<br>
+<h2 id="alasan-kenapa-pakai-arus-ac">Alasan Kenapa Pakai Arus AC</h2>
+<hr>
+<p><strong>A. Gampang untuk diubah (convert)</strong></p>
+<p>Jadi buat mengubah dari AC ke DC kita cukup pakai <strong>Dioda Penyearah</strong> (<em>Rectifier</em>), setiap alat elektronik dimasa kini pasti memiliki komponen seperti itu. Misal lampu led, komputer, laptop, smartphone, dll. Didalam perangkat tersebut didalamnya ada sebuah rangkaian <em>rectifier</em>.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/rangkaian_ac-ke-dc.png" alt="Rangkaian AC ke DC" title="Rangkaian AC ke DC" >
+    <figcaption>Rangkaian AC ke DC</figcaption>
+  </figure>
+
+
+</p>
+<p>Sedangkan untuk mengubah arus DC ke arus AC menggunakan <strong>Inverter</strong>, namun diperlukan banyak sekali rangkaian guna konversi DC ke AC. Seperti berikut rangkaian nya.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/rangkaian_dc-ke-ac.png" alt="Rangkaian DC ke AC" title="Rangkaian DC ke AC" >
+    <figcaption>Rangkaian DC ke AC</figcaption>
+  </figure>
+
+
+</p>
+<p>Dari rangkaian tersebut cukup tidak efisien dan rumit untuk saya hehe.</p>
+<br>
+<p><strong>B. Lebih mudah diubah besaran Tegangan dan Arusnya</strong></p>
+<p>Dalam skalabilitas kecil arus dan tegangan kecil penggunaan rangkaian elektronik untuk mengubah besaran tegangan dan arus lebih efisien dibanding menggunakan trafo yang harganya lebih mahal. Namun, jika penggunaan listrik yang besar (skala yg besar) maka penggunaan trafo lebih oke ketimbang rangkaian elektronik biasa.</p>
+<p>Dari penjelasan tersebut akan lengkap bilamana ada contohnya. Misalnya tegangan yang dihasilkan oleh suatu Pembangkit yakni <strong>20kV</strong>, dinaikkan <em>Trafo Step-up</em> menjadi <strong>200kV</strong>. Kemudian, disalurkan oleh biasanya kabel udara <strong>Sutet</strong> (Saluran Udara Tegangan Tinggi) sampai di suatu gardu induk tegangan diturunkan oleh <em>Trafo Step-down</em> menjadi <strong>30kV</strong>, lalu sampai ke tiang-tiang yang ada trafonya di <em>step-down</em> lagi menjadi tegangan rendah kemudian disalurkanlah ke rumah-rumah sampai tegangan menjadi <strong>220V</strong>.</p>
+<center> .  .  . </center>
+<p>Nah mungkin itu dia beberapa informasi yang dapat saya sampaikan untuk saat ini. Mohon maaf atas segala kesalahan dan kerandoman materi saya, jika ada sanggahan mangga untuk komen di bawah yah .Terima kasih :)</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

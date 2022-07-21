@@ -1,0 +1,89 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>listrik on AnbiDev</title>
+        <link>https://anbidev.com/tags/listrik/</link>
+        <description>Recent content in listrik on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Sun, 15 Nov 2020 17:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/listrik/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Rumahku ber-AC (Alternate Current)</title>
+            <link>https://anbidev.com/rumah-ber-ac/</link>
+            <pubDate>Sun, 15 Nov 2020 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/rumah-ber-ac/</guid>
+            <description>Bismillah,
+Halo readers anbi, melanjut pembahasan mengenai listrik yang lalu. temen-temen udah tahu belum sih listrik dirumah kita itu pake AC? oh waw sekali bukan. Lalu apa istimewanya sih? Di dunia yang fana ini masih diketahui ada dua jenis aliran listrik yakni AC dan DC? nah dulu sejarah mencatat mereka berdua ini bersaing, yakni antara Tesla dan Edison, pengen tahu? baca di situs lain ya, hehe.
+Lanjut mengenai si AC ini kenapa ya kok PLN nyalurin listrik ke rumah kita pake AC?</description>
+            <content type="html"><![CDATA[<p><strong>Bismillah,</strong></p>
+<p>Halo readers anbi, melanjut pembahasan mengenai listrik yang lalu. temen-temen udah tahu belum sih listrik dirumah kita itu pake AC? oh waw sekali bukan. Lalu apa istimewanya sih? Di dunia yang fana ini masih diketahui ada dua jenis aliran listrik yakni <strong>AC</strong> dan <strong>DC</strong>? nah dulu sejarah mencatat mereka berdua ini bersaing, yakni antara <strong>Tesla</strong> dan <strong>Edison</strong>, pengen tahu? baca di situs lain ya, hehe.</p>
+<p>Lanjut mengenai si AC ini kenapa ya kok PLN nyalurin listrik ke rumah kita pake AC? kok gak langsung DC aja? secara alat elektronik kita dirumah pakenya kan DC, misal Komputer, Charger, TV LED, Lampu LED, dan masih banyak lagi. Dan infonya arus AC sangat berbahaya di banding arus DC. Nah, tenang semuanya sudah diatur sama <strong>PLN yang sedang merugi</strong>, kasihan ya. Langsung aja kita bahas.</p>
+<br>
+<h2 id="apa-itu-ac-"><strong>Apa itu AC ?</strong></h2>
+<hr>
+<p><strong><em>Alternate Current</em></strong>, <em>(arus alternatif)</em>, yaitu arus listrik bolak-balik. Maksudnya adalah arus listrik tersebut mengalir pada sebuah penghantar yang tegangannya selalu berubah potensial atau tegangannya, yang bakal ngebentuk sebuah gelombang sinus, eh ga selalu sinus sih, contohnya kek gini.</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/gelombang-arus-ac.png" alt="Gelombang arus AC" title="Gelombang arus AC" loading="lazy">
+    <figcaption>Gelombang arus AC</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="kenapa-pake-ac-"><strong>Kenapa pake AC ?</strong></h2>
+<hr>
+<p>Seperti pembahasan yang lalu, di Indonesia sendiri kebanyakan listrik yang digunain di perumahan itu pake <strong>220Volt 50Hz</strong>. Coba deh cek meteran kalian.</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/meteran-prabayar.png" alt="https://www.idwebpulsa.com/kelebihan-kwh-meter-prabayar/" title="Meteran Prabayar" loading="lazy">
+    <figcaption>Meteran Prabayar</figcaption>
+  </figure>
+
+
+</p>
+<p>Bagian <strong>230V/220V</strong> artinya listrik dirumah kita mendapat tegangan sebesar 220 volt. 50Hz itu nunjukin kalau pake frekuensi <em>50Hertz</em> (50 gelombang per detik). kalau diibaratin lampu bohlam yang warna kuning, dia bakalan kedip-kedip sampai 50 kali dalam 1 detik. wadaw sekali ya.</p>
+<p>Lalu kenapa kok harus pakai arus AC dalam penyaluran listrik ini? Sejarah mencatat bahwa dulu abad ke-19 terdapat perseteruan yang <em>epic</em> antara <em><strong>Nikola Tesla</strong></em> vs <em><strong>Thomas Alva Edison</strong></em>. Yang mana dimenangkan oleh arus AC, karena arus AC dapat ditransmisikan dengan jarak yang cukup jauh menggunakan alat <strong>Trafo</strong> (<em>Transformer</em>) untuk menaik turunkan tegangan. Tegangan ini sangat penting guna transmisi listrik ini, kenapa? karena secara rumus daya :</p>
+<blockquote>
+<p>Daya = Tegangan x Arus</p>
+<p>P = V . I</p>
+</blockquote>
+<p>Jadi kalau semisal transimi listriknya jauh banget nanti bakalan ada arus yang hilang dijalanan (dimakan habis oleh kabel transimi) dan tidak sampai ke rumah-rumah. <ins>Jadi ada dua solusi yakni <strong>menaikkan Arus</strong> dan <strong>menaikkan Voltage</strong></ins>.</p>
+<p>Jika <strong>menaikkan Arus</strong> dibutuhkan Kabel tembaga yang cukup besar dan itu sangat gak efisien dan mahal, maka dari itu dinaikkan lah Voltage-nya yang tidak perlu membutuhkan tembaga(kabel) penyaluran yang besar. Untuk <strong>menaikkan Voltage</strong> (tegangan) dengan menggunakan Trafo (<em>Transformator</em>) <em>Step-up</em> saja.</p>
+<p>Maka dari itu lebih efisien pakai Trafo untuk menaikkan tegangan. Oke paham yah. Tidak jarang juga temen-temen dengar atau pernah merhatiin ada tulisan <em>&ldquo;Awas, Listrik bertegangan tinggi&rdquo;</em>, iya emang betul tegangannya yang ditinggikan bukan Arusnya dan itu sangat berbahaya. Dari pembahasan itu Trafo sendiri hanya dapat bekerja di arus AC aja,kenapa tuh? ya gak tau sih hehe. Info yang saya dapat seperti itu.</p>
+<br>
+<h2 id="alasan-kenapa-pakai-arus-ac">Alasan Kenapa Pakai Arus AC</h2>
+<hr>
+<p><strong>A. Gampang untuk diubah (convert)</strong></p>
+<p>Jadi buat mengubah dari AC ke DC kita cukup pakai <strong>Dioda Penyearah</strong> (<em>Rectifier</em>), setiap alat elektronik dimasa kini pasti memiliki komponen seperti itu. Misal lampu led, komputer, laptop, smartphone, dll. Didalam perangkat tersebut didalamnya ada sebuah rangkaian <em>rectifier</em>.</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/rangkaian_ac-ke-dc.png" alt="Rangkaian AC ke DC" title="Rangkaian AC ke DC" loading="lazy">
+    <figcaption>Rangkaian AC ke DC</figcaption>
+  </figure>
+
+
+</p>
+<p>Sedangkan untuk mengubah arus DC ke arus AC menggunakan <strong>Inverter</strong>, namun diperlukan banyak sekali rangkaian guna konversi DC ke AC. Seperti berikut rangkaian nya.</p>
+<p>
+  <figure>
+    <img class="blurry-load" src="/img/no-image-small.jpg" data-large="/post/rangkaian_dc-ke-ac.png" alt="Rangkaian DC ke AC" title="Rangkaian DC ke AC" loading="lazy">
+    <figcaption>Rangkaian DC ke AC</figcaption>
+  </figure>
+
+
+</p>
+<p>Dari rangkaian tersebut cukup tidak efisien dan rumit untuk saya hehe.</p>
+<br>
+<p><strong>B. Lebih mudah diubah besaran Tegangan dan Arusnya</strong></p>
+<p>Dalam skalabilitas kecil arus dan tegangan kecil penggunaan rangkaian elektronik untuk mengubah besaran tegangan dan arus lebih efisien dibanding menggunakan trafo yang harganya lebih mahal. Namun, jika penggunaan listrik yang besar (skala yg besar) maka penggunaan trafo lebih oke ketimbang rangkaian elektronik biasa.</p>
+<p>Dari penjelasan tersebut akan lengkap bilamana ada contohnya. Misalnya tegangan yang dihasilkan oleh suatu Pembangkit yakni <strong>20kV</strong>, dinaikkan <em>Trafo Step-up</em> menjadi <strong>200kV</strong>. Kemudian, disalurkan oleh biasanya kabel udara <strong>Sutet</strong> (Saluran Udara Tegangan Tinggi) sampai di suatu gardu induk tegangan diturunkan oleh <em>Trafo Step-down</em> menjadi <strong>30kV</strong>, lalu sampai ke tiang-tiang yang ada trafonya di <em>step-down</em> lagi menjadi tegangan rendah kemudian disalurkanlah ke rumah-rumah sampai tegangan menjadi <strong>220V</strong>.</p>
+<center> .  .  . </center>
+<p>Nah mungkin itu dia beberapa informasi yang dapat saya sampaikan untuk saat ini. Mohon maaf atas segala kesalahan dan kerandoman materi saya, jika ada sanggahan mangga untuk komen di bawah yah :)</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

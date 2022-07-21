@@ -1,0 +1,12 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>C&#43;&#43; on AnbiDev</title>
+        <link>https://anbidev.com/tutorials/cpp/</link>
+        <description>Recent content in C&#43;&#43; on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Sat, 06 Feb 2021 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tutorials/cpp/index.xml" rel="self" type="application/rss+xml" />
+        
+    </channel>
+</rss>

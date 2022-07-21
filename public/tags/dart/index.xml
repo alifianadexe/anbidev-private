@@ -1,0 +1,479 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>dart on AnbiDev</title>
+        <link>https://anbidev.com/tags/dart/</link>
+        <description>Recent content in dart on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Sat, 12 Dec 2020 17:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/dart/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Struktur Folder dan File pada Flutter</title>
+            <link>https://anbidev.com/flutter-folder-dan-file/</link>
+            <pubDate>Sat, 12 Dec 2020 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/flutter-folder-dan-file/</guid>
+            <description>Dalam pembuatan project baru, bisa kita lihat bahwa struktur folder dan file pada flutter cukup simpel. Bagi yang belum tahu apa itu direktori, direktori sama artinya dengan folder, jadi Anbi mungkin akan menggunakan kedua kata tersebut. Anbi akan jelaskan, masing-masing kegunaan dari direktori dan file yang dibuat otomatis dan akan sedikit Anbi tambahin sesuai pengalaman Anbi.
+Direktori atau Folder .dart_tool .dart_toolMuncul pada Dart 2, digunakan oleh pub dan tools lainnya.</description>
+            <content type="html"><![CDATA[<p>Dalam pembuatan project baru, bisa kita lihat bahwa struktur folder dan file pada flutter cukup simpel. Bagi yang belum tahu apa itu direktori, <code>direktori</code> sama artinya dengan <code>folder</code>, jadi Anbi mungkin akan menggunakan kedua kata tersebut. Anbi akan jelaskan, masing-masing kegunaan dari direktori dan file yang dibuat otomatis dan akan sedikit Anbi tambahin sesuai pengalaman Anbi.</p>
+<h2 id="direktori-atau-folder">Direktori atau Folder</h2>
+<h3 id="dart_tool">.dart_tool</h3>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/darttool.PNG" alt=".dart" title=".dart_tool" >
+    <figcaption>.dart_tool</figcaption>
+  </figure>
+
+
+</p>
+<p>Muncul pada <code>Dart 2</code>, digunakan oleh pub dan tools lainnya. Direktori ini menggantikan direktori <code>.pub</code> setelah SDK 2.0.0-dev.32.0 rilis. Tidak perlu mengubah isi direktori ini.</p>
+<h3 id="idea">.idea</h3>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/idea.PNG" alt=".idea" title=".idea" >
+    <figcaption>.idea</figcaption>
+  </figure>
+
+
+</p>
+<p>Perlu kita ketahui terlebih dahulu, pada Intellij IDEA terdapat dua tipe format untuk konfigurasi Project disimpan, yakni File-based format dan Directory-based format. Flutter menganut yang kedua (Directory-based format). Nah, di direktori <code>.idea</code> ini setiap pengaturan Project disimpan secara spesifik dalam bentuk <code>xml</code>. Pada sistem operasi macOS dan Linux, direktori .idea akan ter hidden secarta default. Kita tidak perlu mengubah-ubah isi dari direktori ini. Jika menggunakan git, direktori <code>.idea/</code> akan ditulis pada .gitignore secara otomatis.</p>
+<h3 id="android">android</h3>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/android-1.PNG" alt="android" title="android" >
+    <figcaption>android</figcaption>
+  </figure>
+
+
+</p>
+<p>Merupakan Folder yang penting, isi dari folder ini diperlukan untuk proses build menjadi aplikasi native ke <code>platform android</code>. Didalamnya ada file <code>build.gradle</code>, disini tempat untuk menentukan versi Sdk dari aplikasi. Dan pada file <code>AndroidManifest.xml</code> berguna untuk mengatur permissions, untuk meminta ijin menggunakan camera, file explorer, sound recording, dsb. Folder utama didalam android adalah folder main.</p>
+<h3 id="ios">ios</h3>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/ios-1.PNG" alt="ios" title="ios" >
+    <figcaption>ios</figcaption>
+  </figure>
+
+
+</p>
+<p>Fungsinya sama seperti folder android, folder ini diperlukan jika kita ingin menjalankan aplikasi ke <code>platform iOS</code>. Walaupun dalam penerapannya, kita memerlukan sistem operasi macOS dengan XCode nya agar bisa build menjadi aplikasi ke iPhone. Jika kita tidak memiliki device nya, kita bisa menyewa Cloud Service yang menggunakan macOS.</p>
+<h3 id="lib">lib</h3>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/lib.PNG" alt="lib" title="lib" >
+    <figcaption>lib</figcaption>
+  </figure>
+
+
+</p>
+<p>Ini adalah folder utama, dan merupakan code dari aplikasi Flutter mu. Pada awalnya, akan ada file <code>main.dart</code> yang dibuatkan secara otomatis. File main.dart adalah file root dari aplikasi Flutter mu, jadi Anbi beri saran untuk kamu membuat folder baru didalam folder lib. Nah, nanti main.dart diarahkan ke file-file didalam folder baru itu.</p>
+<h3 id="test">test</h3>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/test.PNG" alt="test" title="test" >
+    <figcaption>test</figcaption>
+  </figure>
+
+
+</p>
+<p>Folder ini diatur untuk testing dari kode yang kamu tulis.</p>
+<h3 id="assets">assets</h3>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/assets-1.PNG" alt="assets" title="assets" >
+    <figcaption>assets</figcaption>
+  </figure>
+
+
+</p>
+<p>Folder satu ini tidak ada secara default dan hanya merupakan tambahan yang sering Anbi gunakan. Fungsinya untuk menyimpan <code>images</code> atau <code>font</code> tambahan. Anbi sarankan untuk kita tetap menjaga struktur direktori mudah ditemukan agar tidak pusing saat ingin maintenance.</p>
+<h2 id="file">File</h2>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/file.PNG" alt="file" title="file" >
+    <figcaption>file</figcaption>
+  </figure>
+
+
+</p>
+<h3 id="gitignore">.gitignore</h3>
+<p>File ini berisi daftar file, extensi, dan folder yang akan diabaikan oleh Git, jika kita menggunakan Git. Dalam awal pembuatan Project Flutter baru, file ini sudah terisi dengan baik mana file atau folder yang akan diabaikan. Kamu tidak perlu mengubah isinya kecuali memang ada yang ingin ditambahkan.</p>
+<h3 id="metadata">.metadata</h3>
+<p>File ini dikelola oleh Flutter secara otomatis digunakan untuk melacak properties dari Project Flutter. Juga untuk menilai kemampuan dan menjalankan upgrade. File ini tidak di edit secara manual.</p>
+<h3 id="packages">.packages</h3>
+<p>Isi dari file ini di generate secara otomatis oleh Flutter SDK dan digunakan untuk mendata dependencies dari Project Flutter mu. File ini tidak di edit secara manual.</p>
+<h3 id="nama_projectiml">nama_project.iml</h3>
+<p>File ini akan dinamai sesuai dengan nama project dan berisi pengaturan dari Project Flutter. File ini tidak di edit secara manual.</p>
+<h3 id="pubspecyaml">pubspec.yaml</h3>
+<p>File ini merupakan file konfigurasi dari Project Flutter yang akan sering kamu gunakan. Hal-hal yang bisa kita konfigurasi dari file ini adalah:</p>
+<ul>
+<li>nama, deskripsi dan versi dari project</li>
+<li>dependencies yang digunakan</li>
+<li>asset seperti gambar dan font</li>
+</ul>
+<h3 id="pubspeclock">pubspec.lock</h3>
+<p>Pada awal kita menggunakan dependencies baru untuk sebuah package, pub akan mendownload versi paling baru dan cocok. Lalu pub akan mengunci package untuk selalu digunakan dengan membuat pubspec.lock. File ini akan mendata secara spesifik versi dari setiap dependency yang digunakan package. Saat kamu ingin upgrade dependencies ke versi paling baru, gunakan command</p>
+<pre><code>$ pub upgrade
+</code></pre>
+<h3 id="readmemd">README.md</h3>
+<p>File ini biasanya berguna sebagai guide bagi developer baru yang bergabung ke tim pengembangan Project Flutter mu. Kamu bisa tuliskan langkah awal untuk menjalankan aplikasi beserta lingkup dependencies yang perlu diperhatikan.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Menggunakan Fitur Hot Reload milik Flutter</title>
+            <link>https://anbidev.com/flutter-hot-reload/</link>
+            <pubDate>Sun, 06 Sep 2020 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/flutter-hot-reload/</guid>
+            <description>Pada artikel ini akan dijelaskan cara membuat aplikasi Flutter menggunakan template sekaligus kita akan mencoba fitur &amp;ldquo;hot reload&amp;rdquo; setelah kamu membuat perubahan pada kodinganmu.
+Pilih dulu IDE yang akan kamu gunakan untuk menjalankan Flutter, aku menggunakan Visual Studio Code.
+Persiapan Untuk persiapannya kita akan membuat project bernama myapp yang memuat demo aplikasi yang simpel:
+ Jalankan View &amp;gt; Command Palette.  Menu List of View Ketik &amp;ldquo;flutter&amp;rdquo;, lalu pilih Flutter: New Project.</description>
+            <content type="html"><![CDATA[<p>Pada artikel ini akan dijelaskan cara membuat aplikasi Flutter menggunakan template sekaligus kita akan mencoba fitur <em><strong>&ldquo;hot reload&rdquo;</strong></em> setelah kamu membuat perubahan pada kodinganmu.</p>
+<p>Pilih dulu IDE yang akan kamu gunakan untuk menjalankan Flutter, aku menggunakan Visual Studio Code.</p>
+<br>
+<h2 id="persiapan">Persiapan</h2>
+<hr>
+<p>Untuk persiapannya kita akan membuat project bernama <em>myapp</em> yang memuat demo aplikasi yang simpel:</p>
+<ul>
+<li>Jalankan <strong>View &gt;</strong> <strong>Command Palette</strong>.</li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/hot-reload-1.png" alt="&amp;ldquo;Menu List View&amp;rdquo;" title="Menu List of View" >
+    <figcaption>Menu List of View</figcaption>
+  </figure>
+
+
+</p>
+<ul>
+<li>Ketik &ldquo;flutter&rdquo;, lalu pilih <strong>Flutter: New Project</strong>.</li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/hot-reload-2.png" alt="&amp;ldquo;Auto Run VS Code&amp;rdquo;" title="Auto Run VS Code" >
+    <figcaption>Auto Run VS Code</figcaption>
+  </figure>
+
+
+</p>
+<ul>
+<li>Masukkan nama project, seperti <em>myapp</em>, lalu <strong>Enter</strong>.</li>
+<li>Buat atau pilih direktori utama untuk project baru ini.</li>
+<li>Silakan tunggu hingga <code>main.dart</code> muncul</li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/hot-reload-6.png" alt="&amp;ldquo;main.dart view&amp;rdquo;" title="main.dart view" >
+    <figcaption>main.dart view</figcaption>
+  </figure>
+
+
+</p>
+<blockquote>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>Kode utama terletak pada lib/main.dart, lihat <em>comment</em> yang telah ada sebagai panduan.</li>
+<li>Mungkin saja dalam prosesnya kamu akan diminta untuk mengupdate flutter atau dart (Extension).</li>
+</ul>
+</blockquote>
+<br>
+<h2 id="jalankan-aplikasi">Jalankan Aplikasi</h2>
+<hr>
+<ul>
+<li>Lihat status bar VS Code (Bagian bawah window):</li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/hot-reload-7.png" alt="&amp;ldquo;VS Code Status Bar&amp;rdquo;" title="VS Code Status Bar" >
+    <figcaption>VS Code Status Bar</figcaption>
+  </figure>
+
+
+</p>
+<ul>
+<li>
+<p>Pastikan ada device yang terhubung.</p>
+</li>
+<li>
+<p>Tekan <strong>F5</strong> atau ketik <code>flutter run</code> pada terminal untuk menjalankan aplikasi.</p>
+</li>
+<li>
+<p>Tunggu aplikasi berjalan (Semua proses terlihat pada <strong>Debug Console</strong>)</p>
+</li>
+<li>
+<p>Jika sudah selesai, maka akan terlihat demo aplikasi pada device mu.</p>
+</li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/hot-reload-8-land.png" alt="&amp;ldquo;First Demo Application&amp;rdquo;" title="First Demo Application" >
+    <figcaption>First Demo Application</figcaption>
+  </figure>
+
+
+</p>
+<br>
+<h2 id="hot-reload">Hot Reload</h2>
+<hr>
+<p>Flutter menawarkan <ins>Stateful Hot Reload</ins>, sebuah kemampuan untuk mereload saat ada perubahan pada code.</p>
+<ul>
+<li>
+<p>Buka <code>lib/main.dart</code></p>
+</li>
+<li>
+<p>Ubah tulisan:</p>
+<p><em>&lsquo;You have pushed the button this many times&rsquo;</em></p>
+</li>
+<li>
+<p>Menjadi tulisan:</p>
+<p><em>&lsquo;You have clicked the button this many times&rsquo;</em></p>
+</li>
+</ul>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/hot-reload-9.png" alt="&amp;ldquo;Example Code&amp;rdquo;" title="Example Code" >
+    <figcaption>Example Code</figcaption>
+  </figure>
+
+
+</p>
+<p>Jangan hentikan aplikasi mu, biarkan tetap berjalan. Perubahan akan langsung terlihat</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/hot-reload-10.png" alt="&amp;ldquo;Demo Application&amp;rdquo;" title="Demo Application" >
+    <figcaption>Demo Application</figcaption>
+  </figure>
+
+
+</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Mempersiapkan Editor untuk Flutter</title>
+            <link>https://anbidev.com/flutter-setup-editor/</link>
+            <pubDate>Mon, 31 Aug 2020 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/flutter-setup-editor/</guid>
+            <description>Pada dasarnya, kamu bisa menggunakan segala jenis Text Editor dan bisa dikombinasi dengan command-line. Tapi kami sarankan untuk menggunakan salah satu dari editor beserta plugin pilihan kami.
+Plugin tersebut akan membantumu dalam auto-complete code dan highlighting syntak sehingga lebih jelas dan tidak terkesan monoton, fitur run debug, dan sebagainya.
+Android Studio Dan IntelliJ Dengan menggunakan Editor satu ini, maka lingkungan pengembanganmu akan sangat terbantu dengan beragam bantuan kompleks yang dimiliki Android Studio.</description>
+            <content type="html"><![CDATA[<p>Pada dasarnya, kamu bisa menggunakan segala jenis Text Editor dan bisa dikombinasi dengan command-line. Tapi kami sarankan untuk menggunakan salah satu dari editor beserta <em>plugin</em> pilihan kami.</p>
+<p>Plugin tersebut akan membantumu dalam <em>auto-complete</em> code dan <em>highlighting</em> syntak sehingga lebih jelas dan tidak terkesan monoton, fitur <em><strong>run debug</strong></em>, dan sebagainya.</p>
+<br>
+<h2 id="android-studio-dan-intellij">Android Studio Dan IntelliJ</h2>
+<hr>
+<p>Dengan menggunakan Editor satu ini, maka lingkungan pengembanganmu akan sangat terbantu dengan beragam bantuan kompleks yang dimiliki Android Studio.</p>
+<h3 id="install-editor">Install Editor</h3>
+<ul>
+<li><a href="https://developer.android.com/studio"
+     title="Android Studio" 
+     target="_blank" rel="noreferrer" >Android Studio</a>, (<em>versi 3.0 atau lebih</em>)</li>
+<li><a href="https://www.jetbrains.com/idea/download/"
+     title="IJ IDEA Com" 
+     target="_blank" rel="noreferrer" >IntelliJ IDEA Community</a>, (<em>versi 2017.1 atau lebih</em>)</li>
+<li><a href="https://www.jetbrains.com/idea/download/"
+     title="IJ IDEA Ult" 
+     target="_blank" rel="noreferrer" >IntelliJ IDEA Ultimate</a>, (<em>versi 2017.1 atau lebih</em>)</li>
+</ul>
+<h3 id="install-plugin-flutter-dan-dart">Install plugin Flutter dan Dart</h3>
+<p>Untuk menginstall ini:</p>
+<ol>
+<li>Jalankan Android Studio</li>
+<li>Buka plugin preference (<strong>Configure &gt; Plugins</strong>)</li>
+<li>Cari plugin Flutter lalu <strong>Install</strong></li>
+<li>Klik <strong>Yes</strong> jika diminta menginstall plugin <em>Dart</em></li>
+<li>Biasanya akan diminta untuk merestart Editor</li>
+</ol>
+<br>
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+<hr>
+<p>VS Code adalah editor ringan namun memiliki plugin yang tidak kalah dengan Android Studio.</p>
+<ul>
+<li><a href="https://code.visualstudio.com/"
+     title="VS Code" 
+     target="_blank" rel="noreferrer" >VS Code</a> (<em>Stable Version</em>)</li>
+</ul>
+<h3 id="install-plugin-flutter-dan-dart-1">Install Plugin Flutter Dan Dart</h3>
+<ol>
+<li>Jalankan VS Code</li>
+<li>Panggil Command Pallete dengan menggunakan kombinasi tombol <strong>CTRL+SHIFT+P</strong>. Atau pilih menu <strong>View &gt; Command Pallete</strong></li>
+<li>Ketik &ldquo;install&rdquo;, lalu pilih <strong>Extensions: Install Extensions</strong>.</li>
+<li>Ketik &ldquo;flutter&rdquo; pada jendela pencarian ekstensi, lalu pilih  <strong>Flutter</strong>, lalu <strong>Install</strong>. Plugin untuk Dart akan secara otomatis terinstall.</li>
+</ol>
+<h3 id="flutter-doctor">Flutter Doctor</h3>
+<ol>
+<li>Panggil Command Pallete dengan menggunakan kombinasi tombol <strong>CTRL+SHIFT+P</strong>. Atau pilih menu <strong>View &gt; Command Pallete</strong></li>
+<li>Ketik &ldquo;doctor&rdquo;, lalu pilih  <strong>Flutter: Run Flutter Doctor</strong>.</li>
+<li>Perhatikan isu yang muncul pada panel <strong>Output</strong>, pastikan semua <em>error</em> dapat ditangani.</li>
+</ol>
+<p>Cara untuk menangani error sudah tersedia pada <strong>Output</strong> yang muncul</p>
+<blockquote>
+<p>Jika Komputer atau Laptop yang digunakan tidak sampai 4 GB RAM kami sarankan untuk <strong>tidak</strong> <strong>menggunakan Android Studio</strong>, melainkan <strong>menggunakan VS Code</strong> yang lebih ringan.</p>
+</blockquote>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Instalasi Flutter pada Windows</title>
+            <link>https://anbidev.com/instalasi-flutter/</link>
+            <pubDate>Sat, 29 Aug 2020 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/instalasi-flutter/</guid>
+            <description>System requirements Untuk menginstall dan menjalankan flutter ada beberapa hal yang perlu dipenuhi, yakni:
+ Sistem Operasi: Windows 7 SP1 or later (64-bit) Disk: 1,32 GB (belum termasuk untuk kebutuhan editor) Tool:  Windows PowerShell 5.0 (sudah ada pada instalasi awal Windows 10) Git, pastikan dengan menjalankan perintah git di command prompt    Flutter SDK  Download instalasi berikut : ** Flutter SDK ** Ekstrak file flutter_windows_1.</description>
+            <content type="html"><![CDATA[<h2 id="system-requirements">System requirements</h2>
+<hr>
+<p>Untuk menginstall dan menjalankan flutter ada beberapa hal yang perlu dipenuhi, yakni:</p>
+<ul>
+<li><strong>Sistem Operasi</strong>: Windows 7 SP1 or later (64-bit)</li>
+<li><strong>Disk</strong>: 1,32 GB (belum termasuk untuk kebutuhan editor)</li>
+<li><strong>Tool</strong>:
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell"
+     title="Windows PowerShell" 
+     target="_blank" rel="noreferrer" >Windows PowerShell</a> 5.0 (sudah ada pada instalasi awal Windows 10)</li>
+<li><a href="https://git-scm.com/download/win"
+     title="Git" 
+     target="_blank" rel="noreferrer" >Git</a>, pastikan dengan menjalankan perintah git di command prompt</li>
+</ul>
+</li>
+</ul>
+<br>
+<h2 id="flutter-sdk">Flutter SDK</h2>
+<hr>
+<ol>
+<li>Download instalasi berikut : <br>
+<a href="https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_1.20.2-stable.zip"
+     title="Flutter Windows SDK" 
+     target="_blank" rel="noreferrer" >** Flutter SDK **</a></li>
+<li>Ekstrak file <code>flutter_windows_1.20.2-stable.zip</code> ke lokasi yang diinginkan. Contoh :</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">C:\\src\\flutter
+</code></pre></div><blockquote>
+<p><strong>Peringatan</strong>: Jangan tempatkan flutter pada direktori yang membutuhkan hak akses khusus seperti <code>C:\\Program Files\\</code></p>
+</blockquote>
+<p>Jika kamu tidak mau menginstall versi stabil, kamu bisa mendapatkan <em>source code</em> nya pada <a href="https://github.com/flutter/flutter"
+     title="Repositori Flutter" 
+     target="_blank" rel="noreferrer" >repositori Flutter</a> di GitHub.</p>
+<pre><code>   git clone https://github.com/flutter/flutter.git -b stable
+</code></pre>
+<p>Sekarang kamu siap menjalankan perintah Flutter pada <a href="https://stackoverflow.com/questions/50837815/what-is-the-flutter-console"
+     title="Flutter Console" 
+     target="_blank" rel="noreferrer" >Flutter console</a>.</p>
+<br>
+<h2 id="update-path">Update Path</h2>
+<hr>
+<p>Jika kamu ingin menggunakan perintah Flutter pada Windows console, update path terlebih dahulu:</p>
+<ul>
+<li>
+<p>Pada <em>search bar</em> di Start, ketik <em>&lsquo;env&rsquo;</em> dan pilih <strong>Edit environment variables for your account</strong>.</p>
+</li>
+<li>
+<p>Pada <strong>User variables</strong> double klik &lsquo;<em>Path</em>&rsquo;, isikan tempat kamu mengekstrak Flutter SDK tadi dan diarahkan ke subfolder <code>bin</code>, Contoh :</p>
+<p>C:\src\flutter\bin</p>
+</li>
+<li>
+<p>Buka ulang CMD agar perubahan bisa berjalan</p>
+</li>
+</ul>
+<br>
+<h2 id="jalankan-flutter-doctor">Jalankan Flutter Doctor</h2>
+<hr>
+<p>Untuk melihat apakah Flutter sudah terinstall dengan baik, ketik perintah berikut di CMD:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">flutter doctor
+</code></pre></div><p>Perintah tersebut digunakan untuk melaporkan status instalasi flutter. Cek <em>output</em> yang dihasilkan oleh perintah tersebut (perhatikan teks yang <strong>bold</strong> atau terdapat tanda <strong>✗</strong>)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">      <span style="color:#f92672">[</span>-<span style="color:#f92672">]</span> Android toolchain - develop <span style="color:#66d9ef">for</span> Android devices
+          • Android SDK at D:<span style="color:#ae81ff">\A</span>ndroid<span style="color:#ae81ff">\s</span>dk
+          ✗ Android SDK is missing command line tools; download from https://goo.gl/XxQghQ
+          • Try re-installing or updating your Android SDK,
+            visit https://flutter.dev/setup/#android-setup <span style="color:#66d9ef">for</span> detailed instructions.
+</code></pre></div><p>Pada bagian tersebut diperlihatkan cara menangani setup yang kurang. Seperti menjalankan <code>flutter doctor --android-licenses</code>. Setelah kamu menginstall bagian yang kurang, kamu bisa mengetik flutter doctor lagi untuk melihat apakah sudah terinstall dengan benar.</p>
+<br>
+<h2 id="android-setup">Android setup</h2>
+<hr>
+<blockquote>
+<p><strong>Note:</strong> Flutter bergantung pada instalasi Android Studio untuk memasok dependencies platform Android. Namun, kamu bisa menulis Flutter pada editor lain, akan kita bahas lain waktu</p>
+</blockquote>
+<h3 id="install-android-studio">Install Android Studio</h3>
+<ol>
+<li>Download dan install <a href="https://developer.android.com/studio"
+     title="Android Studio" 
+     target="_blank" rel="noreferrer" >Android Studio</a>.</li>
+<li>Jalankan Android Studio, lalu ke &lsquo;<strong>Android Studio Setup Wizard</strong>&rsquo;. Install Android SDK, Android SDK Command-line Tools, dan Android SDK Build-Tools, dimana dibutuhkan Flutter untuk mendevelop Android.</li>
+</ol>
+<br>
+<h3 id="setup-android-emulator">Setup Android Emulator</h3>
+<p>Untuk menjalankan Aplikasi Flutter pada Android Emulator di komputer atau laptopmu sendiri, ikuti langkah ini:</p>
+<ol>
+<li>Enable <a href="https://developer.android.com/studio/run/emulator-acceleration"
+     title="VM Acceleration" 
+     target="_blank" rel="noreferrer" >VM acceleration</a></li>
+<li>Jalankan <strong>Android Studio</strong></li>
+<li>Pada layar Welcome, pilih <strong>Configure</strong> <strong>&gt; AVD Manager</strong></li>
+<li>Lalu akan tampil layar AVD Manager, pilih <strong>Create Virtual Device</strong>, pilih device emulator yg ingin digunakan.</li>
+<li>Kamu perlu mengunduh satu atau lebih System Image dari versi Android yang ingin digunakan, lalu <strong>Next</strong>.</li>
+<li>Dibawah Emulated Performance, pilih <strong>Hardware - Gles 2.0</strong> agar <a href="https://developer.android.com/studio/run/emulator-acceleration"
+     title="hardware accelerator" 
+     target="_blank" rel="noreferrer" >hardware accelerator</a> berjalan.</li>
+<li>Pastikan semua konfigurasi benar, lalu <strong>Finish</strong>.</li>
+<li>Pada layar Android Virtual Device Manager, klik <strong>Run</strong>. Emulator akan berjalan.</li>
+</ol>
+<br>
+<h3 id="setup-android-device">Setup Android Device</h3>
+<p>Jika komputer atau laptop Flutter mu keberatan untuk menjalankan Emulator, kamu bisa menggunakan Smartphone-mu sendiri untuk menjalankan Aplikasi. Minimun versi Android yang dibutuhkan adalah <strong>Android 4.1 (API level 16)</strong> atau lebih tinggi.</p>
+<ol>
+<li><em>Enable</em> <strong>Developer options</strong> dan <strong>USB debugging</strong> pada Smartphone. Instruksi lebih detail ada di <a href="https://developer.android.com/studio/debug/dev-options"
+     title="Dev Option" 
+     target="_blank" rel="noreferrer" >Android documentation</a>. Hal ini akan membuat Smartphone bisa melakukan <em>debug</em> menggunakan kabel usb.</li>
+<li><a href="https://developer.android.com/studio/run/win-usb"
+     title="Google USB Driver" 
+     target="_blank" rel="noreferrer" >&lt;strong&gt;Google USB Driver&lt;/strong&gt;</a>, diperlukan Windows jika anda ingin menjalankan debug dengan perangkat Google.</li>
+<li>Gunakan kabel USB, lalu hubungkan device mu ke komputer. Lalu ijinkan komputer untuk mengakses Smartphone.</li>
+<li>Buka CMD, jalankan &lsquo;flutter device&rsquo; untuk menverifikasi jika Flutter mengenali Smartphone. Secara default, Flutter menggunakan versi Android yang dimiliki Smartphone.</li>
+</ol>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Mengenal Flutter</title>
+            <link>https://anbidev.com/flutter-dasar/</link>
+            <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/flutter-dasar/</guid>
+            <description>Pengantar Flutter merupakan UI Toolkit milik Google yang digunakan untuk mengembangkan aplikasi mobile dan mampu berjalan di sistem operasi Android dan iOS. Flutter dibangun menggunakan C, C++, Dart dan Skia.
+Flutter telah support plugin untuk Android Studio, IntelliJ IDEA dan VS Code. Bahkan flutter bisa kita gunakan secara kombinasi menggunakan editor lain dan Command Prompt atau Terminal.
+Kemampuan Flutter Kita bisa mendapatkan peforma terbaik untuk aplikasi yang akan kita kembangkan.</description>
+            <content type="html"><![CDATA[<h2 id="pengantar">Pengantar</h2>
+<hr>
+<p>Flutter merupakan UI Toolkit milik Google yang digunakan untuk mengembangkan aplikasi mobile dan mampu berjalan di sistem operasi <strong>Android</strong> dan <strong>iOS</strong>. Flutter dibangun menggunakan C, C++, Dart dan Skia.</p>
+<p>Flutter telah support plugin untuk Android Studio, IntelliJ IDEA dan VS Code. Bahkan flutter bisa kita gunakan secara kombinasi menggunakan editor lain dan Command Prompt atau Terminal.</p>
+<br>
+<h2 id="kemampuan-flutter">Kemampuan Flutter</h2>
+<hr>
+<p>Kita bisa mendapatkan peforma terbaik untuk aplikasi yang akan kita kembangkan. Flutter di desain untuk bisa dengan mudah mendapatkan <strong>60fps</strong> secara konstan. Kode pada flutter telah <em>tercompile</em> secara <em>native</em>, tanpa tambahan <em>interpreter</em>. Hal ini membuat aplikasi yang dikembangkan menggunakan Flutter dapat berjalan lebih cepat.</p>
+<p>Flutter mengimplementasikan <em><strong>hot-reload</strong></em>. Tidak perlu mengulangi build pada aplikasi yang dikembangkan. kita hanya perlu menyimpan <strong>(CTRL+S)</strong> proyek kita dan perubahan akan langsung terlihat pada device atau emulator.</p>
+<p>Pada pengembangan aplikasi web, masih dalam tahap beta. Dan pada pengembangan aplikasi desktop, pada macOS masuk ditahap alpha, Linux dan Windows sedang dalam pengembangan. Kita tunggu saja jika sudah keluar versi stabil.</p>
+<h3 id="device-untuk-flutter">Device untuk Flutter</h3>
+<ul>
+<li>
+<p>Sistem Operasi: <strong>Android Jelly Bean, v16, 4.1.x or newer, dan iOS 8 or newer</strong>.</p>
+</li>
+<li>
+<p>Hardware: <strong>iOS devices (iPhone 4S or newer) dan ARM Android devices</strong>.</p>
+</li>
+<li>
+<p>Support kepada ujicoba atau <em>testing</em> menggunakan device secara langsung, maupun menggunakan emulator atau simulator</p>
+</li>
+<li>
+<p>Telah di tes pada Device <em>High-end</em> maupun <em>Low-End</em> tapi belum ada jaminan pasti untuk spesifikasi smartphone maupun tablet</p>
+</li>
+</ul>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

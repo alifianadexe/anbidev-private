@@ -1,0 +1,603 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>c&#43;&#43; on AnbiDev</title>
+        <link>https://anbidev.com/tutorials/c&#43;&#43;/</link>
+        <description>Recent content in c&#43;&#43; on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Tue, 16 Feb 2021 17:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tutorials/c++/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Variable pada C&#43;&#43;</title>
+            <link>https://anbidev.com/variable-cpp/</link>
+            <pubDate>Tue, 16 Feb 2021 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/variable-cpp/</guid>
+            <description>Sebelumnya kita sudah membahas tentang syntax dasar pada C&amp;#43;&amp;#43;. Selanjutnya Anbi akan bahas tentang variable. Variable adalah tempat untuk menyimpan nilai. Penulisan variable terdapat dua langkah, deklarasi dan inisialisasi. Lalu kita juga akan mendeklarasi variable beserta tipe datanya. Anbi akan bahas masing-masing pengertian keyword tadi.
+Tipe Data Data dibagi bermacam-macam sesuai dengan penggunaannya. Berikut masing-masing tipe data yang ada pada C++:
+ int (integer), semua angka bulat tanpa desimal, contohnya 123, -123 double, angka pecahan, contohnya 19.</description>
+            <content type="html"><![CDATA[<p>Sebelumnya kita sudah membahas tentang <a href="https://www.anbidev.com/syntax-cpp/"
+     title="Syntax Dasar C&#43;&#43;" 
+     target="_blank" rel="noreferrer" >syntax dasar pada C&#43;&#43;</a>. Selanjutnya Anbi akan bahas tentang variable. <code>Variable</code> adalah tempat untuk menyimpan nilai. Penulisan variable terdapat dua langkah, <code>deklarasi</code> dan <code>inisialisasi</code>. Lalu kita juga akan mendeklarasi variable beserta tipe datanya. Anbi akan bahas masing-masing pengertian keyword tadi.</p>
+<br>
+<h3 id="tipe-data">Tipe Data</h3>
+<hr>
+<p>Data dibagi bermacam-macam sesuai dengan penggunaannya. Berikut masing-masing tipe data yang ada pada C++:</p>
+<ul>
+<li><code>int</code> (integer), semua angka bulat tanpa desimal, contohnya 123, -123</li>
+<li><code>double</code>, angka pecahan, contohnya 19.99, -19.99</li>
+<li><code>char</code>, tipe data huruf, hanya satu karakter contohnya &lsquo;a&rsquo; atau &lsquo;B&rsquo;. Isi dari char ditulis dengan petik satu (single quote)</li>
+<li><code>string</code>, tipe data huruf juga namun langsung menjadi sebuah kata atau kalimat, contohnya &ldquo;Hello World&rdquo;. Isi dari string ditulis dengan petik dua (double quote)</li>
+<li><code>boolean</code>, isinya hanya dua: true or false</li>
+</ul>
+<br>
+<h3 id="deklarasi">Deklarasi</h3>
+<hr>
+<p><code>Deklarasi</code> adalah proses dalam pembuatan variable, disini kita akan menuliskan juga tipe data agar dikenali oleh system. Bentuknya adalah sebagai berikut:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">tipe_data nama_variabel;
+</code></pre></div><p>Contoh dari deklarasi beserta masing-masing tipe data:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">int</span> myNum <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>; <span style="color:#75715e">// Integer (whole number without decimals)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">double</span> myFloatNum <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.77</span>; <span style="color:#75715e">// Floating point number (with decimals)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> myChar <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">‘</span>A<span style="color:#960050;background-color:#1e0010">’</span>; <span style="color:#75715e">// Character
+</span><span style="color:#75715e"></span>string myText <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">“</span>Hello Anbi<span style="color:#f92672">!</span><span style="color:#960050;background-color:#1e0010">”</span>; <span style="color:#75715e">// String (text)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">bool</span> myBoolean <span style="color:#f92672">=</span> true; <span style="color:#75715e">// Boolean (true or false)
+</span></code></pre></div><p>Jika ada variable yang memiliki tipe data yang sama, maka bisa juga ditulis satu baris seperti:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">int</span> firstNum, lastNum, minNum, maxNum;
+</code></pre></div><p>Kita harus pastikan jika variable yang akan dideklarasi sudah ditulis. <code>Error</code> yang sering terjadi jika variable tidak dideklarasikan adalah</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">error: ‘myNum’ was not declared in this scope
+</code></pre></div><br>
+<h3 id="inisialisasi">Inisialisasi</h3>
+<hr>
+<p>Inisialisasi adalah proses pemberian nilai awal dari sebuah variable. Sama seperti dalam pelajaran Matematika, kita menggunakan operator sama dengan <code>=</code> untuk memberikan nilai. Bentuknya adalah sebagai berikut:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">nama_variable <span style="color:#f92672">=</span> isi_variable;
+</code></pre></div><p>Contoh dari inisialisasi variable beserta masing-masing tipe data:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">myNum <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;my
+FloatNum <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.77</span>;
+myChar <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">‘</span>A<span style="color:#960050;background-color:#1e0010">’</span>;
+myText <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">“</span>Hello Anbi<span style="color:#f92672">!</span><span style="color:#960050;background-color:#1e0010">”</span>;
+myBoolean <span style="color:#f92672">=</span> true;
+</code></pre></div><br>
+<h3 id="constant">Constant</h3>
+<hr>
+<p>Jika tidak ingin orang lain atau kita sendiri merubah dengan cara menimpa isi variable, maka kita bisa gunakan constant. Dengan menggunakan <code>constant</code>, maka variable tidak akan bisa diubah dan bersifat <code>read-only</code>. Contoh syntax nya adalah sebagai berikut:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> independenceDay <span style="color:#f92672">=</span> <span style="color:#ae81ff">1945</span>;
+<span style="color:#75715e">// independenceDay akan selalu 1945
+</span><span style="color:#75715e"></span>    
+independenceDay <span style="color:#f92672">=</span> <span style="color:#ae81ff">1947</span>;
+<span style="color:#75715e">// error: assignment of read-only variable &#39;independenceDay&#39;
+</span></code></pre></div><br>
+<h3 id="identifier">Identifier</h3>
+<hr>
+<p>Variable pada C++ harus ditulis menggunakan <code>nama unik</code> agar tidak tertukar. Nama unik ini disebut identifier. Identifier dapat ditulis dengan satu huruf seperti <code>x</code> dan <code>y</code>atau juga bisa ditulis lebih rinci seperti <code>myName</code> atau <code>myNumber</code>. Anbi rekomendasikan juga untuk menggunakan nama yang lebih rinci agar kita tidak lupa kegunaan dari variable yang kita tulis, jadi variable lebih mudah untuk dimengerti.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">int</span> minutes <span style="color:#f92672">=</span> <span style="color:#ae81ff">60</span>;
+<span style="color:#75715e">// Baik
+</span><span style="color:#75715e"></span>    
+<span style="color:#66d9ef">int</span> m <span style="color:#f92672">=</span> <span style="color:#ae81ff">60</span>;
+<span style="color:#75715e">// OK, tapi tidak mudah dimengerti apa maksud dari m
+</span></code></pre></div><br>
+<h3 id="ketentuan">Ketentuan</h3>
+<hr>
+<p>Beberapa ketentuan yang perlu diperhatikan dalam menulis variable pada C++ adalah:</p>
+<ul>
+<li>Isi dari Nama Variable <code>dapat berupa</code> huruf, angka dan underscores</li>
+<li>Namun Nama Variable <code>hanya boleh diawali</code> oleh huruf dan underscores</li>
+<li>Nama Variable bersifat <code>Case Sensitive</code> (myNum dan mynum adalah variable yang berbeda)</li>
+<li>Nama Variable <code>tidak boleh</code> berisi spasi atau karakter spesial seperti !, #, %, dll.</li>
+<li>Nama Variable tidak boleh sama seperti <code>reserved word</code> pada C++ (Reserverd Word adalah kata yang tidak bisa digunakan sebagai identifier, karena sudah digunakan oleh syntax atau kode pada C++).</li>
+</ul>
+<p>Berikut adalah contoh - contoh <strong>reversed word</strong> :</p>
+<table>
+<thead>
+<tr>
+<th>Contoh</th>
+<th>Contoh</th>
+<th>Contoh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alignas</code></td>
+<td><code>alignof</code></td>
+<td><code>and</code></td>
+</tr>
+<tr>
+<td><code>and</code></td>
+<td><code>and_eq</code></td>
+<td><code>asm</code></td>
+</tr>
+<tr>
+<td><code>atomic_cancel</code></td>
+<td><code>atomic_commit</code></td>
+<td><code>atomic_noexcept</code></td>
+</tr>
+<tr>
+<td><code>auto</code></td>
+<td><code>bitand</code></td>
+<td><code>bitor</code></td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><code>break</code></td>
+<td><code>case</code></td>
+</tr>
+<tr>
+<td><code>catch</code></td>
+<td><code>char</code></td>
+<td><code>char16_t</code></td>
+</tr>
+<tr>
+<td><code>char32_t</code></td>
+<td><code>class</code></td>
+<td><code>compl</code></td>
+</tr>
+<tr>
+<td><code>concept</code></td>
+<td><code>const</code></td>
+<td><code>constexpr</code></td>
+</tr>
+<tr>
+<td><code>const_cast</code></td>
+<td><code>continue</code></td>
+<td><code>co_await</code></td>
+</tr>
+<tr>
+<td><code>co_return</code></td>
+<td><code>co_yield</code></td>
+<td><code>decltype</code></td>
+</tr>
+<tr>
+<td><code>default</code></td>
+<td><code>delete</code></td>
+<td><code>do</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><code>dynamic_cast</code></td>
+<td><code>else</code></td>
+</tr>
+<tr>
+<td><code>enum</code></td>
+<td><code>explicit</code></td>
+<td><code>export</code></td>
+</tr>
+<tr>
+<td><code>extern</code></td>
+<td><code>0</code></td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td><code>for</code></td>
+<td><code>friend</code></td>
+<td><code>goto</code></td>
+</tr>
+<tr>
+<td><code>if</code></td>
+<td><code>import</code></td>
+<td><code>inline</code></td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td><code>long</code></td>
+<td><code>module</code></td>
+</tr>
+<tr>
+<td><code>mutable</code></td>
+<td><code>namespace</code></td>
+<td><code>new</code></td>
+</tr>
+<tr>
+<td><code>noexcept</code></td>
+<td><code>not</code></td>
+<td><code>not_eq</code></td>
+</tr>
+<tr>
+<td><code>nullptr</code></td>
+<td><code>operator</code></td>
+<td><code>or</code></td>
+</tr>
+<tr>
+<td><code>or_eq</code></td>
+<td><code>private</code></td>
+<td><code>protected</code></td>
+</tr>
+<tr>
+<td><code>public</code></td>
+<td><code>register</code></td>
+<td><code>reinterpret_cast</code></td>
+</tr>
+<tr>
+<td><code>requires</code></td>
+<td><code>return</code></td>
+<td><code>short</code></td>
+</tr>
+<tr>
+<td><code>signed</code></td>
+<td><code>sizeof</code></td>
+<td><code>static</code></td>
+</tr>
+<tr>
+<td><code>static_assert</code></td>
+<td><code>static_cast</code></td>
+<td><code>struct</code></td>
+</tr>
+<tr>
+<td><code>switch</code></td>
+<td><code>synchronized</code></td>
+<td><code>template</code></td>
+</tr>
+<tr>
+<td><code>this</code></td>
+<td><code>thread_local</code></td>
+<td><code>throw</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>try</code></td>
+<td><code>typedef</code></td>
+</tr>
+<tr>
+<td><code>typeid</code></td>
+<td><code>typename</code></td>
+<td><code>union</code></td>
+</tr>
+<tr>
+<td><code>unsigned</code></td>
+<td><code>using</code></td>
+<td><code>virtual</code></td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>volatile</code></td>
+<td><code>wchar_t</code></td>
+</tr>
+<tr>
+<td><code>while</code></td>
+<td><code>xor</code></td>
+<td><code>xor_eq</code></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Sekian materi C++ atau CPP kali ini.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Syntax Dasar C&#43;&#43;</title>
+            <link>https://anbidev.com/syntax-cpp/</link>
+            <pubDate>Tue, 09 Feb 2021 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/syntax-cpp/</guid>
+            <description>Pada artikel sebelumnya, kita sudah berhasil menginstall aplikasi yang kita butuhkan untuk belajar bahasa C++. Sekarang kita akan mempelajari Syntax dasarnya. Silakan buka text editor sublime (atau kalian bisa menggunakan text editor favorit kalian, ini sifatnya opsional). Kelebihan dari sublime adalah kemampuan autocomplete syntax seperti gambar berikut:
+C&amp;#43;&amp;#43; in SublimeDapat dilihat, hanya dengan mengetikkan “io”, kita sudah disuguhkan beberapa pilihan syntax. Kita pilih yang I-Iostream. Ini sifatnya opsional ya, fungsinya hanya agar kita dapat menulis syntax dengan cepat.</description>
+            <content type="html"><![CDATA[<p>Pada <a href="https://www.anbidev.com/persiapan-cpp/"
+     title="Persiapan Belajar C&#43;&#43;" 
+     target="_blank" rel="noreferrer" >artikel sebelumnya</a>, kita sudah berhasil menginstall aplikasi yang kita butuhkan untuk belajar bahasa C++. Sekarang kita akan mempelajari Syntax dasarnya. Silakan buka text editor sublime (atau kalian bisa menggunakan text editor favorit kalian, ini sifatnya opsional). Kelebihan dari sublime adalah kemampuan autocomplete syntax seperti gambar berikut:</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/1_3dzqqtytaypudyux1zbcwg.png" alt="C&#43;&#43; in Sublime" title="C&#43;&#43; in Sublime" >
+    <figcaption>C&#43;&#43; in Sublime</figcaption>
+  </figure>
+
+
+</p>
+<p>Dapat dilihat, hanya dengan mengetikkan “io”, kita sudah disuguhkan beberapa pilihan syntax. Kita pilih yang I-Iostream. Ini sifatnya opsional ya, fungsinya hanya agar kita dapat menulis syntax dengan cepat. Pertama kita akan berlatih dengan kode berikut, silakan copy atau tulis sendiri ya.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+  <span style="color:#75715e">// Program Hello World!
+</span><span style="color:#75715e"></span>  std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Hello World!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><p>Berikut penjelasan dasar dari kode diatas.</p>
+<br>
+<h3 id="line-1---preprocessor-directive">Line 1 - Preprocessor Directive</h3>
+<hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></code></pre></div><p>Preprocessor directives adalah line didalam program yang dimulai dengan karakter <code>#</code>. Line ini digunakan untuk meminta compiler untuk memproses beberapa program lain sebelum proses compile. Pada bagian <code>#include &lt;iostream&gt;</code>, berarti preprosesor directives  memproses kode dari iostream. Disini iostream digunakan untuk menghasilkan input dan output pada Program C++.</p>
+<br>
+<h3 id="line-2---line-kosong">Line 2 - Line kosong</h3>
+<hr>
+<p>Line yang kosong akan diabaikan dan tidak akan dieksekusi oleh program. Kita perlu memberikan ini agar kode kita tetap bersih dan mudah dibaca ya.</p>
+<br>
+<h3 id="line-3---main-function">Line 3 - Main Function</h3>
+<hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">int</span> main ()
+</code></pre></div><p>Selanjutnya kita ke inti program, yaitu bagian fungsi utama. Suatu program C++ dapat berisi banyak fungsi, dan harus memiliki sebuah fungsi utama (main function). Fungsi utama ini digunakan sebagai fungsi yang akan dieksekusi pada awal program ini dijalankan.</p>
+<br>
+<h3 id="line-4---bracket-">Line 4 - Bracket {</h3>
+<hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">{
+</code></pre></div><p>Merupakan isi dari fungsi dan digunakan <code>sebagai awalan program</code>. Maksdunya, program yang akan ditulis didalam <code>int main()</code> akan diawali atau dibuka menggunakan tanda kurung kurawal <code>{</code> ini.</p>
+<br>
+<h3 id="line-5---comment">Line 5 - Comment</h3>
+<hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Program Hello World!
+</span></code></pre></div><p>Comment tidak akan dieksekusi oleh program. Biasanya digunakan sebagai dokumentasi atau penjelasan singkat tentang baris kode dibawahnya. Bisa juga digunakan agar sebuah baris kode tidak dijalankan. Ada dua cara menulis Comment pada C++, yaitu:</p>
+<ul>
+<li><strong>Single-line</strong> comments, dimulai dengan <code>//</code>, dan berlanjut hingga karakter terakhir di baris tersebut.</li>
+<li><strong>Multi-line</strong> comments, dimulai dengan <code>/*</code> dan diakhiri dengan <code>*/</code> . Dapat diakhiri langsung dalam satu barus atau bisa juga di baris berikutnya.</li>
+</ul>
+<br>
+<h3 id="line-6---statement">Line 6 - Statement</h3>
+<hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Hello World!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</code></pre></div><p>Statement adalah intruksi dari sebuah program. Pada kode diatas, intruksinya adalah untuk menulis text <code>Hello World!</code> pada console.</p>
+<h4 id="std">std::</h4>
+<p>Merupakan akronim dari <em>standart</em> yang berasal dari <em>C++ Standart Library</em>. Lalu operator <code>::</code> adalah <code>operator scope</code>. Ini memberitahu compiler class atau namespace mana yang perlu dicari untuk indentifier.</p>
+<h4 id="cout">cout</h4>
+<p>Pada <code>cout</code>, disini <code>c</code> merujuk pada <code>character</code> dan <code>out</code> merujuk pada <code>output</code>, lalu cout dapat diartikan <code>character out</code>. Digunakan bersama dengan operator insertion <code>&lt;&lt;</code>.</p>
+<h4 id="hello-world">&ldquo;Hello World!&rdquo;</h4>
+<p>Adalah text atau character yang akan ditampilkan. Disini tipe data yang digunakan adalah string.</p>
+<h4 id="endl">endl</h4>
+<p>Fungsinya untuk statements tersebut dan melanjutkan ke baris baru.</p>
+<h4 id="semicolon">semicolon</h4>
+<p>Titik koma atau semicolon <code>;</code> digunakan sebagai akhir dari baris.</p>
+<br>
+<h3 id="line-7---return">Line 7 - Return</h3>
+<hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</code></pre></div><p>Default dari <code>return</code> adalah <code>0</code>. Artinya fungsi telah selesai dengan baik. Fungsi mungkin saja mengembalikan nilai lain dalam bentuk integer.</p>
+<br>
+<h3 id="line-8---bracket-">Line 8 - Bracket }</h3>
+<hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">    }
+</code></pre></div><p>Merupakan isi dari fungsi dan digunakan <code>sebagai akhiran program</code>. Maksudnya, blok program yang akan ditulis didalam <code>int main()</code> akan diakhiri atau ditutup menggunakan tanda kurung kurawal <code>}</code> ini.</p>
+<br>
+<h3 id="kesimpulan">Kesimpulan</h3>
+<hr>
+<p>Sekian materi C++ atau CPP kali ini. Sudah jelas ya, kalau masih bingung bisa tulis pertanyaan ke kolom komentar atau ke social media AnbiDev. Terimakasih, semoga bermanfaat, sampai jumpa di artikel selanjutnya.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Persiapan Belajar C&#43;&#43;</title>
+            <link>https://anbidev.com/persiapan-cpp/</link>
+            <pubDate>Wed, 03 Feb 2021 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/persiapan-cpp/</guid>
+            <description>Pada artikel sebelumnya kita sudah berkenalan dengan C++ beserta sejarahnya. Kita akan mulai belajar C++ dengan memahami cara kerja dan lingkungan pengembangannya.
+Cara Kerja C++ C++ merupakan compiled languaged, maksudnya progam yang menggunakan Bahasa C++ akan diterjemahkan terlebih dahulu kedalam bahasa mesin, lalu akan dijalankan oleh sistem secara langsung. Sehingga bahasa ini dapat menghasilkan program yang efisien pada sistem komputer. Untuk menerjemahkannya, diperlukan yang namanya compiler.
+designed by Pixel perfect from FlaticonDapat dilihat pada gambar, progam yang kita tulis dalam Bahasa C++ akan dicompile terlebih dahulu sebelum menjadi file yang dapat dieksekusi oleh komputer.</description>
+            <content type="html"><![CDATA[<p>Pada <a href="https://www.anbidev.com/pengenalan-cpp/"
+     title="Pengenalan C&#43;&#43;" 
+     target="_blank" rel="noreferrer" >artikel sebelumnya</a> kita sudah berkenalan dengan C++ beserta sejarahnya. Kita akan mulai belajar C++ dengan memahami cara kerja dan lingkungan pengembangannya.</p>
+<br>
+<h3 id="cara-kerja-c">Cara Kerja C++</h3>
+<hr>
+<p>C++ merupakan <em>compiled languaged</em>, maksudnya progam yang menggunakan Bahasa C++ akan <em>diterjemahkan</em> terlebih dahulu kedalam bahasa mesin, lalu akan dijalankan oleh sistem secara langsung. Sehingga bahasa ini dapat menghasilkan program yang efisien pada sistem komputer. Untuk menerjemahkannya, diperlukan yang namanya compiler.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/cpp_alur.png" alt="Alur C&#43;&#43;" title="designed by Pixel perfect from Flaticon" >
+    <figcaption>designed by Pixel perfect from Flaticon</figcaption>
+  </figure>
+
+
+</p>
+<p>Dapat dilihat pada gambar, progam yang kita tulis dalam Bahasa C++ akan dicompile terlebih dahulu sebelum menjadi file yang dapat dieksekusi oleh komputer. Jadi, kesimpulannya adalah kita perlu <code>text editor</code> untuk menulis progam dan <code>compiler</code> agar progamnya dapat berjalan. Ada juga yang disebut dengan <code>IDE</code> (Integrated Development Environment), dimana Text Editor digabung dengan compiler sehingga kita hanya perlu menginstall IDE ini saja. Namun untuk saat ini Anbi akan menggunakan Text Editor yang terpisah dengan compilernya, agar kita sama-sama bisa belajar cara kerja masing-masing tools.</p>
+<br>
+<h3 id="text-editor">Text Editor</h3>
+<hr>
+<p>Ada beberapa text editor yang bisa kamu gunakan seperti VS Code, Atom, Notepad++ dan Sublime. Anbi merekomendasikan untuk menggunakan Sublime Text. Alasannya adalah Text Editor ini sangat ringan dan memiliki Package Control yang akan memudahkan kita dalam menulis kode C++. Kamu bisa mendownload aplikasinya <a href="https://www.sublimetext.com/3"
+     title="Sublime" 
+     target="_blank" rel="noreferrer" >disini</a>, sesuaikan dengan sistem operasi kalian masing-masing. Anbi asumsikan kalian sudah menginstall Sublime Text.</p>
+<p>Sekarang kita akan menginstall Package Controlnya, tekan CTRL+SHIFT+P lalu ketik Package Control: Install Package.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/package-control.PNG" alt="Package Control" title="Package Control: Install Package" >
+    <figcaption>Package Control: Install Package</figcaption>
+  </figure>
+
+
+</p>
+<p>Tunggu sejenak, sublime akan membaca repository Package Control yang tersedia. Disini kita akan menambahkan Package yang bernama C++11 dan C++ Completions.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/package-control-cpp.PNG" alt="Package Control untuk C&#43;&#43;" title="Package Control untuk C&#43;&#43;" >
+    <figcaption>Package Control untuk C&#43;&#43;</figcaption>
+  </figure>
+
+
+</p>
+<p>Sampai disini Text Editor kita sudah siap digunakan, selanjutnya kita akan menginstall Compiler.</p>
+<br>
+<h3 id="compiler">Compiler</h3>
+<hr>
+<p>Seperti yang sudah kita bahas sebelumnya, compiler ini berfungsi sebagai penerjemah dari progam yang kita tulis dalam Bahasa C++ ke bahasa mesin agar dimengerti oleh komputer. Anbi akan menggunakan compiler milik GNU yakni g++. Sebelum itu kita akan install terlebih dahulu MinGw untuk menggunakan compiler tersebut.  Kamu bisa mendownload aplikasinya <a href="https://sourceforge.net/projects/mingw-w64/"
+     title="MinGw-w64" 
+     target="_blank" rel="noreferrer" >disini</a>. Jalankan Setup nya lalu sesuaikan dengan spesifikasi PC/Laptop kalian.</p>
+<p>
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/mingw.PNG" alt="MinGw" title="MinGw" >
+    <figcaption>MinGw</figcaption>
+  </figure>
+
+
+</p>
+<p>Disini Anbi menggunakan <code>versi 8.1.0</code> dengan Architecture <code>x86_64</code>dan Threads nya <code>posix</code>. Klik Next, lalu tempatkan pada direktori yang kalian inginkan atau biarkan default juga tidak apa-apa. Proses instalasinya akan memakan waktu agak lama, MinGw juga akan mendownload beberapa resource tambahan. Setelah proses instalasi selesai, kita perlu menambahkan <code>path</code> programnya (Folder <code>bin</code> didalam folder instalasi MinGw) ke system environment variable agar perintah dari MinGw dapat dikenali oleh Command Prompt.</p>
+<p>Untuk menambahkan path, kita bisa ikuti langkah berikut ini:</p>
+<ol>
+<li>
+<p>Cari lalu buka System Environment Variable</p>
+<p>
+  <img src="/post/screenshot-178.png" alt="">
+
+
+</p>
+</li>
+<li>
+<p>Pilih Environment Variable</p>
+<p>
+  <img src="/post/env.PNG" alt="">
+
+
+</p>
+</li>
+<li>
+<p>Klik 2x pada <code>Path</code></p>
+<p>
+  <img src="/post/env2.PNG" alt="">
+
+
+</p>
+</li>
+<li>
+<p>Pilih New, lalu isi dengan direktori instalasi MinGw. Direktori instalasi Anbi ada di <em>C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin</em></p>
+<p>
+  <img src="/post/env3.PNG" alt="">
+
+
+</p>
+</li>
+<li>
+<p>Pilih Ok, lalu Ok lagi untuk mengkonfirmasi perubahan path</p>
+</li>
+<li>
+<p>Kita perlu mengetes apakah path sudah terpasang dengan benar atau belum menggunakan perintah <code>g++ --version</code>.</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">C:\Users\Anbi<span style="color:#75715e">&gt;g++ --version</span>
+g++ (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+
+This is free software; see the source for copying conditions.  There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+</code></pre></div><p>Jika <code>versi g++</code> terlihat, tandanya compiler sudah bisa kita gunakan. <br></p>
+<p>Sekian materi C++ atau CPP kali ini. Masih simple ya, semoga bermanfaat. Sampai jumpa di artikel selanjutnya.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Pengenalan C&#43;&#43;</title>
+            <link>https://anbidev.com/pengenalan-cpp/</link>
+            <pubDate>Mon, 01 Feb 2021 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/pengenalan-cpp/</guid>
+            <description>Sering kali Anbi melihat pertanyaan seputar Bahasa C++ di beberapa forum pemrogaman yang Anbi ikuti. Sebagian besar dari pertanyaan tersebut adalah untuk kebutuhan mengerjakan tugas dari dosen entah itu sifatnya quiz atau ujian.
+Walau tidak banyak, tapi Anbi juga menemukan beberapa pembaca Anbi yang masih pelajar SMA dan SMK juga belajar tentang bahasa ini.
+Entah itu sebagai persiapan kuliah atau hanya sekedar mengikuti trend pertanyaan di grup pemrogaman umum. Anbi akan mencoba membuat artikel untuk bahasa ini mulai dari dasar, semoga bisa bermanfaat untuk pembaca Anbi yang lain.</description>
+            <content type="html"><![CDATA[<p>Sering kali Anbi melihat pertanyaan seputar Bahasa C++ di beberapa forum pemrogaman yang Anbi ikuti. Sebagian besar dari pertanyaan tersebut adalah untuk kebutuhan mengerjakan tugas dari dosen entah itu sifatnya quiz atau ujian.</p>
+<p>Walau tidak banyak, tapi Anbi juga menemukan beberapa pembaca Anbi yang masih pelajar SMA dan SMK juga belajar tentang bahasa ini.</p>
+<p>Entah itu sebagai persiapan kuliah atau hanya sekedar mengikuti trend pertanyaan di grup pemrogaman umum. Anbi akan mencoba membuat artikel untuk bahasa ini mulai dari dasar, semoga bisa bermanfaat untuk pembaca Anbi yang lain.</p>
+<br>
+<h2 id="sejarah">Sejarah</h2>
+<hr>
+<p>Sebelum membahas lebih jauh, kurang lengkap jika Anbi tidak mengungkit sejarah C++ ini. Bahasa C++ dikembangkan <code>oleh Bjarne Stroustrup</code> di <a href="https://en.wikipedia.org/wiki/Bell_Labs"
+    
+     target="_blank" rel="noreferrer" >Bell Labs</a> pada tahun 1979. Tujuan awal bahasa ini adalah sebagai tambahan bahasa C atau pada awalnya disebut juga <code>“C with Classes”</code>.</p>
+<p>Bahasa ini diperluas dari waktu ke waktu, dan “C with Classes” milik Bjarne ini dikembangkan lalu diberi nama C++ pada tahun 1982. Penggunaan <code>++</code> ini didasari oleh operator increment di Bahasa C.
+  <figure>
+    <img class="lazy" src="/img/no-image.png" data-src="/post/bjarne.png" alt="Bjarne Stroustrup" title="Bjarne Stroustrup" >
+    <figcaption>Bjarne Stroustrup</figcaption>
+  </figure>
+
+
+</p>
+<p>Pada tahun 1985, edisi pertama buku <em>The C++ Programming Language</em> dirilis dan menjadi referensi untuk bahasa ini, yang pada waktu itu belum memiliki standarisasi. Pada tahun 1989 <code>C++ 2.0</code> dirilis. Lalu pada 1990, <em>The Annotated C++ Reference Manual</em> dirilis.</p>
+<p>Diikuti edisi kedua buku <em>The C++ Programming Language</em> pada tahun 1991. Pada tahun 1998, dirilis <code>C++98</code> sekaligus menstandarisasi bahasa ini. Lalu dilakukan minor update pada tahun 2003, dirilis <code>C++03</code>.</p>
+<p>Setelah itu, C++ dikembangkan agak lamban hingga tahun 2011 dirilis standarisasi <code>C++11</code>. Lalu dilakukan minor update pada Desember 2014 dengan di rilisnya <code>C++14</code>. Tiga tahun setelahnya, kembali distandarisasi dengan <code>C++17</code> pada tahun 2017.</p>
+<p>Lalu distandarisasi kembali pada tahun 2020, sekaligus menjadikannya versi stabil hingga saat ini, <code>C++20</code>. Jika kita perhatikan, setiap versi dari bahasa ini akan ditambahkan tahun standarisasinya.</p>
+<p>Jadi, walau bahasa ini sudah ada sejak lama, C++ bukan bahasa yang ketinggalan zaman ya, karena memiliki release cycle yang konsisten setiap tiga tahun.</p>
+<br>
+<h2 id="standarisasi">Standarisasi</h2>
+<hr>
+<p>Proses standarisasi ini dilakukan oleh ISO <em>(International Organization for Standardization)</em> lebih spesifik untuk C++ sendiri dilakukan oleh <a href="https://en.wikipedia.org/wiki/ISO/IEC_JTC_1/SC_22"
+    
+     target="_blank" rel="noreferrer" >JTC1/SC22/WG21</a><a href="https://isocpp.org/std/the-committee"
+    
+     target="_blank" rel="noreferrer" > </a>(Working Group 21). Sejauh ini telah dibuat enam revisi dari standarisasi C++ dan saat ini bekerja untuk revisi selanjutnya, <code>C++23</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>C++ Standard</th>
+<th>Informal name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1998</td>
+<td>ISO/IEC 14882:1998[29]</td>
+<td>C++98</td>
+</tr>
+<tr>
+<td>2003</td>
+<td>ISO/IEC 14882:2003[30]</td>
+<td>C++03</td>
+</tr>
+<tr>
+<td>2011</td>
+<td>ISO/IEC 14882:2011[31]</td>
+<td>C++11, C++0x</td>
+</tr>
+<tr>
+<td>2014</td>
+<td>ISO/IEC 14882:2014[32]</td>
+<td>C++14, C++1y</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>ISO/IEC 14882:2017[33]</td>
+<td>C++17, C++1z</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>ISO/IEC 14882:2020[12]</td>
+<td>C++20, C++2a</td>
+</tr>
+</tbody>
+</table>
+<p>Standarisasi ini dilakukan untuk penambahan fitur, <em>bug-fixing</em> dan menyamakan compiler C++ pada suatu platform. Banyak vendor yang menyediakan Compiler untuk C++ seperti <a href="https://en.wikipedia.org/wiki/Free_Software_Foundation"
+     title="Free Software Foundation" 
+     target="_blank" rel="noreferrer" >Free Software Foundation</a>, <a href="https://en.wikipedia.org/wiki/LLVM"
+     title="LLVM" 
+     target="_blank" rel="noreferrer" >LLVM</a>, <a href="https://en.wikipedia.org/wiki/Microsoft"
+     title="Microsoft" 
+     target="_blank" rel="noreferrer" >Microsoft</a>, <a href="https://en.wikipedia.org/wiki/Intel"
+     title="Intel" 
+     target="_blank" rel="noreferrer" >Intel</a>, <a href="https://en.wikipedia.org/wiki/Oracle_Developer_Studio"
+     title="Oracle Developer Studio" 
+     target="_blank" rel="noreferrer" >Oracle</a>, dan <a href="https://en.wikipedia.org/wiki/IBM"
+     title="IBM" 
+     target="_blank" rel="noreferrer" >IBM</a> sehingga bahasa ini bisa digunakan di banyak platform dengan standarisasi yang sudah ditentukan.</p>
+<br>
+<h2 id="kegunaan">Kegunaan</h2>
+<hr>
+<p>C++ dapat berjalan di semua <em>Operating System</em> seperti Windows, Linux dan MacOS. Beberapa kegunaan bahasa ini adalah:</p>
+<h4 id="games">Games</h4>
+<p>Bahasa ini mampu memanipulasi resource sehingga CPU dapat berkerja secara intensif.</p>
+<h4 id="desktop-application">Desktop Application.</h4>
+<p>Aplikasi berbasis GUI memang sering menggunakan C++, contohnya Adobe.</p>
+<h4 id="software-database">Software Database.</h4>
+<p>MySQL dan Postgres ditulis menggunakan C++.</p>
+<h4 id="operating-system">Operating System.</h4>
+<p>Beberapa bagian Apple OS X ditulis menggunakan C++, dan untuk Windows sudah tidak asing dengan yang namanya Visual C++</p>
+<h4 id="browser">Browser</h4>
+<p>Mozilla dikembangkan secara penuh menggunakan C++.</p>
+<h4 id="advanced-computation-and-graphics">Advanced Computation and Graphics</h4>
+<p>C++ sangat berguna untuk aplikasi grafis skala besar yang memerlukan peforma tinggi, contohnya Maya</p>
+<h4 id="banking-aplication">Banking Aplication</h4>
+<p>Salah satu Digital Bank Solution di India (Infosys Finacle) menggunakan C++ untuk backend-progamming</p>
+<h4 id="clouddistribution-system">Cloud/Distribution System</h4>
+<p>Cloud Storage yang banyak digunakan saat ini bekerja sangat dekat dengan hardware, merupakan keunggulan dari C++. Development Environment pada Bloomberg ditulis dengan C++.</p>
+<h4 id="embedded-system">Embedded System</h4>
+<p>Smartwatch dan Sistem Medis yang sangat dekat dengan hardware juga bisa dikembangkan dengan bahasa ini</p>
+<h4 id="mobile">Mobile</h4>
+<p>Aplikasi mobile untuk Android dan iOS juga bisa ditulis dengan bahasa ini.</p>
+<br>
+<h2 id="hello-world">Hello World</h2>
+<hr>
+<p>Karena berupa tambahan dari bahasa pendahulunya, C++ mewarisi syntax dari Bahasa C. Untuk membuat “Hello World” dengan bahasa ini adalah sebagai berikut:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CPP" data-lang="CPP"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {    
+    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Hello, world!</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+}
+</code></pre></div><br>
+<p>Sekian materi C++ atau CPP kali ini. Cukup simple bukan? Masih simple sih ya. Semoga bermanfaat, sampai jumpa di artikel selanjutnya.</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

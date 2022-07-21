@@ -1,0 +1,275 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>AnbiDev</title>
+        <link>https://anbidev.com/</link>
+        <description>Recent content on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Sun, 14 Mar 2021 17:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Tutorials</title>
+            <link>https://anbidev.com/tutorials/</link>
+            <pubDate>Sun, 14 Mar 2021 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/tutorials/</guid>
+            <description></description>
+            <content type="html"><![CDATA[]]></content>
+        </item>
+        
+        <item>
+            <title>Blogs</title>
+            <link>https://anbidev.com/blogs/</link>
+            <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/blogs/</guid>
+            <description>Disini berisi tentang wawasan dan juga opini yang dituangkan dalam bentuk tulisan agar kalian bisa mendapatkans sedikit pengetahuan tentang luasnya dunia informas dan teknologi</description>
+            <content type="html"><![CDATA[<p>Disini berisi tentang wawasan dan juga opini yang dituangkan dalam bentuk tulisan agar kalian bisa mendapatkans sedikit pengetahuan tentang luasnya dunia informas dan teknologi</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Donate</title>
+            <link>https://anbidev.com/donate/</link>
+            <pubDate>Sat, 29 Aug 2020 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/donate/</guid>
+            <description>Supaya AnbiDev tetap berdiri untuk membangun bangsa lewat karya - karya nya mari kita bantu donasi.
+Keperluan Donasi yang anda berikan akan kita proses menjadi suatu asset bagi AnbiDev. Apa saja asset yang perlu dijaga AnbiDev.
+ Asset Karya Ilmiah Asset Pemikiran Asset Loyalitas  Selain itu pemeliharaan AnbiDev juga perlu dilakukan. Seperti berlangganan server dan juga domain, serta membeli Coffe ☕ .
+Trakteer.id Disini untuk membagikan Dimsum kalian untuk kita :D</description>
+            <content type="html"><![CDATA[<p>Supaya AnbiDev tetap berdiri untuk membangun bangsa lewat karya - karya nya mari kita bantu donasi.</p>
+<hr>
+<h2 id="keperluan">Keperluan</h2>
+<p>Donasi yang anda berikan akan kita proses menjadi suatu asset bagi AnbiDev. Apa saja asset yang perlu dijaga AnbiDev.</p>
+<ol>
+<li>Asset Karya Ilmiah</li>
+<li>Asset Pemikiran</li>
+<li>Asset Loyalitas</li>
+</ol>
+<p>Selain itu pemeliharaan AnbiDev juga perlu dilakukan. Seperti berlangganan server dan juga domain, serta membeli Coffe ☕ .</p>
+<br>
+<h2 id="trakteeridhttpstrakteeridanbidev"><a href="https://trakteer.id/anbidev"
+    
+     target="_blank" rel="noreferrer" >Trakteer.id</a></h2>
+<hr>
+<p>Disini untuk membagikan Dimsum kalian untuk kita :D</p>
+<p><a href="https://trakteer.id/anbidev"
+    
+     target="_blank" rel="noreferrer" >trakteer.id/anbidev</a></p>
+<p>
+  <img src="/post/trakteer.png" alt="">
+
+
+</p>
+<br>
+<h2 id="saweriacohttpssaweriacoanbidev"><a href="https://saweria.co/anbidev"
+    
+     target="_blank" rel="noreferrer" >Saweria.co</a></h2>
+<p>Jika kalian ingin menyawer bisa disini juga.</p>
+<hr>
+<p><a href="https://saweria.co/anbidev"
+    
+     target="_blank" rel="noreferrer" >saweria.co/anbidev</a></p>
+<p>
+  <img src="/post/sawerio.png" alt="">
+
+
+</p>
+<br>
+<pre><code>// Atas Nama Bangsa Indonesia
+
+// Alifian      Hamid       Bagus</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Contributes</title>
+            <link>https://anbidev.com/contribute/</link>
+            <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/contribute/</guid>
+            <description></description>
+            <content type="html"><![CDATA[]]></content>
+        </item>
+        
+        <item>
+            <title>Atas Nama Bangsa Indonesia Developer</title>
+            <link>https://anbidev.com/about/</link>
+            <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/about/</guid>
+            <description>Halo Indonesia!Selamat datang di AnbiDev. Disini kami memiliki tujuan naif untuk membagi sedikit ilmu kami kepada masyarakat Indonesia. Semua artikel kami usahakan untuk dapat dimengengerti dengan mudah kepada para pembaca.
+Tidak menutup kemungkinan jika artikel yang kami bawa memiliki kesalahan atau ccd pada ejaan. Kebenaran hanya milik Allah dan kesalahan sepenuhnya ada pada diri kami.
+Kenapa masyarakat Indonesia harus belajar pemrogaman? Silakan baca artikel berikut ini sebagai jawabannya.
+Terimakasih! Terimakasih sudah mendukung kami, semoga kami bisa bermanfaat.</description>
+            <content type="html"><![CDATA[<pre><code>Halo Indonesia!
+</code></pre><h4 id="selamat-datang-di-anbidev">Selamat datang di AnbiDev.</h4>
+<p>Disini kami memiliki tujuan <em>naif</em> untuk membagi sedikit ilmu kami kepada <code>masyarakat Indonesia</code>. Semua artikel kami usahakan untuk dapat dimengengerti dengan mudah kepada para pembaca.</p>
+<p>Tidak menutup kemungkinan jika artikel yang kami bawa memiliki kesalahan atau <code>ccd</code> pada ejaan. Kebenaran hanya milik Allah dan kesalahan sepenuhnya ada pada diri kami.</p>
+<p>Kenapa <code>masyarakat Indonesia</code> harus belajar pemrogaman? <em>Silakan baca  artikel berikut <a href="https://anbidev.com/blogs/kenapa-saya-menjadi-programmer/"
+    
+     target="_blank" rel="noreferrer" >ini</a> sebagai jawabannya.</em></p>
+<h4 id="terimakasih">Terimakasih!</h4>
+<p>Terimakasih sudah mendukung kami, semoga kami bisa bermanfaat.</p>
+<pre><code>Atas Nama Bangsa Indonesia
+
+[X] Alifian
+[G] Hamid
+[?] Bagus
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>Contact</title>
+            <link>https://anbidev.com/contact/</link>
+            <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/contact/</guid>
+            <description>DM kita aja di social media kita atau mail ke : anbidev@gmail.com Disusun oleh // Atas Nama Bangsa Indonesia// Alifian Hamid Bagus</description>
+            <content type="html"><![CDATA[<h4 id="dm-kita-aja-di-social-media-kita-atau-mail-ke--anbidevgmailcommailtoanbidevgmailcom">DM kita aja di social media kita atau mail ke : <a href="mailto:anbidev@gmail.com"
+    
+    >anbidev@gmail.com</a></h4>
+<h4 id="disusun-oleh">Disusun oleh</h4>
+<pre><code>// Atas Nama Bangsa Indonesia
+
+// Alifian      Hamid       Bagus
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>Disclaimer for Anbi Developer</title>
+            <link>https://anbidev.com/disclaimer/</link>
+            <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/disclaimer/</guid>
+            <description>If you require any more information or have any questions about our site&amp;rsquo;s disclaimer, please feel free to contact us by email at anbidev@gmail.com
+Disclaimers for AnbiDev All the information on this website - https://anbidev.tech/ - is published in good faith and for general information purpose only. AnbiDev does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (AnbiDev), is strictly at your own risk.</description>
+            <content type="html"><![CDATA[<p>If you require any more information or have any questions about our site&rsquo;s disclaimer, please feel free to contact us by email at <a href="mailto:anbidev@gmail.com"
+    
+    >anbidev@gmail.com</a></p>
+<h3 id="disclaimers-for-anbidev">Disclaimers for AnbiDev</h3>
+<p>All the information on this website - <a href="https://anbidev.com"
+    
+     target="_blank" rel="noreferrer" >https://anbidev.tech/</a> - is published in good faith and for general information purpose only. AnbiDev does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (AnbiDev), is strictly at your own risk. AnbiDev will not be liable for any losses and/or damages in connection with the use of our website. Our Disclaimer was generated with the help of the <a href="https://www.disclaimergenerator.net/"
+    
+     target="_blank" rel="noreferrer" >Disclaimer Generator</a> and the <a href="https://www.termsandcondiitionssample.com/"
+    
+     target="_blank" rel="noreferrer" >Terms and Conditions Template</a>.</p>
+<p>From our website, you can visit other websites by following hyperlinks to such external sites. While we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these sites. These links to other websites do not imply a recommendation for all the content found on these sites. Site owners and content may change without notice and may occur before we have the opportunity to remove a link which may have gone &lsquo;bad&rsquo;.</p>
+<p>Please be also aware that when you leave our website, other sites may have different privacy policies and terms which are beyond our control. Please be sure to check the Privacy Policies of these sites as well as their &ldquo;Terms of Service&rdquo; before engaging in any business or uploading any information.</p>
+<h3 id="consent">Consent</h3>
+<p>By using our website, you hereby consent to our disclaimer and agree to its terms.</p>
+<h3 id="update">Update</h3>
+<p>Should we update, amend or make any changes to this document, those changes will be prominently posted here.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Pertanyaan yang Sering Ditanyakan</title>
+            <link>https://anbidev.com/faq/</link>
+            <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/faq/</guid>
+            <description>Hallo, jika kamu masih kepo tentang kami, mungkin jawaban-jawaban yang biasanya ditanyakan kepada kami dibawah ini bisa sedikit membantu anda. Jika jawaban kami kurang memuaskan, hubungi kami melalui email atau sosial media kami.
+Apa itu ANBIDEV? ANBIDEV merupakan akronim dari ANBI Developer, dimana ANBI merupakan singkatan dari Atas Nama Bangsa Indonesia.
+Kenapa mengatasnamakan Indonesia? Karena menurut kami, setiap orang dinegeri kita tercinta ini perlu dan berhak belajar pemrogaman. Disini kami menawarkan diri untuk membagikan sedikit pengalaman kami untuk catatan untuk kami pribadi, dan semoga bisa bermanfaat untuk masyarakat secara umum.</description>
+            <content type="html"><![CDATA[<p>Hallo, jika kamu masih <em>kepo</em> tentang kami, mungkin jawaban-jawaban yang biasanya ditanyakan kepada kami dibawah ini bisa sedikit membantu anda. Jika jawaban kami kurang memuaskan, hubungi kami melalui email atau sosial media kami.</p>
+<h4 id="apa-itu-anbidev">Apa itu ANBIDEV?</h4>
+<p>ANBIDEV merupakan akronim dari ANBI Developer, dimana ANBI merupakan singkatan dari Atas Nama Bangsa Indonesia.</p>
+<h4 id="kenapa-mengatasnamakan-indonesia">Kenapa mengatasnamakan Indonesia?</h4>
+<p>Karena menurut kami, setiap orang dinegeri kita tercinta ini perlu dan berhak belajar pemrogaman. Disini kami menawarkan diri untuk membagikan sedikit pengalaman kami untuk catatan untuk kami pribadi, dan semoga bisa bermanfaat untuk masyarakat secara umum.</p>
+<h4 id="apakah-anbidev-rutin-memposting-artikel">Apakah Anbidev rutin memposting artikel?</h4>
+<p>Postingan kami pada dasarnya tergantung <em>effort</em> para penulis. Kami usahakan untuk setiap seminggu sekali ada satu artikel update.</p>
+<h4 id="bagaimana-dengan-quality-of-content-pada-isi-artikel-anbidev">Bagaimana dengan Quality of Content pada isi artikel Anbidev?</h4>
+<p>Kami usahakan, sebaik mungkin dan semudah mungkin dapat dimengerti. Kami tidak akan mengabaikan komentar yang kami terima.</p>
+<h4 id="apakah-akan-ada-update-jika-bahasa-pemrogaman-atau-farmework-yang-digunakan-juga-di-update">Apakah akan ada update jika bahasa pemrogaman atau farmework yang digunakan juga di update?</h4>
+<p>Pasti, walau butuh waktu, tapi pasti kami siapkan waktu untuk bertarung dengan perkembangan teknologi. Kata guru kami, Ibu Netty Pietersina, <em>&ldquo;Teknologi kita tinggal tidur sebentar sudah berkembang&rdquo;</em>.</p>
+<h4 id="dimana-referensi-untuk-menulis-artikel">Dimana referensi untuk menulis artikel?</h4>
+<p>Beberapa berasal dari dokumentasi resmi, yang lain merupakan pengalaman pribadi penulis.</p>
+<h4 id="bagaimana-cara-untuk-berkontribusi-untuk-anbidev">Bagaimana cara untuk berkontribusi untuk Anbidev?</h4>
+<p>Untuk saat ini kami masih berfokus pada pembangunan website dan sosial media tak lupa kami juga terus menambah pengalaman kami. Jika ada bantuan, kami mungkin belum bisa menerima dengan alasan alur mau dibawa kemana web ini. Tapi suatu saat nanti pasti kami akan buka kesempatan untuk kontributor-kontributor yang ingin membagikan pengalaman dibidang pemrogaman untuk bergabung bersama kami.</p>
+<h4 id="apakah-hanya-tentang-pemrogaman">Apakah hanya tentang pemrogaman?</h4>
+<p><em>Big NO!</em>. Untuk saat ini mungkin masih seputar pemrogaman, tapi untuk kedepannya kami akan melebarkan sayap untuk menjangkau teknologi lain yang berguna bagi Indonesia.</p>
+<h4 id="apakah-admin-programmer">Apakah admin programmer?</h4>
+<p>Salah satu iya, yang lainnya tidak.</p>
+<h4 id="apakah-bukan-programmer-bisa-coding">Apakah bukan programmer bisa coding?</h4>
+<p>Coding tidak hanya dilakukan oleh programmer, setiap orang entah itu memiliki background IT atau tidak, berhak belajar pemrogaman. Pemrogaman itu seperti Matematika, ada masalah dan ada solusi. Jika kamu mungkin tidak suka matematika, mungkin pemrogaman bisa jadi solusi.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Privacy Policy for Anbi Developer</title>
+            <link>https://anbidev.com/policy/</link>
+            <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/policy/</guid>
+            <description>At AnbiDev, accessible from https://anbidev.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by AnbiDev and how we use it.
+If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us through email at anbidev@gmail.com
+General Data Protection Regulation (GDPR) We are a Data Controller of your information.</description>
+            <content type="html"><![CDATA[<p>At AnbiDev, accessible from <a href="https://anbidev.com"
+     title="https://anbidev.com" 
+     target="_blank" rel="noreferrer" >https://anbidev.com</a>, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by AnbiDev and how we use it.</p>
+<p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us through email at <a href="mailto:anbidev@gmail.com"
+    
+    >anbidev@gmail.com</a></p>
+<h3 id="general-data-protection-regulation-gdpr">General Data Protection Regulation (GDPR)</h3>
+<p>We are a Data Controller of your information.</p>
+<p>Anbi Developer legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Information we collect and the specific context in which we collect the information:</p>
+<ul>
+<li>Anbi Developer needs to perform a contract with you</li>
+<li>You have given Anbi Developer permission to do so</li>
+<li>Processing your personal information is in Anbi Developer legitimate interests</li>
+<li>Anbi Developer needs to comply with the law</li>
+</ul>
+<p>Anbi Developer will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.</p>
+<p>If you are a resident of the European Economic Area (EEA), you have certain data protection rights. If you wish to be informed what Personal Information we hold about you and if you want it to be removed from our systems, please contact us. Our Privacy Policy was generated with the help of <a href="https://www.gdprprivacypolicy.net.com/"
+    
+     target="_blank" rel="noreferrer" >GDPR Privacy Policy Generator</a>.</p>
+<p>In certain circumstances, you have the following data protection rights:</p>
+<ul>
+<li>The right to access, update or to delete the information we have on you.</li>
+<li>The right of rectification.</li>
+<li>The right to object.</li>
+<li>The right of restriction.</li>
+<li>The right to data portability</li>
+<li>The right to withdraw consent</li>
+</ul>
+<h3 id="log-files">Log Files</h3>
+<p>AnbiDev follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services&rsquo; analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users&rsquo; movement on the website, and gathering demographic information.</p>
+<h3 id="cookies-and-web-beacons">Cookies and Web Beacons</h3>
+<p>Like any other website, AnbiDev uses &lsquo;cookies&rsquo;. These cookies are used to store information including visitors&rsquo; preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users&rsquo; experience by customizing our web page content based on visitors&rsquo; browser type and/or other information.</p>
+<h3 id="google-doubleclick-dart-cookie">Google DoubleClick DART Cookie</h3>
+<p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to <a href="http://www.website.com">www.website.com</a> and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a href="https://policies.google.com/technologies/ads"
+    
+     target="_blank" rel="noreferrer" >https://policies.google.com/technologies/ads</a></p>
+<h3 id="our-advertising-partners">Our Advertising Partners</h3>
+<p>Some of advertisers on our site may use cookies and web beacons. Our advertising partners are listed below. Each of our advertising partners has their own Privacy Policy for their policies on user data. For easier access, we hyperlinked to their Privacy Policies below.</p>
+<ul>
+<li>Google</li>
+</ul>
+<p><a href="https://policies.google.com/technologies/ads"
+    
+     target="_blank" rel="noreferrer" >https://policies.google.com/technologies/ads</a></p>
+<h3 id="privacy-policies">Privacy Policies</h3>
+<p>You may consult this list to find the Privacy Policy for each of the advertising partners of AnbiDev.</p>
+<p>Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on AnbiDev, which are sent directly to users&rsquo; browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
+<p>Note that AnbiDev has no access to or control over these cookies that are used by third-party advertisers.</p>
+<h3 id="third-party-privacy-policies">Third Party Privacy Policies</h3>
+<p>AnbiDev&rsquo;s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. You may find a complete list of these Privacy Policies and their links here: Privacy Policy Links.</p>
+<p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers&rsquo; respective websites. What Are Cookies?</p>
+<h3 id="childrens-information">Children&rsquo;s Information</h3>
+<p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+<p>AnbiDev does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
+<h3 id="online-privacy-policy-only">Online Privacy Policy Only</h3>
+<p>Our Privacy Policy created at GDPRPrivacyPolicy.net) applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in AnbiDev. This policy is not applicable to any information collected offline or via channels other than this website. <a href="https://gdprprivacypolicy.net/"
+    
+     target="_blank" rel="noreferrer" >Our GDPR Privacy Policy</a> was generated from the GDPR Privacy Policy Generator.</p>
+<h3 id="consent">Consent</h3>
+<p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

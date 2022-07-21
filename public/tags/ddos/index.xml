@@ -1,0 +1,46 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>ddos on AnbiDev</title>
+        <link>https://anbidev.com/tags/ddos/</link>
+        <description>Recent content in ddos on AnbiDev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <lastBuildDate>Wed, 04 Nov 2020 17:00:00 +0000</lastBuildDate>
+        <atom:link href="https://anbidev.com/tags/ddos/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Mengenal DDoS Attack</title>
+            <link>https://anbidev.com/ddos/</link>
+            <pubDate>Wed, 04 Nov 2020 17:00:00 +0000</pubDate>
+            
+            <guid>https://anbidev.com/ddos/</guid>
+            <description>Distributed Denial of Service (DDos) Attack adalah percobaan penyerangan dengan cara mengganggu traffic dari server, layanan atau jaringan akan kewalahan menangani request sehingga server akan melambat lalu down.
+Macam-Macam DDos UDP Flood Cara kerjanya adalah dengan membanjiri target menggunakan paket User Datagram Protocol (UDP) pada random port ke remote host. Hal ini akan menyebabkan host mengecek terus menerus aplikasi apa yang berjalan di port - port tersebut, dan (saat tidak ditemukan aplikasi apapun yang berjalan) host akan me-reply dengan &amp;ldquo;Destination Unreachable&amp;rdquo;.</description>
+            <content type="html"><![CDATA[<p><strong>Distributed Denial of Service</strong> <code>(DDos)</code> <em>Attack</em> adalah percobaan penyerangan dengan cara mengganggu <em>traffic</em> dari server, layanan atau jaringan akan kewalahan menangani <em>request</em> sehingga server akan melambat lalu down.</p>
+<h2 id="macam-macam-ddos">Macam-Macam DDos</h2>
+<hr>
+<h3 id="udp-flood">UDP Flood</h3>
+<p>Cara kerjanya adalah <strong>dengan membanjiri target menggunakan paket User Datagram Protocol</strong> <code>(UDP)</code> pada random port ke remote host. Hal ini akan menyebabkan host mengecek terus menerus aplikasi apa yang berjalan di port - port tersebut, dan (saat tidak ditemukan aplikasi apapun yang berjalan) host akan me-<em>reply</em> dengan &ldquo;Destination Unreachable&rdquo;. Jika terus berulang maka host server bisa saja kehabisan resource sehingga berakibat tidak bisa diakses.</p>
+<br>
+<h3 id="icmp-flood-ping">ICMP Flood (Ping)</h3>
+<p>Sama halnya dengan tipe UDP Flood, <code>ICMP Flood</code> akan menyebabkan host server kewalahan dengan menggunakan ping secara banyak dan berulang hingga host tidak mampu me-<em>reply</em>. DDoS yang ini mengkonsumsi baik bandwidth yang datang maupun keluar sehingga menyebabkan host server akan melambat.</p>
+<br>
+<h3 id="ntp-amplification">NTP Amplification</h3>
+<p>Progam <strong>ntpd</strong> berfungsi untuk menyesuaikan waktu pada sistem operasi dengan waktu pada internet. DDoS dapat terjadi oleh fitur &ldquo;monlist&rdquo; yang ada pada kebanyakan NTP Server. NTP berjalan pada port 123, merupakan port UDP yang bisa di spoofing. Dengan command monlist yang dijalankan pada server, <strong>ntpd-c monlist</strong>, output nya adalah 600 query dari sumber IP yang berbeda. Dan karena datanya besar, server bisa saja tidak mampu menanganinya.</p>
+<br>
+<h3 id="ping-of-death-pod">Ping of Death (PoD)</h3>
+<p>Secara default, ping ke perangkat lain hanya berukuran 56 bytes, walaupun semua paket IPv4 bisa saja lebih dari 65,535 bytes. Banyak sistem komputer tidak didesain untuk mampu menangani menangangi paket ping lebih dari batasnya karena ini melanggar Internet Protocol. PoD memecah paket ping menjadi 8 octet sebelum mengirimkannya. Hal ini sama seperti paket besar lain, namun tidak disusun dengan baik. Saat host server menyusun ulang paket yang cacat tersebut, hal ini akan memunculkan <em>buffer overflow</em> (saat paket yang dikirim terlalu besar dari yang mampu diterima) menyebabkan system crash. Disini hacker/cracker mampu menginjeksi kode berbahaya untuk server.</p>
+<br>
+<h3 id="http-flood">HTTP Flood</h3>
+<p>Pada tipe ini penyerang melakukan request GET dan POST pada Web Server. Tidak menggunakan paket cacat, spoofing dan menggunakan lebih sedikit bandwidth untuk membuat servre down. Sangat efektif jika ditujukan kepada aplikasi atau server yang mengalokasikan maximum resource pada setiap request.</p>
+<br>
+<h3 id="slowloris">Slowloris</h3>
+<p>Bekerja dengan membuka beberapa koneksi sekaligus lewat web server dan menjaganya tetap terbuka selama mungkin. Caranya adalah dengan secara terus menerus mengirim HTTP Request, tapi tak satupun diselesaikan. Target server akan membuka dan menunggu setiap request diselesaikan. Pada akhirnya server tidak mampu menyelesaikan koneksi secara bersamaan hingga tidak mampu lagi menerima koneksi. Pada web-server besar, mungkin akan membutuhan waktu lama, terutama dengan kemampuan penanganan session yang baik.</p>
+<br>
+<h3 id="syn-flood">SYN Flood</h3>
+<p>Tipe satu ini, adalah percobaan membuat koneksi ke host server tanpa menyelesaikannya. Server akan menghabiskan waktu untuk menunggu koneksi yang masih terbuka. Jika resource untuk waktu tunggu habis, maka server bisa tidak merespon traffic yang benar. Paket yang dikirim adalah SYN (<em>synchronize</em>), bagian dari <em>three-way handshake</em> milik TCP yang berguna untuk membangun koneksi antar jaringan.</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>
