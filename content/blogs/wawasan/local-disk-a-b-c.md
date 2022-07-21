@@ -29,4 +29,6 @@ History of drive C
 
 Lalu disini kita akan membahas kenapa Local disk dimulai dari C? kemana A B nya? Dari sini kita akan belajar sedikit mengenai sejarah. Dimulai dari lahirnya Harddisk pada tahun 1956 yang diproduksi oleh IBM, tahun 1961 oleh IBM juga, tahun 1973 oleh IBM lagi. yang mana ciptaan tersebut masih berukuran besar yakni 24 inch, 8 inch, 24 inch. Lalu 1980 Seagate memproduksi Harddisk 5,25inch. Nah dari tahun-tahun inilah Harddisk menjadi standar umu di dunia perkomputeran. Lah, lalu apa hubungannya? Nah sebelum Harddisk lahir dipasaran umum, penyimpanan dilakukan didalam floppy disk drive 1960 an. yang mana disket floppy ini ada dua ukuran 5,25 inch yang dilabeli Huruf A dan ukuran 3,5inch dengan Huruf B. Nah maka dari itu sejak Harddisk diluncurkan secara umum, dilabeli lah Harddisk dengan huruf C.
 
-Wah Cukup singkat sekali ya, Mantap…
+Wah Cukup singkat sekali ya, Mantap
+
+Nah mungkin itu dia beberapa informasi yang dapat saya sampaikan untuk saat ini. Mohon maaf atas segala kesalahan dan kerandoman materi saya, jika ada sanggahan mangga untuk komen di bawah yah .Terima kasih :)
