@@ -1,8 +1,8 @@
 +++
 draft = true
-name = "Handika Rafli"
+name = "Handika"
 photo = ""
 social = []
-title = "Handika Rafli"
+title = "Handika"
 
 +++
