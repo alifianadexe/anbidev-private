@@ -1,17 +1,17 @@
 +++
 authors = ""
-cover = ""
-date = ""
+cover = "/post/picture2.jpg"
+date = 2022-08-03T17:00:00Z
 description = "Cari tahu lebih dalam mengenai bahasa Dart sendiri sebelum masuk ke Flutter."
 draft = true
 series = ""
 shortcode = ""
-status = ""
+status = "draft"
 sumber = []
-tags = []
+tags = ["dart", "flutter"]
 title = "Yuk Kenalan dengan Bahasa Pemrogaman Dart!"
-tutorials = []
-type = []
+tutorials = ["flutter"]
+type = ["tutorials", "tutorial"]
 url = ""
 [author]
 images = "/img/author.jpg"
