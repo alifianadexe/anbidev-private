@@ -13,7 +13,7 @@ tutorials = ["dart"]
 type = ["tutorial", "tutorials"]
 url = "dart-pengenalan"
 [author]
-images = "/img/handika.jepg"
+images = "/img/handika.jpg"
 name = "Handika"
 
 +++
