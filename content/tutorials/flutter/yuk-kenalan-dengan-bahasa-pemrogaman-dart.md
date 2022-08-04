@@ -31,3 +31,9 @@ Dan _General purpose_ di sini dart bisa digunakan di banyak platform mulai dari 
 Dart sendiri dibuat oleh `Lars Bak` dan `Kasper Lund` dari `Google`, versi Dart 1.0 mulai dirilis pada `14 November 2013`. Awalnya pembuatan Dart digunakan untuk menggantikan Javascript yang memiliki banyak kelemahan. Namun mengingat ekosistem Javascript yang sudah merajalela membuat Dart kalah bersaing, hingga akhirnya Google merilis `Flutter SDK` pada tahun `2017` yang disokong oleh Dart dari situ titik balik Dart mulai populer.
 
 ## Kenapa Belajar Dart
+
+Pertama, Dart itu _`single codebase`_ anda cukup menuliskan 1 kodingan maka bisa di compile ke berbagai macam platform.
+
+Kedua, Dart cocok digunakan sebagai _`first language` _hal demikian karena sintaks nya yang sederhana, bahasanya yang mudah dipelajari dan memiliki dokumentasi yang cukup lengkap sehingga memudahkan untuk dipelajari.
+
+Ketiga, alasan lain mengapa belajar Dart karena ingin mendalami Flutter, ya betul popularitas Flutter sebagai framework multiplatform sedang _`high demand`_ sehingga sangat _`worth it to learn Dart`._
