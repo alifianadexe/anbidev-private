@@ -3,10 +3,9 @@ authors = "Handika"
 cover = "/post/picture2.jpg"
 date = 2022-08-03T17:00:00Z
 description = "Cari tahu lebih dalam mengenai bahasa Dart sendiri sebelum masuk ke Flutter."
-draft = true
 series = "Dart Dasar"
 shortcode = "pengenalan"
-status = "draft"
+status = "publish"
 sumber = ["https://dart.dev/overview", "https://blog.devgenius.io/dart-the-basics-1e9bee78c644", "https://github.com/dart-lang", "https://www.youtube.com/watch?v=-mzXdI27tyk&t=145s"]
 tags = ["dart"]
 title = "Yuk Kenalan dengan Bahasa Pemrogaman Dart!"
