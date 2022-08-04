@@ -40,7 +40,7 @@ Kedua, Dart cocok digunakan sebagai _`first language`_ hal demikian karena sinta
 
 Ketiga, alasan lain mengapa belajar Dart karena ingin mendalami Flutter, ya betul popularitas Flutter sebagai framework multiplatform sedang _`high demand`_ sehingga sangat _`worth it to learn Dart`._
 
-![](/post/picture3.png)
+![Persentase pertanyaan tentang Dart](/post/picture3.png "Persentase pertanyaan tentang Dart")
 
 Sedikit menyinggung tentang Flutter, bisa dilihat bahwa perkembangannya dari 2017-2021 sangat cepat dengan begitu belajar Dart sebelum Flutter adalah wajib hukumnya.
 
@@ -48,7 +48,7 @@ Sedikit menyinggung tentang Flutter, bisa dilihat bahwa perkembangannya dari 201
 
 Bahasa Dart sendiri menggunakan Teknologi _`compiler`_ yang fleksibel sehingga memungkinkan kode dari Dart di kompilasi sesuai target platform yang dituju.
 
-![](/post/picture4.png)
+![Dart Platform](/post/picture4.png "Dart Platform")
 
 Ada dua target platform yang dituju yakni Dart Native dan Dart Web, mari kita bahas satu-satu.
 
