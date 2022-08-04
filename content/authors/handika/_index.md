@@ -1,6 +1,6 @@
 +++
 name = "Handika Rafli Aryatama"
-photo = "handika.jpeg"
+photo = "handika.jpg"
 title = "Handika Rafli Aryatama"
 [[social]]
 name = "github"
