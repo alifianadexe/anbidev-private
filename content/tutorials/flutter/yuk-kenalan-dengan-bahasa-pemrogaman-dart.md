@@ -2,7 +2,7 @@
 authors = ""
 cover = ""
 date = ""
-description = ""
+description = "Cari tahu lebih dalam mengenai bahasa Dart sendiri sebelum masuk ke Flutter."
 draft = true
 series = ""
 shortcode = ""
@@ -60,4 +60,4 @@ Pendekatan pada kompilasi ini menggunakan **_`Dart dev compiler`_** `(`**_`dartd
 
 ## Penutup
 
-Sekian artikel untuk mengawali pemrogaman flutter dengan dart kali ini. Semoga bermanfaat, terimakasih.
+Sekian artikel untuk mengawali pemrogaman flutter dengan dart kali ini. Semoga bermanfaat untuk para pembaca, terimakasih.
