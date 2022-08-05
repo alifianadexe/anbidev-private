@@ -78,7 +78,7 @@ Lalu pilih New dan masukkan lokasi Dart SDK tadi.
 
 ![](/post/dart_path.png)
 
-Buka command prompt lagi, lalu gunakan command `dart --version` untuk mengecek versinya. 
+Buka command prompt lagi, lalu gunakan command `dart --version` untuk mengecek versinya.
 
 ## Text Editor untuk Dart
 
@@ -125,3 +125,9 @@ void main(List<String> arguments) {
   print('Hello world: ${dart_application_1.calculate()}!');
 }
 ```
+
+Secara bawaan kode Dart akan seperti ini (cek pada _`directory bin`_), untuk menjalankannya anda bisa mengklik tulisan run di atas function main. Maka otomatis kode Dart akan dijalankan. Maka hasilnya akan seperti ini :
+
+![](/post/dart_hello_world.png)
+
+Baik cukup sudah materi kali ini, tidak perlu risau apabila ada beberapa kode di atas yang belum anda pahami, kita akan pelajari di materi selanjutnya.
