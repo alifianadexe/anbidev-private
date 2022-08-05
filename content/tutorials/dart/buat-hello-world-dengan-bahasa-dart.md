@@ -34,6 +34,8 @@ Mengutip dari dokumentasi Dart bahwa perbedaan ketiga versi tersebut berada pada
 
 Pada materi kali ini kita akan melakukan instalasi menggunakan _operating system `Windows`_, untuk _operating system_ lainnya bisa mengikuti arahan dari dokumentasi resmi. Bisa dibaca di link berikut: [https://dart.dev/get-dart](https://dart.dev/get-dart "https://dart.dev/get-dart")
 
+### Instalasi Dart SDK
+
 Pertama masuk ke link berikut : [https://gekorm.com/dart-windows/](https://gekorm.com/dart-windows/ "https://gekorm.com/dart-windows/")
 
 ![Dart for Windows](/post/picture2.png "Dart for Windows")
@@ -54,6 +56,6 @@ Nah, gunakan command `dart --version` untuk mengecek versinya. Pada saat artikel
 
 Apabila perintah tersebut tidak berfungsi maka harus melakukan setting tambahan yakni menambahkan lokasi SDK ke dalam `PATH`
 
-### Menambahkan SDK kedalam PATH
+### Menambahkan Dart SDK kedalam PATH
 
 _By Default_ lokasi SDK berada di C:\\tools\\dart-sdk.
