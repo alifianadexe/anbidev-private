@@ -116,4 +116,12 @@ Pilih yang `console application`
 
 ## Hello World
 
-Setelah instalasi Dart SDK, text editor dan juga pembuatan projek. Selanjutnya menjalankan kode Dart
+Setelah instalasi Dart SDK, text editor dan juga pembuatan projek. Selanjutnya menjalankan kode Dart.
+
+```dart
+import 'package:dart_application_1/dart_application_1.dart' as dart_application_1;
+ 
+void main(List<String> arguments) {
+  print('Hello world: ${dart_application_1.calculate()}!');
+}
+```
