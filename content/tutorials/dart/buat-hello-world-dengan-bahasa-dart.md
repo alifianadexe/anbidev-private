@@ -1,21 +1,20 @@
 +++
-authors = ""
-cover = ""
+authors = "Handika"
+cover = "/post/picture2.jpg"
 date = 2022-08-04T17:00:00Z
 description = "kali ini akan mengulas mengenai cara instalasi Dart SDK dan membuat program “Hello World”"
-draft = true
-series = ""
-shortcode = ""
-status = "draft"
+series = "Dart Dasar"
+shortcode = "Hello World"
+status = "publish"
 sumber = ["https://dart.dev/get-dart"]
 tags = ["dart"]
 title = "Buat Hello World dengan Bahasa Dart"
-tutorials = []
+tutorials = ["dart"]
 type = ["tutorials", "tutorial"]
-url = ""
+url = "dart-hello-world"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 Apa saja sih yang harus disiapkan untuk memulai pemograman Dart? Lalu text editor mana saja yang biasa digunakan untuk membuat program dengan Dart? Pada artikel kali ini akan mengulas mengenai cara instalasi Dart SDK dan membuat program `“Hello World”` sebagai permulaan awal, oke tidak lama-lama mari kita mulai, _Here We Go._
