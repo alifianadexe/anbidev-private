@@ -77,3 +77,15 @@ Setelah itu double klik pada Path untuk mengedit dan menambahkan lokasi Dart SDK
 Lalu pilih New dan masukkan lokasi Dart SDK tadi.
 
 ![](/post/dart_path.png)
+
+Buka command prompt lagi, lalu gunakan command `dart --version` untuk mengecek versinya. 
+
+## Text Editor untuk Dart
+
+Setidaknya ada 3 (tiga) text editor yang paling sering digunakan, di antaranya :
+
+### DartPad
+
+Jika kalian yang langsung menjalankan kode Dart tanpa perlu unduh ini itu, dan ingin yang versi `online`, maka pilihannya menggunakan `DartPad`
+
+![](/post/dart_dartpad.png)
