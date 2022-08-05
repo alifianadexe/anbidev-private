@@ -1,17 +1,17 @@
 +++
 authors = ""
 cover = ""
-date = ""
+date = 2022-08-04T17:00:00Z
 description = "kali ini akan mengulas mengenai cara instalasi Dart SDK dan membuat program “Hello World”"
 draft = true
 series = ""
 shortcode = ""
-status = ""
-sumber = []
-tags = []
+status = "draft"
+sumber = ["https://dart.dev/get-dart"]
+tags = ["dart"]
 title = "Buat Hello World dengan Bahasa Dart"
 tutorials = []
-type = []
+type = ["tutorials", "tutorial"]
 url = ""
 [author]
 images = "/img/author.jpg"
