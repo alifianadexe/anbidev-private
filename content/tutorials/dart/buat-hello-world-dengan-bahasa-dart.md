@@ -52,4 +52,8 @@ Setelah itu akan menjalankan proses unduh, setelah semuanya telah selesai. Maka 
 
 Nah, gunakan command `dart --version` untuk mengecek versinya. Pada saat artikel ini ditulis, versi dart yang Anbu gunakan adalah `2.17.6 (stable)`
 
-Apabila perintah tersebut tidak berfungsi maka harus melakukan setting tambahan yakni menambahkan lokasi SDK ke dalam PATH.
+Apabila perintah tersebut tidak berfungsi maka harus melakukan setting tambahan yakni menambahkan lokasi SDK ke dalam `PATH`
+
+### Menambahkan SDK kedalam PATH
+
+_By Default_ lokasi SDK berada di C:\\tools\\dart-sdk.
