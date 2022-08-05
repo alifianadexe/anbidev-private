@@ -99,3 +99,21 @@ Kita juga bisa menggunakan VS Code sebagai text editor untuk Dart. Adapun persya
 ![Persyaratan Penggunaan VS Code](/post/dart_vscode.png "Persyaratan Penggunaan VS Code")
 
 Selanjutnya download terlebih dahulu extension Dart
+
+![Dart Extension](/post/dart_extention.png "Dart Extension")
+
+Setelah itu mari kita buat projek dengan Dart. Langkah pertama buka command pallete (`ctrl + shift + p`). Lalu pilih `Dart: New Project`
+
+Setelah itu pilih folder yang ingin dituju.
+
+![](/post/dart_folder.png)
+
+Setelah itu muncul pop-up untuk memberikan nama projek, terserah beri nama apa saja.
+
+> _Best practice_: gunakan lowercase dan jika lebih dari satu kata gunakan underscore, contoh `dart_application`
+
+Pilih yang `console application`
+
+## Hello World
+
+Setelah instalasi Dart SDK, text editor dan juga pembuatan projek. Selanjutnya menjalankan kode Dart
