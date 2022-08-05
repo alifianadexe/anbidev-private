@@ -48,4 +48,8 @@ Setelah itu pilih _`I accept the agreement`_ untuk menyetujui perjanjian penggun
 
 ![Setup downloading resource](/post/downloading_dart.png "Setup downloading resource")
 
-Setelah itu akan menjalankan proses unduh, setelah semuanya telah selesai. Maka langkah selanjutnya perlu untuk mengecek Dart SDK tersebut, caranya buka `terminal` / `command prompt` / `git bash`
+Setelah itu akan menjalankan proses unduh, setelah semuanya telah selesai. Maka langkah selanjutnya perlu untuk mengecek Dart SDK tersebut, caranya buka `terminal` / `command prompt` / `git bash`![dart --version](/post/dart_cmd.png "dart --version")
+
+Nah, gunakan command `dart --version` untuk mengecek versinya. Pada saat artikel ini ditulis, versi dart yang Anbu gunakan adalah `2.17.6 (stable)`
+
+Apabila perintah tersebut tidak berfungsi maka harus melakukan setting tambahan yakni menambahkan lokasi SDK ke dalam PATH.
