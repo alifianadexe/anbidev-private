@@ -41,3 +41,11 @@ Pertama masuk ke link berikut : [https://gekorm.com/dart-windows/](https://gekor
 Maka akan menampilkan halaman tersebut, lalu pilih sesuai kebutuhan pada materi ini memilih yang versi _`Stable`_
 
 Setelah itu jalankan file `.exe` untuk melanjutkan ke proses instalasi.
+
+![file instalasi dart](/post/fileexe.png "file instalasi dart")
+
+Setelah itu pilih _`I accept the agreement`_ untuk menyetujui perjanjian penggunaan produk dan selanjutnya next-next aja.
+
+![Setup downloading resource](/post/downloading_dart.png "Setup downloading resource")
+
+Setelah itu akan menjalankan proses unduh, setelah semuanya telah selesai. Maka langkah selanjutnya perlu untuk mengecek Dart SDK tersebut, caranya buka `terminal` / `command prompt` / `git bash`
