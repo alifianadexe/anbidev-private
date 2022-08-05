@@ -59,3 +59,21 @@ Apabila perintah tersebut tidak berfungsi maka harus melakukan setting tambahan 
 ### Menambahkan Dart SDK kedalam PATH
 
 _By Default_ lokasi SDK berada di C:\\tools\\dart-sdk.
+
+![dart sdk location](/post/dart_sdk_location.png "dart sdk location")
+
+Pertama search `env` terlebih dahulu di windows search box, lalu pilih `Edit the system environment variables`
+
+![](/post/dart_system_environment_variables.png)
+
+Selanjutnya memasukkan lokasi Dart SDK ke dalam PATH, pilih `Environment Variables`
+
+![](/post/dart_system_properties-1.png)
+
+Setelah itu double klik pada Path untuk mengedit dan menambahkan lokasi Dart SDK
+
+![](/post/dart_environment_variables.png)
+
+Lalu pilih New dan masukkan lokasi Dart SDK tadi.
+
+![](/post/dart_path.png)
