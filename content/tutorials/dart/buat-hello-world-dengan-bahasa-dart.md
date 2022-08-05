@@ -89,3 +89,13 @@ Setidaknya ada 3 (tiga) text editor yang paling sering digunakan, di antaranya :
 Jika kalian yang langsung menjalankan kode Dart tanpa perlu unduh ini itu, dan ingin yang versi `online`, maka pilihannya menggunakan `DartPad`
 
 ![](/post/dart_dartpad.png)
+
+Anda sudah langsung bisa membuat kode Dart dan menjalankannya di situ. Fleksibel bukan?
+
+### Visual Studio Code
+
+Kita juga bisa menggunakan VS Code sebagai text editor untuk Dart. Adapun persyaratan yang harus diketahui untuk menggunakan text editor ini, sebagai berikut :
+
+![Persyaratan Penggunaan VS Code](/post/dart_vscode.png "Persyaratan Penggunaan VS Code")
+
+Selanjutnya download terlebih dahulu extension Dart
