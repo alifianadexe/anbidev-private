@@ -4,7 +4,7 @@ cover = "/post/picture2.jpg"
 date = 2022-08-05T17:00:00Z
 description = "Menambahkan komentar pada kode program Dart"
 series = "Dart Dasar"
-shortcode = "komentar"
+shortcode = "Komentar"
 status = "publish"
 sumber = []
 tags = ["dart"]
@@ -17,7 +17,7 @@ images = "/img/handika.jpg"
 name = "Handika"
 
 +++
-Sebagai seorang programmer saat membangun aplikasi baik yang kompleks maupun simpel ada hal penting, yaitu menambahkan `komentar` pada kode program. Apa sih itu komentar? `Komentar` sendiri merupakan kode atau perintah yang tidak akan dieksekusi oleh komputer, biasanya pemberian komentar digunakan untuk `catatan` atau `mendeskripsikan` lebih detail mengenai kode program yang sudah dibuat, terlebih jika kode program atau aplikasi yang dibuat secara kerja sama (tim) untuk memberikan pemahaman yang mudah kepada rekan yang lain maka menambahkan komentar pada kode yang sudah dibuat merupakan langkah yang penting.
+Sebagai seorang programmer, saat membangun aplikasi baik yang kompleks maupun simpel ada hal penting, yaitu menambahkan `komentar` pada kode program. Apa sih itu komentar? `Komentar` sendiri merupakan kode atau perintah yang tidak akan dieksekusi oleh komputer, biasanya pemberian komentar digunakan untuk `catatan` atau `mendeskripsikan` lebih detail mengenai kode program yang sudah dibuat, terlebih jika kode program atau aplikasi yang dibuat secara kerja sama (tim) untuk memberikan pemahaman yang mudah kepada rekan yang lain maka menambahkan komentar pada kode yang sudah dibuat merupakan langkah yang penting.
 
 Ada 3 (tiga) jenis komentar yang bisa digunakan pada pemograman Dart :
 
