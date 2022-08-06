@@ -22,6 +22,7 @@ Sebagai seorang programmer saat membangun aplikasi baik yang kompleks maupun sim
 Ada 3 (tiga) jenis komentar yang digunakan pada pemograman Dart :
 
 ### Single Line Commnets
+
 Biasa disebut dengan komentar satu baris yang diawali dengan tanda `//` (`Double Forward Slash`).
 
 ```dart
@@ -33,6 +34,7 @@ void main() {
 ```
 
 ### Multi Line Comments
+
 Biasa disebut dengan komentar beberapa baris yang diawali dengan tanda `/*` dan diakhiri dengan tanda `*/`. Cocok digunakan lebih dari satu baris.
 
 ```dart
@@ -50,9 +52,10 @@ void main() {
 ```
 
 ### Documentation Comments
+
 Biasa disebut dengan komentar dokumentasi yang diawali dengan tanda `/**` dan diakhiri dengan tanda `*/` atau menggunakan `///`. Kehebatan menggunakan komentar ini pesan komentar yang dapat ditampilkan saat dihover. Contoh :
 
-   ![](/post/ss1.png)
+![](/post/ss1.png)
 
 ```dart
 ///this function to return hello and name from params
@@ -65,3 +68,5 @@ String sayHello(String name) {
 Selain itu anda bisa melakukan direct fungsi yang sudah dibuat diatas dengan menambahkan tanda `[]` pada baris komentar.
 
 ![](/post/code.gif)
+
+Sekian artikel tentang pemberian komentar pada program Dart. Anbi berpesan untuk tetap menjaga kebersihan kode dengan membuat komentar seperlunya saja. Semoga bermanfaat, terimakasih.
