@@ -20,21 +20,19 @@ name = ""
 +++
 Sebagai seorang programmer saat membangun aplikasi baik yang kompleks maupun simpel ada hal penting yaitu menambahkan `komentar` pada kode program. Apa sih itu komentar? `Komentar` sendiri merupakan kode atau perintah yang tidak akan dieksekusi oleh komputer, biasanya pemberian komentar digunakan untuk `catatan` atau `mendeskripsikan` lebih detail mengenai kode program yang sudah dibuat, terlebih jika kode program atau aplikasi yang dibuat secara kerja sama (tim) untuk memberikan pemahaman yang mudah kepada rekan yang lain maka menambahkan komentar pada kode yang sudah dibuat merupakan langkah yang penting.
 
-* Ada 3 (tiga) jenis komentar yang digunakan pada pemograman Dart :
+- Ada 3 (tiga) jenis komentar yang digunakan pada pemograman Dart :
 
-1. `Single Line Commnets` 
-
-   Biasa disebut dengan komentar satu baris yang diawali dengan tanda `//` (`Double Forward Slash`).
+ 1. Single Line Commnets
+	Biasa disebut dengan komentar satu baris yang diawali dengan tanda // (Double Forward Slash).
 
 ```dart
 //ini adalah fungsi untuk mencetak Hello World
-
 void main() {
     print('Hello World');
 }
 ```
 
-1. Multi Line Comments
+2. Multi Line Comments
    Biasa disebut dengan komentar beberapa baris yang diawali dengan tanda /* dan diakhiri dengan tanda */. Cocok digunakan lebih dari satu baris.
 
 ```dart
@@ -50,7 +48,7 @@ void main() {
 }
 ```
 
-1. Documentation Comments
+2. Documentation Comments
    Biasa disebut dengan komentar dokumentasi yang diawali dengan tanda /** dan diakhiri dengan tanda */ atau menggunakan ///. Kehebatan menggunakan komentar ini pesan komentar yang dapat ditampilkan saat dihover.
    contoh :
    ![App Screenshot](assets/ss1.png)
