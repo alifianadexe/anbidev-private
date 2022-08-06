@@ -26,7 +26,7 @@ Ada 3 (tiga) jenis komentar yang bisa digunakan pada pemograman Dart :
 Biasa disebut dengan komentar satu baris yang diawali dengan tanda `//` (`Double Forward Slash`).
 
 ```dart
-//ini adalah fungsi untuk mencetak Hello World
+// ini adalah fungsi untuk mencetak Hello World
 
 void main() {
     print('Hello World');
@@ -40,8 +40,8 @@ Biasa disebut dengan komentar beberapa baris yang diawali dengan tanda `/*` dan 
 ```dart
 /*
 ini adalah fungsi untuk mencetak Hello World
-selain itu mencetak Hello User
-dan mencetak Hello Person
+selain itu juga mencetak Hello User
+dan juga mencetak Hello Person
 */
 
 void main() {
@@ -58,7 +58,7 @@ Biasa disebut dengan komentar dokumentasi yang diawali dengan tanda `/**` dan di
 ![](/post/ss1.png)
 
 ```dart
-///this function to return hello and name from params
+/// this function to return hello and name from params
 
 String sayHello(String name) {
   return 'Hello, $name';
