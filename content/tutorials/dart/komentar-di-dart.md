@@ -23,24 +23,27 @@ Sebagai seorang programmer saat membangun aplikasi baik yang kompleks maupun sim
 * Ada 3 (tiga) jenis komentar yang digunakan pada pemograman Dart :
 
 1. Single Line Commnets
-   Biasa disebut dengan komentar satu baris yang diawali dengan tanda // (Double Forward Slash).
+   Biasa disebut dengan komentar satu baris yang diawali dengan tanda `//` (`Double Forward Slash`).
 
 ```dart
 //ini adalah fungsi untuk mencetak Hello World
+
 void main() {
     print('Hello World');
 }
+
 ```
 
-1. Multi Line Comments
+2. Multi Line Comments
    Biasa disebut dengan komentar beberapa baris yang diawali dengan tanda /* dan diakhiri dengan tanda */. Cocok digunakan lebih dari satu baris.
 
 ```dart
 /*
 ini adalah fungsi untuk mencetak Hello World
-selain itu mencetak hello user
-dan mencetak hello person
+selain itu mencetak Hello User
+dan mencetak Hello Person
 */
+
 void main() {
     print('Hello World');
     print('Hello User');
@@ -49,15 +52,16 @@ void main() {
 ```
 
 1. Documentation Comments
-   Biasa disebut dengan komentar dokumentasi yang diawali dengan tanda /** dan diakhiri dengan tanda */ atau menggunakan ///. Kehebatan menggunakan komentar ini pesan komentar yang dapat ditampilkan saat dihover.
+   Biasa disebut dengan komentar dokumentasi yang diawali dengan tanda /** dan diakhiri dengan tanda */ atau menggunakan `///`. Kehebatan menggunakan komentar ini pesan komentar yang dapat ditampilkan saat dihover.
    contoh :
    
-
 ```dart
 ///this function to return hello and name from params
+
 String sayHello(String name) {
   return 'Hello, $name';
 }
+
 ```
 
-Selain itu anda bisa melakukan direct fungsi yang sudah dibuat diatas dengan menambahkan tanda \[\] pada baris komentar.
+Selain itu anda bisa melakukan direct fungsi yang sudah dibuat diatas dengan menambahkan tanda `[]` pada baris komentar.
