@@ -164,11 +164,18 @@ disableHugoGeneratorInject = false
       weight     = 2
     
     [[menu.main]]
+      identifier = "dart"
+      name       = "Dart"
+      url        = "tutorials/arduino/"
+      parent     = "tutorials"
+      weight     = 3
+
+    [[menu.main]]
       identifier = "c"
       name       = "C"
       url        = "tutorials/c/"
       parent     = "tutorials"
-      weight     = 3
+      weight     = 4
     
 
     [[menu.main]]
@@ -176,39 +183,29 @@ disableHugoGeneratorInject = false
       name       = "Kotlin"
       url        = "tutorials/kotlin/"
       parent     = "tutorials"
-      weight     = 4
+      weight     = 5
 
     [[menu.main]]
       identifier = "android"
       name       = "Android"
       url        = "tutorials/android/"
       parent     = "tutorials"
-      weight     = 5
+      weight     = 6
 
     [[menu.main]]
       identifier = "git"
       name       = "Git"
       url        = "tutorials/git/"
       parent     = "tutorials"
-      weight     = 6
+      weight     = 7
     
     [[menu.main]]
       identifier = "php"
       name       = "PHP"
       url        = "tutorials/php/"
       parent     = "tutorials"
-      weight     = 7
+      weight     = 8
     
-    [[menu.main]]
-      identifier = "arduino"
-      name       = "Arduino"
-      url        = "tutorials/arduino/"
-      parent     = "tutorials"
-      weight     = 7
-
-  
-  
-
 # Markdown renderer
 [markup]
     defaultMarkdownHandler = "goldmark"
