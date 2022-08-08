@@ -21,7 +21,7 @@ Materi kali ini kita akan belajar mengenai pembuatan variabel dan mengenal tipe 
 
 ## Apa itu Variabel?
 
-Secara garis besar `Dart` adalah bahasa pemograman yang menggunakan `paradigma berorientasi objek`, dan statis (`statically typed)` dimana dalam mendeklarasikan suatu variabel pada Dart harus disertai tipenya, namun Dart juga mendukung `type inference` yang artinya kita tidak perlu mendefinisikan tipe datanya secara eksplisit karena compiler Dart akan secara otomatis mendeteksi tipe datanya. Pengertian dari variabel sendiri adalah wadah untuk menyimpan suatu nilai (`value`) yang nantinya bisa dipanggil.
+Secara garis besar `Dart` adalah bahasa pemograman yang menggunakan `paradigma berorientasi objek`, dan statis (`statically typed)` dimana dalam mendeklarasikan suatu variabel pada Dart harus disertai tipe datanya, namun Dart juga mendukung `type inference` yang artinya kita tidak perlu mendefinisikan tipe datanya secara eksplisit karena compiler Dart akan secara otomatis mendeteksi tipe datanya. Pengertian dari variabel sendiri adalah `wadah` untuk menyimpan suatu nilai (`value`) yang nantinya bisa dipanggil.
 
 ```dart
     TypeData nameVariabel = value;
@@ -38,14 +38,14 @@ Kita bisa menggunakan kata kunci `var` apabila tidak ingin mendefinisikan secara
 
 ## Variabel Statis
 
-Variabel statis adalah variabel yang `tidak bisa diubah nilainya`, jika kita sudah menentukan nilainya maka kita tidak bisa mengubahnya lagi. ada 2 kata kunci yang bisa digunakan untuk menentukan variabel statis, yaitu `const` dan `final`
+Variabel statis adalah variabel yang `tidak bisa diubah nilainya`, jika kita sudah menentukan nilainya maka kita tidak bisa mengubahnya lagi. ada dua kata kunci yang bisa digunakan untuk menentukan variabel statis, yaitu `const` dan `final`
 
 ```dart
 const pi = 3.14;
 final data = 'Anbidev';
 ```
 
-Lalu muncul pertanyaan apa bedanya const dan final di dalam Dart? **Kalau const itu harus diisi di awal, tidak boleh dikosongkan. sedangkan final bisa diisi nanti, tapi cuma satu kali saja.**
+Lalu muncul pertanyaan, apa bedanya const dan final di dalam Dart? **Kalau const itu harus diisi di awal, tidak boleh dikosongkan. sedangkan final bisa diisi nanti, tapi cuma satu kali saja.**
 
 ![const variable](/post/pi.png "const variable") 
 
@@ -63,21 +63,24 @@ Tipe data yang ada di Dart adalah:
 4. dynamic
 
 ```dart
-//String
+// String
 var name = 'Anbidev';
 String name = 'Anbidev';
 
+// Numbers
 var age = 21;
 int age = 21;
 double weight = 77.5;
 
+// Boolean
 var isTrue = true;
 bool isTrue = false;
 
+// dynamic
 dynamic data = 'Anbidev';
 ```
 
-❗Tambahan : Poin penting yang harus diperhatikan adalah perbedaan penggunaan `var` dan `dynamic`, jika menggunakan var maka kompiler akan mendeteksi secara otomatis tipe datanya, jika menggunakan dynamic maka kompiler akan mendeteksi tipe tetap dynamic, dengan begitu variabel dengan tipe dynamic bisa di replace dengan tipe data lain. Contoh:
+❗Tambahan : Poin penting yang harus diperhatikan adalah perbedaan penggunaan `var` dan `dynamic`, jika menggunakan var maka kompiler akan mendeteksi secara otomatis tipe datanya, jika menggunakan dynamic maka kompiler akan mendeteksi tipe tetap dynamic, dengan begitu variabel dengan tipe dynamic bisa diisi ulang dengan tipe data lain. Contoh:
 
 ```dart
 dynamic data = 'Hello World';
