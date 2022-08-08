@@ -48,10 +48,11 @@ final data = 'Anbidev';
 
 Lalu muncul pertanyaan apa bedanya const dan final di dalam Dart? **Kalau const itu harus diisi di awal, tidak boleh dikosongkan. sedangkan final bisa diisi nanti, tapi cuma satu kali saja.**
 
+![const variable](/post/pi.png "const variable") 
 
-Bisa dilihat bahwa pada contoh code tersebut variabel const pi harus diisi di awal.
+Bisa dilihat bahwa pada contoh code tersebut variabel `const pi` harus diisi di awal.
 
-💡 Saran dari Anbi, gunakan const apabila ingin membuat variabel yang static dan sudah tau valuenya supaya lebih efisien dalam memori karena kompilasi terjadi di compile time.
+> 💡 Saran dari Anbi, gunakan const apabila ingin membuat variabel yang static dan sudah tau valuenya supaya `lebih efisien dalam memori` karena kompilasi terjadi di `compile time`
 
 ## Tipe Data yang ada di Dart
 
@@ -77,7 +78,7 @@ bool isTrue = false;
 dynamic data = 'Anbidev';
 ```
 
-❗Tambahan : Poin penting yang harus diperhatikan adalah perbedaan penggunaan var dan dynamic, jika menggunakan var maka kompiler akan mendeteksi secara otomatis tipe datanya, jika menggunakan dynamic maka kompiler akan mendeteksi tipe tetap dynamic, dengan begitu variabel dengan tipe dynamic bisa di replace dengan tipe data lain. Contoh:
+❗Tambahan : Poin penting yang harus diperhatikan adalah perbedaan penggunaan `var` dan `dynamic`, jika menggunakan var maka kompiler akan mendeteksi secara otomatis tipe datanya, jika menggunakan dynamic maka kompiler akan mendeteksi tipe tetap dynamic, dengan begitu variabel dengan tipe dynamic bisa di replace dengan tipe data lain. Contoh:
 
 ```dart
 dynamic data = 'Hello World';
