@@ -1,21 +1,20 @@
 +++
-authors = ""
-cover = ""
-date = ""
+authors = "Handika"
+cover = "/post/picture2.jpg"
+date = 2022-08-07T17:00:00Z
 description = "Belajar mengenai pembuatan variabel dan mengenal tipe data"
-draft = true
-series = ""
-shortcode = ""
-status = ""
+series = "Dart Dasar"
+shortcode = "variabel & tipe data"
+status = "publish"
 sumber = []
 tags = []
 title = "Dart: Variabel Dan Tipe Data"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorials", "tutorial"]
+url = "dart-variabel-tipe-data"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 Materi kali ini kita akan belajar mengenai pembuatan variabel dan mengenal tipe data apa saja yang ada di dart dan sering digunakan.
