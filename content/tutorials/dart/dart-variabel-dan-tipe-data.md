@@ -87,3 +87,5 @@ data = 21; //SUCCESS
 var data = 'Hello World';
 data = 21; //ERROR
 ```
+
+Sekian materi tentang variabel dan tipe data pada Dart. Terimakasih, semoga bermanfaat.
