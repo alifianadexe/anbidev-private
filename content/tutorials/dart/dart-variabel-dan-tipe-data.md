@@ -21,7 +21,7 @@ Materi kali ini kita akan belajar mengenai pembuatan variabel dan mengenal tipe 
 
 ## Apa itu Variabel?
 
-Secara garis besar `Dart` adalah bahasa pemograman yang menggunakan `paradigma berorientasi objek`, dan statis (`statically typed)` dimana dalam mendeklarasikan suatu variabel pada Dart harus disertai tipe datanya, namun Dart juga mendukung `type inference` yang artinya kita tidak perlu mendefinisikan tipe datanya secara eksplisit karena compiler Dart akan secara otomatis mendeteksi tipe datanya. Pengertian dari variabel sendiri adalah `wadah` untuk menyimpan suatu nilai (`value`) yang nantinya bisa dipanggil.
+Secara garis besar `Dart` adalah bahasa pemograman yang menggunakan `paradigma berorientasi objek`, dan statis (`statically typed)` dimana dalam mendeklarasikan suatu variabel pada Dart harus disertai tipe datanya, namun Dart juga mendukung `type inference` yang artinya kita tidak perlu mendefinisikan tipe datanya secara eksplisit karena compiler Dart akan secara otomatis mendeteksi tipe datanya. Pada mata pelajaran Matematika, **_Variabel_** adalah setiap karakteristik, jumlah, atau kuantitas yang dapat diukur atau dihitung. Sedangkan didalam Bahasa Pemrogaman, pengertian dari variabel sendiri adalah `wadah` untuk menyimpan suatu nilai (`value`) yang nantinya bisa dipanggil. Secara teknis maksudnya sama. Susunan sederhana dalam membuat variable pada program dart adalah sebagai berikut:
 
 ```dart
     TypeData nameVariabel = value;
