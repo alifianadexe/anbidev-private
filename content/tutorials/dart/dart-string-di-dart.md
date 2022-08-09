@@ -2,16 +2,16 @@
 authors = ""
 cover = ""
 date = ""
-description = ""
+description = "String adalah tipe data yang berisi karakter"
 draft = true
 series = ""
 shortcode = ""
-status = ""
+status = "draft"
 sumber = []
 tags = []
 title = "Dart: String di Dart"
 tutorials = []
-type = []
+type = ["tutorials", "tutorial"]
 url = ""
 [author]
 images = "/img/author.jpg"
