@@ -47,6 +47,6 @@ Dari buah diskusi ini, Devops ini tidak fokus pada efisiensi saja, melakinkan la
 
 Conclusion
 
-Industri IT dewasa ini seharusnya sudah sangat membutuhkan si DevOps. 
+Industri IT dewasa ini seharusnya sudah sangat membutuhkan si DevOps.
 
-Nah mungkin itu dia beberapa informasi yang dapat saya sampaikan untuk saat ini. Mohon maaf atas segala kesalahan dan kerandoman materi saya, jika ada sanggahan mangga untuk komen di bawah yah .Terima kasih :)
+Nah mungkin itu dia beberapa informasi yang dapat saya sampaikan untuk saat ini. Mohon maaf atas segala kesalahan dan kerandoman materiwwwwwwwwww saya, jika ada sanggahan mangga untuk komen di bawah yah .Terima kasih :)
