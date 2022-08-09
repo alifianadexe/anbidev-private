@@ -1,21 +1,21 @@
 +++
-authors = ""
-cover = ""
-date = ""
+authors = "Handika"
+cover = "/post/picture2.jpg"
+date = 2022-08-08T17:00:00Z
 description = "String adalah tipe data yang berisi karakter"
 draft = true
-series = ""
-shortcode = ""
+series = "Dart Dasar"
+shortcode = "String"
 status = "draft"
 sumber = []
 tags = []
 title = "Dart: String di Dart"
-tutorials = []
+tutorials = ["dart"]
 type = ["tutorials", "tutorial"]
-url = ""
+url = "dart-string"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 Jika kamu sebelumnya mengikuti materi [Dart](https://www.anbidev.com/dart-pengenalan/). Playlist ini sebelumnya yang sering kita gunakan untuk contoh, maka kamu sudah tahu bahwa String adalah tipe data yang berisi `karakter`. String pada Dart menggunakan `tanda kutip (')` untuk menandai awal dan akhir String. Selain itu bisa menggunakan `tanda kutip dua (")`.
