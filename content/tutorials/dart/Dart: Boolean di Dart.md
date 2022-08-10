@@ -9,7 +9,7 @@ shortcode = ""
 status = ""
 sumber = []
 tags = []
-title = ""
+title = "Dart: Boolean di Dart"
 tutorials = []
 type = []
 url = ""
@@ -18,11 +18,9 @@ images = "/img/author.jpg"
 name = ""
 
 +++
-# Dart: Boolean di Dart
-
 Yuk kenalan dengan tipe data `Boolean` yang hanya memiliki dua nilai yakni `true` dan `false`. Sekilas mengenai sejarah adanya tipe data Boolean, berawal dari seorang matematikawan asal Inggris yang bernama `George Boole`. Beliau ini dikenal karena menciptakan suatu cabang pada pembelajaran Aljabar yang menyatakan bahwa setiap `logika` yang diberikan adalah `benar` atau `salah`.
 
-![Gif](assets/waw.gif
+!\[Gif\](assets/waw.gif
 <br/>
 
 Pada bahasa pemograman Dart untuk mendeklarasikan tipe data Boolean cukup dengan kata kunci `bool` dan ingat jika boolean hanya punya 2 nilai saja jika tidak true, ya false.
@@ -34,6 +32,7 @@ bool hateMe = true;
 bool isFalse = !true;
 bool isTrue = !false;
 ```
+
 <br/>
 
 Bisa dilihat di atas ada 4 variabel yang kita buat, untuk variabel `loveMe` dan `hateMe` kita mengisi false dan true, tapi coba liat variabel 2 terakhir ada tanda `!` di depan valuenya.
@@ -46,6 +45,11 @@ Yuk, kita latihan sedikit agar mudah memahami tipe data ini.
 <br/>
 
 ```dart
+main(List<String> args) {
+  checkRain();
+}
+
+checkRain() {
   bool check;
   int val1 = 12;
   int val2 = 9;
@@ -54,7 +58,10 @@ Yuk, kita latihan sedikit agar mudah memahami tipe data ini.
   // value depending on condition
   check = (val1 > val2);
   print(check);
+}
+
 ```
+
 <br/>
 
 Pada kode di atas mula-mula kita buat variabel `bool check` dan kita mengisi nilai dari variabel `val1` dan `val2`. Lalu kita membuat kondisi apakah `val1` lebih besar dari `val2`, jika `iya` maka nilai check akan bernilai `true`, jika `tidak` maka akan bernilai `false`.
