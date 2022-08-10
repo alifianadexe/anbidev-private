@@ -1,28 +1,27 @@
 +++
-authors = ""
-cover = ""
-date = ""
-description = ""
-draft = true
-series = ""
-shortcode = ""
-status = ""
-sumber = []
-tags = []
+authors = "Handika"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
+date = 2022-08-09T17:00:00Z
+description = "Bahwa setiap logika yang diberikan adalah benar atau salah"
+series = "Dart Dasar"
+shortcode = "Boolean"
+status = "publish"
+sumber = ["https://www.geeksforgeeks.org/dart-boolean/"]
+tags = ["dart"]
 title = "Dart: Boolean di Dart"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorials", "tutorial"]
+url = "dart-boolean"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
-Yuk kenalan dengan tipe data `Boolean` yang hanya memiliki dua nilai yakni `true` dan `false`. Sekilas mengenai sejarah adanya tipe data Boolean, berawal dari seorang matematikawan asal Inggris yang bernama `George Boole`. 
+Yuk kenalan dengan tipe data `Boolean` yang hanya memiliki dua nilai yakni `true` dan `false`. Sekilas mengenai sejarah adanya tipe data Boolean, berawal dari seorang matematikawan asal Inggris yang bernama `George Boole`.
 
 ![George Boole](/post/george_bool.png "George Boole")
 
-Beliau ini dikenal karena menciptakan suatu cabang pada pembelajaran Aljabar yang menyatakan bahwa setiap `logika` yang diberikan adalah `benar` atau `salah`. Dalam matakuliah matematika diskrit juga, kita sering menemui contoh soal yang menggunakan boolean sebagai nilai dari sebuah variabel. 
+Beliau ini dikenal karena menciptakan suatu cabang pada pembelajaran Aljabar yang menyatakan bahwa setiap `logika` yang diberikan adalah `benar` atau `salah`. Dalam matakuliah matematika diskrit juga, kita sering menemui contoh soal yang menggunakan boolean sebagai nilai dari sebuah variabel.
 
 ![](/post/waw.gif)
 <br/>
@@ -77,4 +76,4 @@ Pada kode di atas mula-mula kita buat variabel `bool check` dan kita mengisi nil
 Taraa... kita sudah bisa mengetahui tipe data boolean. Sekian materi pada pertemuan ini. Ikuti terus blog anbidev agar kalian lebih jago lagi dalam dunia pemograman. Sampai jumpa di blog anbidev.
 <br/>
 
-![Gif](assets/happy.gif)
+![](/post/happy.gif)
