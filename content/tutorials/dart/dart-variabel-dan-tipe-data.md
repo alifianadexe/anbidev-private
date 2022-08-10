@@ -1,6 +1,6 @@
 +++
 authors = "Handika"
-cover = "/post/picture2.jpg"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
 date = 2022-08-07T17:00:00Z
 description = "Belajar mengenai pembuatan variabel dan mengenal tipe data"
 series = "Dart Dasar"
