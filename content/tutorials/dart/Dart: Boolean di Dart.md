@@ -18,9 +18,13 @@ images = "/img/author.jpg"
 name = ""
 
 +++
-Yuk kenalan dengan tipe data `Boolean` yang hanya memiliki dua nilai yakni `true` dan `false`. Sekilas mengenai sejarah adanya tipe data Boolean, berawal dari seorang matematikawan asal Inggris yang bernama `George Boole`. Beliau ini dikenal karena menciptakan suatu cabang pada pembelajaran Aljabar yang menyatakan bahwa setiap `logika` yang diberikan adalah `benar` atau `salah`.
+Yuk kenalan dengan tipe data `Boolean` yang hanya memiliki dua nilai yakni `true` dan `false`. Sekilas mengenai sejarah adanya tipe data Boolean, berawal dari seorang matematikawan asal Inggris yang bernama `George Boole`. 
 
-!\[Gif\](assets/waw.gif
+![George Boole](/post/george_bool.png "George Boole")
+
+Beliau ini dikenal karena menciptakan suatu cabang pada pembelajaran Aljabar yang menyatakan bahwa setiap `logika` yang diberikan adalah `benar` atau `salah`. Dalam matakuliah matematika diskrit juga, kita sering menemui contoh soal yang menggunakan boolean sebagai nilai dari sebuah variabel. 
+
+![](/post/waw.gif)
 <br/>
 
 Pada bahasa pemograman Dart untuk mendeklarasikan tipe data Boolean cukup dengan kata kunci `bool` dan ingat jika boolean hanya punya 2 nilai saja jika tidak true, ya false.
@@ -59,7 +63,6 @@ checkRain() {
   check = (val1 > val2);
   print(check);
 }
-
 ```
 
 <br/>
