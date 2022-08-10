@@ -1,6 +1,6 @@
 +++
 authors = "Handika"
-cover = "/post/picture2.jpg"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
 date = 2022-08-04T17:00:00Z
 description = "kali ini akan mengulas mengenai cara instalasi Dart SDK dan membuat program “Hello World”"
 series = "Dart Dasar"
