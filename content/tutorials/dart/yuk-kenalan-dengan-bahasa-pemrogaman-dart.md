@@ -1,6 +1,6 @@
 +++
 authors = "Handika"
-cover = "/post/picture2.jpg"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
 date = 2022-08-03T17:00:00Z
 description = "Cari tahu lebih dalam mengenai bahasa Dart sendiri sebelum masuk ke Flutter."
 series = "Dart Dasar"
