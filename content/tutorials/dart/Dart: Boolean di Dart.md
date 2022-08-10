@@ -70,7 +70,7 @@ checkRain() {
 Pada kode di atas mula-mula kita buat variabel `bool check` dan kita mengisi nilai dari variabel `val1` dan `val2`. Lalu kita membuat kondisi apakah `val1` lebih besar dari `val2`, jika `iya` maka nilai check akan bernilai `true`, jika `tidak` maka akan bernilai `false`.
 <br/>
 
-![Screenshoot](assets/value.png)
+![true](/post/value.png "true")
 
 <br/>
 
