@@ -74,7 +74,7 @@ print(pi.runtimeType);
 
 ## Method
 
-Anbu kasih beberapa method yang ada di tipe data Number baik integer maupun double yang nantinya bisa mempermudah dalam memahami bahasa Dart.
+Anbi kasih beberapa `method` yang ada di tipe data Number baik integer maupun double yang nantinya bisa mempermudah dalam memahami bahasa Dart.
 
 | method | Deskripsi |
 | :--- | :--- |
