@@ -25,19 +25,18 @@ Pasti kalian sudah tidak asing dengan keyword tersebut, yak tipe data `numbers` 
 1. int (`Integer`)
 2. Double (`Float`)
 
-Ada juga tipe data num, yakni superclass dari int dan double. yuk kita bahas satu satu, Here we go..
+Ada juga tipe data num, yakni `superclass` dari int dan double. yuk kita bahas satu satu, Here we go..
 
 ## Integer
 
-adalah bilangan yang tidak lebih besar dari 64 bit (2^64). Pada Dart variabel integer dapat menyimpan nilai mulai dari -2^63 hingga 2^63-1.
-Berikut contoh kode yang menampilkan nilai integer :
+Integer adalah bilangan yang tidak lebih besar dari `64 bit` (2^64). Pada Dart variabel integer dapat menyimpan nilai mulai dari -2^63 hingga 2^63-1. Berikut contoh kode yang menampilkan nilai integer :
 
 ```dart
 int nilai = 10;
 int nilai2 = -10;
 ```
 
-Bisa dilihat bahwa nilai 10 dan -10 adalah nilai integer, tidak ada tambahan nilai desimal seperti titik di belakang angka.
+Bisa dilihat bahwa nilai `10` dan `-10` adalah nilai integer, tidak ada tambahan nilai desimal seperti titik di belakang angka.
 
 ## Double
 
