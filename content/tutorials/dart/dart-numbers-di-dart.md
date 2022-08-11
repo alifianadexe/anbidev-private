@@ -57,8 +57,7 @@ Yap jangan bingung sobat Anbi, sejauh versi `Dart 2.1` kita bisa menuliskan doub
 
 ## Num
 
-Seperti yang disinggung di atas, jika di hierarki num itu paling tinggi dan int dan double di bawahnya.
-Dengan begitu kita bisa menuliskan variabel dengan tipe num, yang artinya bisa menyimpan nilai integer maupun double.
+Seperti yang disinggung di atas, jika di hierarki `num` itu paling tinggi dan int dan double di bawahnya. Dengan begitu kita bisa menuliskan variabel dengan tipe num, yang artinya bisa menyimpan nilai integer maupun double.
 
 ```dart
 num nilai = 10;
@@ -69,7 +68,7 @@ print(nilai.runtimeType);
 print(pi.runtimeType);
 ```
 
-❗ Note: field runtimeType menampilkan tipe data dari variabel.
+> ❗ Note: field `runtimeType` menampilkan tipe data dari variabel.
 
 ![Screenshott](assets/ss.png)
 
