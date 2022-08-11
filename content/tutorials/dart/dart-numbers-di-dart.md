@@ -40,8 +40,7 @@ Bisa dilihat bahwa nilai `10` dan `-10` adalah nilai integer, tidak ada tambahan
 
 ## Double
 
-tipe double juga memiliki ukuran sebesar 64 bit, dan bisa dibilang double ini adalah representasi dari bilangan desimal yang mana diikuti tambahan nilai desimal.
-Berikut contoh kode yang menampilkan nilai double :
+Tipe data double juga memiliki ukuran sebesar 64 bit, dan bisa dibilang double ini adalah representasi dari `bilangan desimal` yang mana diikuti tambahan nilai desimal. Berikut contoh kode yang menampilkan nilai double :
 
 ```dart
 double nilai = 10.0;
@@ -50,11 +49,11 @@ double nilai2 = -10.0;
 double nilai3 = 10;
 ```
 
-Loh kok pada variabel nilai3 tipe double tidak diikuti angka desimal sih ?
+Loh kok pada variabel `nilai3` tipe double tidak diikuti angka desimal sih ?
 
 <img src="assets/confusion.gif" width="400">
 
-Yap jangan bingung sobat anbu, sejauh versi Dart 2.1 kita bisa menuliskan double tanpa menambahkan titik di belakang angka, dengan begitu kita bisa katakan variabel nilai3 adalah double tanpa desimal.
+Yap jangan bingung sobat Anbi, sejauh versi `Dart 2.1` kita bisa menuliskan double tanpa menambahkan titik di belakang angka, dengan begitu kita bisa katakan variabel `nilai3` adalah double tanpa desimal.
 
 ## Num
 
