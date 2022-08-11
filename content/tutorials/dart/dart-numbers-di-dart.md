@@ -1,21 +1,21 @@
 +++
-authors = ""
-cover = ""
-date = ""
-description = ""
+authors = "Handika"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
+date = 2022-08-10T17:00:00Z
+description = "Tipe data numbers atau tipe data angka"
 draft = true
-series = ""
-shortcode = ""
-status = ""
-sumber = []
+series = "Dart Dasar"
+shortcode = "Number"
+status = "publish"
+sumber = ["https://cotutorial.github.io/dart/dart-tipe-data-number/"]
 tags = []
 title = "Dart: Numbers di Dart"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorials", "tutorial"]
+url = "dart-number"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 ## Apa itu Numbers ?
