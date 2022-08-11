@@ -3,7 +3,6 @@ authors = "Handika"
 cover = "/post/photo_2022-08-10_09-23-27.jpg"
 date = 2022-08-10T17:00:00Z
 description = "Tipe data numbers atau tipe data angka"
-draft = true
 series = "Dart Dasar"
 shortcode = "Number"
 status = "publish"
@@ -51,7 +50,7 @@ double nilai3 = 10;
 
 Loh kok pada variabel `nilai3` tipe double tidak diikuti angka desimal sih ?
 
-<img src="assets/confusion.gif" width="400">
+![](/post/confusion.gif)
 
 Yap jangan bingung sobat Anbi, sejauh versi `Dart 2.1` kita bisa menuliskan double tanpa menambahkan titik di belakang angka, dengan begitu kita bisa katakan variabel `nilai3` adalah double tanpa desimal.
 
@@ -70,7 +69,7 @@ print(pi.runtimeType);
 
 > ❗ Note: field `runtimeType` menampilkan tipe data dari variabel.
 
-![Screenshott](assets/ss.png)
+![Output dari runtimeType](/post/ss.png "Output dari runtimeType")
 
 ## Method
 
@@ -92,4 +91,4 @@ Baik sekian materi tentang tipe data Numbers pada Dart, terus pantengin blog anb
 <br/>
 <br/>
 
-![Gif](assets/applause.gif)
+![](/post/applause.gif)
