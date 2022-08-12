@@ -22,13 +22,15 @@ Seperti kita tahu bahwa bahasa Dart menjadi pondasi bagi Flutter, terdapat banya
 <br/>
 Sejak versi `2.12`, Dart menghadirkan fitur `Null Safety`. Apa sih yang dimaksud dengan Null Safety? Kenapa kita harus menggunakan Null Safety? Oke mari kita bahas lebih dalam, Here we go...
 
-
 ## Apa itu Null Safety ?
+
 Oke langsung saja Anbi contohkan
+
 ```dart
 String nama = "Jokowi";
 int age = 30;
 ```
+
 <br/>
 Bisa dilihat kedua variabel tersebut memiliki nilai, tapi di kasus tertentu variabel akan diisi `nanti` alias kita beri nilai `null` dulu.
 <br/>
@@ -59,11 +61,12 @@ Pertama jika kamu ingin menggunakan fitur `null safety` pastikan di berkas **pub
 environment:
   sdk: '>=2.12.0 <3.0.0'
 ```
+
 Setidaknya ada `3 operator` yang bisa kamu gunakan untuk menggunakan fitur null safety, bisa dilihat di tabel bawah ini:
 <br/>
 
-| Operator | Nama     | Description                |
-| :-------- | :------- | :------------------------- |
+| Operator | Nama | Description |
+| :--- | :--- | :--- |
 | ? | Nullable | Digunakan untuk mendeklarasikan bahwa sebuah variable boleh bernilai null |
 | ! | Bang Operator | Digunakan untuk mendeklarasikan sebuah variable tidak boleh null |
 | late | First Read | Mendeklarasikan bahwa sebuah variable baru pertama kali di inisialisasi dan biasanya digabung dengan final |
@@ -74,14 +77,18 @@ Oke mari kita bahas satu persatu
 ### Nullable
 
 Langsung saja ke contoh kode
+
 ```dart
 String? warnaFavorite = null;
 int? ukuranBaju;
 ```
+
 Pemberian `tanda tanya (?)` digunakan untuk mendeklarasikan bahwa sebuah variable boleh bernilai `null`.
 
 ### Bang Operator
+
 Coba tuliskan kode berikut di text editor kamu
+
 ```dart
 main(List<String> args) {
   String? name = null;
@@ -97,6 +104,7 @@ checkName(String name) {
   }
 }
 ```
+
 Bisa dilihat bahwa terdapat `error` pada compiler karena kita mencoba mengakses sebuah variable yang bernilai null, sedangkan parameter pada function `checkName` bertipe `String` sedangkan variabel yang kita masukkan bertipe String? alias String `null`.
 
 ```dart
@@ -104,7 +112,8 @@ Bisa dilihat bahwa terdapat `error` pada compiler karena kita mencoba mengakses 
  checkName(name!);
  
 ```
- Untuk mengatasi error ini, kita bisa menggunakan `bang operator (!)`, tanda seru tersebut kita memaksa variabel null menjadi `non nullabel`, Dengan demikian kita memberi tahu kepada compiler bahwa variabel tersebut ada jaminan tidak akan null .
+
+Untuk mengatasi error ini, kita bisa menggunakan `bang operator (!)`, tanda seru tersebut kita memaksa variabel null menjadi `non nullabel`, Dengan demikian kita memberi tahu kepada compiler bahwa variabel tersebut ada jaminan tidak akan null .
 
 ❗ Note : Gunakan bang operator (!) jika kamu yakin 100 % bahwa variabel tidak akan null alias akan ada nilainya.
 
@@ -120,15 +129,17 @@ Kok keknya sama aja ya ? Oke kita langsung code
 late String nama;
 print(nama) //The late local variable 'data' is definitely unassigned at this point
 ```
+
 Bisa dilihat bahwa kode di atas akan menampilkan pesan error karena variabel yang seharusnya diinisasi nanti tapi belum diinisiasi dan langsung di cetak sehingga menghasilkan output error, berbeda dengan `nullabel` yang masih bisa menampilkan null.
 
 Mengutip dari seredata.com bahwa
 <br/>
 Keyword `late` mempunyai 2 efek, yaitu:
+
 1. Dart Analyzer tidak akan meminta kita untuk menginisialisasi nilai awal dari variabel yang non-nullable.
 2. Dart runtime akan malas (lazy) menginisialisasi variabel late, sebagai contoh: jika ada instance variabel non-nullable harus dikalkulasi, maka dengan menambahkan keyword late akan mendelay kalkulasi tersebut sampai penggunaan pertama sekali variable tersebut.
-<br/>
-Oke mari kita contohkan
+   <br/>
+   Oke mari kita contohkan
 
 ```dart
 
