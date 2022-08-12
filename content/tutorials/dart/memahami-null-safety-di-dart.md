@@ -7,7 +7,7 @@ draft = true
 series = ""
 shortcode = ""
 status = ""
-sumber = []
+sumber = ["https://www.seredata.com/2021/03/dart-null-safety.html", "https://www.thengoding.com/2021/07/07/dart-programming-null-safety/", "https://medium.flutterdevs.com/null-safety-support-for-flutter-dart-e25cb31ad5c8", "https://dart.cn/null-safety/tour"]
 tags = []
 title = "Memahami Null Safety di Dart"
 tutorials = []
@@ -120,11 +120,11 @@ Kok keknya sama aja ya ? Oke kita langsung code
 late String nama;
 print(nama) //The late local variable 'data' is definitely unassigned at this point
 ```
-Bisa dilihat bahwa kode di atas akan menampilkan pesan error karena variabel yang seharusnya diinisasi nanti tapi belum diinisiasi dan langsung di cetak sehingga menghasilkan output error, berbeda dengan nullabel yang masih bisa menampilkan null.
+Bisa dilihat bahwa kode di atas akan menampilkan pesan error karena variabel yang seharusnya diinisasi nanti tapi belum diinisiasi dan langsung di cetak sehingga menghasilkan output error, berbeda dengan `nullabel` yang masih bisa menampilkan null.
 
 Mengutip dari seredata.com bahwa
 <br/>
-Keyword late mempunyai 2 efek, yaitu:
+Keyword `late` mempunyai 2 efek, yaitu:
 1. Dart Analyzer tidak akan meminta kita untuk menginisialisasi nilai awal dari variabel yang non-nullable.
 2. Dart runtime akan malas (lazy) menginisialisasi variabel late, sebagai contoh: jika ada instance variabel non-nullable harus dikalkulasi, maka dengan menambahkan keyword late akan mendelay kalkulasi tersebut sampai penggunaan pertama sekali variable tersebut.
 <br/>
@@ -140,7 +140,6 @@ main() {
   //output: Value is Here
 }
 
-
 String getValue() {
   print("Get value dipanggil");
   return "Value is here";
@@ -152,8 +151,6 @@ Berikut output yang tidak menggunakan keyword late
 
 ![Screenshot](assets/late.png)
 
-
-
 <br/>
 Baik sekian materi tentang Null Safety, Bagaimana menyenangkan bukan ?
 <br/>
@@ -162,13 +159,3 @@ Baik sekian materi tentang Null Safety, Bagaimana menyenangkan bukan ?
 <br/>
 Sampai berjumpa di lain waktu, tetap pantau anbidev supaya kamu lebih jago lagi dalam mengoding.
 <br/>
-
-source :
-<br/>
-https://dart.cn/null-safety/tour
-<br/>
-https://medium.flutterdevs.com/null-safety-support-for-flutter-dart-e25cb31ad5c8
-<br/>
-https://www.thengoding.com/2021/07/07/dart-programming-null-safety/
-<br/>
-https://www.seredata.com/2021/03/dart-null-safety.html
