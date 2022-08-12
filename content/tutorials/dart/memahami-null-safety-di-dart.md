@@ -117,7 +117,7 @@ Untuk mengatasi error ini, kita bisa menggunakan `bang operator (!)`, tanda seru
 
 ❗ Note : Gunakan bang operator (!) jika kamu yakin 100 % bahwa variabel tidak akan null alias akan ada nilainya.
 
-![Screenshoot](assets/null.png)
+![Unhandled exception](/post/null.png "Unhandled exception")
 Berikut contoh jika kamu tetap menggunakan bang operator (!), tapi nilainya tetap null.
 
 ### Late
@@ -160,13 +160,12 @@ String getValue() {
 Berikut output yang tidak menggunakan keyword late
 <br/>
 
-![Screenshot](assets/late.png)
+![Late](/post/late-1.png "Late")
 
 <br/>
 Baik sekian materi tentang Null Safety, Bagaimana menyenangkan bukan ?
 <br/>
 
-![Gif](assets/ynkts.gif)
-<br/>
-Sampai berjumpa di lain waktu, tetap pantau anbidev supaya kamu lebih jago lagi dalam mengoding.
-<br/>
+![](/post/ynkts.gif)
+
+ <br/> Sampai berjumpa di lain waktu, tetap pantau Anbidev supaya kamu lebih jago lagi dalam mengoding. <br/>
