@@ -1,21 +1,21 @@
 +++
-authors = ""
-cover = ""
-date = ""
+authors = "Handika"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
+date = 2022-08-11T17:00:00Z
 description = "Sejak versi 2.12, Dart menghadirkan fitur Null Safety"
 draft = true
-series = ""
-shortcode = ""
-status = ""
+series = "Dart Dasar"
+shortcode = "NullSafety"
+status = "draft"
 sumber = ["https://www.seredata.com/2021/03/dart-null-safety.html", "https://www.thengoding.com/2021/07/07/dart-programming-null-safety/", "https://medium.flutterdevs.com/null-safety-support-for-flutter-dart-e25cb31ad5c8", "https://dart.cn/null-safety/tour"]
-tags = []
+tags = ["dart"]
 title = "Memahami Null Safety di Dart"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorials", "tutorial"]
+url = "dart-nullsafety"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 Seperti kita tahu bahwa bahasa Dart menjadi pondasi bagi Flutter, terdapat banyak fitur di dalam bahasa ini yang akan kita bahas tuntas di materi kali ini yaitu `Null Safety`.
