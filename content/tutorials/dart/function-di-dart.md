@@ -32,9 +32,9 @@ main() {}
 
 kedua kode di atas merupakan `function`, function `main()` merupakan function yang akan dijalankan pertama kali ketika program dijalankan. Semua program di Dart dimulai dari fungsi `main()` bisa dikatakan bahwa fungsi ini adalah `entry point` dari program. Sedangkan `print()` merupakan fungsi untuk mencetak output. Mudah dipahami bukan ?
 
-![Gif](assets/easy.gif)
-<br/>
-Kita bahas secara konsep, fungsi atau metode (jika pendeklarasiannya di dalam class) adalah sekumpulan kode yang melakukan tugas tertentu. Pendeklarasian fungsi ini pastinya menggunakan nama sehingga apabila kita ingin memanggil fungsi tersebut tinggal panggil nama fungsinya dan sesuaikan kebutuhan. Pembuatan fungsi bertujuan agar programmer tidak membuat code yang berulang (redundant).
+![](/post/easy.gif)
+
+Kita bahas secara konsep, fungsi atau metode (jika pendeklarasiannya di dalam class) adalah sekumpulan kode yang melakukan tugas tertentu. Pendeklarasian fungsi ini pastinya menggunakan nama sehingga apabila kita ingin memanggil fungsi tersebut tinggal panggil nama fungsinya dan sesuaikan kebutuhan. Pembuatan fungsi bertujuan agar programmer tidak membuat code yang berulang (`redundant`).
 
 <br/>
 
@@ -44,8 +44,8 @@ Secara garis besar di banyak bahasa pemograman ada dua kategori function:
 
 1. Built-in Function (Fungsi yang sudah ada di Dart)
 2. User-Defined Funtions (Fungsi yand dibuat oleh programmer)
-   <br/>
-   yok kita bahas satu satu
+
+   <br/> yok kita bahas satu satu
 
 <br/>
 
