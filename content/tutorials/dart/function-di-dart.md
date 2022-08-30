@@ -34,7 +34,7 @@ kedua kode di atas merupakan `function`, function `main()` merupakan function ya
 
 ![](/post/easy.gif)
 
-Kita bahas secara konsep, fungsi atau metode (jika pendeklarasiannya di dalam class) adalah sekumpulan kode yang melakukan tugas tertentu. Pendeklarasian fungsi ini pastinya menggunakan nama sehingga apabila kita ingin memanggil fungsi tersebut tinggal panggil nama fungsinya dan sesuaikan kebutuhan. Pembuatan fungsi bertujuan agar programmer tidak membuat code yang berulang (`redundant`).
+Kita bahas secara konsep, `fungsi` atau `metode` (jika pendeklarasiannya di dalam class) adalah sekumpulan kode yang melakukan tugas tertentu. Pendeklarasian fungsi ini pastinya menggunakan nama sehingga apabila kita ingin memanggil fungsi tersebut tinggal panggil nama fungsinya dan sesuaikan kebutuhan. Pembuatan fungsi bertujuan agar programmer tidak membuat code yang berulang (`redundant`).
 
 <br/>
 
@@ -42,8 +42,8 @@ Kita bahas secara konsep, fungsi atau metode (jika pendeklarasiannya di dalam cl
 
 Secara garis besar di banyak bahasa pemograman ada dua kategori function:
 
-1. Built-in Function (Fungsi yang sudah ada di Dart)
-2. User-Defined Funtions (Fungsi yand dibuat oleh programmer)
+1. `Built-in` Function (Fungsi yang sudah ada di Dart)
+2. `User-Defined` Funtions (Fungsi yand dibuat oleh programmer)
 
    <br/> yok kita bahas satu satu
 
@@ -53,9 +53,11 @@ Secara garis besar di banyak bahasa pemograman ada dua kategori function:
 
 Sudah disinggung di atas bahwa function jenis ini merupakan bawaan library dari Dart nya, sehingga kita cukup memanggil nama fungsi tersebut saja sesuai kebutuhan.
 
-![List](/post/list.png "List")
-<br/>
-Bisa dilihat pada gambar di atasm bahwa kita sedang membuat list dengan nama items, lalu kita mencoba memanggil ada fungsi apa aja di dalam list. Gunakan fungsi tersebut sesuai kebutuhan.
+![List](/post/list.png "List") 
+
+<br/> 
+
+Bisa dilihat pada gambar di atas bahwa kita sedang membuat list dengan nama items, lalu kita mencoba memanggil ada fungsi apa aja di dalam list. Gunakan fungsi tersebut sesuai kebutuhan.
 
 ## User-Defined Function
 
@@ -67,11 +69,14 @@ returnType functionName(type param1, type param2, ...) {
 }
 ```
 
-<br/>
-kita definisikan dulu return tipenya selanjutnya nama fungsinya, jika ada parameternya kita tambahkan parameter dan terakhir return valuenya.
-<br/>
-Setiap fungsi di Dart selalu mengembalikan nilai namun ada satu tipe data khusus yang bisa kita lihat pada fungsi main sebelumnya yakni return type nya adalah void. Kata void sendiri tidak menghasilkan output atau nilai kembalian biasanya fungsi seperti in digunakan untuk kumpulan instruksi atau sesuatu yang berulang.
-<br/>
+<br/> 
+
+Kita definisikan dulu `return tipenya` selanjutnya `nama fungsinya`, jika ada parameternya kita tambahkan parameter dan terakhir return valuenya. 
+
+<br/> 
+
+Setiap fungsi di Dart selalu mengembalikan nilai namun ada satu tipe data khusus yang bisa kita lihat pada fungsi main sebelumnya yakni return type nya adalah void. Kata void sendiri tidak menghasilkan output atau nilai kembalian biasanya fungsi seperti in digunakan untuk kumpulan instruksi atau sesuatu yang berulang. <br/> 
+
 Yuk kita mulai ke latihan membuat fungsi
 
 ```dart
@@ -84,7 +89,7 @@ void main() {
 }
 ```
 
-Kita buat fungsi sederhana dengan nama sayHello, di situ kita panggil, selanjutnya coba jalankan program di terminal atau run maka akan menghasilkan **Hello World**.
+Kita buat fungsi sederhana dengan nama `sayHello()`, di situ kita panggil, selanjutnya coba jalankan program di terminal atau run maka akan menghasilkan **Hello World**.
 <br/>
 Bagaimana menambahkan return type ?
 
