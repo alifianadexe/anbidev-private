@@ -90,7 +90,7 @@ Maka outputnya akan menghasilkan seperti ini :
 
 ![Screenshot](assets/ss1.png)
 
-Selain dari bawaan, kamu bisa lho buat exception sendiri.
+Selain dari bawaan, kamu bisa lho buat `exception` sendiri.
 
 ```dart
 class MyException implements Exception {
@@ -109,9 +109,11 @@ try {
 }
 ```
 
-Perhatikan pada parameter kedua, s adalah StackTrace. Ketika kamu ingin tahu dimana lokasi kesalahan kode, maka gunakan parameter stacktrace.
-<br/>
-Terakhir mengenai finally, finally akan mengeksekusi kode tidak peduli kode itu error atau tidak.
+Perhatikan pada parameter kedua, `s` adalah `StackTrace`. Ketika kamu ingin tahu dimana lokasi kesalahan kode, maka gunakan parameter `stacktrace`. 
+
+<br/> 
+
+Terakhir mengenai `finally`, finally akan mengeksekusi kode tidak peduli kode itu error atau tidak.
 
 ```dart
 try {
