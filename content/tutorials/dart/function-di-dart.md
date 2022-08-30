@@ -1,24 +1,25 @@
 +++
-authors = ""
-cover = ""
-date = ""
-description = ""
-draft = true
-series = ""
-shortcode = ""
-status = ""
+authors = "Handika"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
+date = 2022-08-29T17:00:00Z
+description = "Konsep dimana kamu dapat membuat fungsi sesuai kebutuhan program kamu"
+series = "Dart Dasar"
+shortcode = "Function"
+status = "publish"
 sumber = []
-tags = []
+tags = ["dart"]
 title = "Function di Dart"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorials", "tutorial"]
+url = "dart-function"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 Yuk kenalan dengan `function`, yakni konsep dimana kamu dapat membuat `fungsi` sesuai kebutuhan program kamu. Di materi kali ini kita akan belajar gimana caranya buat function, apa itu parameter di function dan banyak lagi dengan bahasa pemograman Dart.
+
+![](/post/function.gif)
 
 ## Apa itu Function?
 
@@ -30,7 +31,7 @@ print('Hello World');
 main() {}
 ```
 
-kedua kode di atas merupakan `function`, function `main()` merupakan function yang akan dijalankan pertama kali ketika program dijalankan. Semua program di Dart dimulai dari fungsi `main()` bisa dikatakan bahwa fungsi ini adalah `entry point` dari program. Sedangkan `print()` merupakan fungsi untuk mencetak output. Mudah dipahami bukan ?
+Kedua kode di atas merupakan `function`, function `main()` merupakan function yang akan dijalankan pertama kali ketika program dijalankan. Semua program di Dart dimulai dari fungsi `main()` bisa dikatakan bahwa fungsi ini adalah `entry point` dari program. Sedangkan `print()` merupakan fungsi untuk mencetak output. Mudah dipahami bukan ?
 
 ![](/post/easy.gif)
 
@@ -53,9 +54,9 @@ Secara garis besar di banyak bahasa pemograman ada dua kategori function:
 
 Sudah disinggung di atas bahwa function jenis ini merupakan bawaan library dari Dart nya, sehingga kita cukup memanggil nama fungsi tersebut saja sesuai kebutuhan.
 
-![List](/post/list.png "List") 
+![List](/post/list.png "List")
 
-<br/> 
+<br/>
 
 Bisa dilihat pada gambar di atas bahwa kita sedang membuat list dengan nama items, lalu kita mencoba memanggil ada fungsi apa aja di dalam list. Gunakan fungsi tersebut sesuai kebutuhan.
 
@@ -69,13 +70,13 @@ returnType functionName(type param1, type param2, ...) {
 }
 ```
 
-<br/> 
+<br/>
 
-Kita definisikan dulu `return tipenya` selanjutnya `nama fungsinya`, jika ada parameternya kita tambahkan parameter dan terakhir return valuenya. 
+Kita definisikan dulu `return tipenya` selanjutnya `nama fungsinya`, jika ada parameternya kita tambahkan parameter dan terakhir return valuenya.
 
-<br/> 
+<br/>
 
-Setiap fungsi di Dart selalu mengembalikan nilai namun ada satu tipe data khusus yang bisa kita lihat pada fungsi main sebelumnya yakni return type nya adalah void. Kata void sendiri tidak menghasilkan output atau nilai kembalian biasanya fungsi seperti in digunakan untuk kumpulan instruksi atau sesuatu yang berulang. <br/> 
+Setiap fungsi di Dart selalu mengembalikan nilai namun ada satu tipe data khusus yang bisa kita lihat pada fungsi main sebelumnya yakni return type nya adalah void. Kata void sendiri tidak menghasilkan output atau nilai kembalian biasanya fungsi seperti in digunakan untuk kumpulan instruksi atau sesuatu yang berulang. <br/>
 
 Yuk kita mulai ke latihan membuat fungsi
 
@@ -174,9 +175,9 @@ main() {
 }
 ```
 
-Bisa dilihat perbedaannya? Kamu bisa menaruh argumen name di belakang, asal kita mention paramter. Dengan begitu kamu tidak perlu khawatir dengan urutan pengisian argumen. 
+Bisa dilihat perbedaannya? Kamu bisa menaruh argumen name di belakang, asal kita mention paramter. Dengan begitu kamu tidak perlu khawatir dengan urutan pengisian argumen.
 
-<br/> 
+<br/>
 
 Jika anda sudah belajar sedikit tentang Flutter pasti anda menyinggung sedikit tentang function yang diberi **required** pada parameternya. keyword tersebut digunakan agar user mengharuskan mengisi parameter yang diberi **required**.
 <br/>
@@ -194,6 +195,6 @@ Bisa dilihat jika tidak mengisi parameter tersebut akan mengalami `error`
 
 <br/>
 
-![Image](assets/cograts.gif)
+![](/post/cograts.gif)
 <br/>
 Selamat anda sudah belajar banyak tentang fungsi di Dart. ikuti terus blog Anbidev agar kamu makin jago lagi dalam mengoding..
