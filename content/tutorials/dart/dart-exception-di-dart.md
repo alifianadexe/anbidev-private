@@ -54,8 +54,10 @@ try {
 }
 ```
 
-Bisa dipahami kode di atas? Oke jadi di blok try itu akan mengeksekusi kode di dalamnya, jika terjadi error maka akan mengeksekusi kode di blok catch. Dengan begitu jika kode error tidak akan mengakibatkan crash melainkan akan menuju blok catch.
-<br/>
+Bisa dipahami kode di atas? Oke jadi di blok `try` itu akan mengeksekusi kode di dalamnya, jika terjadi error maka akan mengeksekusi kode di blok `catch`. Dengan begitu jika kode error tidak akan mengakibatkan crash melainkan akan menuju blok catch. 
+
+<br/> 
+
 Selanjutnya jika kamu sudah paham kode program kamu akan mengalami error apa, kamu bisa menaruhnya di blok catch.
 
 ```dart
