@@ -130,8 +130,11 @@ try {
 ```
 
 Kode program dari finally akan dijalankan, tidak mengiraukan kode apakah error atau tidak. dan dieksekusi di akhir sesuai urutan blok.
+
 <br/>
-❗ Note : Wajib buat kamu untuk membuat Error Handling pada kode programmu terlebih jika kamu ada keraguan pada kode program yang kamu anggap akan terjadi crash.
+
+> 
+> ❗ Note : Wajib buat kamu untuk membuat Error Handling pada kode programmu terlebih jika kamu ada keraguan pada kode program yang kamu anggap akan terjadi crash.
 
 ![Timmy](assets/timmy.gif)
 
