@@ -53,7 +53,7 @@ Secara garis besar di banyak bahasa pemograman ada dua kategori function:
 
 Sudah disinggung di atas bahwa function jenis ini merupakan bawaan library dari Dart nya, sehingga kita cukup memanggil nama fungsi tersebut saja sesuai kebutuhan.
 
-<img src="assets/list.png" width="300">
+![](/post/list.png)
 <br/>
 Bisa dilihat pada gambar di atasm bahwa kita sedang membuat list dengan nama items, lalu kita mencoba memanggil ada fungsi apa aja di dalam list. Gunakan fungsi tersebut sesuai kebutuhan.
 
