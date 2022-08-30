@@ -102,13 +102,13 @@ Bagaimana menambahkan return type ?
 }
 ```
 
-kode di atas jika di run apa yang akan terjadi ? tidak ada outputnya bukan ? apakah itu error ? jawabannya tidak. karena fungsi sayHello hanya mengembalikan String Hello World, kita perlu memanggil fungsi print() untuk menampilkan hasilnya.
+Kode di atas jika di run apa yang akan terjadi? Tidak ada outputnya bukan? Apakah itu error? Jawabannya tidak. Karena fungsi `sayHello()` hanya mengembalikan String Hello World, kita perlu memanggil fungsi `print()` untuk menampilkan hasilnya.
 
 ```dart
-print(sayHello()); //Hello World
+print(sayHello()); // Hello World
 ```
 
-Dengan begitu output dari fungsi sayHello() akan menampilkan Hello World.
+Dengan begitu output dari fungsi `sayHello()` akan menampilkan Hello World.
 
 ## Function Parameter
 
@@ -134,7 +134,7 @@ void sayHello(String name, int age, bool isMarried, String alamat)
 sayHello('John', 20, true, 'Jakarta', ...); //Begini cara pemanggilan
 ```
 
-cukup banyak yang harus diisi bukan ? Gunakan optional paramter agar tidak perlu mengisi argumen yang tidak diperlukan. Optional paramter ditulis dengan simbol \[\] di parameternya
+Cukup banyak yang harus diisi bukan? Gunakan optional paramter agar tidak perlu mengisi argumen yang tidak diperlukan. Optional parameter ditulis dengan simbol `[]` di parameternya
 
 ```dart
 String sayHello([String? name, int? age, bool? isMarried, String? alamat]) {
@@ -161,7 +161,7 @@ sayHello('Jane'); //Hello Jane
 
 ## Named Parameter
 
-Coba kalian perhatikan cara buat fungsi di atas dan pendeklarasiannya, kalian harus hafal tempat menaruhkan argumen agar sama dengan paramter. Namun dengan penggunaan named parameter Human error akibat salah menginput argumen bisa diminimalisir. Gunakan curly brackets {}
+Coba kalian perhatikan cara buat fungsi di atas dan pendeklarasiannya, kalian harus hafal tempat menaruhkan argumen agar sama dengan paramter. Namun dengan penggunaan named parameter Human error akibat salah menginput argumen bisa diminimalisir. Gunakan `curly brackets {}`
 
 ```dart
 String sayHello({String name = 'John', int age = 20, bool isMarried = true, String alamat = 'Jakarta'}) {
@@ -174,13 +174,14 @@ main() {
 }
 ```
 
-Bisa dilihat perbedaannya ? kamu bisa menaruh argumen name di belakang, asal kita mention paramter. Dengan begitu kamu tidak perlu khawatir dengan urutan pengisian argumen.
-<br/>
-Jika anda sudah belajar sedikit tentang Flutter pasti anda menyinggung sedikit tentang function yang diberi **required** di parameternya. keyword tersebut digunakan agar user mengharuskan mengisi parameter yang diberi **required**.
+Bisa dilihat perbedaannya? Kamu bisa menaruh argumen name di belakang, asal kita mention paramter. Dengan begitu kamu tidak perlu khawatir dengan urutan pengisian argumen. 
+
+<br/> 
+
+Jika anda sudah belajar sedikit tentang Flutter pasti anda menyinggung sedikit tentang function yang diberi **required** pada parameternya. keyword tersebut digunakan agar user mengharuskan mengisi parameter yang diberi **required**.
 <br/>
 
 ```dart
-
 String sayGoodBye({required String name}) {
   return 'Goodbye $name';
 }
@@ -189,7 +190,7 @@ sayGoodBye(name: 'John'); //Goodbye John
 sayGoodBye(); //The named parameter 'name' is required, but there's no corresponding argument. Try adding the required argument
 ```
 
-Bisa dilihat jika tidak mengisi parameter tersebut akan mengalami error.
+Bisa dilihat jika tidak mengisi parameter tersebut akan mengalami `error`
 
 <br/>
 
