@@ -18,8 +18,10 @@ images = "/img/author.jpg"
 name = ""
 
 +++
-Pernahkah kamu membayangkan bahwa membuat aplikasi atau program yang sudah berjalan terjadi crash atau error? Pastinya kamu tidak ingin kan hal demikian terjadi, nah kondisi seperti itu yakni kondisi error pada  aplikasi yang berjalan (runtime) dikenal dengan sebutan exception. Ketika programmu terjadi exception, maka aplikasi akan dihentikan dan program selanjutnya tidak akan dijalankan.
-<br/>
+Pernahkah kamu membayangkan bahwa membuat aplikasi atau program yang sudah berjalan terjadi `crash` atau `error`? Pastinya kamu tidak ingin kan hal demikian terjadi, nah kondisi seperti itu yakni kondisi error pada aplikasi yang berjalan (`runtime`) dikenal dengan sebutan `exception`. Ketika programmu terjadi exception, maka aplikasi akan dihentikan dan program selanjutnya tidak akan dijalankan. 
+
+<br/> 
+
 Yuk langsung ke code biar lebih mudah
 
 ```dart
@@ -29,14 +31,17 @@ Yuk langsung ke code biar lebih mudah
   print(c);
 ```
 
-Buat program seperti code di atas, lalu coba jalankan apa yang terjadi ?
+Buat program seperti code di atas, lalu coba jalankan apa yang terjadi?
 
 ![Screenshot](assets/ss.png)
 
-<br/>
-oke tambah sedikit, tanda \~/ itu artinya dibagi dengan return integer. Bisa dilihat bahwa terjadi error, saat compile time kode di atas masih aman namun saat run time kode tersebut menjadi error sehingga aplikasi / program menjadi crash, tentu hal demikian perlu di perbaiki.
-<br/>
-Untuk menangani Exception tersebut maka gunakan try dan catch
+<br/> 
+
+Oke tambah sedikit, tanda `~/` itu artinya dibagi dengan return integer. Bisa dilihat bahwa terjadi error, saat compile time kode di atas masih aman namun saat run time kode tersebut menjadi error sehingga aplikasi atau program menjadi crash, tentu hal demikian perlu di perbaiki. 
+
+<br/> 
+
+Untuk menangani Exception tersebut maka gunakan `try` dan `catch`
 
 ```dart
 try {
