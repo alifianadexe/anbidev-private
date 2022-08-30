@@ -18,7 +18,7 @@ images = "/img/author.jpg"
 name = ""
 
 +++
-Yuk kenalan dengan function, yakni konsep dimana kamu dapat membuat fungsi sesuai kebutuhan program kamu. Di materi kali ini kita akan belajar gimana caranya buat function, apa itu parameter di function dan banyak lagi dengan bahasa pemograman Dart.
+Yuk kenalan dengan `function`, yakni konsep dimana kamu dapat membuat `fungsi` sesuai kebutuhan program kamu. Di materi kali ini kita akan belajar gimana caranya buat function, apa itu parameter di function dan banyak lagi dengan bahasa pemograman Dart.
 
 ## Apa itu Function?
 
@@ -53,7 +53,7 @@ Secara garis besar di banyak bahasa pemograman ada dua kategori function:
 
 Sudah disinggung di atas bahwa function jenis ini merupakan bawaan library dari Dart nya, sehingga kita cukup memanggil nama fungsi tersebut saja sesuai kebutuhan.
 
-![](/post/list.png)
+![List](/post/list.png "List")
 <br/>
 Bisa dilihat pada gambar di atasm bahwa kita sedang membuat list dengan nama items, lalu kita mencoba memanggil ada fungsi apa aja di dalam list. Gunakan fungsi tersebut sesuai kebutuhan.
 
