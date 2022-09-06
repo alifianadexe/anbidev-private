@@ -1,21 +1,20 @@
 +++
-authors = ""
-cover = ""
-date = ""
-description = ""
-draft = true
-series = ""
-shortcode = ""
-status = ""
+authors = "Handika"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
+date = 2022-09-05T17:00:00Z
+description = "Proses mengulang eksekusi satu statement atau lebih selama kondisi terpenuhi"
+series = "Dart Dasar"
+shortcode = "Perulangan"
+status = "publish"
 sumber = []
 tags = []
 title = "Dart: Perulangan For, While, Do While"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorials", "tutorial"]
+url = "dart-iteration"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 Sebagai seorang programmer, kita akan menghadapi kasus dimana kita harus menulis program berkali-kali, dengan menulisnya secara manual pasti akan sangat merepotkan. Maka dari itu kita kenalan dengan yang namanya perulangan. `Perulangan` sendiri adalah proses mengulang-ulang eksekusi satu statement atau lebih blok tanpa henti, selama kondisi yang dijadikan acuan terpenuhi. Setidaknya ada 2 (dua) perulangan di dalam Dart yakni `counted loop` dan `uncounted loop`
