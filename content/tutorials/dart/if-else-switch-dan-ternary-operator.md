@@ -34,7 +34,7 @@ Berikut contoh control flow dalam bahasa pemrograman:
 
 <br/>
 
-<img src="assets/ss1.png" alt="" width="300">
+![Conditional Flow : If](/post/ss_conditional2.png "Conditional Flow : If")
 
 <br/>
 
@@ -68,7 +68,7 @@ Kita juga bisa menggunakan keyword else, apa sih keyword else itu? `Else` sendir
 
 Berikut flow dari If Else condition 
 
-<img src="assets/ss2.png" alt="" width="300"> 
+![Conditional Flow : If Else](/post/ss_conditional3.png "Conditional Flow : If Else")
 
 <br/> 
 
@@ -102,9 +102,13 @@ if(condition) {
 ```
 
 Lalu jika kita ingin menambahkan kondisi lebih dari contoh di atas ? Bisa, tambahkan sesuai kebutuhan kode program kamu.
-<br/>
-Oke kita next level, latihan soal yang berbeda
-<br/>
+
+<br/> 
+
+Oke kita next level, latihan soal yang berbeda 
+
+<br/> 
+
 Kita akan buat kondisi dimana :
 
 1. Mendapatkan A jika nilai lebih besar dari 90
