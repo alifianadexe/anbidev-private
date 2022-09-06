@@ -59,13 +59,12 @@ Ada juga konsep perulangan dengan `for in`, perulangan ini sama halnya dengan al
 Basik sintak :
 
 ```dart
-
 for(var iterator in collection) {
     //code
 }
 ```
 
-Nah iterator bisa kita istilahkan sebagai alias, kita bisa tulis terserah kita.
+Nah `iterator` bisa kita istilahkan sebagai alias, kita bisa tulis terserah kita.
 
 Contoh penggunaan :
 
@@ -90,7 +89,7 @@ Coba lakukan print, dan liat pada debug console jika kamu menggunakan visual stu
 
 ## Perulangan While Loops dan Do While Loops
 
-Tidak jauh berbeda dengan perulangan for loops, perulangan while loops dan do while loops memiliki sama-sama konsep. Hal yang membedakan dikeduanya yakni jika while akan dievaluasi dulu baru dieksekusi sedangkan do while akan dieksekusi dulu baru di evaluasi. Mari kita ke contoh :
+Tidak jauh berbeda dengan perulangan for loops, perulangan `while loops` dan `do while loops` memiliki sama-sama konsep. Hal yang membedakan dikeduanya yakni jika `while` akan `dievaluasi dulu` baru dieksekusi, sedangkan `do while` akan `dieksekusi dulu` baru di evaluasi. Mari kita ke contoh :
 
 ```dart
 var i = 1;
