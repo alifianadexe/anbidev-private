@@ -111,7 +111,7 @@ do {
 } while(i > 10); //Output 1
 ```
 
-Coba ketikan kode di atas, lalu lihat akan menghasilkan output 1 bukan ? iya karena kija menjalankan program dulu baru kita evaluasi. print(i) akan dijalankan 1 kali, lalu evaluasi apakah 1 lebih besar dari 10 ? Tidak, maka selesai program tidak akan dijalankan.
+Coba ketikan kode di atas, lalu lihat akan menghasilkan output 1 bukan ? iya karena kija menjalankan program dulu baru kita evaluasi. `print(i)` akan dijalankan 1 kali, lalu evaluasi apakah 1 lebih besar dari 10 ? Tidak, maka selesai program tidak akan dijalankan.
 
 ❗ Jawaban dari Challange di atas :
 
@@ -128,4 +128,4 @@ Coba ketikan kode di atas, lalu lihat akan menghasilkan output 1 bukan ? iya kar
 
 Sekian materi mengenai perulangan, terimakasih.
 
-![](assets/bravo.gif)
+![](/post/bravo.gif)
