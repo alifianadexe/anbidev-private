@@ -18,25 +18,25 @@ images = "/img/author.jpg"
 name = ""
 
 +++
-Sebagai seorang programmer pasti dalam pembuatan program kita dihadapkan dengan kode yang membutuhkan `kondisi`. Jika kondisi terpenuhi maka jalankan, sedangkan jika tidak terpenuhi maka jalankan kode yang lain. Oke sampai sini bisa dimengerti ?0 
+Sebagai seorang programmer pasti dalam pembuatan program kita dihadapkan dengan kode yang membutuhkan `kondisi`. Jika kondisi terpenuhi maka jalankan, sedangkan jika tidak terpenuhi maka jalankan kode yang lain. Oke sampai sini bisa dimengerti ?0
 
-<br/> 
+<br/>
 
 Mari kita berkenalan dengan `if` dan `else`. keyword If dan Else tersebut merupakan hal yang umum ada di bahasa pemograman seperti C, C++, Java, dan lain-lain.
 
 ## If condition
 
-Ekspresi if akan `menguji suatu kondisi`. Jika hasil ekspresi tersebut bernilai `true`, maka blok kode di dalamnya akan dijalankan. Sebaliknya, jika bernilai `false` maka proses yang ditentukan akan dilewatkan. 
+Ekspresi if akan `menguji suatu kondisi`. Jika hasil ekspresi tersebut bernilai `true`, maka blok kode di dalamnya akan dijalankan. Sebaliknya, jika bernilai `false` maka proses yang ditentukan akan dilewatkan.
 
-<br/> 
+<br/>
 
-Berikut contoh control flow dalam bahasa pemrograman: 
+Berikut contoh control flow dalam bahasa pemrograman:
 
-<br/> 
+<br/>
 
-<img src="assets/ss1.png" alt="" width="300"> 
+<img src="assets/ss1.png" alt="" width="300">
 
-<br/> 
+<br/>
 
 jika diuraikan ke dalam kode maka akan jadi seperti ini :
 
@@ -58,15 +58,20 @@ if(isMarried) {
 //output : Ya, saya sudah menikah
 ```
 
-Kode di atas akan menghasilkan karena kondisi dari if terpenuhi, hal demikian karena variabel isMarried bernilai true. Lalu bagaimana jika false ? Nah tidak akan terjadi apa pun. Kita perlu memberikan alternatif untuk menangani kondisi tersebut.
+Kode di atas akan menghasilkan output karena kondisi dari if `terpenuhi`, hal demikian karena variabel `isMarried` bernilai `true`. Lalu bagaimana jika variable `isMarried` bernilai `false`? Nah tidak akan terjadi apa pun. Kita perlu memberikan alternatif untuk menangani kondisi tersebut.
 
 ## If Else condition
 
-Kita juga bisa menggunakan keyword else, apa sih keyword else itu ? Else sendiri bisa digunakan untuk menangani kondisi yang tidak terpenuhi atau bisa dibilang alternatif kondisi yang letaknya di akhir kondisi.
-<br/>
-Berikut flow dari If Else condition
-<img src="assets/ss2.png" alt="" width="300">
-<br/>
+Kita juga bisa menggunakan keyword else, apa sih keyword else itu? `Else` sendiri bisa digunakan untuk menangani kondisi yang tidak terpenuhi atau bisa dibilang alternatif kondisi yang letaknya di akhir kondisi. 
+
+<br/> 
+
+Berikut flow dari If Else condition 
+
+<img src="assets/ss2.png" alt="" width="300"> 
+
+<br/> 
+
 Pada gambar di atas dijelaskan bahwa flow nya apabila kondisi if tidak terpenuhi maka akan dilempar ke else. Mari kita ke latihan soal untuk lebih mudah memahaminya.
 
 ```dart
