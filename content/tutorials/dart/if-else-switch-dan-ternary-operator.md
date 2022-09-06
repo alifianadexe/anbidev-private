@@ -89,7 +89,7 @@ Pada kode di atas bisa dilihat dengan jelas bahwa variabel `isMarried` bernilai 
 
 ## If Else If condition
 
-Berbeda dengan 2 kondisi sebelumnya yang mana kita hanya melakukan 2 pengecekan jika tidak terpenuhi maka lempar ke else, nah ada konsep lain apabila ingin menambahkan kondisi alias tidak hanya 1 kondisi saja yang diuji. Berikut sintak umum yang digunakan
+Berbeda dengan 2 kondisi sebelumnya yang mana kita hanya melakukan 2 pengecekan jika tidak terpenuhi maka lempar ke else, nah ada konsep lain apabila ingin `menambahkan kondisi` alias tidak hanya 1 kondisi saja yang diuji. Berikut sintak umum yang digunakan
 
 ```dart
 if(condition) {
@@ -134,8 +134,7 @@ Jika dinarasikan : Mula-mula Anbu mendapatkan nilai 84, lalu kita cek apakah 84 
 
 ## Switch case
 
-Sama halnya dengan if else, switch case adalah kondisi yang bisa menampung banyak kondisi. Jika melihat pada latihan soal sebelumnya ada banyak pengecekan, jika semakin banyak akan semakin membingungkan dan sulit untuk dibaca.
-Contoh code switch case:
+Sama halnya dengan if else, `switch case` adalah kondisi yang bisa `menampung banyak kondisi`. Jika melihat pada latihan soal sebelumnya ada banyak pengecekan, jika semakin banyak akan semakin membingungkan dan sulit untuk dibaca. Contoh code switch case:
 
 ```dart
 switch (variable/expression) {
@@ -150,8 +149,10 @@ switch (variable/expression) {
 }
 ```
 
-Mari kita bahas, keyword switch berisi mengenai variabel atau ekspresi yang akan diuji. Selanjutnya case, ini adalah nilai yang valid, keyword break digunakan untuk keluar dari proses swithc jika sudah terpenuhi sedangkan default digunakan untuk menangani kondisi yang tidak terpenuhi bisa dibilang sama seperti else.
-<br/>
+Mari kita bahas, keyword `switch` berisi mengenai variabel atau ekspresi yang akan diuji. Selanjutnya `case`, ini adalah nilai yang valid, keyword `break` digunakan untuk `keluar` dari proses switch jika sudah terpenuhi sedangkan default digunakan untuk menangani kondisi yang tidak terpenuhi bisa dibilang sama seperti else. 
+
+<br/> 
+
 Berikut contoh kode switch case:
 
 ```dart
@@ -175,13 +176,13 @@ Terlihat enak dibaca bukan ?
 
 ## Ternary operator
 
-Ini merupakan magic di Dart, kita bisa melakukan pengujian dengan 1 baris saja dengan menggunakan ternary operator. ada 3 kondisi yakni condtion, expresion true dan expresion false. Berikut sintak nya
+Ini merupakan magic di Dart, kita bisa melakukan pengujian dengan `1 baris saja` dengan menggunakan `ternary operator`. ada 3 kondisi yakni `condition`, `expresion true` dan `expresion false`. Berikut sintak nya
 
 ```dart
 condition ? expresion true : expresion false;
 ```
 
-Kita gunakan latihan soal kita yang pertama menggunakan variabel isMarried.
+Kita gunakan latihan soal kita yang pertama menggunakan variabel `isMarried`
 
 ```dart
 var isMarried = true;
@@ -200,7 +201,7 @@ Apa lagi yang hebat di Dart ? kita bisa buat pengecekan nilai null. Berikut sint
 expression1 ?? expression2
 ```
 
-Jika expression1 tidak null maka akan menampilkan expression1, jika expression1 null maka akan menampilkan expression2. Masih bingung ? Mari kita latihan soalnya.
+Jika `expression1` tidak `null` maka akan menampilkan expression1, jika expression1 null maka akan menampilkan `expression2`. Masih bingung ? Mari kita latihan soalnya.
 
 ```dart
 String? nameNull = null;
@@ -230,5 +231,5 @@ void main() {
 }
 ```
 
-![Gif](assets/bravo.gif)
+![](/post/bravo.gif)
 Sekian materi kali ini, cukup banyak yang sudah kita pelajari pada materi ini, pantau terus blog anbidev supaya kamu lebih jago dalam ngoding.
