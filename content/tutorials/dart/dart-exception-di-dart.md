@@ -1,26 +1,25 @@
 +++
-authors = ""
-cover = ""
-date = ""
-description = ""
-draft = true
-series = ""
-shortcode = ""
-status = ""
+authors = "Handika"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
+date = 2022-09-05T17:00:00Z
+description = "Menghentikan program sebelum kondisi error"
+series = "Dart Dasar"
+shortcode = "Exception"
+status = "publish"
 sumber = []
-tags = []
+tags = ["dart"]
 title = "Dart: Exception di Dart"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorials", "tutorial"]
+url = "dart-exception"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
-Pernahkah kamu membayangkan bahwa membuat aplikasi atau program yang sudah berjalan terjadi `crash` atau `error`? Pastinya kamu tidak ingin kan hal demikian terjadi, nah kondisi seperti itu yakni kondisi error pada aplikasi yang berjalan (`runtime`) dikenal dengan sebutan `exception`. Ketika programmu terjadi exception, maka aplikasi akan dihentikan dan program selanjutnya tidak akan dijalankan. 
+Pernahkah kamu membayangkan bahwa membuat aplikasi atau program yang sudah berjalan terjadi `crash` atau `error`? Pastinya kamu tidak ingin kan hal demikian terjadi, nah kondisi seperti itu yakni kondisi error pada aplikasi yang berjalan (`runtime`) dikenal dengan sebutan `exception`. Ketika program yang kamu tulis menjalankan exception, maka aplikasi akan dihentikan dan program selanjutnya tidak akan dijalankan.
 
-<br/> 
+<br/>
 
 Yuk langsung ke code biar lebih mudah
 
@@ -35,11 +34,11 @@ Buat program seperti code di atas, lalu coba jalankan apa yang terjadi?
 
 ![Screenshot](assets/ss.png)
 
-<br/> 
+<br/>
 
-Oke tambah sedikit, tanda `~/` itu artinya dibagi dengan return integer. Bisa dilihat bahwa terjadi error, saat compile time kode di atas masih aman namun saat run time kode tersebut menjadi error sehingga aplikasi atau program menjadi crash, tentu hal demikian perlu di perbaiki. 
+Oke tambah sedikit, tanda `~/` itu artinya dibagi dengan return integer. Bisa dilihat bahwa terjadi error, saat compile time kode di atas masih aman namun saat `run time` kode tersebut menjadi error sehingga aplikasi atau program menjadi crash, tentu hal demikian perlu di perbaiki.
 
-<br/> 
+<br/>
 
 Untuk menangani Exception tersebut maka gunakan `try` dan `catch`
 
@@ -54,9 +53,9 @@ try {
 }
 ```
 
-Bisa dipahami kode di atas? Oke jadi di blok `try` itu akan mengeksekusi kode di dalamnya, jika terjadi error maka akan mengeksekusi kode di blok `catch`. Dengan begitu jika kode error tidak akan mengakibatkan crash melainkan akan menuju blok catch. 
+Bisa dipahami kode di atas? Oke jadi di blok `try` itu akan mengeksekusi kode di dalamnya, jika terjadi error maka akan mengeksekusi kode di blok `catch`. Dengan begitu jika kode error tidak akan mengakibatkan crash melainkan akan menuju blok catch.
 
-<br/> 
+<br/>
 
 Selanjutnya jika kamu sudah paham kode program kamu akan mengalami error apa, kamu bisa menaruhnya di blok catch.
 
@@ -109,9 +108,9 @@ try {
 }
 ```
 
-Perhatikan pada parameter kedua, `s` adalah `StackTrace`. Ketika kamu ingin tahu dimana lokasi kesalahan kode, maka gunakan parameter `stacktrace`. 
+Perhatikan pada parameter kedua, `s` adalah `StackTrace`. Ketika kamu ingin tahu dimana lokasi kesalahan kode, maka gunakan parameter `stacktrace`.
 
-<br/> 
+<br/>
 
 Terakhir mengenai `finally`, finally akan mengeksekusi kode tidak peduli kode itu error atau tidak.
 
@@ -133,7 +132,6 @@ Kode program dari finally akan dijalankan, tidak mengiraukan kode apakah error a
 
 <br/>
 
-> 
 > ❗ Note : Wajib buat kamu untuk membuat Error Handling pada kode programmu terlebih jika kamu ada keraguan pada kode program yang kamu anggap akan terjadi crash.
 
 ![Timmy](assets/timmy.gif)
