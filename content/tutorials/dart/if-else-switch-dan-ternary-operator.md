@@ -72,7 +72,7 @@ Berikut flow dari If Else condition
 
 <br/> 
 
-Pada gambar di atas dijelaskan bahwa flow nya apabila kondisi if tidak terpenuhi maka akan dilempar ke else. Mari kita ke latihan soal untuk lebih mudah memahaminya.
+Pada gambar di atas dijelaskan bahwa flow nya apabila kondisi if tidak terpenuhi maka akan `dilempar` ke else. Mari kita ke latihan soal untuk lebih mudah memahaminya.
 
 ```dart
 var isMarried = false;
@@ -83,7 +83,8 @@ if(isMarried) {
 }
 ```
 
-Pada kode di atas bisa dilihat dengan jelas bahwa variabel isMarried bernilai false, sehingga pada pengecekan if tidak terpenuhi. Maka dilempat ke else dan kode di blok else akan dijalankan.
+Pada kode di atas bisa dilihat dengan jelas bahwa variabel `isMarried` bernilai `false`, sehingga pada pengecekan if tidak terpenuhi. Maka dilempat ke else dan kode di blok else akan dijalankan. 
+
 <br/>
 
 ## If Else If condition
