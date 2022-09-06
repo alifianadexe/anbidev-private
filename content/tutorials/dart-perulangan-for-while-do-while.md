@@ -20,8 +20,8 @@ name = ""
 +++
 Sebagai seorang programmer, kita akan menghadapi kasus dimana kita harus menulis program berkali-kali, dengan menulisnya secara manual pasti akan sangat merepotkan. Maka dari itu kita kenalan dengan yang namanya perulangan. `Perulangan` sendiri adalah proses mengulang-ulang eksekusi satu statement atau lebih blok tanpa henti, selama kondisi yang dijadikan acuan terpenuhi. Setidaknya ada 2 (dua) perulangan di dalam Dart yakni `counted loop` dan `uncounted loop`
 
-* `Counted Loop` adalah perulangan yang sudah jelas banyaknya perulangan yang diinginkan. contoh for `loops`
-* `Uncounted Loop` yakni perulangan yang tidak jelas berapa kali harus diulang. contoh `while`, `do while`
+* `Counted Loop` adalah perulangan yang `sudah jelas banyaknya` perulangan yang diinginkan. contoh for `loops`
+* `Uncounted Loop` yakni perulangan yang `tidak jelas berapa kali` harus diulang. contoh `while`, `do while`
 
 ## Perulangan For Loops
 
@@ -38,7 +38,7 @@ print(4);
 print(100);
 ```
 
-Sangat melelahkan bukan jika menulisnya secara manual. Lalu bagaimana menggunakan perulangan For Loops
+Sangat melelahkan bukan jika menulisnya secara manual. Lalu bagaimana menggunakan perulangan `For Loops`
 
 ```dart
 for (var i = 1; i <= 100; i++) {
@@ -48,13 +48,13 @@ for (var i = 1; i <= 100; i++) {
 
 Mari kita ulas,
 
-pertama pada tulisan var i = 1; kita sebut dengan inisiasi nilai awal. Lalu kenapa variabel i ? agar mudah mengingatnya i di sini sebagai representasi dari index.
+Pertama pada tulisan `var i = 1;` kita sebut dengan inisiasi nilai awal. Lalu kenapa variabel `i`? agar mudah mengingatnya `i` di sini sebagai representasi dari `index`
 
-Kedua, sebagai operasi perbandingan jika nilainya terpenuhi maka akan dijalankan perulangannya. Di sini kita buat perbandingan 1 kurang dari sama dengan 100 artinya jika variabel i kurang dari sama dengan 100 maka akan dijalankan perulangannya.
+Kedua, sebagai operasi perbandingan jika nilainya terpenuhi maka akan dijalankan perulangannya. Di sini kita buat perbandingan `1 kurang dari sama dengan 100` artinya jika variabel `i` kurang dari sama dengan `100` maka akan dijalankan perulangannya.
 
-Ketiga, increment/decrement nilai variabel i. Di sini kita menambahkan 1 ke nilai variabel i. Setiap kali perulangan dijalankan akan menambah variabel i.
+Ketiga, `increment/decrement` nilai variabel `i`. Di sini kita menambahkan `1` ke nilai variabel `i`. Setiap kali perulangan dijalankan akan `menambah` variabel i. Dituliskan dengan `i++`
 
-Ada juga konsep perulangan dengan for in, perulangan ini sama halnya dengan alur perulangan sebelumnya tetapi hanya bisa digunakan dengan tipe data yang Iterabel/ collection seperti List, Set, dan Map.
+Ada juga konsep perulangan dengan `for in`, perulangan ini sama halnya dengan alur perulangan sebelumnya tetapi hanya bisa digunakan dengan tipe data yang `Iterable/collection` seperti `List`, `Set`, dan `Map`
 
 Basik sintak :
 
