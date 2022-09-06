@@ -1,21 +1,20 @@
 +++
-authors = ""
-cover = ""
-date = ""
-description = ""
-draft = true
-series = ""
-shortcode = ""
-status = ""
+authors = "Handika"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
+date = 2022-09-05T17:00:00Z
+description = "Digunakan untuk menangani berbagai kondisi yang mungkin terjadi"
+series = "Dart Dasar"
+shortcode = "Pengkondisian"
+status = "publish"
 sumber = []
 tags = []
 title = "If else, Switch dan Ternary Operator"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorials", "tutorial"]
+url = "dart-conditional"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 Sebagai seorang programmer pasti dalam pembuatan program kita dihadapkan dengan kode yang membutuhkan `kondisi`. Jika kondisi terpenuhi maka jalankan, sedangkan jika tidak terpenuhi maka jalankan kode yang lain. Oke sampai sini bisa dimengerti ?0
