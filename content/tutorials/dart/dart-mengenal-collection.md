@@ -61,7 +61,7 @@ Ada banyak properti dan method List yang sangat berguna, seperti `length`, `isEm
 
 ## Set
 
-Set sendiri mirip dengan List namun yang berbeda ialah jika List masih bisa menampung data yang sama sedangkan Set itu tidak boleh ada nilai yang duplikat. Set juga bisa menampung tipe data apapun. Berikut cara membuat Set
+Set sendiri mirip dengan List namun yang berbeda ialah jika List masih bisa menampung data yang sama sedangkan Set itu `tidak boleh ada nilai yang duplikat`. Set juga bisa menampung tipe data apapun. Berikut cara membuat Set
 
 ```dart
 Set namaVariabel = {};
@@ -73,11 +73,11 @@ print(data.union(data2));
 // Output {Andi, Budi, Caca, Siska, Kavin}
 ```
 
-Kita uji coba membuat 2 set dengan ada nilai yang duplikat lalu kita gabungkan dnegan method union.
+Kita uji coba membuat 2 set dengan ada nilai yang duplikat lalu kita gabungkan dengan method union.
 
 ## Map
 
-Map adalah struktur data yang menyimpan banyak data dengan key dan value. Map bisa menampung tipe data apapun layaknya List dan Set. Perlu dicata bahwa Map tidak digunakan untuk menyimpan informasi secara berurutan, kita bisa memanggilnya menggunakan key. Berikut cara deklarasi Map
+Map adalah struktur data yang menyimpan banyak data dengan `key` dan `value`. Map bisa menampung tipe data apapun layaknya List dan Set. Perlu dicata bahwa Map tidak digunakan untuk menyimpan informasi secara berurutan, kita bisa memanggilnya menggunakan key. Berikut cara deklarasi Map
 
 ```dart
 Map namaVariabel = {}; //sekilas mirip Set
