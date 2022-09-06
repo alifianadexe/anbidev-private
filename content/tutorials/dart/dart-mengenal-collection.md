@@ -1,21 +1,20 @@
 +++
-authors = ""
-cover = ""
-date = ""
-description = ""
-draft = true
-series = ""
-shortcode = ""
-status = ""
+authors = "Handika"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
+date = 2022-09-05T17:00:00Z
+description = "Struktur data yang digunakan untuk menyimpan banyak data sekaligus"
+series = "Dart Dasar"
+shortcode = "Collections"
+status = "publish"
 sumber = ["https://belajarflutter.com/dart-list-pada-pemrograman-dart/", "https://www.seredata.com/2019/06/dart-collection-map.html"]
 tags = []
 title = "Dart: Mengenal Collection"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorials", "tutorial"]
+url = "dart-collections"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 Yuk kita kenalan dengan struktur data yang digunakan untuk `menyimpan banyak data sekaligus` yang ada di Dart. `Collections` adalah `objek` yang menyimpan banyak data seperti `List`, `Set`, dan `Map` (Pada artikel ini kita hanya membahas ketiga collection ini). Mari kita ulas tuntas pada materi kali ini.
@@ -107,4 +106,4 @@ Bahkan kita juga bisa membuat nested Map.
 
 Sekian materi Dart tentang Collections, tidak sulit bukan ? Terus pantau blog anbidev agar kalian jago ngoding.
 
-![Picture](assets/amazing.gif)
+![](/post/amazing.gif)
