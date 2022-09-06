@@ -55,10 +55,9 @@ List nameOfPresiden = ['Jokowi', 'Habibie', 'Gusdur'];
 print(nameOfPresiden[0]); //Jokowi
 ```
 
-Pada contoh di atas kita mengambil jokowi dengan mengambil list dengan index ke 0.
+Pada contoh di atas kita mengambil data string `jokowi` dengan mengambil list dengan index ke 0.
 
-Ada banyak properti dan method List yang sangat berguna, seperti length, isEmpty, isNotEmpty, remove, add  dan banyak lagi. Berikut Anbu berikan link terkait :
-https://medium.com/flutter-community/useful-list-methods-in-dart-6e173cac803d
+Ada banyak properti dan method List yang sangat berguna, seperti `length`, `isEmpty`, `isNotEmpty`, `remove`, `add`  dan banyak lagi. Berikut Anbi berikan link terkait : [Useful List methods in Dart](https://medium.com/flutter-community/useful-list-methods-in-dart-6e173cac803d)
 
 ## Set
 
