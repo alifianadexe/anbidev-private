@@ -32,7 +32,7 @@ Yuk langsung ke code biar lebih mudah
 
 Buat program seperti code di atas, lalu coba jalankan apa yang terjadi?
 
-![Screenshot](assets/ss.png)
+![](/post/ss_exception1.png)
 
 <br/>
 
@@ -87,7 +87,7 @@ Selanjutnya jika kamu belum tahu spesifik akan ada error apa pada kode programmu
 <br/>
 Maka outputnya akan menghasilkan seperti ini :
 
-![Screenshot](assets/ss1.png)
+![](/post/ss_exception2.png)
 
 Selain dari bawaan, kamu bisa lho buat `exception` sendiri.
 
@@ -134,6 +134,6 @@ Kode program dari finally akan dijalankan, tidak mengiraukan kode apakah error a
 
 > ❗ Note : Wajib buat kamu untuk membuat Error Handling pada kode programmu terlebih jika kamu ada keraguan pada kode program yang kamu anggap akan terjadi crash.
 
-![Timmy](assets/timmy.gif)
+![](/post/timmy.gif)
 
 Selesai sudah materi kita tentang Exception, terus pantengin blog Anbidev agar kalian bisa belajar lebih banyak dan jago dalam mengoding.
