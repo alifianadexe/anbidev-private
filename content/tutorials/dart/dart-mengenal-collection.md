@@ -20,11 +20,11 @@ name = ""
 +++
 Yuk kita kenalan dengan struktur data yang digunakan untuk `menyimpan banyak data sekaligus` yang ada di Dart. `Collections` adalah `objek` yang menyimpan banyak data seperti `List`, `Set`, dan `Map` (Pada artikel ini kita hanya membahas ketiga collection ini). Mari kita ulas tuntas pada materi kali ini.
 
-![Picture](assets/tutorial.png)
+![](/post/collection_tutorial.png)
 
 ## List
 
-Jika kamu sudah belajar mengenai Javascript, konsep array ini sama seperti List di Dart. List berguna untuk menyimpan data secara berurutan, karena mengandalkan index yang ada di List dan index yang ada di Dart sendiri dimulai dari angka 0. Kita bisa menyimpan tipe data apapun ke dalam List.
+Jika kamu sudah belajar mengenai JavaScript, konsep `array` pada JavaScript sama seperti `List` pada Dart. List berguna untuk menyimpan data secara berurutan, karena mengandalkan index yang ada di List dan index yang ada di Dart sendiri `dimulai dari angka 0`. Kita bisa menyimpan tipe data apapun ke dalam List.
 
 ```dart
 List nama = ['Andi', 'Budi', 'Caca'];
@@ -38,7 +38,7 @@ List list = ['Jokowi', 55, true];
 
 Selanjutnya kita bisa mendeklarasikan tipe data apapun ke dalam List.
 
-Tidak hanya mendeklarasikan dengan tipe String, int, boolean. Kita bisa memasukkan tipe data List ke dalam List, sehingga akan terjadi nested List.
+Tidak hanya mendeklarasikan dengan tipe String, int, boolean. Kita bisa memasukkan tipe data List ke dalam List, sehingga akan terjadi `nested List`
 
 ```dart
 List itemsOfList = [['Andi', 'Budi', 'Caca'], ['Jokowi', 55, true]];
