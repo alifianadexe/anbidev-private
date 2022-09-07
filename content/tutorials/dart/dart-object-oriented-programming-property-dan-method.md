@@ -29,7 +29,7 @@ class Person {
 }
 ```
 
-Pada class person di atas kita membuat property name dan age. Property name bertipe data String dan property age bertipe data int. Selanjtnya bagaimana cara kita akses property tersebut
+Pada class `Person` di atas kita membuat property `name` dan `age`. Property name bertipe data `String` dan property age bertipe data `int`. Selanjtnya bagaimana cara kita akses property tersebut
 
 ```dart
 void main() {
@@ -43,7 +43,7 @@ void main() {
 
 ## Method
 
-Method adalah fungsi yang ada di dalam sebuah class. Sama seperti cara pembuatan fungsi pada materi sebelumnya, berikut cara membuat method di dalam class.
+Method adalah `fungsi` yang ada di dalam sebuah class. Sama seperti cara pembuatan fungsi pada materi sebelumnya, berikut cara membuat method di dalam class.
 
 ```dart
 class Person {
