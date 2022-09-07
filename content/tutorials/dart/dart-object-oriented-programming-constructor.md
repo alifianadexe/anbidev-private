@@ -19,10 +19,12 @@ name = ""
 
 +++
 ## Konsep Constructor
-Ketika kita membuat object atau instance dari suatu class, kita bisa menginisialisasi nilai awal dari properti yang ada di dalam class tersebut. Hal ini bisa kita lakukan dengan menggunakan constructor. Constructor sendiri diartikan sebagai fungsi khusus dari suatu class yang bertanggung jawab untuk menginisialisasi nilai awal dari properti yang ada di dalam class tersebut. Dart memiliki 3 jenis constructor, yaitu default constructor dan named constructor, dan factory constructor.
+
+Ketika kita membuat `object` atau `instance` dari suatu class, kita bisa menginisialisasi nilai awal dari properti yang ada di dalam class tersebut. Hal ini bisa kita lakukan dengan menggunakan constructor. `Constructor` sendiri diartikan sebagai fungsi khusus dari suatu class yang bertanggung jawab untuk menginisialisasi nilai awal dari properti yang ada di dalam class tersebut. Dart memiliki 3 jenis constructor, yaitu `default` constructor dan `named` constructor, dan `factory` constructor.
 
 ## Default Constructor
-Default constructor adalah constructor yang tidak memiliki nama. Default constructor akan dipanggil secara otomatis ketika kita membuat object dari suatu class. Default constructor akan menginisialisasi nilai awal dari properti yang ada di dalam class tersebut. Contoh default constructor:
+
+Default constructor adalah constructor yang `tidak memiliki nama`. Default constructor akan dipanggil secara otomatis ketika kita membuat object dari suatu class. Default constructor akan menginisialisasi nilai awal dari properti yang ada di dalam class tersebut. Contoh default constructor:
 
 ```dart
 class Person {
@@ -50,7 +52,8 @@ void main() {
 ```
 
 ## Named Constructor
-Ketika kita ingin membuat custom dari constructor, bisa menggunakan named constructor. Dengan named constructor kita bisa membuat lebih dari 1 constructor. Format dari pembuatan named constructor yakni NamaClass.namaConstructor() {}. Contoh named constructor:
+
+Ketika kita ingin membuat `custom` dari constructor, bisa menggunakan named constructor. Dengan named constructor kita bisa membuat lebih dari 1 constructor. Format dari pembuatan named constructor yakni `NamaClass.namaConstructor() {}`. Contoh named constructor:
 
 ```dart
 class Person {
@@ -75,6 +78,7 @@ void main() {
 ```
 
 ## Factory Constructor
+
 Factory constructor digunakan apabila kamu tidak ingin constructor membuat instance baru. Ini sangat berguna ketika kamu ingin membuat instance baru dari class yang sama. Contoh factory constructor:
 
 ```dart
@@ -90,6 +94,7 @@ class Person {
   }
 }
 ```
+
 Biasanya factory contructor digunakan pada kasus pembuatan singleton, yang mana hanya memiliki satu instance saja. Berikut contoh singleton di Dart
 
 ```dart
@@ -103,6 +108,7 @@ class Singleton {
   Singleton._internal();
 }
 ```
+
 Sekian materi constructor di Dart. Semoga bermanfaat.
 
-![Gif](assets/amazing.gif)
+![](/post/amazing.gif)
