@@ -83,4 +83,4 @@ void main() {
 
 Dengan begitu kita tidak perlu `redundant` menuliskan nama variabel cukup dengan `..nama_method()` atau  `..nama_property = nilai`.
 
-![Gif](assets/amazing.gif)
+![](/post/amazing.gif)
