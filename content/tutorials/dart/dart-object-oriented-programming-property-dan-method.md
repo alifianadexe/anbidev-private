@@ -1,21 +1,20 @@
 +++
-authors = ""
-cover = ""
-date = ""
-description = ""
-draft = true
-series = ""
-shortcode = ""
-status = ""
+authors = "Handika"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
+date = 2022-09-06T17:00:00Z
+description = "Kita belajar tentang Property, Method dan Cascade Notation"
+series = "Dart Dasar"
+shortcode = "Property & Method"
+status = "publish"
 sumber = []
-tags = []
+tags = ["dart"]
 title = "Dart: Object Oriented Programming (Property dan Method)"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorial", "tutorials"]
+url = "dart-property-method"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 ## Property
