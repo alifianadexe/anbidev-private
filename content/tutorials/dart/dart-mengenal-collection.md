@@ -1,7 +1,7 @@
 +++
 authors = "Handika"
 cover = "/post/photo_2022-08-10_09-23-27.jpg"
-date = 2022-09-05T17:00:00Z
+date = 2022-09-04T17:00:00Z
 description = "Struktur data yang digunakan untuk menyimpan banyak data sekaligus"
 series = "Dart Dasar"
 shortcode = "Collections"
