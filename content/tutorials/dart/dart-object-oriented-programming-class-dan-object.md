@@ -4,14 +4,14 @@ cover = "/post/photo_2022-08-10_09-23-27.jpg"
 date = 2022-09-05T17:00:00Z
 description = "Kita akan membahas tentang paradigma pemrograman berbasis objek."
 series = "Dart Dasar"
-shortcode = "Konsep OOP"
+shortcode = "Class & Object"
 status = "publish"
 sumber = []
 tags = []
 title = "Dart: Object Oriented Programming (Class dan Object)"
 tutorials = ["dart"]
 type = ["tutorials", "tutorial"]
-url = "dart-oop"
+url = "dart-oop-class-object"
 [author]
 images = "/img/handika.jpg"
 name = "Handika"

@@ -11,7 +11,7 @@ tags = ["dart"]
 title = "Dart: Object Oriented Programming (Property dan Method)"
 tutorials = ["dart"]
 type = ["tutorial", "tutorials"]
-url = "dart-property-method"
+url = "dart-oop-property-method"
 [author]
 images = "/img/handika.jpg"
 name = "Handika"
