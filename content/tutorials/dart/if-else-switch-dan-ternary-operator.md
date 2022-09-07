@@ -1,7 +1,7 @@
 +++
 authors = "Handika"
 cover = "/post/photo_2022-08-10_09-23-27.jpg"
-date = 2022-09-05T17:00:00Z
+date = 2022-09-01T17:00:00Z
 description = "Digunakan untuk menangani berbagai kondisi yang mungkin terjadi"
 series = "Dart Dasar"
 shortcode = "Pengkondisian"

@@ -1,7 +1,7 @@
 +++
 authors = "Handika"
 cover = "/post/photo_2022-08-10_09-23-27.jpg"
-date = 2022-09-05T17:00:00Z
+date = 2022-08-31T17:00:00Z
 description = "Menghentikan program sebelum kondisi error"
 series = "Dart Dasar"
 shortcode = "Exception"
