@@ -1,21 +1,20 @@
 +++
-authors = ""
-cover = ""
-date = ""
+authors = "Handika"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
+date = 2022-09-05T17:00:00Z
 description = "Kita akan membahas tentang paradigma pemrograman berbasis objek."
-draft = true
-series = ""
-shortcode = ""
-status = ""
+series = "Dart Dasar"
+shortcode = "Konsep OOP"
+status = "publish"
 sumber = []
 tags = []
 title = "Dart: Object Oriented Programming (Class dan Object)"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorials", "tutorial"]
+url = "dart-oop"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 ## Konsep dasar pemrograman berorientasi objek
