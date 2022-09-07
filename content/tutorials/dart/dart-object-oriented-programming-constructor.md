@@ -1,21 +1,20 @@
 +++
-authors = ""
-cover = ""
-date = ""
-description = ""
-draft = true
-series = ""
-shortcode = ""
-status = ""
+authors = "Handika"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
+date = 2022-09-06T19:00:00Z
+description = "Fungsi khusus dari suatu class yang untuk menginisialisasi nilai awal dari properti yang ada di dalam class tersebut"
+series = "Dart Dasar"
+shortcode = "Constructor"
+status = "publish"
 sumber = []
-tags = []
+tags = ["dart"]
 title = "Dart: Object Oriented Programming (Constructor)"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorials", "tutorial"]
+url = "dart-oop-contructor"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 ## Konsep Constructor
