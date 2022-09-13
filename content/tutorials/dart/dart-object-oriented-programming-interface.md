@@ -20,8 +20,8 @@ name = ""
 +++
 Apakah kita akan user interface ? tentu saja bukan ya, kita akan membahas salah satu konsep dari OOP yaitu interface. Here we goo..
 
-
 ## Interface
+
 Kita sebelumnya sudah belajar tentang abstract class, kurang lebih konsep nya sama dengan Interface.
 Jika kamu sebelumnya belajar bahasa pemograman dengan konsep OOP pasti tidak asing dengan istilah interface akan tetapi ada perbedaan penggunaan interface di Dart dengan bahasa pemograman lainnya. Jika kamu dari bahasa Java atau kotlin penulisan interface di awali dengan kata kunci `interface` sedangkan di Dart tidak ada keyword interface. Lalu bagaimana cara kita membuat interface ? kita akan menggunakan kata kunci `abstract` dan kita akan menambahkan kata kunci `implements` untuk mengimplementasikan interface tersebut.
 <br/>
@@ -36,6 +36,7 @@ class ClassName implements InterfaceClassName {
    ...
 }
 ```
+
 <br/>
 Lalu apa bedanya dengan abstract class :
 
@@ -64,8 +65,8 @@ class Apel implements IBuah {
     throw UnimplementedError();
   }
 }
-
 ```
+
 Jika kamu ingin melakukan implementasi lebih dari satu interface, kamu bisa menggunakan tanda koma `,` seperti berikut :
 
 ```dart
@@ -74,12 +75,10 @@ abstract class IPetani {}
 class Apel implements IBuah, IPetani {
 //body
 }
-
 ```
-
 
 <br/>
 
 Sekian materi pada kali ini, semoga bermanfaat. Terima kasih.
 
-![Gif](assets/wow.gif)
+![](/post/wow.gif)
