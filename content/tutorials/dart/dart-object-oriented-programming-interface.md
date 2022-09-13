@@ -1,21 +1,20 @@
 +++
-authors = ""
-cover = ""
-date = ""
-description = ""
-draft = true
-series = ""
-shortcode = ""
-status = ""
+authors = "Handika"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
+date = 2022-09-11T17:00:00Z
+description = "Membahas tentang kata Interface pada Dart"
+series = "Dart Dasar"
+shortcode = "Interface"
+status = "publish"
 sumber = []
-tags = []
+tags = ["dart"]
 title = "Dart: Object Oriented Programming (Interface)"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorials", "tutorial"]
+url = "dart-interface"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 Apakah kita akan user interface ? tentu saja bukan ya, kita akan membahas salah satu konsep dari OOP yaitu interface. Here we goo..
