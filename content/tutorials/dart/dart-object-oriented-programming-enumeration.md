@@ -20,9 +20,9 @@ name = ""
 +++
 Bagaimana sih cara membuat nilai constant di Dart atau bagaimana cara membuat tipe sendiri di Dart. Yuk kita kenalan dengan Enumeration. Here we go..
 
-
 ## Enumeration
-Dart sendiri memiliki konsep Enumeration atau Enum. Pada update Dart 1.8, konsep Enum bertindak sebagai kelas yang mewakili sejumlah nilai konstanta.
+
+Dart sendiri memiliki konsep `Enumeration` atau `Enum`. Pada update `Dart 1.8`, konsep Enum bertindak sebagai `kelas` yang mewakili sejumlah `nilai konstanta`
 
 <br/>
 Template pembuatan enum :
@@ -31,12 +31,15 @@ Template pembuatan enum :
 enum Nama {
   //nilai konstanta
 }
-
 ```
-<br/>
-Masih bingung ? mari kita ke contoh :
-<br/>
-Misal kita melakukan pengecekan koneksi, apakah status koneksinya masih loading, error, atau success.
+
+<br/> 
+
+Masih bingung ? mari kita ke contoh : 
+
+<br/> 
+
+Misal kita melakukan pengecekan koneksi, apakah status koneksinya masih `loading`, `error`, atau `success`
 
 ```dart
 enum Status {
@@ -44,10 +47,9 @@ enum Status {
   Error,
   Success,
 }
-
 ```
-Kita sudah membuat enum class nya sekarang kita buat pengecekannya
 
+Kita sudah membuat enum class nya sekarang kita buat pengecekannya
 
 ```dart
 
@@ -68,7 +70,8 @@ main() {
   }
 }
 ```
-Mula-mula kita buat variabel yang menampung nilai dari fungsi getData(). lalu kita buat pengecekan apakah status nya loading, error atau success.
+
+Mula-mula kita buat variabel yang menampung nilai dari fungsi `getData()`. Lalu kita buat pengecekan apakah status nya loading, error atau success.
 
 <br/>
 
