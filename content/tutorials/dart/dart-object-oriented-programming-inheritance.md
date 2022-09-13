@@ -1,30 +1,30 @@
 +++
-authors = ""
-cover = ""
-date = ""
-description = ""
+authors = "Handika"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
+date = 2022-09-07T17:00:00Z
+description = "Dimana sebuah class dapat mewarisi semua properti dan method dari class lain"
 draft = true
-series = ""
-shortcode = ""
-status = ""
+series = "Dart Dasar"
+shortcode = "Inheritance"
+status = "publish"
 sumber = ["https://www.geeksforgeeks.org/dart-concept-of-inheritance/"]
-tags = []
+tags = ["dart"]
 title = "Dart: Object Oriented Programming (Inheritance)"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorials", "tutorial"]
+url = "dart-inheritance"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 Salah satu pilar dari Object Oriented Programming ialah `inheritance` atau pewarisan, bagaimana cara kerja inheritance ini dan seberapa penting penggunaannya. Mari kita belajar Here we goo...
 
 ## Inheritance
 
-Dart mendukung konsep inheritance, dimana sebuah class dapat mewarisi semua properti dan method dari class lain. Dengan demikian, kita dapat membuat sebuah class baru yang memiliki semua properti dan method dari class lain, dan kita dapat menambahkan properti dan method baru ke class tersebut. 
+Dart mendukung konsep inheritance, dimana sebuah class dapat mewarisi semua properti dan method dari class lain. Dengan demikian, kita dapat membuat sebuah class baru yang memiliki semua properti dan method dari class lain, dan kita dapat menambahkan properti dan method baru ke class tersebut.
 
-<br/> 
+<br/>
 
 Biasanya konsep dari Inheritance ini adalah hubungan antara `Class Parent` dan `Class Child`. Dimana Class Parent akan mewariskan seluruh properti dan method kepada Class Child. Berikut format dari Inheritance pada Dart:
 
@@ -159,6 +159,4 @@ class DieselEngine extends Engine {
 
 Sekian materi tentang inheritance pada Dart, semoga bermanfaat. Terima kasih.
 
- 
-
-![Gif](assets/cat.gif)
+![](/post/cat.gif)
