@@ -71,7 +71,7 @@ main() {
 }
 ```
 
-Mula-mula kita buat variabel yang menampung nilai dari fungsi `getData()`. Lalu kita buat pengecekan apakah status nya loading, error atau success.
+Mula-mula kita buat variabel yang menampung nilai dari fungsi `getData()`. Lalu kita buat pengecekan apakah statusnya loading, error atau success.
 
 <br/>
 
