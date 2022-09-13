@@ -18,10 +18,11 @@ images = "/img/author.jpg"
 name = ""
 
 +++
-Pernah terfikirkan sebelumnya apakah semua class itu harus dijadikan objek atau tidak? Jawabannya adalah tidak. Kita bisa membuat class yang tidak bisa dijadikan objek. Mari kita kenalan dengan abstract class.
+Pernah terfikirkan sebelumnya apakah semua class itu harus dijadikan objek atau tidak? Jawabannya adalah `tidak`. Kita bisa membuat class yang tidak bisa dijadikan objek. Mari kita kenalan dengan `abstract class`
 
 ## Abstract Class
-Secara sederhana gambaran dari class abstrak ialah class yang memang tidak secara rinci mendefinisikan objek tertentu, sehingga class abstrak biasa dijadikan sebagai gambarann umum. Oke mari kita ke contoh, pernah membayangkan gimana rasanya buah ? bagaimana bentuk buah itu ? apa warnah buah itu ? dan lain sebagainya. Nah, kita bisa membuat class buah yang berisi gambaran umum dari buah itu sendiri. Berikut contoh class buah.
+
+Secara sederhana gambaran dari class abstrak ialah class yang memang tidak secara rinci mendefinisikan objek tertentu, sehingga class abstrak biasa dijadikan sebagai gambaran umum. Oke mari kita ke contoh, pernah membayangkan gimana rasanya buah ? bagaimana bentuk buah itu ? apa warnah buah itu ? dan lain sebagainya. Nah, kita bisa membuat class buah yang berisi gambaran umum dari buah itu sendiri. Berikut contoh class buah.
 
 ```dart
 abstract class Buah {
@@ -30,7 +31,9 @@ abstract class Buah {
   void makan();
 }
 ```
+
 Poin penting abstract class di Dart sendiri antara lain :
+
 1. Abstract class biasa ditandai dengan keyword `abstract` sebelum keyword `class`.
 2. Dengan class menjadi abstract, maka kita bisa membuat method abstract dengan menghilangkan kurung kurawal atau body `{}` pada method tersebut.
 3. Penggunaan abstract class mewarisi ke child class dengan keyword `extends`.
@@ -59,8 +62,8 @@ class Jeruk extends Buah {
     print('Jeruk dimakan dengan cara dipotong-potong');
   }
 }
-
 ```
+
 Setelah kita membuat class buah, kita bisa membuat class apel dan jeruk yang mewarisi class buah. Dengan begitu kita bisa membuat objek apel dan jeruk yang memiliki method makan().
 
 ```dart
@@ -72,6 +75,7 @@ void main() {
   jeruk.makan();
 }
 ```
+
 Namun apabila kita mencoba untuk membuat object dari class abstract itu sendiri, maka akan terjadi error. Berikut contoh errornya :
 
 ```dart
@@ -79,8 +83,9 @@ void main() {
   Buah buah = Buah(); // Error
 }
 ```
+
 <br/>
 
 Sekian materi pada kali ini, semoga bermanfaat. Terima kasih.
 
-![Gif](assets/wow.gif)
+![](/post/wow.gif)
