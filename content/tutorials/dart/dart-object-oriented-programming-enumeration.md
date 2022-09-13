@@ -3,7 +3,6 @@ authors = "Handika"
 cover = "/post/photo_2022-08-10_09-23-27.jpg"
 date = 2022-09-08T17:00:00Z
 description = "Enum bertindak sebagai kelas yang mewakili sejumlah nilai konstanta"
-draft = true
 series = "Dart Dasar"
 shortcode = "Enumeration"
 status = "publish"
