@@ -1,21 +1,20 @@
 +++
-authors = ""
-cover = ""
-date = ""
-description = ""
-draft = true
-series = ""
-shortcode = ""
-status = ""
+authors = "Handika"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
+date = 2022-09-08T17:00:00Z
+description = "Keyword yang digunakan untuk membuat variabel atau method menjadi global"
+series = "Dart Dasar"
+shortcode = "Static"
+status = "publish"
 sumber = []
-tags = []
+tags = ["dart"]
 title = "Dart: Object Oriented Programming (Static Keyword)"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorials", "tutorial"]
+url = "dart-static"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 ## Static
@@ -60,7 +59,6 @@ void main() {
 
 > ❗ Note: Jika kamu memutuskan untuk menambahkan static pada property atau method maka kamu tidak bisa mengakses property atau method tersebut melalui object.
 
-
 Berikut contohnya :
 
 ```dart
@@ -75,4 +73,4 @@ main() {
 
 Sekian materi pada kali ini, semoga bermanfaat. Terima kasih.
 
-![Gif](assets/wow.gif)
+![](/post/wow.gif)
