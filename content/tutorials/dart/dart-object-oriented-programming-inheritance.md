@@ -3,7 +3,6 @@ authors = "Handika"
 cover = "/post/photo_2022-08-10_09-23-27.jpg"
 date = 2022-09-07T17:00:00Z
 description = "Dimana sebuah class dapat mewarisi semua properti dan method dari class lain"
-draft = true
 series = "Dart Dasar"
 shortcode = "Inheritance"
 status = "publish"
