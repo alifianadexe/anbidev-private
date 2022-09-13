@@ -1,21 +1,20 @@
 +++
-authors = ""
-cover = ""
-date = ""
-description = ""
-draft = true
-series = ""
-shortcode = ""
-status = ""
+authors = "Handika"
+cover = "/post/photo_2022-08-10_09-23-27.jpg"
+date = 2022-09-10T17:00:00Z
+description = "Class yang memang tidak secara rinci mendefinisikan objek tertentu"
+series = "Dart Dasar"
+shortcode = "Abstract Class"
+status = "publish"
 sumber = []
-tags = []
+tags = ["dart"]
 title = "Dart: Object Oriented Programming (Abstract Class)"
-tutorials = []
-type = []
-url = ""
+tutorials = ["dart"]
+type = ["tutorials", "tutorial"]
+url = "dart-abstract-class"
 [author]
-images = "/img/author.jpg"
-name = ""
+images = "/img/handika.jpg"
+name = "Handika"
 
 +++
 Pernah terfikirkan sebelumnya apakah semua class itu harus dijadikan objek atau tidak? Jawabannya adalah `tidak`. Kita bisa membuat class yang tidak bisa dijadikan objek. Mari kita kenalan dengan `abstract class`
