@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #05080e;
+  --color-bg-soft: #0d1827;
+  --color-text: #e8f3ff;
+  --color-muted: #8ca4bd;
+  --color-primary: #34d399;
+  --color-primary-soft: #173427;
+  --color-secondary: #f59e0b;
+  --color-panel: #0f1724cc;
+  --glow-primary: 52 211 153;
+  --glow-secondary: 245 158 11;
+}
+
+@theme inline {
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text);
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+body {
+  color: var(--color-text);
+  background:
+    radial-gradient(circle at 15% 15%, rgb(var(--glow-primary) / 20%), transparent 30%),
+    radial-gradient(circle at 85% 20%, rgb(var(--glow-secondary) / 22%), transparent 28%),
+    linear-gradient(180deg, #060b13 0%, #05080e 60%, #071120 100%);
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+::selection {
+  background: rgb(var(--glow-primary) / 40%);
+  color: #f8fffc;
+}
+
+.panel {
+  border: 1px solid rgb(148 163 184 / 16%);
+  background: var(--color-panel);
+  backdrop-filter: blur(8px);
+  box-shadow:
+    0 18px 60px rgb(2 6 23 / 45%),
+    inset 0 1px 0 rgb(255 255 255 / 4%);
+}
+
+.elevate {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.elevate:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 22px 52px rgb(15 23 42 / 42%),
+    0 0 0 1px rgb(148 163 184 / 18%);
+}
+
+.scanlines::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255 255 255 / 0%) 0%,
+    rgb(255 255 255 / 4%) 50%,
+    rgb(255 255 255 / 0%) 100%
+  );
+  background-size: 100% 8px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.pulse-dot {
+  position: relative;
+}
+
+.pulse-dot::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  border: 1px solid rgb(var(--glow-primary) / 50%);
+  animation: pulse-ring 1.8s infinite ease-out;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes rise-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-in {
+  animation: rise-fade 0.7s both ease;
+}
+
+.stagger-in-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.stagger-in-delay-2 {
+  animation-delay: 0.16s;
+}
+
+.stagger-in-delay-3 {
+  animation-delay: 0.24s;
+}
+
+.stagger-in-delay-4 {
+  animation-delay: 0.32s;
+}
