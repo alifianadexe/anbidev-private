@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { BrandNav } from "./brand-nav";
 
 type AppFrameProps = {
@@ -21,12 +23,16 @@ export function AppFrame({
       <div className="mx-auto flex w-full max-w-[1720px] flex-col px-4 pb-20 pt-8 md:px-8 md:pt-10">
         <header className="panel elevate stagger-in rounded-[6px] px-5 py-4 md:px-6">
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <div className="flex items-center gap-3">
-              <span className="inline-flex h-2.5 w-2.5 rounded-full border border-white" />
-              <p className="mono-ui text-xs text-white">
-                AnbiDev
-              </p>
-            </div>
+            <Link href="/" className="inline-flex items-center" aria-label="AnbiDev Home">
+              <Image
+                src="/logo.svg"
+                alt="AnbiDev logo"
+                width={120}
+                height={40}
+                className="h-8 w-auto invert"
+                priority
+              />
+            </Link>
             <BrandNav />
           </div>
         </header>
