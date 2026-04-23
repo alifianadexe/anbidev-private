@@ -6,5 +6,5 @@ type PanelProps = {
 };
 
 export function Panel({ className = "", children }: PanelProps) {
-  return <section className={`panel elevate rounded-3xl p-6 ${className}`}>{children}</section>;
+  return <section className={`panel elevate rounded-[6px] p-6 ${className}`}>{children}</section>;
 }

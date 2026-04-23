@@ -34,23 +34,23 @@ export default function ModelsPage() {
       description="Compare latency, quality, and cost in one interactive view. Tune your token workload to estimate monthly usage impact."
     >
       <Panel className="stagger-in stagger-in-delay-2 lg:col-span-7">
-        <h2 className="text-lg font-semibold text-white">Model Benchmark</h2>
+        <h2 className="display-title text-4xl text-white">Model Benchmark</h2>
         <div className="mt-4 space-y-3">
           {models.map((item) => (
             <button
               key={item.id}
               onClick={() => setSelected(item)}
-              className={`w-full rounded-2xl border p-4 text-left transition ${
+              className={`w-full rounded-[6px] border p-4 text-left transition ${
                 selected.id === item.id
-                  ? "border-emerald-300/70 bg-emerald-300/10"
-                  : "border-white/10 bg-slate-950/60 hover:border-white/30"
+                  ? "border-white bg-white text-black"
+                  : "border-[#999999] text-white hover:border-white"
               }`}
             >
               <div className="flex items-center justify-between gap-2">
-                <p className="font-semibold uppercase tracking-[0.12em] text-white">{item.id}</p>
-                <span className="text-xs text-slate-300">{item.bestFor}</span>
+                <p className="mono-ui text-[12px]">{item.id}</p>
+                <span className="mono-ui text-[12px]">{item.bestFor}</span>
               </div>
-              <div className="mt-3 grid grid-cols-3 gap-2 text-xs text-slate-300">
+              <div className="mono-ui mt-3 grid grid-cols-3 gap-2 text-[12px]">
                 <p>Latency: {item.latency}ms</p>
                 <p>Quality: {item.quality}/100</p>
                 <p>Cost: ${item.costPerK.toFixed(3)} / 1K</p>
@@ -61,12 +61,12 @@ export default function ModelsPage() {
       </Panel>
 
       <Panel className="stagger-in stagger-in-delay-3 lg:col-span-5">
-        <h2 className="text-lg font-semibold text-white">Usage Estimator</h2>
-        <p className="mt-2 text-sm text-slate-400">
+        <h2 className="display-title text-4xl text-white">Usage Estimator</h2>
+        <p className="mt-2 text-sm text-[#999999]">
           Adjust monthly token usage to estimate cost for the selected model.
         </p>
-        <div className="mt-5 rounded-2xl border border-white/10 bg-slate-950/60 p-4">
-          <label className="text-xs uppercase tracking-[0.14em] text-slate-400">
+        <div className="mt-5 rounded-[6px] border border-[#999999] p-4">
+          <label className="mono-ui text-[12px] text-[#999999]">
             Monthly Tokens: {tokens.toLocaleString()}
           </label>
           <input
@@ -76,17 +76,17 @@ export default function ModelsPage() {
             step={50_000}
             value={tokens}
             onChange={(event) => setTokens(Number(event.target.value))}
-            className="mt-3 w-full accent-emerald-400"
+            className="mt-3 w-full accent-white"
           />
-          <p className="mt-5 text-xs uppercase tracking-[0.14em] text-slate-400">
+          <p className="mono-ui mt-5 text-[12px] text-[#999999]">
             Estimated Monthly Cost
           </p>
-          <p className="mt-2 text-3xl font-semibold text-emerald-200">${estimatedCost}</p>
+          <p className="mt-2 text-3xl text-white">${estimatedCost}</p>
         </div>
       </Panel>
 
       <Panel className="stagger-in stagger-in-delay-4 lg:col-span-12">
-        <h2 className="text-lg font-semibold text-white">Deployment Guidance</h2>
+        <h2 className="display-title text-4xl text-white">Deployment Guidance</h2>
         <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-3">
           <Advice
             title="Speed-sensitive flows"
@@ -108,9 +108,9 @@ export default function ModelsPage() {
 
 function Advice({ title, text }: { title: string; text: string }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-slate-950/60 p-4">
-      <p className="font-medium text-white">{title}</p>
-      <p className="mt-2 text-sm text-slate-400">{text}</p>
+    <div className="rounded-[6px] border border-[#999999] p-4">
+      <p className="mono-ui text-[12px] text-white">{title}</p>
+      <p className="mt-2 text-sm text-[#999999]">{text}</p>
     </div>
   );
 }

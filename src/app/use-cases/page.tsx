@@ -63,17 +63,17 @@ export default function UseCasesPage() {
     >
       <Panel className="stagger-in stagger-in-delay-2 lg:col-span-12">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <h2 className="text-lg font-semibold text-white">Solution Library</h2>
+          <h2 className="display-title text-4xl text-white">Solution Library</h2>
           <div className="flex flex-wrap gap-2">
             {(["All", "Marketing", "Operations", "Education", "Support"] as Category[]).map(
               (item) => (
                 <button
                   key={item}
                   onClick={() => setCategory(item)}
-                  className={`rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] transition ${
+                  className={`mono-ui rounded-full border px-4 py-2 text-[12px] transition ${
                     category === item
-                      ? "border-emerald-300/70 bg-emerald-300 text-slate-900"
-                      : "border-white/10 text-slate-300 hover:text-white"
+                      ? "border-white bg-white text-black"
+                      : "border-[#999999] text-white hover:border-white"
                   }`}
                 >
                   {item}
@@ -85,32 +85,32 @@ export default function UseCasesPage() {
 
         <div className="mt-5 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
           {filtered.map((item) => (
-            <div key={item.name} className="rounded-2xl border border-white/10 bg-slate-950/60 p-4">
+            <div key={item.name} className="rounded-[6px] border border-[#999999] p-4">
               <div className="flex items-center justify-between gap-2">
-                <p className="font-medium text-white">{item.name}</p>
-                <span className="rounded-full border border-cyan-300/40 bg-cyan-300/10 px-2.5 py-1 text-xs text-cyan-100">
+                <p className="text-white">{item.name}</p>
+                <span className="mono-ui rounded-full border border-[#999999] px-2.5 py-1 text-[12px] text-white">
                   {item.status}
                 </span>
               </div>
-              <p className="mt-3 text-sm text-slate-400">{item.category}</p>
-              <p className="mt-2 text-sm font-semibold text-emerald-200">{item.impact}</p>
+              <p className="mono-ui mt-3 text-[12px] text-[#999999]">{item.category}</p>
+              <p className="mt-2 text-sm text-white">{item.impact}</p>
             </div>
           ))}
         </div>
       </Panel>
 
       <Panel className="stagger-in stagger-in-delay-3 lg:col-span-6">
-        <h2 className="text-lg font-semibold text-white">Implementation Cycle</h2>
-        <ol className="mt-4 space-y-3 text-sm text-slate-300">
-          <li className="rounded-xl border border-white/10 bg-slate-950/50 p-3">1. Identify repetitive work and baseline KPI.</li>
-          <li className="rounded-xl border border-white/10 bg-slate-950/50 p-3">2. Build a focused AI flow with fallback controls.</li>
-          <li className="rounded-xl border border-white/10 bg-slate-950/50 p-3">3. Test with team users and monitor quality gates.</li>
-          <li className="rounded-xl border border-white/10 bg-slate-950/50 p-3">4. Launch and track business impact weekly.</li>
+        <h2 className="display-title text-4xl text-white">Implementation Cycle</h2>
+        <ol className="mt-4 space-y-3 text-sm text-[#999999]">
+          <li className="rounded-[6px] border border-[#999999] p-3">1. Identify repetitive work and baseline KPI.</li>
+          <li className="rounded-[6px] border border-[#999999] p-3">2. Build a focused AI flow with fallback controls.</li>
+          <li className="rounded-[6px] border border-[#999999] p-3">3. Test with team users and monitor quality gates.</li>
+          <li className="rounded-[6px] border border-[#999999] p-3">4. Launch and track business impact weekly.</li>
         </ol>
       </Panel>
 
       <Panel className="stagger-in stagger-in-delay-4 lg:col-span-6">
-        <h2 className="text-lg font-semibold text-white">Performance Snapshot</h2>
+        <h2 className="display-title text-4xl text-white">Performance Snapshot</h2>
         <div className="mt-4 space-y-3">
           <Snapshot name="Avg. Time Saved" value="31%" />
           <Snapshot name="Quality Score Lift" value="+24 pts" />
@@ -123,9 +123,9 @@ export default function UseCasesPage() {
 
 function Snapshot({ name, value }: { name: string; value: string }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-slate-950/60 p-4">
-      <p className="text-xs uppercase tracking-[0.12em] text-slate-400">{name}</p>
-      <p className="mt-2 text-2xl font-semibold text-white">{value}</p>
+    <div className="rounded-[6px] border border-[#999999] p-4">
+      <p className="mono-ui text-[12px] text-[#999999]">{name}</p>
+      <p className="mt-2 text-2xl text-white">{value}</p>
     </div>
   );
 }

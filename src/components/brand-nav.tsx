@@ -23,10 +23,10 @@ export function BrandNav() {
           <Link
             key={item.href}
             href={item.href}
-            className={`rounded-full border px-4 py-1.5 transition ${
+            className={`mono-ui rounded-full border px-4 py-2 text-[12px] leading-[1.33] transition ${
               active
-                ? "border-emerald-300/60 bg-emerald-300/15 text-white"
-                : "border-white/10 text-slate-300 hover:border-emerald-300/40 hover:text-white"
+                ? "border-white bg-white text-black"
+                : "border-[#999999] text-white hover:border-white"
             }`}
           >
             {item.label}

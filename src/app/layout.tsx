@@ -1,22 +1,28 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
+import { Bebas_Neue, DM_Sans, Space_Mono } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const bugattiDisplay = Bebas_Neue({
+  variable: "--font-bugatti-display",
   subsets: ["latin"],
+  weight: ["400"],
 });
 
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: "--font-ibm-plex-mono",
-  weight: ["400", "500", "600"],
+const bugattiMono = Space_Mono({
+  variable: "--font-bugatti-mono",
   subsets: ["latin"],
+  weight: ["400"],
+});
+
+const bugattiText = DM_Sans({
+  variable: "--font-bugatti-text",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
-  title: "AnbiDev v2 | AI Builder Hub",
-  description:
-    "AnbiDev v2 is an AI-first learning and builder hub for Indonesian creators.",
+  title: "AnbiDev | AI Builder Hub",
+  description: "AnbiDev is an AI-first learning and builder hub for Indonesian creators.",
 };
 
 export default function RootLayout({
@@ -27,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${ibmPlexMono.variable} h-full antialiased`}
+      className={`${bugattiDisplay.variable} ${bugattiMono.variable} ${bugattiText.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
