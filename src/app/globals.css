@@ -29,6 +29,7 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-bugatti-text), sans-serif;
+  transition: background-color 0.35s ease, color 0.35s ease;
 }
 
 ::selection {
@@ -43,11 +44,12 @@ body {
 }
 
 .elevate {
-  transition: border-color 0.25s ease, opacity 0.25s ease;
+  transition: border-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
 }
 
 .elevate:hover {
   border-color: var(--color-text);
+  transform: translateY(-2px);
 }
 
 .stagger-in {
@@ -95,12 +97,13 @@ body {
   letter-spacing: 1.4px;
   line-height: 1.43;
   text-transform: uppercase;
-  transition: background-color 0.25s ease, color 0.25s ease, opacity 0.25s ease;
+  transition: background-color 0.25s ease, color 0.25s ease, opacity 0.25s ease, transform 0.2s ease;
 }
 
 .btn-pill:hover {
   background: var(--color-text);
   color: var(--color-bg);
+  transform: translateY(-1px);
 }
 
 .btn-pill:active {
@@ -118,11 +121,85 @@ body {
   letter-spacing: 1.2px;
   line-height: 1.33;
   text-transform: uppercase;
-  transition: border-color 0.25s ease, opacity 0.25s ease;
+  transition: border-color 0.25s ease, opacity 0.25s ease, transform 0.2s ease;
 }
 
 .btn-utility:hover {
   border-color: var(--color-text);
+  transform: translateY(-1px);
+}
+
+.interactive-card {
+  transition: border-color 0.25s ease, transform 0.25s ease, background-color 0.25s ease;
+}
+
+.interactive-card:hover {
+  border-color: var(--color-text);
+  transform: translateY(-2px);
+}
+
+.interactive-tile {
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.interactive-tile:hover {
+  border-color: var(--color-text);
+}
+
+.line-heading {
+  position: relative;
+}
+
+.line-heading::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 72px;
+  margin-top: 10px;
+  background: var(--color-text);
+  transform-origin: left;
+  animation: line-grow 0.6s ease both;
+}
+
+.status-pulse {
+  position: relative;
+  display: inline-flex;
+}
+
+.status-pulse::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 1px solid var(--color-text);
+  border-radius: 9999px;
+  opacity: 0;
+  animation: status-ring 1.8s ease-out infinite;
+}
+
+.bar-animate {
+  animation: bar-rise 0.65s ease both;
+}
+
+.tab-animate {
+  transition: transform 0.2s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.tab-animate:hover {
+  transform: translateY(-1px);
+}
+
+.command-active {
+  position: relative;
+  overflow: hidden;
+}
+
+.command-active::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgb(255 255 255 / 12%) 50%, transparent 100%);
+  transform: translateX(-100%);
+  animation: sweep 1.2s ease;
 }
 
 .border {
@@ -157,5 +234,63 @@ html[data-theme="light"] .invert {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes line-grow {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes bar-rise {
+  0% {
+    transform: scaleY(0.15);
+    opacity: 0.35;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes status-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+}
+
+@keyframes sweep {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stagger-in,
+  .bar-animate,
+  .line-heading::after,
+  .status-pulse::after,
+  .command-active::before {
+    animation: none !important;
+  }
+
+  .elevate:hover,
+  .btn-pill:hover,
+  .btn-utility:hover,
+  .tab-animate:hover,
+  .interactive-card:hover {
+    transform: none !important;
   }
 }

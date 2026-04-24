@@ -55,15 +55,15 @@ export default function Home() {
         </>
       }
     >
-      <Panel className="stagger-in stagger-in-delay-2 lg:col-span-4">
+      <Panel className="stagger-in stagger-in-delay-2 interactive-card lg:col-span-4">
         <p className="mono-ui text-xs text-white">Control Tower</p>
         <div className="mt-5 space-y-4">
-          <div className="rounded-[6px] border border-[#999999] p-4">
+          <div className="interactive-tile rounded-[6px] border border-[#999999] p-4">
             <p className="mono-ui text-[12px] text-[#999999]">Active Communities</p>
             <p className="mt-2 text-3xl text-white">15,420</p>
             <p className="mt-1 text-xs text-[#999999]">+18% this month</p>
           </div>
-          <div className="rounded-[6px] border border-[#999999] p-4">
+          <div className="interactive-tile rounded-[6px] border border-[#999999] p-4">
             <p className="mono-ui text-[12px] text-[#999999]">AI Workflow Completion</p>
             <p className="mt-2 text-3xl text-white">93.7%</p>
             <p className="mt-1 text-xs text-[#999999]">Last sync: 2 mins ago</p>
@@ -71,15 +71,15 @@ export default function Home() {
         </div>
       </Panel>
 
-      <Panel className="stagger-in stagger-in-delay-2 lg:col-span-8">
+      <Panel className="stagger-in stagger-in-delay-2 interactive-card lg:col-span-8">
         <div className="flex items-center justify-between gap-4">
-          <h2 className="display-title text-4xl text-white">Usage Signal</h2>
+          <h2 className="display-title line-heading text-4xl text-white">Usage Signal</h2>
           <div className="flex items-center gap-2 rounded-full border border-[#999999] p-1">
             {(["24H", "7D", "30D"] as Horizon[]).map((item) => (
               <button
                 key={item}
                 onClick={() => setHorizon(item)}
-                className={`mono-ui rounded-full px-3 py-1.5 text-[12px] transition ${
+                className={`mono-ui tab-animate rounded-full px-3 py-1.5 text-[12px] transition ${
                   horizon === item
                     ? "bg-white text-black border border-white"
                     : "text-white border border-transparent hover:border-white"
@@ -94,8 +94,8 @@ export default function Home() {
           {bars.map((value, idx) => (
             <div key={`${horizon}-${idx}`} className="group flex-1">
               <div
-                className="rounded-t-[6px] border border-[#999999] bg-white/20 transition group-hover:bg-white/35"
-                style={{ height: `${value}%` }}
+                className="bar-animate rounded-t-[6px] border border-[#999999] bg-white/20 transition group-hover:bg-white/35"
+                style={{ height: `${value}%`, animationDelay: `${idx * 45}ms` }}
                 aria-label={`Chart bar ${idx + 1}: ${value}%`}
               />
             </div>
@@ -106,9 +106,9 @@ export default function Home() {
         </p>
       </Panel>
 
-      <Panel className="stagger-in stagger-in-delay-3 lg:col-span-5">
+      <Panel className="stagger-in stagger-in-delay-3 interactive-card lg:col-span-5">
         <div className="flex items-center justify-between gap-2">
-          <h2 className="display-title text-4xl text-white">Model Stack</h2>
+          <h2 className="display-title line-heading text-4xl text-white">Model Stack</h2>
           <span className="mono-ui rounded-full border border-white px-3 py-1 text-[12px] text-white">
             Live
           </span>
@@ -118,7 +118,7 @@ export default function Home() {
             <button
               key={item}
               onClick={() => setModel(item)}
-              className={`mono-ui rounded-[6px] border px-3 py-2 text-[12px] transition ${
+              className={`mono-ui tab-animate rounded-[6px] border px-3 py-2 text-[12px] transition ${
                 model === item
                   ? "border-white bg-white text-black"
                   : "border-[#999999] text-white hover:border-white"
@@ -136,8 +136,8 @@ export default function Home() {
         </div>
       </Panel>
 
-      <Panel className="stagger-in stagger-in-delay-3 lg:col-span-7">
-        <h2 className="display-title text-4xl text-white">Command Studio</h2>
+      <Panel className="stagger-in stagger-in-delay-3 interactive-card lg:col-span-7">
+        <h2 className="display-title line-heading text-4xl text-white">Command Studio</h2>
         <p className="mt-2 text-sm text-[#999999]">
           A builder interface for creating AI workflows, articles, and model
           evaluations in one place.
@@ -152,9 +152,9 @@ export default function Home() {
               <button
                 key={command}
                 onClick={() => setActiveCommand(command)}
-                className={`rounded-[6px] border px-3 py-2 text-left text-xs transition md:text-sm ${
+                className={`tab-animate rounded-[6px] border px-3 py-2 text-left text-xs transition md:text-sm ${
                   activeCommand === command
-                    ? "border-white bg-white text-black"
+                    ? "command-active border-white bg-white text-black"
                     : "border-[#999999] text-white hover:border-white"
                 }`}
               >
@@ -165,15 +165,15 @@ export default function Home() {
         </div>
       </Panel>
 
-      <Panel className="stagger-in stagger-in-delay-4 lg:col-span-12">
-        <h2 className="display-title text-4xl text-white">Pipeline Health</h2>
+      <Panel className="stagger-in stagger-in-delay-4 interactive-card lg:col-span-12">
+        <h2 className="display-title line-heading text-4xl text-white">Pipeline Health</h2>
         <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-3">
           {pipeline.map((item) => (
-            <div key={item.name} className="rounded-[6px] border border-[#999999] p-4">
+            <div key={item.name} className="interactive-tile rounded-[6px] border border-[#999999] p-4">
               <div className="flex items-center justify-between">
                 <p className="text-white">{item.name}</p>
                 <span className="mono-ui inline-flex items-center gap-2 text-[12px] text-[#999999]">
-                  <span className="h-2 w-2 rounded-full border border-white" />
+                  <span className="status-pulse h-2 w-2 rounded-full border border-white" />
                   {item.status}
                 </span>
               </div>
