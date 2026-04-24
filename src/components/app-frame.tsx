@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BrandNav } from "./brand-nav";
+import { ThemeToggle } from "./theme-toggle";
 
 type AppFrameProps = {
   eyebrow: string;
@@ -33,7 +34,10 @@ export function AppFrame({
                 priority
               />
             </Link>
-            <BrandNav />
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <BrandNav />
+            </div>
           </div>
         </header>
 
